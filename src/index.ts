@@ -1,5 +1,6 @@
 import * as bodyParser from "body-parser";
 import * as express from "express";
+import * as cors from "cors";
 import "reflect-metadata";
 import { Container } from "inversify";
 import { interfaces, InversifyExpressServer, TYPE } from "inversify-express-utils";
@@ -30,6 +31,8 @@ container
 const server = new InversifyExpressServer(container);
 
 server.setConfig((app: any) => {
+  app.use(cors({ origin: "http://localhost:3000" }));
+
   app.use("/api-docs/swagger", express.static("swagger"));
   app.use("/api-docs/swagger/assets", express.static("node_modules/swagger-ui-dist"));
   app.use(bodyParser.json());
@@ -59,5 +62,5 @@ server.setErrorConfig((app: any) => {
 });
 
 const app = server.build();
-app.listen(3000);
-console.info("Server is listening on port : 3000");
+app.listen(4000);
+console.info("Server is listening on port : 4000");
