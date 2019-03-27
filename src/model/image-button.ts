@@ -1,23 +1,16 @@
-import { ApiModelProperty, ApiModel } from "swagger-express-ts";
-import { ButtonType } from "../enums/button-type";
+import { ButtonType } from '../enums/button-type';
+import { ApiModelProperty } from '@nestjs/swagger';
 
-@ApiModel({
-  description: "Image Button"
-})
 export class ImageButton {
-  @ApiModelProperty({
-    description: "Which type of button is it",
-    example: ["Large", "Medium"],
-    required: true
-  })
+  @ApiModelProperty()
   public buttonType: ButtonType;
 
-  @ApiModelProperty({ description: "Text inside the button", required: true })
+  @ApiModelProperty()
   public content: string;
 
-  @ApiModelProperty({ description: "Image url in the button", required: true })
+  @ApiModelProperty()
   public imageUrl: string;
 
-  @ApiModelProperty({ description: "Route that the button links to", required: true })
+  @ApiModelProperty()
   public route: string;
 }

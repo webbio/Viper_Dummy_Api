@@ -1,25 +1,27 @@
-import "reflect-metadata";
-import { injectable } from "inversify";
-import { PageModel } from "./page.model";
-import * as _ from "lodash";
-import { WelcomeModule, generateDummyWelcomeModule } from "../model/welcome-module";
-import * as uuid from "uuid";
+import { Injectable } from '@nestjs/common';
+import { PageModel } from './page.model';
+import * as uuid from 'uuid';
+import * as _ from 'lodash';
+import {
+  WelcomeModule,
+  generateDummyWelcomeModule,
+} from 'src/model/welcome-module';
 
-@injectable()
+@Injectable()
 export class PageService {
   private pageList: PageModel[] = [
     {
       id: uuid(),
-      route: "homepage",
-      description: "Homepage with modules",
-      wordpressPostModules: [generateDummyWelcomeModule() as WelcomeModule]
+      route: 'homepage',
+      description: 'Homepage with modules',
+      wordPressPostModules: [generateDummyWelcomeModule() as WelcomeModule],
     } as PageModel,
     {
       id: uuid(),
-      route: "about-us",
-      description: "Home",
-      wordpressPostModules: []
-    } as PageModel
+      route: 'about-us',
+      description: 'Home',
+      wordPressPostModules: [],
+    } as PageModel,
   ];
 
   public getWordPressControls(): PageModel[] {
