@@ -5,27 +5,23 @@ import "reflect-metadata";
 import { Container } from "inversify";
 import { interfaces, InversifyExpressServer, TYPE } from "inversify-express-utils";
 import * as swagger from "swagger-express-ts";
-import { WordPressControlsController } from "./wordpress/wordpress-controls.controller";
-import { WordPressControlController } from "./wordpress/wordpress-control.controller";
-import { WordpressService } from "./wordpress/wordpress.service";
+
+import { PageController } from "./page/page.controller";
+import { PageService } from "./page/page.service";
 
 // set up container
 const container = new Container();
 
 // note that you *must* bind your controllers to Controller
 container
-  .bind<WordpressService>(WordpressService.name)
-  .to(WordpressService)
+  .bind<PageService>(PageService.name)
+  .to(PageService)
   .inSingletonScope();
 container
   .bind<interfaces.Controller>(TYPE.Controller)
-  .to(WordPressControlsController)
-  .whenTargetNamed(WordPressControlsController.name);
-container
-  .bind<interfaces.Controller>(TYPE.Controller)
-  .to(WordPressControlController)
+  .to(PageController)
   .inSingletonScope()
-  .whenTargetNamed(WordPressControlController.name);
+  .whenTargetNamed(PageController.name);
 
 // create server
 const server = new InversifyExpressServer(container);
