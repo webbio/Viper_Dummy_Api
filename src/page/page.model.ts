@@ -1,5 +1,6 @@
-import { WordPressPostModule } from 'src/model/wordpress-post-module';
-import { ApiModelProperty } from '@nestjs/swagger';
+import { WordPressPostModule } from "src/model/wordpress-post-module";
+import { ApiModelProperty } from "@nestjs/swagger";
+import { NavBarModule } from "src/model/nav-bar-module";
 
 export class PageModel {
   @ApiModelProperty()
@@ -13,4 +14,8 @@ export class PageModel {
 
   @ApiModelProperty({ type: [WordPressPostModule] })
   public wordPressPostModules: WordPressPostModule[];
+
+  // change NavBarModule to module you are working on
+  @ApiModelProperty()
+  public playgroundModule?: NavBarModule;
 }
