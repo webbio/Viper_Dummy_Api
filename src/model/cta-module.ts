@@ -6,23 +6,22 @@ export class CTAModule extends WordPressPostModule {
   @ApiModelProperty()
   public titleText: string;
   @ApiModelProperty()
-  public subTitleText: string;
+  public bodyText: string;
   @ApiModelProperty()
-  public seeRecipeButtomText: string;
+  public buttonLeftText: string;
   @ApiModelProperty()
-  public seeAllRecipesButtomText: string;
-
+  public buttonRightText: string;
   @ApiModelProperty()
-  public backgroundImgURL: string;
+  public imageURL: string;
 }
 
 export const generateDummyCTAModule = (): CTAModule => {
   return {
     titleText: "Maak je eigen biologische wraps!",
-    subTitleText: "Binnen een half uur je eigen biologische hoemoes. Lees hier hoe dat moet!",
-    seeRecipeButtomText: "Bekijk recept",
-    seeAllRecipesButtomText: "Bekijk alle recepten",
-    backgroundImgURL: "",
+    bodyText: "Binnen een half uur je eigen biologische hoemoes. Lees hier hoe dat moet!",
+    buttonLeftText: "Bekijk recept",
+    buttonRightText: "Bekijk alle recepten",
+    imageURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/rectangle-5.png",
     id: uuid(),
     name: "CTA",
     bottomMargin: "0px",
