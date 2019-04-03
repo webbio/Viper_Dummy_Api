@@ -5,6 +5,7 @@ import * as _ from "lodash";
 import { WelcomeModule, generateDummyWelcomeModule } from "src/model/welcome-module";
 import { NavBarModule, generateDummyNavBarModule } from "src/model/nav-bar-module";
 import { generateDummyCTAModule } from "src/model/cta-module";
+import { generateDummyInfoHeaderModule } from "src/model/info-header-module";
 
 @Injectable()
 export class PageService {
@@ -27,9 +28,10 @@ export class PageService {
       description: "Test Page for building modules",
       wordPressPostModules: [],
       // change this to your module.
-      playgroundModule: generateDummyCTAModule(),
+      // playgroundModule: generateDummyCTAModule(),
       ctaModule: generateDummyCTAModule(),
-      navBarModule: generateDummyNavBarModule()
+      navBarModule: generateDummyNavBarModule(),
+      infoHeaderModule: generateDummyInfoHeaderModule()
     } as PageModel
   ];
 
