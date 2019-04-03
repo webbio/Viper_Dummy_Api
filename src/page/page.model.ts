@@ -18,5 +18,11 @@ export class PageModel {
 
   // change NavBarModule to module you are working on
   @ApiModelProperty()
-  public playgroundModule?: CTAModule;
+  public playgroundModule?: null;
+
+  @ApiModelProperty()
+  public ctaModule?: CTAModule;
+
+  @ApiModelProperty()
+  public navBarModule?: NavBarModule;
 }

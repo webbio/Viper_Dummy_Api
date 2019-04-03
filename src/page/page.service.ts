@@ -27,7 +27,9 @@ export class PageService {
       description: "Test Page for building modules",
       wordPressPostModules: [],
       // change this to your module.
-      playgroundModule: generateDummyCTAModule()
+      playgroundModule: generateDummyCTAModule(),
+      ctaModule: generateDummyCTAModule(),
+      navBarModule: generateDummyNavBarModule()
     } as PageModel
   ];
 

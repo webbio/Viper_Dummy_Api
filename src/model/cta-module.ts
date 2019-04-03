@@ -1,6 +1,7 @@
 import { WordPressPostModule } from "./wordpress-post-module";
 import * as uuid from "uuid";
 import { ApiModelProperty } from "@nestjs/swagger";
+import { buttonCTA } from "./button-cta";
 
 export class CTAModule extends WordPressPostModule {
   @ApiModelProperty()
@@ -8,19 +9,45 @@ export class CTAModule extends WordPressPostModule {
   @ApiModelProperty()
   public bodyText: string;
   @ApiModelProperty()
-  public buttonLeftText: string;
+  public buttonLeft: buttonCTA;
   @ApiModelProperty()
-  public buttonRightText: string;
+  public buttonRight: buttonCTA;
   @ApiModelProperty()
   public imageURL: string;
 }
-
+const buttonLeftData = (): buttonCTA => {
+  return {
+    href: "#",
+    target: "_blank",
+    title: "Bekijk recept",
+    variant: "primary",
+    type: "",
+    icon: "",
+    onClick: ""
+  };
+};
 export const generateDummyCTAModule = (): CTAModule => {
   return {
     titleText: "Maak je eigen biologische wraps!",
     bodyText: "Binnen een half uur je eigen biologische hoemoes. Lees hier hoe dat moet!",
-    buttonLeftText: "Bekijk recept",
-    buttonRightText: "Bekijk alle recepten",
+    buttonLeft: {
+      href: "#",
+      target: "_blank",
+      title: "Bekijk recept",
+      variant: "primary",
+      type: "",
+      icon: "",
+      onClick: ""
+    },
+    buttonRight: {
+      href: "#",
+      target: "_blank",
+      title: "Bekijk alle recepten",
+      variant: "secondary",
+      type: "",
+      icon: "",
+      onClick: ""
+    },
     imageURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/rectangle-5.png",
     id: uuid(),
     name: "CTA",
