@@ -15,6 +15,10 @@ export class InfoHeader extends WordPressPostModule {
   public align: string;
   @ApiModelProperty()
   public bgcolor: string;
+  @ApiModelProperty()
+  public buttonLinkText: string;
+  @ApiModelProperty()
+  public buttonLinkURL: string;
 }
 
 export const generateDummyInfoHeaderModule = (): InfoHeader => {
@@ -23,12 +27,14 @@ export const generateDummyInfoHeaderModule = (): InfoHeader => {
     bodyText:
       "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
     buttonText: "Terug naar home",
-    align: "center",
+    buttonLinkURL: "/",
+    buttonLinkText: "Download baekje",
+    align: "left",
     bgcolor: "#F5FAFA",
     imageURL: "",
     id: uuid(),
     name: "infoHeaderModule",
     bottomMargin: "0px",
-    topMargin: "0px"
+    topMargin: ""
   };
 };
