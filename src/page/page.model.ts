@@ -2,6 +2,8 @@ import { WordPressPostModule } from "src/model/wordpress-post-module";
 import { ApiModelProperty } from "@nestjs/swagger";
 import { NavBarModule } from "src/model/nav-bar-module";
 import { CTAModule } from "src/model/cta-module";
+import { FooterModule } from "src/model/footer-component";
+
 import { InfoHeader } from "src/model/info-header-module";
 
 export class PageModel {
@@ -23,6 +25,9 @@ export class PageModel {
 
   @ApiModelProperty()
   public ctaModule?: CTAModule;
+
+  @ApiModelProperty()
+  public footerModule?: FooterModule;
 
   @ApiModelProperty()
   public navBarModule?: NavBarModule;

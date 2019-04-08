@@ -8,8 +8,8 @@ export class Link {
   public route: string;
 
   @ApiModelProperty()
-  public color: string;
+  public color?: string;
 
   @ApiModelProperty()
-  public hoverColor: string;
+  public hoverColor?: string;
 }

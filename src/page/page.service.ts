@@ -6,6 +6,7 @@ import { WelcomeModule, generateDummyWelcomeModule } from "src/model/welcome-mod
 import { NavBarModule, generateDummyNavBarModule } from "src/model/nav-bar-module";
 import { generateDummyCTAModule } from "src/model/cta-module";
 import { generateDummyInfoHeaderModule } from "src/model/info-header-module";
+import { generateDummyFooterModule } from "src/model/footer-component";
 
 @Injectable()
 export class PageService {
@@ -29,6 +30,7 @@ export class PageService {
       wordPressPostModules: [],
       // change this to your module.
       // playgroundModule: generateDummyCTAModule(),
+      footerModule: generateDummyFooterModule(),
       ctaModule: generateDummyCTAModule(),
       navBarModule: generateDummyNavBarModule(),
       infoHeaderModule: generateDummyInfoHeaderModule()
