@@ -3,6 +3,7 @@ import { ApiModelProperty } from "@nestjs/swagger";
 import { NavBarModule } from "src/model/nav-bar-module";
 import { CTAModule } from "src/model/cta-module";
 import { InfoHeader } from "src/model/info-header-module";
+import { BodyTextModule } from "src/model/bodytext-module";
 
 export class PageModel {
   @ApiModelProperty()
@@ -29,4 +30,7 @@ export class PageModel {
 
   @ApiModelProperty()
   public infoHeaderModule?: InfoHeader;
+
+  @ApiModelProperty()
+  public bodyTextModule?: BodyTextModule;
 }

@@ -6,6 +6,7 @@ import { WelcomeModule, generateDummyWelcomeModule } from "src/model/welcome-mod
 import { NavBarModule, generateDummyNavBarModule } from "src/model/nav-bar-module";
 import { generateDummyCTAModule } from "src/model/cta-module";
 import { generateDummyInfoHeaderModule } from "src/model/info-header-module";
+import { generateBodyTextModule } from "src/model/bodytext-module";
 
 @Injectable()
 export class PageService {
@@ -35,7 +36,8 @@ export class PageService {
       // change this to your module.
       ctaModule: generateDummyCTAModule(),
       navBarModule: generateDummyNavBarModule(),
-      infoHeaderModule: generateDummyInfoHeaderModule()
+      infoHeaderModule: generateDummyInfoHeaderModule(),
+      bodyTextModule: generateBodyTextModule()
     } as PageModel
   ];
 
