@@ -9,6 +9,12 @@ export class NavBarModule extends WordPressPostModule {
 
   @ApiModelProperty({ type: [Link] })
   public botLinks: Link[];
+
+  @ApiModelProperty()
+  public first_logo: string;
+
+  @ApiModelProperty()
+  public second_logo: string;
 }
 
 export const generateDummyNavBarModule = (): NavBarModule => {
@@ -25,6 +31,8 @@ export const generateDummyNavBarModule = (): NavBarModule => {
       { content: "Recepten", route: "products" },
       { content: "Verkooppunten", route: "products" }
     ],
+    first_logo: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/group.svg",
+    second_logo: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/group-2.svg",
     id: uuid(),
     name: "Navbar",
     bottomMargin: "0px",

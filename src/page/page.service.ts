@@ -32,7 +32,8 @@ export class PageService {
       playgroundModule: generateDummyNavBarModule(),
       ctaModule: generateDummyCTAModule(),
       navBarModule: generateDummyNavBarModule(),
-      infoHeaderModule: generateDummyInfoHeaderModule()
+      infoHeaderModule: generateDummyInfoHeaderModule(),
+      welcomeModule: generateDummyWelcomeModule()
     } as PageModel
   ];
 
