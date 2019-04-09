@@ -14,13 +14,18 @@ export class PageService {
       id: uuid(),
       route: "homepage",
       description: "Homepage with modules",
-      wordPressPostModules: [generateDummyNavBarModule() as NavBarModule, generateDummyWelcomeModule() as WelcomeModule]
+      wordPressPostModules: [
+        generateDummyNavBarModule() as NavBarModule,
+        generateDummyWelcomeModule() as WelcomeModule,
+        generateDummyCTAModule(),
+        generateDummyInfoHeaderModule()
+      ]
     } as PageModel,
     {
       id: uuid(),
       route: "about-us",
       description: "Home",
-      wordPressPostModules: []
+      wordPressPostModules: [generateDummyCTAModule(), generateDummyInfoHeaderModule()]
     } as PageModel,
     {
       id: uuid(),
@@ -28,7 +33,6 @@ export class PageService {
       description: "Test Page for building modules",
       wordPressPostModules: [],
       // change this to your module.
-      // playgroundModule: generateDummyCTAModule(),
       ctaModule: generateDummyCTAModule(),
       navBarModule: generateDummyNavBarModule(),
       infoHeaderModule: generateDummyInfoHeaderModule()
@@ -40,8 +44,13 @@ export class PageService {
   }
 
   public getPageByRoute(route: string): PageModel {
+    let routeToUse = route;
+    if (route === "") {
+      routeToUse = "homepage";
+    }
+
     return _.find(this.pageList, (page: PageModel) => {
-      return _.isEqual(page.route, route);
+      return _.isEqual(page.route, routeToUse);
     });
   }
 }

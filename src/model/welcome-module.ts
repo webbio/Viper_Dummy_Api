@@ -2,8 +2,13 @@ import { WordPressPostModule } from "./wordpress-post-module";
 import { ImageButton } from "./image-button";
 import { ButtonType } from "../enums/button-type";
 import * as uuid from "uuid";
-import { ApiModelProperty } from "@nestjs/swagger";
+import { ApiModelProperty, ApiImplicitBody, ApiUseTags } from "@nestjs/swagger";
+import { Module } from "@nestjs/common";
+import { PageController } from "src/page/page.controller";
 
+@Module({
+  controllers: [PageController]
+})
 export class WelcomeModule extends WordPressPostModule {
   @ApiModelProperty()
   public headerText: string;
@@ -36,7 +41,7 @@ export class WelcomeModule extends WordPressPostModule {
 export const generateDummyWelcomeModule = (): WelcomeModule => {
   return {
     id: uuid(),
-    name: "welcomeModule",
+    name: "WelcomeModule",
     topMargin: "5px",
     bottomMargin: "5px",
     headerText: "Header text!",
