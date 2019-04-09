@@ -7,6 +7,7 @@ import { NavBarModule, generateDummyNavBarModule } from "src/model/nav-bar-modul
 import { generateDummyCTAModule } from "src/model/cta-module";
 import { generateDummyInfoHeaderModule } from "src/model/info-header-module";
 import { generateDummyFooterModule } from "src/model/footer-component";
+import { generateDummySocialMediaButtons } from "src/model/socialMediaButtons";
 
 @Injectable()
 export class PageService {
@@ -31,6 +32,8 @@ export class PageService {
       // change this to your module.
       // playgroundModule: generateDummyCTAModule(),
       footerModule: generateDummyFooterModule(),
+      socialMediaButtons: generateDummySocialMediaButtons(),
+
       ctaModule: generateDummyCTAModule(),
       navBarModule: generateDummyNavBarModule(),
       infoHeaderModule: generateDummyInfoHeaderModule()
