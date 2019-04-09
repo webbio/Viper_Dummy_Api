@@ -35,18 +35,14 @@ export class PageService {
       route: "playground",
       description: "Test Page for building modules",
       wordPressPostModules: [],
-      // change this to your module.
-<<<<<<< HEAD
-=======
-      // playgroundModule: generateDummyCTAModule(),
       footerModule: generateDummyFooterModule(),
       socialMediaButtons: generateDummySocialMediaButtons(),
-
->>>>>>> dev_ahmed
       ctaModule: generateDummyCTAModule(),
       navBarModule: generateDummyNavBarModule(),
       infoHeaderModule: generateDummyInfoHeaderModule(),
-      bodyTextModule: generateBodyTextModule()
+      bodyTextModule: generateBodyTextModule(),
+      playgroundModule: generateDummyNavBarModule(),
+      welcomeModule: generateDummyWelcomeModule()
     } as PageModel
   ];
 
