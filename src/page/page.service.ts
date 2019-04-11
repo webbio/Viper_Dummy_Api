@@ -15,24 +15,25 @@ export class PageService {
   private pageList: PageModel[] = [
     {
       id: uuid(),
-      route: "homepage",
+      route: "https://terrasana.com/",
       description: "Homepage with modules",
       wordPressPostModules: [
         generateDummyNavBarModule() as NavBarModule,
         generateDummyWelcomeModule() as WelcomeModule,
+        generateBodyTextModule(),
         generateDummyCTAModule(),
         generateDummyInfoHeaderModule()
       ]
     } as PageModel,
     {
       id: uuid(),
-      route: "about-us",
+      route: "https://terrasana.com/about-us",
       description: "Home",
       wordPressPostModules: [generateDummyCTAModule(), generateDummyInfoHeaderModule()]
     } as PageModel,
     {
       id: uuid(),
-      route: "playground",
+      route: "https://terrasana.com/playground",
       description: "Test Page for building modules",
       wordPressPostModules: [],
       footerModule: generateDummyFooterModule(),
@@ -53,7 +54,7 @@ export class PageService {
   public getPageByRoute(route: string): PageModel {
     let routeToUse = route;
     if (route === "") {
-      routeToUse = "homepage";
+      routeToUse = "https://terrasana.com/";
     }
 
     return _.find(this.pageList, (page: PageModel) => {
