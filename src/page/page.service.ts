@@ -6,6 +6,7 @@ import { WelcomeModule, generateDummyWelcomeModule } from "src/model/welcome-mod
 import { NavBarModule, generateDummyNavBarModule } from "src/model/nav-bar-module";
 import { generateDummyCTAModule } from "src/model/cta-module";
 import { generateDummyInfoHeaderModule } from "src/model/info-header-module";
+import { generateBodyTextModule } from "src/model/bodytext-module";
 import { generateDummyFooterModule } from "src/model/footer-component";
 import { generateDummySocialMediaButtons } from "src/model/socialMediaButtons";
 
@@ -14,19 +15,25 @@ export class PageService {
   private pageList: PageModel[] = [
     {
       id: uuid(),
-      route: "homepage",
+      route: "https://terrasana.com/",
       description: "Homepage with modules",
-      wordPressPostModules: [generateDummyNavBarModule() as NavBarModule, generateDummyWelcomeModule() as WelcomeModule]
+      wordPressPostModules: [
+        generateDummyNavBarModule() as NavBarModule,
+        generateDummyWelcomeModule() as WelcomeModule,
+        generateBodyTextModule(),
+        generateDummyCTAModule(),
+        generateDummyInfoHeaderModule()
+      ]
     } as PageModel,
     {
       id: uuid(),
-      route: "about-us",
+      route: "https://terrasana.com/about-us",
       description: "Home",
-      wordPressPostModules: []
+      wordPressPostModules: [generateDummyCTAModule(), generateDummyInfoHeaderModule()]
     } as PageModel,
     {
       id: uuid(),
-      route: "playground",
+      route: "https://terrasana.com/playground",
       description: "Test Page for building modules",
       wordPressPostModules: [],
       // change this to your module.
@@ -40,6 +47,7 @@ export class PageService {
       ctaModule: generateDummyCTAModule(),
       navBarModule: generateDummyNavBarModule(),
       infoHeaderModule: generateDummyInfoHeaderModule(),
+      bodyTextModule: generateBodyTextModule(),
       welcomeModule: generateDummyWelcomeModule()
     } as PageModel
   ];
@@ -49,8 +57,13 @@ export class PageService {
   }
 
   public getPageByRoute(route: string): PageModel {
+    let routeToUse = route;
+    if (route === "") {
+      routeToUse = "https://terrasana.com/";
+    }
+
     return _.find(this.pageList, (page: PageModel) => {
-      return _.isEqual(page.route, route);
+      return _.isEqual(page.route, routeToUse);
     });
   }
 }

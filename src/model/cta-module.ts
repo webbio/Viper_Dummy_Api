@@ -50,7 +50,7 @@ export const generateDummyCTAModule = (): CTAModule => {
     },
     imageURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/rectangle-5.png",
     id: uuid(),
-    name: "CTA",
+    name: "CTAModule",
     bottomMargin: "0px",
     topMargin: "0px"
   };
