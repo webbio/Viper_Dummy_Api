@@ -8,7 +8,7 @@ import { generateDummyCTAModule } from "src/model/cta-module";
 import { generateDummyInfoHeaderModule } from "src/model/info-header-module";
 import { generateDummyFooterModule } from "src/model/footer-component";
 import { generateDummySocialMediaButtons } from "src/model/socialMediaButtons";
-
+import { generateDummyOurTeamModule} from 'src/model/ourTeam-module'
 @Injectable()
 export class PageService {
   private pageList: PageModel[] = [
@@ -33,6 +33,7 @@ export class PageService {
       // playgroundModule: generateDummyCTAModule(),
       footerModule: generateDummyFooterModule(),
       socialMediaButtons: generateDummySocialMediaButtons(),
+      ourTeamModule: generateDummyOurTeamModule(),
 
       ctaModule: generateDummyCTAModule(),
       navBarModule: generateDummyNavBarModule(),
