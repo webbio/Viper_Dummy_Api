@@ -2,8 +2,13 @@ import { WordPressPostModule } from "./wordpress-post-module";
 import { ImageButton } from "./image-button";
 import { ButtonType } from "../enums/button-type";
 import * as uuid from "uuid";
-import { ApiModelProperty } from "@nestjs/swagger";
+import { ApiModelProperty, ApiImplicitBody, ApiUseTags } from "@nestjs/swagger";
+import { Module } from "@nestjs/common";
+import { PageController } from "src/page/page.controller";
 
+@Module({
+  controllers: [PageController]
+})
 export class WelcomeModule extends WordPressPostModule {
   @ApiModelProperty()
   public headerText: string;
@@ -36,11 +41,12 @@ export class WelcomeModule extends WordPressPostModule {
 export const generateDummyWelcomeModule = (): WelcomeModule => {
   return {
     id: uuid(),
-    name: "welcomeModule",
-    topMargin: "5px",
-    bottomMargin: "5px",
-    headerText: "Header text!",
-    bodyText: "Body text!",
+    name: "WelcomeModule",
+    topMargin: "0px",
+    bottomMargin: "0px",
+    headerText: "Proef en voel dat het goed is.",
+    bodyText:
+      "We houden van echt eten, waarmee je iets goed doet voor jezelf én de wereld om je heen. Samen. Dat is positive eating!",
     bottomBackgroundPatternUrl:
       "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png",
     topBackgroundImageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/rectangle-copy.png",

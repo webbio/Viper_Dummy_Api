@@ -9,15 +9,30 @@ export class NavBarModule extends WordPressPostModule {
 
   @ApiModelProperty({ type: [Link] })
   public botLinks: Link[];
+
+  @ApiModelProperty()
+  public first_logo: string;
+
+  @ApiModelProperty()
+  public second_logo: string;
 }
 
 export const generateDummyNavBarModule = (): NavBarModule => {
   return {
-    botLinks: [
-      { color: "black", content: "Over ons", hoverColor: "green", route: "about-us" },
-      { color: "black", content: "Nieuws", hoverColor: "green", route: "news" }
+    topLinks: [
+      { content: "Over ons", route: "about-us" },
+      { content: "Nieuws", route: "news" },
+      { content: "FAQ", route: "news" },
+      { content: "Zakelijk", route: "news" },
+      { content: "Contact", route: "news" }
     ],
-    topLinks: [{ color: "white", content: "Producten", hoverColor: "green", route: "products" }],
+    botLinks: [
+      { content: "Producten", route: "products" },
+      { content: "Recepten", route: "products" },
+      { content: "Verkooppunten", route: "products" }
+    ],
+    first_logo: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/group.svg",
+    second_logo: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/group-2.svg",
     id: uuid(),
     name: "Navbar",
     bottomMargin: "0px",

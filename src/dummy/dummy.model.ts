@@ -1,33 +1,27 @@
 import { WordPressPostModule } from "src/model/wordpress-post-module";
 import { ApiModelProperty } from "@nestjs/swagger";
-<<<<<<< HEAD
 import { NavBarModule } from "src/model/nav-bar-module";
 import { CTAModule } from "src/model/cta-module";
 import { FooterModule } from "src/model/footer-component";
 import { SocialMediaButtons } from "src/model/socialMediaButtons";
-import { OurTeamModule } from "src/model/ourTeam-module";
 
 import { InfoHeader } from "src/model/info-header-module";
-=======
->>>>>>> master
+import { BodyTextModule } from "src/model/bodytext-module";
+import { WelcomeModule } from "src/model/welcome-module";
 
-export class PageModel {
+export class DummyModel {
   @ApiModelProperty()
   public id: string;
-
-  @ApiModelProperty()
-  public route: string;
 
   @ApiModelProperty()
   public description: string;
 
   @ApiModelProperty({ type: [WordPressPostModule] })
   public wordPressPostModules: WordPressPostModule[];
-<<<<<<< HEAD
 
   // change NavBarModule to module you are working on
   @ApiModelProperty()
-  public playgroundModule?: null;
+  public playgroundModule?: NavBarModule;
 
   @ApiModelProperty()
   public ctaModule?: CTAModule;
@@ -39,13 +33,14 @@ export class PageModel {
   public socialMediaButtons?: SocialMediaButtons;
 
   @ApiModelProperty()
-  public ourTeamModule?: OurTeamModule;
-
-  @ApiModelProperty()
   public navBarModule?: NavBarModule;
 
   @ApiModelProperty()
   public infoHeaderModule?: InfoHeader;
-=======
->>>>>>> master
+
+  @ApiModelProperty()
+  public bodyTextModule?: BodyTextModule;
+
+  @ApiModelProperty()
+  public welcomeModule?: WelcomeModule;
 }
