@@ -36,20 +36,7 @@ export class PageService {
       id: uuid(),
       route: "https://terrasana.com/playground",
       description: "Test Page for building modules",
-<<<<<<< HEAD
-      wordPressPostModules: [],
-      // change this to your module.
-      // playgroundModule: generateDummyCTAModule(),
-      footerModule: generateDummyFooterModule(),
-      socialMediaButtons: generateDummySocialMediaButtons(),
-      ourTeamModule: generateDummyOurTeamModule(),
-
-      ctaModule: generateDummyCTAModule(),
-      navBarModule: generateDummyNavBarModule(),
-      infoHeaderModule: generateDummyInfoHeaderModule()
-=======
       wordPressPostModules: [generateDummyCTAModule()]
->>>>>>> master
     } as PageModel
   ];
 
