@@ -43,5 +43,7 @@ export class PageModel {
 
   @ApiModelProperty()
   public bodyTextModule?: BodyTextModule;
+
+  @ApiModelProperty()
   public welcomeModule?: WelcomeModule;
 }

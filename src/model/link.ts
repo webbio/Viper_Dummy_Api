@@ -7,9 +7,9 @@ export class Link {
   @ApiModelProperty()
   public route: string;
 
-  @ApiModelProperty()
+  @ApiModelProperty({ required: false })
   public color?: string;
 
-  @ApiModelProperty()
+  @ApiModelProperty({ required: false })
   public hoverColor?: string;
 }
