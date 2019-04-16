@@ -75,6 +75,6 @@ export const generateDummyFooterModule = (): FooterModule => {
     id: uuid(),
     topMargin: "",
     bottomMargin: "",
-    name: "FooterComponent"
+    name: "FooterModule"
   };
 };

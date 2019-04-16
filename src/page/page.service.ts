@@ -21,8 +21,9 @@ export class PageService {
         generateDummyNavBarModule() as NavBarModule,
         generateDummyWelcomeModule() as WelcomeModule,
         generateBodyTextModule(),
+        generateDummyInfoHeaderModule(),
         generateDummyCTAModule(),
-        generateDummyInfoHeaderModule()
+        generateDummyFooterModule()
       ]
     } as PageModel,
     {
@@ -35,15 +36,7 @@ export class PageService {
       id: uuid(),
       route: "https://terrasana.com/playground",
       description: "Test Page for building modules",
-      wordPressPostModules: [],
-      footerModule: generateDummyFooterModule(),
-      socialMediaButtons: generateDummySocialMediaButtons(),
-      ctaModule: generateDummyCTAModule(),
-      navBarModule: generateDummyNavBarModule(),
-      infoHeaderModule: generateDummyInfoHeaderModule(),
-      bodyTextModule: generateBodyTextModule(),
-      playgroundModule: generateDummyNavBarModule(),
-      welcomeModule: generateDummyWelcomeModule()
+      wordPressPostModules: [generateDummyCTAModule()]
     } as PageModel
   ];
 
