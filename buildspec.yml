@@ -26,6 +26,3 @@ phases:
       - printf '[{"name":"viper_client","imageUri":"%s"},{"name":"viper_dummy_api","imageUri":"%s"}]' $REPOSITORY_URI_VIPER_CLIENT:$IMAGE_TAG $REPOSITORY_URI_VIPER_DUMMY:$IMAGE_TAG > imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
-
-artifacts:
-  files: imagedefinitions.json
