@@ -9,7 +9,9 @@ import { generateDummyInfoHeaderModule } from "src/model/info-header-module";
 import { generateBodyTextModule } from "src/model/bodytext-module";
 import { generateDummyFooterModule } from "src/model/footer-component";
 import { generateDummySocialMediaButtons } from "src/model/socialMediaButtons";
-import { generateDummyOurTeamModule} from 'src/model/ourTeam-module'
+import { generateDummyOurTeamModule} from 'src/model/ourTeam-module';
+import { generateDummySalePointModule, SalePointModule} from 'src/model/salePoint-module'
+
 @Injectable()
 export class PageService {
   private pageList: PageModel[] = [
@@ -18,12 +20,14 @@ export class PageService {
       route: "https://terrasana.com/",
       description: "Homepage with modules",
       wordPressPostModules: [
+   
         generateDummyNavBarModule() as NavBarModule,
         generateDummyWelcomeModule() as WelcomeModule,
         generateBodyTextModule(),
         generateDummyInfoHeaderModule(),
         generateDummyCTAModule(),
-        generateDummyFooterModule()
+        generateDummyFooterModule(),
+        generateDummySalePointModule() as SalePointModule,
       ]
     } as PageModel,
     {
@@ -36,7 +40,7 @@ export class PageService {
       id: uuid(),
       route: "https://terrasana.com/playground",
       description: "Test Page for building modules",
-      wordPressPostModules: [generateDummyCTAModule()]
+      wordPressPostModules: [generateDummySalePointModule()]
     } as PageModel
   ];
 
