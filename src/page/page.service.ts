@@ -11,6 +11,7 @@ import { generateDummyFooterModule } from "src/model/footer-component";
 import { generateDummySocialMediaButtons } from "src/model/socialMediaButtons";
 import { generateDummySalePointModule, SalePointModule} from 'src/model/salePoint-module'
 import { generateDummyOurTeamModule, OurTeamModule} from 'src/model/ourTeam-module'
+import { generateDummyContactModule, ContactModule} from 'src/model/contact-module'
 
 @Injectable()
 export class PageService {
@@ -29,6 +30,7 @@ export class PageService {
         generateDummyFooterModule(),
         generateDummySalePointModule() as SalePointModule,
         generateDummyOurTeamModule() as OurTeamModule,
+        generateDummyContactModule() as ContactModule,
 
       ]
     } as PageModel,
@@ -42,7 +44,7 @@ export class PageService {
       id: uuid(),
       route: "https://terrasana.com/playground",
       description: "Test Page for building modules",
-      wordPressPostModules: [generateDummyOurTeamModule()]
+      wordPressPostModules: [generateDummyContactModule()]
     } as PageModel
   ];
 

@@ -10,6 +10,7 @@ import { BodyTextModule } from "src/model/bodytext-module";
 import { WelcomeModule } from "src/model/welcome-module";
 import { SalePointModule } from "src/model/salePoint-module";
 import { OurTeamModule } from "src/model/ourTeam-module";
+import { ContactModule } from "src/model/contact-module";
 
 export class DummyModel {
   @ApiModelProperty()
@@ -51,4 +52,7 @@ export class DummyModel {
 
   @ApiModelProperty()
   public ourTeamModule?: OurTeamModule;
+
+  @ApiModelProperty()
+  public contactModule?: ContactModule;
 }
