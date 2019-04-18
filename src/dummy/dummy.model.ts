@@ -8,6 +8,7 @@ import { SocialMediaButtons } from "src/model/socialMediaButtons";
 import { InfoHeader } from "src/model/info-header-module";
 import { BodyTextModule } from "src/model/bodytext-module";
 import { WelcomeModule } from "src/model/welcome-module";
+import { InstagramWalllModule } from "src/model/instagram-wall";
 
 export class DummyModel {
   @ApiModelProperty()
@@ -43,4 +44,7 @@ export class DummyModel {
 
   @ApiModelProperty()
   public welcomeModule?: WelcomeModule;
+
+  @ApiModelProperty()
+  public InstagramWalllModule?: InstagramWalllModule;
 }
