@@ -44,6 +44,8 @@ export class ContactModule extends WordPressPostModule {
   public fax: string;
   @ApiModelProperty()
   public fax_number: string;
+  @ApiModelProperty()
+  public direct_contact: string;
   @ApiModelProperty({type: [contactForm]})
   public contactform: contactForm[];
 }
@@ -69,6 +71,7 @@ export const generateDummyContactModule = (): ContactModule => {
      customer_service_phone:"+31 (0) 172 - 50 33 44",
      marketing_phone:"+31 (0) 172 - 50 33 47",
      fax_number:"+31 (0) 172 - 50 33 55",
+     direct_contact:"DIRECT CONTACT",
      contactform: [{email:"",name:"",privacy_text:"Wanneer je op verzenden drukt ga je akkoord met ons",privacy_link:"/privacy"}],
 
     id: uuid(),
