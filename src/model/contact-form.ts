@@ -1,6 +1,6 @@
 import { ApiModelProperty } from "@nestjs/swagger";
 
-export class contactForm{
+export class ContactForm{
     @ApiModelProperty()
     public email?: string;
     @ApiModelProperty()
@@ -9,8 +9,5 @@ export class contactForm{
     public privacy_text?: string;
     @ApiModelProperty()
     public privacy_link?: string;
-
- 
-
 
   }
