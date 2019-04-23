@@ -13,6 +13,10 @@ export class ProductCard{
     public button?: any;
     @ApiModelProperty()
     public category?: string;
+    @ApiModelProperty()
+    public modifyClass?: string;
+    @ApiModelProperty()
+    public cardVariant?: string;
 
   }
  
