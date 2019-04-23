@@ -6,8 +6,8 @@ export class ContactForm{
     @ApiModelProperty()
     public name?: string;
     @ApiModelProperty()
-    public privacy_text?: string;
+    public privacyText?: string;
     @ApiModelProperty()
-    public privacy_link?: string;
+    public privacyLink?: string;
 
   }

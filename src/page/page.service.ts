@@ -12,6 +12,7 @@ import { generateDummySocialMediaButtons } from "src/model/socialMediaButtons";
 import { generateDummySalePointModule, SalePointModule} from 'src/model/salePoint-module'
 import { generateDummyOurTeamModule, OurTeamModule} from 'src/model/ourTeam-module'
 import { generateDummyContactModule, ContactModule} from 'src/model/contact-module'
+import { generateDummyProductOverviewModule, ProductOverviewModule } from "src/model/product-overview";
 
 @Injectable()
 export class PageService {
@@ -31,6 +32,7 @@ export class PageService {
         generateDummySalePointModule() as SalePointModule,
         generateDummyOurTeamModule() as OurTeamModule,
         generateDummyContactModule() as ContactModule,
+       // generateDummyProductOverviewModule() as ProductOverviewModule,
 
       ]
     } as PageModel,

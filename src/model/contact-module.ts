@@ -1,10 +1,9 @@
 import { WordPressPostModule } from "./wordpress-post-module";
 import * as uuid from "uuid";
 import { ApiModelProperty } from "@nestjs/swagger";
-import { ourTeamCards } from "./ourTeam-cards";
-import { type } from "os";
+
 import { ContactForm } from "./contact-form";
-import { Address } from "./address";
+import { AddressInfo } from "./address";
 import { Phone } from "./phone";
 
 export class ContactModule extends WordPressPostModule {
@@ -15,11 +14,11 @@ export class ContactModule extends WordPressPostModule {
   @ApiModelProperty()
   public subtitleContactAddress: string;
   @ApiModelProperty()
-  public contactAddressInfo: Address;
+  public contactAddressInfo: AddressInfo;
   @ApiModelProperty()
   public mailingAddress: string;
   @ApiModelProperty()
-  public mailingAddressInfo: Address;
+  public mailingAddressInfo: AddressInfo;
   @ApiModelProperty()
   public phone: string;
   @ApiModelProperty()
@@ -50,7 +49,7 @@ export const generateDummyContactModule = (): ContactModule => {
      customerService:{contactName:"Consumentenservice",phone:"+31 (0) 172 - 50 33 44"},
      fax:{contactName:"Fax",phone:"+31 (0) 172 - 50 33 55"},
      directContact:"DIRECT CONTACT",
-     contactForm:{email:"email",name:"name",privacy_text:"Wanneer je op verzenden drukt ga je akkoord met ons",privacy_link:"/privacy"},
+     contactForm:{email:"email",name:"name",privacyText:"Wanneer je op verzenden drukt ga je akkoord met ons",privacyLink:"/privacy"},
 
     id: uuid(),
     topMargin: "",

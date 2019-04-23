@@ -1,6 +1,6 @@
 import { ApiModelProperty } from "@nestjs/swagger";
 
-export class Address{
+export class AddressInfo{
     @ApiModelProperty()
     public shopName?: string;
     @ApiModelProperty()
