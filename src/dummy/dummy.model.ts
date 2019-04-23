@@ -8,6 +8,8 @@ import { SocialMediaButtons } from "src/model/socialMediaButtons";
 import { InfoHeader } from "src/model/info-header-module";
 import { BodyTextModule } from "src/model/bodytext-module";
 import { WelcomeModule } from "src/model/welcome-module";
+import { ItemOverviewModule } from "src/model/item-overview-module";
+import { CardModel, CardPaginationReturn } from "src/card/card.model";
 
 export class DummyModel {
   @ApiModelProperty()
@@ -43,4 +45,12 @@ export class DummyModel {
 
   @ApiModelProperty()
   public welcomeModule?: WelcomeModule;
+
+  @ApiModelProperty()
+  public itemOverviewModule?: ItemOverviewModule;
+
+  @ApiModelProperty()
+  public card?: CardModel;
+  @ApiModelProperty()
+  public cardPaginationReturn?: CardPaginationReturn;
 }
