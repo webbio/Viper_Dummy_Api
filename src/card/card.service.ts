@@ -1,5 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { CardModel, CardPaginationReturn } from "./card.model";
+import uuid = require("uuid");
 @Injectable()
 export class CardService {
   private GenerateCardList(length: number) {
@@ -15,7 +16,7 @@ export class CardService {
         rightItemText: "right item",
         title: `Item #${i}`,
         URL: "/",
-        id: i,
+        id: uuid(),
         name: "ItemOverviewCard",
         bottomMargin: "0px",
         topMargin: "0px"
