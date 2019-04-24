@@ -9,8 +9,8 @@ import { generateDummyInfoHeaderModule } from "src/model/info-header-module";
 import { generateBodyTextModule } from "src/model/bodytext-module";
 import { generateDummyFooterModule } from "src/model/footer-component";
 import { generateDummySocialMediaButtons } from "src/model/socialMediaButtons";
-import { generateDummyOurTeamModule} from 'src/model/ourTeam-module';
-import { generateDummySalePointModule, SalePointModule} from 'src/model/salePoint-module'
+import { generateDummyOurTeamModule } from "src/model/ourTeam-module";
+import { generateDummySalePointModule, SalePointModule } from "src/model/sale-point-module";
 
 @Injectable()
 export class PageService {
@@ -20,14 +20,13 @@ export class PageService {
       route: "https://terrasana.com/",
       description: "Homepage with modules",
       wordPressPostModules: [
-   
         generateDummyNavBarModule() as NavBarModule,
         generateDummyWelcomeModule() as WelcomeModule,
         generateBodyTextModule(),
         generateDummyInfoHeaderModule(),
         generateDummyCTAModule(),
         generateDummyFooterModule(),
-        generateDummySalePointModule() as SalePointModule,
+        generateDummySalePointModule() as SalePointModule
       ]
     } as PageModel,
     {

@@ -1,24 +1,24 @@
 import { ApiModelProperty } from "@nestjs/swagger";
-import {information} from "./markers-info"
+import { MarkerInformation } from "./markers-info";
+import { MapLocation } from "./location";
 
-export class markers {
+export class Markers {
   @ApiModelProperty()
-  public latitude: number;
+  public id: string;
   @ApiModelProperty()
-  public longitude: number;
+  public displayName: string;
   @ApiModelProperty()
-  public isOpen?: boolean;
-  @ApiModelProperty({ type: [information] })
-  public workingHours?: information[];
+  public location: MapLocation;
+  @ApiModelProperty({ type: [MarkerInformation] })
+  public workingHours?: MarkerInformation[];
   @ApiModelProperty()
-  public street?: string;
+  public streetNameAndNumber?: string;
   @ApiModelProperty()
-  public address?: string;
+  public postalCode?: string;
   @ApiModelProperty()
   public city?: string;
   @ApiModelProperty()
-  public phone?: number;
+  public phone?: string;
   @ApiModelProperty()
-  public fax?: number;
-  
+  public fax?: string;
 }
