@@ -17,6 +17,8 @@ import { RecipeDetailModule } from "src/model/recipe-detail-module";
 import { RecipeHeadCard } from "src/model/recipe-head-card";
 import { RelatedProduct } from "src/model/related-product";
 import { SalePointModule } from "src/model/sale-point-module";
+import { ToggleModule } from "src/model/toggle-module";
+import { ExpandablePanel } from "src/model/expandable-panel";
 
 export class DummyModel {
   @ApiModelProperty()
@@ -82,4 +84,10 @@ export class DummyModel {
 
   @ApiModelProperty()
   public salePointModule?: SalePointModule;
+
+  @ApiModelProperty()
+  public toggleModule?: ToggleModule;
+
+  @ApiModelProperty()
+  public expandablePanel?: ExpandablePanel;
 }
