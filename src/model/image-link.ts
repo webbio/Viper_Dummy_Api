@@ -1,10 +1,10 @@
 import { ApiModelProperty } from "@nestjs/swagger";
 
-export class MarkerInformation {
+export class ImageLink {
   @ApiModelProperty()
-  public day: string;
+  logo: string;
   @ApiModelProperty()
-  public opensAt: string;
+  tooltip: string;
   @ApiModelProperty()
-  public closesAt: string;
+  url: string;
 }
