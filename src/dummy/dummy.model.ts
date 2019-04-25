@@ -12,6 +12,7 @@ import { SalePointModule } from "src/model/salePoint-module";
 import { OurTeamModule } from "src/model/ourTeam-module";
 import { ContactModule } from "src/model/contact-module";
 import { ProductOverviewModule } from "src/model/product-overview";
+import { SidebarModule } from "src/model/sidebar-module";
 
 export class DummyModel {
   @ApiModelProperty()
@@ -59,4 +60,7 @@ export class DummyModel {
 
   @ApiModelProperty()
   public productOverview?: ProductOverviewModule;
+
+  @ApiModelProperty()
+  public sidebarModule?: SidebarModule;
 }
