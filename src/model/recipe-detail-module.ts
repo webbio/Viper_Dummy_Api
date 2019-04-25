@@ -36,7 +36,7 @@ export class RecipeDetailModule extends WordPressPostModule {
   public buttonURLRelatedPosts: string;
 
   @ApiModelProperty()
-  public titleRelatedPosts?: string;
+  public titleRelatedPosts: string;
 
   @ApiModelProperty({ type: [RelatedProduct] })
   public productsRelatedPosts: RelatedProduct[];
@@ -104,6 +104,7 @@ export const generateDummyRecipeDetailModule = (): RecipeDetailModule => {
         URL: "/"
       }
     ],
+    titleRelatedPosts: "Gerelateerde producten",
     buttonTextRelatedPosts: "Meer producten",
     buttonURLRelatedPosts: "/",
     id: uuid(),
