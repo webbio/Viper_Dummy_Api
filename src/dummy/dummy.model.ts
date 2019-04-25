@@ -10,6 +10,12 @@ import { BodyTextModule } from "src/model/bodytext-module";
 import { WelcomeModule } from "src/model/welcome-module";
 import { ItemOverviewModule } from "src/model/item-overview-module";
 import { CardModel, CardPaginationReturn } from "src/card/card.model";
+import { HowToModel } from "src/model/how-to-model";
+import { IngredientModel } from "src/model/ingredient-model";
+import { ItemRecipeInfo } from "src/model/item-recipe-info";
+import { RecipeDetailModule } from "src/model/recipe-detail-module";
+import { RecipeHeadCard } from "src/model/recipe-head-card";
+import { RelatedProduct } from "src/model/related-product";
 
 export class DummyModel {
   @ApiModelProperty()
@@ -51,6 +57,25 @@ export class DummyModel {
 
   @ApiModelProperty()
   public card?: CardModel;
+
   @ApiModelProperty()
   public cardPaginationReturn?: CardPaginationReturn;
+
+  @ApiModelProperty()
+  public howTo?: HowToModel;
+
+  @ApiModelProperty()
+  public ingredientModel?: IngredientModel;
+
+  @ApiModelProperty()
+  public itemRecipeInfo?: ItemRecipeInfo;
+
+  @ApiModelProperty()
+  public recipeDetailModule?: RecipeDetailModule;
+
+  @ApiModelProperty()
+  public recipeHeadCard?: RecipeHeadCard;
+
+  @ApiModelProperty()
+  public relatedProduct?: RelatedProduct;
 }

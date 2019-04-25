@@ -10,6 +10,7 @@ import { generateBodyTextModule } from "src/model/bodytext-module";
 import { generateDummyFooterModule } from "src/model/footer-component";
 import { generateDummySocialMediaButtons } from "src/model/socialMediaButtons";
 import { generateDummyItemOverviewModule, ItemOverviewModule } from "src/model/item-overview-module";
+import { generateDummyRecipeDetailModule, RecipeDetailModule } from "src/model/recipe-detail-module";
 
 @Injectable()
 export class PageService {
@@ -38,7 +39,7 @@ export class PageService {
       id: uuid(),
       route: "https://terrasana.com/playground",
       description: "Test Page for building modules",
-      wordPressPostModules: [generateDummyCTAModule(), generateDummyItemOverviewModule()]
+      wordPressPostModules: [generateDummyRecipeDetailModule() as RecipeDetailModule]
     } as PageModel
   ];
 
