@@ -9,6 +9,8 @@ export class FooterModule extends WordPressPostModule {
   public footerSections: footerSection[];
   @ApiModelProperty({ type: [Link] })
   public footerLinks: Link[];
+  @ApiModelProperty()
+  public logo: string;
 }
 
 export const generateDummyFooterModule = (): FooterModule => {
@@ -69,6 +71,7 @@ export const generateDummyFooterModule = (): FooterModule => {
         route: "route"
       }
     ],
+    logo: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/footergroup.svg",
 
     //footerLinks: [{ content: "content", route: "" }, { content: "content", route: "" }],
 

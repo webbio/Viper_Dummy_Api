@@ -16,6 +16,7 @@ import { ItemRecipeInfo } from "src/model/item-recipe-info";
 import { RecipeDetailModule } from "src/model/recipe-detail-module";
 import { RecipeHeadCard } from "src/model/recipe-head-card";
 import { RelatedProduct } from "src/model/related-product";
+import { SalePointModule } from "src/model/sale-point-module";
 
 export class DummyModel {
   @ApiModelProperty()
@@ -78,4 +79,5 @@ export class DummyModel {
 
   @ApiModelProperty()
   public relatedProduct?: RelatedProduct;
+  public salePointModule?: SalePointModule;
 }

@@ -11,6 +11,8 @@ import { generateDummyFooterModule } from "src/model/footer-component";
 import { generateDummySocialMediaButtons } from "src/model/socialMediaButtons";
 import { generateDummyItemOverviewModule, ItemOverviewModule } from "src/model/item-overview-module";
 import { generateDummyRecipeDetailModule, RecipeDetailModule } from "src/model/recipe-detail-module";
+import { generateDummyOurTeamModule } from "src/model/ourTeam-module";
+import { generateDummySalePointModule, SalePointModule } from "src/model/sale-point-module";
 
 @Injectable()
 export class PageService {
@@ -26,7 +28,8 @@ export class PageService {
         generateDummyInfoHeaderModule(),
         generateDummyCTAModule(),
         generateDummyFooterModule(),
-        generateDummyItemOverviewModule() as ItemOverviewModule
+        generateDummyItemOverviewModule() as ItemOverviewModule,
+        generateDummySalePointModule() as SalePointModule
       ]
     } as PageModel,
     {
