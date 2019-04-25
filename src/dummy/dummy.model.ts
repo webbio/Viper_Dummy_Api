@@ -79,5 +79,7 @@ export class DummyModel {
 
   @ApiModelProperty()
   public relatedProduct?: RelatedProduct;
+
+  @ApiModelProperty()
   public salePointModule?: SalePointModule;
 }

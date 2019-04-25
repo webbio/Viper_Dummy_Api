@@ -30,10 +30,10 @@ export class RecipeDetailModule extends WordPressPostModule {
   public ingredientsPics: string[];
 
   @ApiModelProperty()
-  public buttonTextRelatedPosts?: string;
+  public buttonTextRelatedPosts: string;
 
   @ApiModelProperty()
-  public buttonURLRelatedPosts?: string;
+  public buttonURLRelatedPosts: string;
 
   @ApiModelProperty()
   public titleRelatedPosts?: string;
@@ -58,22 +58,31 @@ export const generateDummyRecipeDetailModule = (): RecipeDetailModule => {
     subTitle:
       "  Deze koekjes kunnen gewoon altijd. Wist je dat je ze ook kunt eten zonder te bakken? Zet ze in dat geval in de vriezer tot je ze gaat eten.",
     itensRecipeInfo: [
-      { text: "Tussendoortje", icon: "" },
-      { text: "15 koekjes", icon: "" },
-      { text: "15-20 minuten", icon: "" },
-      { text: "Vegan", icon: "" },
-      { text: "Glutenvrij", icon: "" }
+      {
+        text: "Tussendoortje",
+        icon: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/type.svg"
+      },
+      {
+        text: "15 koekjes",
+        icon: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/person.svg"
+      },
+      {
+        text: "15-20 minuten",
+        icon: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/time.svg"
+      },
+      { text: "Vegan", icon: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/check.svg" },
+      { text: "Glutenvrij", icon: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/check.svg" }
     ],
     ingredients: [
       { name: "Raw cacaopoeder", amount: "15g" },
       { name: "Witte amandelpasta", amount: "50g" },
       { name: "Ahornisiroop", amount: "80g" },
-      { name: "Kokosolie", amount: "Havermout" }
+      { name: "Kokosolie", amount: "120g" }
     ],
     ingredientsPics: [
-      "https://dummyimage.com/112x12/000/fff.jpg",
-      "https://dummyimage.com/112x12/000/fff.jpg",
-      "https://dummyimage.com/112x12/000/fff.jpg"
+      "https://dummyimage.com/112x120/000/fff.jpg",
+      "https://dummyimage.com/112x120/000/fff.jpg",
+      "https://dummyimage.com/112x120/000/fff.jpg"
     ],
     productsRelatedPosts: [
       {
@@ -95,6 +104,8 @@ export const generateDummyRecipeDetailModule = (): RecipeDetailModule => {
         URL: "/"
       }
     ],
+    buttonTextRelatedPosts: "Meer producten",
+    buttonURLRelatedPosts: "/",
     id: uuid(),
     topMargin: "",
     bottomMargin: "",
