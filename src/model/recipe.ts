@@ -18,4 +18,7 @@ export class Recipe {
 
   @ApiModelProperty()
   public buttonText: string;
+
+  @ApiModelProperty()
+  public link: string;
 }

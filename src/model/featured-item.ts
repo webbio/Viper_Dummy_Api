@@ -34,7 +34,8 @@ export const generateDummyFeaturedItemModule = (): FeaturedItemModule => {
         numPeople: "1 persoon",
         content: "Soba met frisse gember-sojasaus",
         category: "Recept",
-        buttonText: "Bekijk meer recepten"
+        buttonText: "Bekijk meer recepten",
+        link: "./"
       },
       {
         imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg",
@@ -42,7 +43,8 @@ export const generateDummyFeaturedItemModule = (): FeaturedItemModule => {
         numPeople: "2 persoon",
         content: "Yaki soba (gebakken sobanoedels)",
         category: "Recept",
-        buttonText: "Bekijk meer recepten"
+        buttonText: "Bekijk meer recepten",
+        link: "./"
       },
       {
         imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg",
@@ -50,7 +52,8 @@ export const generateDummyFeaturedItemModule = (): FeaturedItemModule => {
         numPeople: "3 persoon",
         content: "Udon met daikon in miso-tamarisaus",
         category: "Recept",
-        buttonText: "Bekijk meer recepten"
+        buttonText: "Bekijk meer recepten",
+        link: "./"
       }
     ]
   } as FeaturedItemModule;
