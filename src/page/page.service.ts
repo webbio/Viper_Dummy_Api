@@ -9,6 +9,7 @@ import { generateDummyInfoHeaderModule } from "src/model/info-header-module";
 import { generateBodyTextModule } from "src/model/bodytext-module";
 import { generateDummyFooterModule } from "src/model/footer-component";
 import { generateDummySocialMediaButtons } from "src/model/socialMediaButtons";
+import { generateBodyTextExpandedModule } from "src/model/bodytext-expanded-module";
 
 @Injectable()
 export class PageService {
@@ -36,7 +37,7 @@ export class PageService {
       id: uuid(),
       route: "https://terrasana.com/playground",
       description: "Test Page for building modules",
-      wordPressPostModules: [generateDummyCTAModule()]
+      wordPressPostModules: [generateBodyTextExpandedModule()]
     } as PageModel
   ];
 
