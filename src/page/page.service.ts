@@ -2,30 +2,18 @@ import { Injectable } from "@nestjs/common";
 import { PageModel } from "./page.model";
 import * as uuid from "uuid";
 import * as _ from "lodash";
-import {
-  WelcomeModule,
-  generateDummyWelcomeModule
-} from "src/model/welcome-module";
-import {
-  NavBarModule,
-  generateDummyNavBarModule
-} from "src/model/nav-bar-module";
+import { WelcomeModule, generateDummyWelcomeModule } from "src/model/welcome-module";
+import { NavBarModule, generateDummyNavBarModule } from "src/model/nav-bar-module";
 import { generateDummyCTAModule } from "src/model/cta-module";
 import { generateDummyInfoHeaderModule } from "src/model/info-header-module";
 import { generateBodyTextModule } from "src/model/bodytext-module";
 import { generateDummyFooterModule } from "src/model/footer-component";
 import { generateDummySocialMediaButtons } from "src/model/socialMediaButtons";
 import { OurTeamModule } from "src/model/ourTeam-module";
-import {
-  generateDummyContactModule,
-  ContactModule
-} from "src/model/contact-module";
+import { generateDummyContactModule, ContactModule } from "src/model/contact-module";
 import { generateDummyOurTeamModule } from "src/model/ourTeam-module";
-import {
-  generateDummySalePointModule,
-  SalePointModule
-} from "src/model/sale-point-module";
-import { generateBodyTextExpandedModule } from "src/model/bodytext-expanded-module";
+import { generateDummySalePointModule, SalePointModule } from "src/model/sale-point-module";
+import { generateBodyTextExpandedModule, BodyTextExpandedModule } from "src/model/bodytext-expanded-module";
 
 @Injectable()
 export class PageService {
@@ -51,16 +39,13 @@ export class PageService {
       id: uuid(),
       route: "https://terrasana.com/about-us",
       description: "Home",
-      wordPressPostModules: [
-        generateDummyCTAModule(),
-        generateDummyInfoHeaderModule()
-      ]
+      wordPressPostModules: [generateDummyCTAModule(), generateDummyInfoHeaderModule()]
     } as PageModel,
     {
       id: uuid(),
       route: "https://terrasana.com/playground",
       description: "Test Page for building modules",
-      wordPressPostModules: [generateDummyContactModule()]
+      wordPressPostModules: [generateBodyTextExpandedModule()]
     } as PageModel
   ];
 
