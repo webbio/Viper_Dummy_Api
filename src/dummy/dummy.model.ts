@@ -8,7 +8,7 @@ import { SocialMediaButtons } from "src/model/social-media-buttons";
 import { InfoHeader } from "src/model/info-header-module";
 import { BodyTextModule } from "src/model/bodytext-module";
 import { WelcomeModule } from "src/model/welcome-module";
-import { OurTeamModule } from "src/model/ourTeam-module";
+import { OurTeamModule } from "src/model/our-team-module";
 import { ContactModule } from "src/model/contact-module";
 import { ProductOverviewModule } from "src/model/product-overview";
 import { SalePointModule } from "src/model/sale-point-module";

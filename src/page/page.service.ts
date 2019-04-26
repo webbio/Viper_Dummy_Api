@@ -15,12 +15,12 @@ import { generateDummyInfoHeaderModule } from "src/model/info-header-module";
 import { generateBodyTextModule } from "src/model/bodytext-module";
 import { generateDummyFooterModule } from "src/model/footer-component";
 import { generateDummySocialMediaButtons } from "src/model/social-media-buttons";
-import { OurTeamModule } from "src/model/ourTeam-module";
+import { OurTeamModule } from "src/model/our-team-module";
 import {
   generateDummyContactModule,
   ContactModule
 } from "src/model/contact-module";
-import { generateDummyOurTeamModule } from "src/model/ourTeam-module";
+import { generateDummyOurTeamModule } from "src/model/our-team-module";
 import {
   generateDummySalePointModule,
   SalePointModule
