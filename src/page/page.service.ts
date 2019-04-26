@@ -25,7 +25,10 @@ import {
   generateDummySalePointModule,
   SalePointModule
 } from "src/model/sale-point-module";
-import { generateBodyTextExpandedModule } from "src/model/bodytext-expanded-module";
+import {
+  generateBodyTextExpandedModule,
+  BodyTextExpandedModule
+} from "src/model/bodytext-expanded-module";
 
 @Injectable()
 export class PageService {
