@@ -8,6 +8,7 @@ import { SocialMediaButtons } from "src/model/socialMediaButtons";
 import { InfoHeader } from "src/model/info-header-module";
 import { BodyTextModule } from "src/model/bodytext-module";
 import { WelcomeModule } from "src/model/welcome-module";
+import { SalePointModule } from "src/model/sale-point-module";
 import { BodyTextExpandedModule } from "src/model/bodytext-expanded-module";
 
 export class DummyModel {
@@ -44,6 +45,9 @@ export class DummyModel {
 
   @ApiModelProperty()
   public welcomeModule?: WelcomeModule;
+
+  @ApiModelProperty()
+  public salePointModule?: SalePointModule;
 
   @ApiModelProperty()
   public bodyTextExpandedModule?: BodyTextExpandedModule;
