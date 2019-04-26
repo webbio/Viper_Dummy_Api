@@ -14,6 +14,10 @@ import { generateDummyContactModule, ContactModule } from "src/model/contact-mod
 import { generateDummyOurTeamModule } from "src/model/ourTeam-module";
 import { generateDummySalePointModule, SalePointModule } from "src/model/sale-point-module";
 import { generateBodyTextExpandedModule, BodyTextExpandedModule } from "src/model/bodytext-expanded-module";
+import { generateDummyItemOverviewModule } from "src/model/item-overview-module";
+import { generateDummyRecipeDetailModule } from "src/model/recipe-detail-module";
+import { generateDummyToggleModule } from "src/model/toggle-module";
+import { generateDummyInstagramWallModule } from "src/model/instagram-wall";
 
 @Injectable()
 export class PageService {
@@ -23,16 +27,14 @@ export class PageService {
       route: "https://terrasana.com/",
       description: "Homepage with modules",
       wordPressPostModules: [
-        generateDummyNavBarModule() as NavBarModule,
-        generateDummyWelcomeModule() as WelcomeModule,
-        generateBodyTextModule(),
-        generateDummyInfoHeaderModule(),
-        generateDummyCTAModule(),
-        generateDummyFooterModule(),
-        generateDummySalePointModule() as SalePointModule,
-        generateDummyOurTeamModule() as OurTeamModule,
-        generateDummyContactModule() as ContactModule
-        // generateDummyProductOverviewModule() as ProductOverviewModule,
+        generateDummySalePointModule(),
+        generateDummyOurTeamModule(),
+        generateDummyContactModule(),
+        generateBodyTextExpandedModule(),
+        generateDummyItemOverviewModule(),
+        generateDummyRecipeDetailModule(),
+        generateDummyInstagramWallModule(),
+        generateDummyInfoHeaderModule()
       ]
     } as PageModel,
     {
