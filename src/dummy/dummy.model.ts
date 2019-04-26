@@ -14,6 +14,16 @@ import { ProductOverviewModule } from "src/model/product-overview";
 import { SalePointModule } from "src/model/sale-point-module";
 import { BodyTextExpandedModule } from "src/model/bodytext-expanded-module";
 import { InstagramWalllModule } from "src/model/instagram-wall";
+import { ItemOverviewModule } from "src/model/item-overview-module";
+import { CardModel, CardPaginationReturn } from "src/card/card.model";
+import { HowToModel } from "src/model/how-to-model";
+import { IngredientModel } from "src/model/ingredient-model";
+import { ItemRecipeInfo } from "src/model/item-recipe-info";
+import { RecipeDetailModule } from "src/model/recipe-detail-module";
+import { RecipeHeadCard } from "src/model/recipe-head-card";
+import { RelatedProduct } from "src/model/related-product";
+import { ToggleModule } from "src/model/toggle-module";
+import { ExpandablePanel } from "src/model/expandable-panel";
 
 export class DummyModel {
   @ApiModelProperty()
@@ -51,6 +61,33 @@ export class DummyModel {
   public welcomeModule?: WelcomeModule;
 
   @ApiModelProperty()
+  public itemOverviewModule?: ItemOverviewModule;
+
+  @ApiModelProperty()
+  public card?: CardModel;
+
+  @ApiModelProperty()
+  public cardPaginationReturn?: CardPaginationReturn;
+
+  @ApiModelProperty()
+  public howTo?: HowToModel;
+
+  @ApiModelProperty()
+  public ingredientModel?: IngredientModel;
+
+  @ApiModelProperty()
+  public itemRecipeInfo?: ItemRecipeInfo;
+
+  @ApiModelProperty()
+  public recipeDetailModule?: RecipeDetailModule;
+
+  @ApiModelProperty()
+  public recipeHeadCard?: RecipeHeadCard;
+
+  @ApiModelProperty()
+  public relatedProduct?: RelatedProduct;
+
+  @ApiModelProperty()
   public salePointModule?: SalePointModule;
 
   @ApiModelProperty()
@@ -67,4 +104,10 @@ export class DummyModel {
 
   @ApiModelProperty()
   public InstagramWalllModule?: InstagramWalllModule;
+
+  @ApiModelProperty()
+  public toggleModule?: ToggleModule;
+
+  @ApiModelProperty()
+  public expandablePanel?: ExpandablePanel;
 }
