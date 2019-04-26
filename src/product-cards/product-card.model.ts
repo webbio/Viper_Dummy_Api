@@ -1,7 +1,7 @@
 import { WordPressPostModule } from "src/model/wordpress-post-module";
 import { ApiModelProperty } from "@nestjs/swagger";
 
-export class ProductCardModel extends WordPressPostModule {
+export class ProductOverviewCardModel extends WordPressPostModule {
   @ApiModelProperty()
   public link?: string;
   @ApiModelProperty()
@@ -21,6 +21,6 @@ export class ProductCardModel extends WordPressPostModule {
 }
 
 export class ProductCardsFilterReturn extends WordPressPostModule {
-  @ApiModelProperty({ type: [ProductCardModel] })
-  public productOverviewCard: ProductCardModel[];
+  @ApiModelProperty({ type: [ProductOverviewCardModel] })
+  public productOverviewCard: ProductOverviewCardModel[];
 }
