@@ -13,6 +13,7 @@ import { OurTeamModule } from "src/model/ourTeam-module";
 import { ContactModule } from "src/model/contact-module";
 import { ProductOverviewModule } from "src/model/product-overview";
 import { SidebarModule } from "src/model/sidebar-module";
+import { ProductCardsFilterReturn } from "src/product-cards/product-card.model";
 
 export class DummyModel {
   @ApiModelProperty()
@@ -63,4 +64,7 @@ export class DummyModel {
 
   @ApiModelProperty()
   public sidebarModule?: SidebarModule;
+
+  @ApiModelProperty()
+  public productCardFilter?: ProductCardsFilterReturn;
 }
