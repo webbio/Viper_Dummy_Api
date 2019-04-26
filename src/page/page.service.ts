@@ -14,6 +14,7 @@ import { generateDummyCTAModule } from "src/model/cta-module";
 import { generateDummyInfoHeaderModule } from "src/model/info-header-module";
 import { generateBodyTextModule } from "src/model/bodytext-module";
 import { generateDummyFooterModule } from "src/model/footer-component";
+<<<<<<< HEAD
 import { generateDummySocialMediaButtons } from "src/model/social-media-buttons";
 import { OurTeamModule } from "src/model/ourTeam-module";
 import {
@@ -29,6 +30,10 @@ import {
   generateBodyTextExpandedModule,
   BodyTextExpandedModule
 } from "src/model/bodytext-expanded-module";
+=======
+import { generateDummySocialMediaButtons } from "src/model/socialMediaButtons";
+import { generateDummyInstagramWallModule, InstagramWalllModule } from "src/model/instagram-wall";
+>>>>>>> dev_daniele
 
 @Injectable()
 export class PageService {
@@ -44,10 +49,14 @@ export class PageService {
         generateDummyInfoHeaderModule(),
         generateDummyCTAModule(),
         generateDummyFooterModule(),
+<<<<<<< HEAD
         generateDummySalePointModule() as SalePointModule,
         generateDummyOurTeamModule() as OurTeamModule,
         generateDummyContactModule() as ContactModule
         // generateDummyProductOverviewModule() as ProductOverviewModule,
+=======
+        generateDummyInstagramWallModule() as InstagramWalllModule
+>>>>>>> dev_daniele
       ]
     } as PageModel,
     {
@@ -63,10 +72,14 @@ export class PageService {
       id: uuid(),
       route: "https://terrasana.com/playground",
       description: "Test Page for building modules",
+<<<<<<< HEAD
       wordPressPostModules: [
         generateDummyContactModule(),
         generateDummyOurTeamModule()
       ]
+=======
+      wordPressPostModules: [generateDummyInstagramWallModule()]
+>>>>>>> dev_daniele
     } as PageModel
   ];
 

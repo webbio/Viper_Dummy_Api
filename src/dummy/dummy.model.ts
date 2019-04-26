@@ -13,6 +13,7 @@ import { ContactModule } from "src/model/contact-module";
 import { ProductOverviewModule } from "src/model/product-overview";
 import { SalePointModule } from "src/model/sale-point-module";
 import { BodyTextExpandedModule } from "src/model/bodytext-expanded-module";
+import { InstagramWalllModule } from "src/model/instagram-wall";
 
 export class DummyModel {
   @ApiModelProperty()
@@ -63,4 +64,7 @@ export class DummyModel {
 
   @ApiModelProperty()
   public bodyTextExpandedModule?: BodyTextExpandedModule;
+
+  @ApiModelProperty()
+  public InstagramWalllModule?: InstagramWalllModule;
 }
