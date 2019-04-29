@@ -13,19 +13,23 @@ export const generateDummySocialMediaButtons = (): SocialMediaButtons => {
     footerButtons: [
       {
         href: "fb",
-        icon: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/facebook.svg"
+        icon:
+          "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/facebook.svg"
       },
       {
         href: "linked",
-        icon: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/linkedin.svg"
+        icon:
+          "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/linkedin.svg"
       },
       {
         href: "twitter",
-        icon: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/twitter.svg"
+        icon:
+          "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/twitter.svg"
       },
       {
         href: "mail",
-        icon: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/mail.svg"
+        icon:
+          "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/mail.svg"
       }
     ],
 

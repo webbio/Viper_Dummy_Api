@@ -10,6 +10,12 @@ import { generateBodyTextModule } from "src/model/bodytext-module";
 import { generateDummyFooterModule } from "src/model/footer-component";
 import { generateDummyInstagramWallModule, InstagramWalllModule } from "src/model/instagram-wall";
 import { generateDummyFeaturedItemModule, FeaturedItemModule } from "src/model/featured-item";
+import { generateDummySocialMediaButtons } from "src/model/social-media-buttons";
+import { OurTeamModule } from "src/model/our-team-module";
+import { generateDummyContactModule, ContactModule } from "src/model/contact-module";
+import { generateDummyOurTeamModule } from "src/model/our-team-module";
+import { generateDummySalePointModule, SalePointModule } from "src/model/sale-point-module";
+import { generateBodyTextExpandedModule, BodyTextExpandedModule } from "src/model/bodytext-expanded-module";
 
 @Injectable()
 export class PageService {
@@ -26,7 +32,11 @@ export class PageService {
         generateDummyCTAModule(),
         generateDummyFooterModule(),
         generateDummyInstagramWallModule() as InstagramWalllModule,
-        generateDummyFeaturedItemModule() as FeaturedItemModule
+        generateDummyFeaturedItemModule() as FeaturedItemModule,
+        generateDummySalePointModule() as SalePointModule,
+        generateDummyOurTeamModule() as OurTeamModule,
+        generateDummyContactModule() as ContactModule
+        // generateDummyProductOverviewModule() as ProductOverviewModule,
       ]
     } as PageModel,
     {
