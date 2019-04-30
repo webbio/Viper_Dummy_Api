@@ -41,27 +41,32 @@ export const generateDummySalePointModule = (): SalePointModule => {
         url: "https://www.natuurwinkel.nl/"
       },
       {
-        logo: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/SalePoint/ekoplaza.jpg",
+        logo:
+          "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/SalePoint/ekoplaza.jpg",
         tooltip: "Ekoplaza",
         url: "https://www.ekoplaza.nl"
       },
       {
-        logo: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/SalePoint/estafette.jpg",
+        logo:
+          "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/SalePoint/estafette.jpg",
         tooltip: "Estafette",
         url: "https://www.odin.nl/"
       },
       {
-        logo: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/SalePoint/marqt.jpg",
+        logo:
+          "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/SalePoint/marqt.jpg",
         tooltip: "Marqt",
         url: "https://www.marqt.nl/"
       },
       {
-        logo: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/SalePoint/organic.jpg",
+        logo:
+          "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/SalePoint/organic.jpg",
         tooltip: "Organic",
         url: "https://www.organicfoodforyou.nl/"
       },
       {
-        logo: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/SalePoint/gezondheidswinkel.png",
+        logo:
+          "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/SalePoint/gezondheidswinkel.png",
         tooltip: "Gezondheidswinkel",
         url: "https://www.gezondheidswinkel.nl"
       }
