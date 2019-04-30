@@ -8,6 +8,8 @@ import { generateDummyCTAModule } from "src/model/cta-module";
 import { generateDummyInfoHeaderModule } from "src/model/info-header-module";
 import { generateBodyTextModule, getHomepageBodyTextHtml } from "src/model/bodytext-module";
 import { generateDummyFooterModule } from "src/model/footer-component";
+import { generateDummyInstagramWallModule, InstagramWalllModule } from "src/model/instagram-wall";
+import { generateDummyFeaturedItemModule, FeaturedItemModule } from "src/model/featured-item";
 import { generateDummySocialMediaButtons } from "src/model/social-media-buttons";
 import { OurTeamModule } from "src/model/our-team-module";
 import { generateDummyContactModule, ContactModule } from "src/model/contact-module";
@@ -31,6 +33,8 @@ export class PageService {
         generateDummyInfoHeaderModule(),
         generateDummyCTAModule(),
         generateDummyFooterModule(),
+        generateDummyInstagramWallModule() as InstagramWalllModule,
+        generateDummyFeaturedItemModule() as FeaturedItemModule,
         generateDummySalePointModule() as SalePointModule,
         generateDummyOurTeamModule() as OurTeamModule,
         generateDummyContactModule() as ContactModule

@@ -8,6 +8,8 @@ import { SocialMediaButtons } from "src/model/social-media-buttons";
 import { InfoHeader } from "src/model/info-header-module";
 import { BodyTextModule } from "src/model/bodytext-module";
 import { WelcomeModule } from "src/model/welcome-module";
+import { InstagramWalllModule } from "src/model/instagram-wall";
+import { FeaturedItemModule } from "src/model/featured-item";
 import { OurTeamModule } from "src/model/our-team-module";
 import { ContactModule } from "src/model/contact-module";
 import { ProductOverviewModule } from "src/model/product-overview";
@@ -49,6 +51,12 @@ export class DummyModel {
 
   @ApiModelProperty()
   public welcomeModule?: WelcomeModule;
+
+  @ApiModelProperty()
+  public InstagramWalllModule?: InstagramWalllModule;
+
+  @ApiModelProperty()
+  public FeaturedItemModule?: FeaturedItemModule;
 
   @ApiModelProperty()
   public salePointModule?: SalePointModule;
