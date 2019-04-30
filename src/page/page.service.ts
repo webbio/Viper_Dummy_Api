@@ -14,6 +14,7 @@ import { generateDummyContactModule, ContactModule } from "src/model/contact-mod
 import { generateDummyOurTeamModule } from "src/model/our-team-module";
 import { generateDummySalePointModule, SalePointModule } from "src/model/sale-point-module";
 import { generateBodyTextExpandedModule, BodyTextExpandedModule } from "src/model/bodytext-expanded-module";
+import { generateNotYetImplemented } from "src/model/not-yet-implemented-module";
 
 @Injectable()
 export class PageService {
@@ -25,6 +26,7 @@ export class PageService {
       wordPressPostModules: [
         generateDummyNavBarModule() as NavBarModule,
         generateDummyWelcomeModule() as WelcomeModule,
+        generateNotYetImplemented("Module Name Test"),
         generateBodyTextModule(getHomepageBodyTextHtml()),
         generateDummyInfoHeaderModule(),
         generateDummyCTAModule(),
@@ -37,15 +39,111 @@ export class PageService {
     } as PageModel,
     {
       id: uuid(),
-      route: "https://terrasana.com/about-us",
-      description: "Home",
-      wordPressPostModules: [generateDummyCTAModule(), generateDummyInfoHeaderModule()]
+      route: "https://terrasana.com/product-line-overview",
+      description: "Homepage",
+      wordPressPostModules: [generateDummyNavBarModule()]
     } as PageModel,
     {
       id: uuid(),
-      route: "https://terrasana.com/playground",
-      description: "Test Page for building modules",
-      wordPressPostModules: [generateDummyContactModule(), generateDummyOurTeamModule()]
+      route: "https://terrasana.com/product-line-single",
+      description: "Productlijnen overzicht",
+      wordPressPostModules: [generateDummyNavBarModule()]
+    } as PageModel,
+    {
+      id: uuid(),
+      route: "https://terrasana.com/product-line-story-single",
+      description: "Productlijnen overzicht",
+      wordPressPostModules: [generateDummyNavBarModule()]
+    } as PageModel,
+    {
+      id: uuid(),
+      route: "https://terrasana.com/product-group",
+      description: "Productgroepen",
+      wordPressPostModules: [generateDummyNavBarModule()]
+    } as PageModel,
+    {
+      id: uuid(),
+      route: "https://terrasana.com/product-single",
+      description: "Product",
+      wordPressPostModules: [generateDummyNavBarModule()]
+    } as PageModel,
+    {
+      id: uuid(),
+      route: "https://terrasana.com/news-overview",
+      description: "Nieuws",
+      wordPressPostModules: [generateDummyNavBarModule()]
+    } as PageModel,
+    {
+      id: uuid(),
+      route: "https://terrasana.com/news-single",
+      description: "Nieuws",
+      wordPressPostModules: [generateDummyNavBarModule()]
+    } as PageModel,
+    {
+      id: uuid(),
+      route: "https://terrasana.com/recipe-overview",
+      description: "Recepten",
+      wordPressPostModules: [generateDummyNavBarModule()]
+    } as PageModel,
+    {
+      id: uuid(),
+      route: "https://terrasana.com/recipe-single",
+      description: "Recepten",
+      wordPressPostModules: [generateDummyNavBarModule()]
+    } as PageModel,
+    {
+      id: uuid(),
+      route: "https://terrasana.com/faq-overview",
+      description: "Veelgestelde vragen",
+      wordPressPostModules: [generateDummyNavBarModule()]
+    } as PageModel,
+    {
+      id: uuid(),
+      route: "https://terrasana.com/faq-single",
+      description: "Veelgestelde vragen",
+      wordPressPostModules: [generateDummyNavBarModule()]
+    } as PageModel,
+    {
+      id: uuid(),
+      route: "https://terrasana.com/about-us",
+      description: "Informatief",
+      wordPressPostModules: [generateDummyNavBarModule()]
+    } as PageModel,
+    {
+      id: uuid(),
+      route: "https://terrasana.com/contact",
+      description: "Contact",
+      wordPressPostModules: [generateDummyNavBarModule()]
+    } as PageModel,
+    {
+      id: uuid(),
+      route: "https://terrasana.com/business",
+      description: "Zakelijk",
+      wordPressPostModules: [generateDummyNavBarModule()]
+    } as PageModel,
+    {
+      id: uuid(),
+      route: "https://terrasana.com/business-downloads-product-line",
+      description: "Zakelijk",
+      wordPressPostModules: [generateDummyNavBarModule()]
+    } as PageModel,
+    {
+      id: uuid(),
+      route: "https://terrasana.com/business-downloads-product-line-detail",
+      description: "Zakelijk",
+      wordPressPostModules: [generateDummyNavBarModule()]
+    } as PageModel,
+    {
+      id: uuid(),
+      route: "https://terrasana.com/business-login",
+      description: "Zakelijk",
+      wordPressPostModules: [generateDummyNavBarModule()]
+    } as PageModel,
+    {
+      id: uuid(),
+      route: "https://terrasana.com/business-new-account",
+      description: "Zakelijk",
+      wordPressPostModules: [generateDummyNavBarModule()]
     } as PageModel
   ];
 

@@ -21,15 +21,15 @@ export const generateDummyNavBarModule = (): NavBarModule => {
   return {
     topLinks: [
       { content: "Over ons", route: "about-us" },
-      { content: "Nieuws", route: "news" },
-      { content: "FAQ", route: "news" },
-      { content: "Zakelijk", route: "news" },
-      { content: "Contact", route: "news" }
+      { content: "Nieuws", route: "news-overview" },
+      { content: "FAQ", route: "faq-overview" },
+      { content: "Zakelijk", route: "business" },
+      { content: "Contact", route: "contact" }
     ],
     botLinks: [
-      { content: "Producten", route: "products" },
-      { content: "Recepten", route: "products" },
-      { content: "Verkooppunten", route: "products" }
+      { content: "Producten", route: "product-line-overview" },
+      { content: "Recepten", route: "recipe-overview" },
+      { content: "Verkooppunten", route: "about-us" }
     ],
     first_logo: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/group.svg",
     second_logo: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/group-2.svg",
