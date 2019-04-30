@@ -18,6 +18,7 @@ import { generateDummyItemOverviewModule } from "src/model/item-overview-module"
 import { generateDummyRecipeDetailModule } from "src/model/recipe-detail-module";
 import { generateDummyToggleModule } from "src/model/toggle-module";
 import { generateDummyInstagramWallModule } from "src/model/instagram-wall";
+import { generateDummyFeaturedItemModule } from "src/model/featured-item";
 
 @Injectable()
 export class PageService {
@@ -31,9 +32,10 @@ export class PageService {
         generateDummyOurTeamModule(),
         generateDummyContactModule(),
         generateBodyTextExpandedModule(),
-        generateDummyItemOverviewModule(),
         generateDummyRecipeDetailModule(),
+        generateDummyToggleModule(),
         generateDummyInstagramWallModule(),
+        generateDummyFeaturedItemModule(),
         generateDummyInfoHeaderModule()
       ]
     } as PageModel,

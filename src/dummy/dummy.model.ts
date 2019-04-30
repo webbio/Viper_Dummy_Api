@@ -24,6 +24,7 @@ import { RecipeHeadCard } from "src/model/recipe-head-card";
 import { RelatedProduct } from "src/model/related-product";
 import { ToggleModule } from "src/model/toggle-module";
 import { ExpandablePanel } from "src/model/expandable-panel";
+import { FeaturedItemModule } from "src/model/featured-item";
 
 export class DummyModel {
   @ApiModelProperty()
@@ -110,4 +111,7 @@ export class DummyModel {
 
   @ApiModelProperty()
   public expandablePanel?: ExpandablePanel;
+
+  @ApiModelProperty()
+  public FeaturedItemModule?: FeaturedItemModule;
 }
