@@ -56,6 +56,8 @@ export class DummyModel {
 
   @ApiModelProperty()
   public FeaturedItemModule?: FeaturedItemModule;
+
+  @ApiModelProperty()
   public salePointModule?: SalePointModule;
 
   @ApiModelProperty()

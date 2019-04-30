@@ -49,7 +49,7 @@ export class PageService {
       id: uuid(),
       route: "https://terrasana.com/playground",
       description: "Test Page for building modules",
-      wordPressPostModules: [generateDummyInstagramWallModule()]
+      wordPressPostModules: [generateDummyFeaturedItemModule()]
     } as PageModel
   ];
 
