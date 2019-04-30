@@ -1,6 +1,6 @@
 import { ApiModelProperty } from "@nestjs/swagger";
 
-export class buttonCTA {
+export class CTAButton {
   @ApiModelProperty()
   public title: string;
   @ApiModelProperty()
@@ -15,4 +15,6 @@ export class buttonCTA {
   public icon: string;
   @ApiModelProperty()
   public onClick: string;
+  @ApiModelProperty()
+  public location?: "left" | "center" | "right";
 }
