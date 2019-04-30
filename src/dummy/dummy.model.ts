@@ -18,6 +18,8 @@ import { RecipeHeadCard } from "src/model/recipe-head-card";
 import { RelatedProduct } from "src/model/related-product";
 import { ToggleModule } from "src/model/toggle-module";
 import { ExpandablePanel } from "src/model/expandable-panel";
+import { InstagramWalllModule } from "src/model/instagram-wall";
+import { FeaturedItemModule } from "src/model/featured-item";
 import { OurTeamModule } from "src/model/our-team-module";
 import { ContactModule } from "src/model/contact-module";
 import { ProductOverviewModule } from "src/model/product-overview";
@@ -85,6 +87,10 @@ export class DummyModel {
 
   @ApiModelProperty()
   public relatedProduct?: RelatedProduct;
+  public InstagramWalllModule?: InstagramWalllModule;
+
+  @ApiModelProperty()
+  public FeaturedItemModule?: FeaturedItemModule;
 
   @ApiModelProperty()
   public salePointModule?: SalePointModule;

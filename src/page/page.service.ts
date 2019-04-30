@@ -11,6 +11,8 @@ import { generateDummyFooterModule } from "src/model/footer-component";
 import { generateDummyRecipeDetailModule, RecipeDetailModule } from "src/model/recipe-detail-module";
 import { generateDummyToggleModule, ToggleModule } from "src/model/toggle-module";
 import { generateDummyItemOverviewModule, ItemOverviewModule } from "src/model/item-overview-module";
+import { generateDummyInstagramWallModule, InstagramWalllModule } from "src/model/instagram-wall";
+import { generateDummyFeaturedItemModule, FeaturedItemModule } from "src/model/featured-item";
 import { generateDummySocialMediaButtons } from "src/model/social-media-buttons";
 import { OurTeamModule } from "src/model/our-team-module";
 import { generateDummyContactModule, ContactModule } from "src/model/contact-module";
@@ -33,6 +35,8 @@ export class PageService {
         generateDummyCTAModule(),
         generateDummyFooterModule(),
         generateDummyItemOverviewModule() as ItemOverviewModule,
+        generateDummyInstagramWallModule() as InstagramWalllModule,
+        generateDummyFeaturedItemModule() as FeaturedItemModule,
         generateDummySalePointModule() as SalePointModule,
         generateDummyOurTeamModule() as OurTeamModule,
         generateDummyContactModule() as ContactModule
@@ -49,7 +53,11 @@ export class PageService {
       id: uuid(),
       route: "https://terrasana.com/playground",
       description: "Test Page for building modules",
-      wordPressPostModules: [generateDummyCTAModule(), generateDummyItemOverviewModule()]
+      wordPressPostModules: [
+        generateDummyCTAModule(),
+        generateDummyFeaturedItemModule(),
+        generateDummyItemOverviewModule()
+      ]
     } as PageModel
   ];
 
