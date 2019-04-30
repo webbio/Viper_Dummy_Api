@@ -1,18 +1,19 @@
 import { WordPressPostModule } from "./wordpress-post-module";
-import * as uuid from "uuid";
 import { ApiModelProperty } from "@nestjs/swagger";
+import { FilterModule } from "./filter";
+import { RecentPostsModule } from "./recent-posts";
 
-export class SidebarModule extends WordPressPostModule {
+export class SidebarModule {
   @ApiModelProperty()
   public placeholder?: string;
-  @ApiModelProperty()
-  public filters?: any;
+  @ApiModelProperty({ type: [FilterModule] })
+  public filters?: FilterModule[];
   @ApiModelProperty()
   public sidebarBox?: any;
   @ApiModelProperty()
   public searchItem?: any;
-  @ApiModelProperty()
-  public recentPosts?: any;
+  @ApiModelProperty({ type: [RecentPostsModule] })
+  public recentPosts?: RecentPostsModule[];
 }
 
 export const generateDummySidebarModule = (): SidebarModule => {
@@ -20,54 +21,76 @@ export const generateDummySidebarModule = (): SidebarModule => {
     placeholder: "Zoek je product",
     filters: [
       {
-        args: [
+        options: [
           {
             label: "Glutenvrij",
-            slug: "Glutenvrij"
+            slug: "Glutenvrij",
+            isClicked: false,
+            id: 1
           },
           {
             label: "Vegetarisch",
-            slug: "vegetarisch"
+            slug: "vegetarisch",
+            isClicked: false,
+            id: 2
           },
           {
             label: "Veganistisch",
-            slug: "veganistisch"
+            slug: "veganistisch",
+            isClicked: false,
+            id: 3
           }
         ],
-        title: "Snel filteren"
+        title: "Snel filteren",
+        max: 2
       },
       {
-        args: [
+        options: [
           {
             label: "Zeewieren",
-            slug: "zeewieren"
+            slug: "zeewieren",
+            isClicked: false,
+            id: 4
           },
           {
             label: "Paddenstoelen en seitan",
-            slug: "paddenstoelen-en-seitan"
+            slug: "paddenstoelen-en-seitan",
+            isClicked: false,
+            id: 5
           },
           {
             label: "Veganistisch",
-            slug: "veganistisch-2"
+            slug: "veganistisch-2",
+            isClicked: false,
+            id: 6
           },
           {
             label: "Sojasauzen",
-            slug: "sojasauzen"
+            slug: "sojasauzen",
+            isClicked: false,
+            id: 7
           },
           {
             label: "Rijst, bonen, zaden",
-            slug: "rijst-bonen-zaden"
+            slug: "rijst-bonen-zaden",
+            isClicked: false,
+            id: 8
           },
           {
             label: "Paddenstoelen en seitan",
-            slug: "paddenstoelenenseitan"
+            slug: "paddenstoelenenseitan",
+            isClicked: false,
+            id: 9
           },
           {
             label: "Noedels",
-            slug: "noedels"
+            slug: "noedels",
+            isClicked: false,
+            id: 10
           }
         ],
-        title: "Producten"
+        title: "Producten",
+        max: 4
       }
     ],
     sidebarBox: "",
@@ -76,58 +99,53 @@ export const generateDummySidebarModule = (): SidebarModule => {
     },
     recentPosts: [
       {
-        args: [
+        posts: [
           {
             image: "@assets/images/rectangle-3.png",
             link: "/",
-            title: "Recept van de maand: freakshake met…"
+            content: "Recept van de maand: freakshake met…"
           },
           {
             image: "@assets/images/rectangle-3.png",
             link: "/",
-            title: "Aenean ullamcorper mi sit amet lacus accumsan..."
+            content: "Aenean ullamcorper mi sit amet lacus accumsan..."
           },
           {
             image: "@assets/images/rectangle-3.png",
             link: "/",
-            title: "Duis blandit tortor a erat"
+            content: "Duis blandit tortor a erat"
           }
         ],
         button: {
-          link: "/",
-          title: "Meer nieuws"
+          route: "/",
+          content: "Meer nieuws"
         },
         title: "News"
       },
       {
-        args: [
+        posts: [
           {
             image: "@assets/images/rectangle-3.png",
             link: "/",
-            title: "Nunc a dolor eget nisi accumsan mollis"
+            content: "Nunc a dolor eget nisi accumsan mollis"
           },
           {
             image: "@assets/images/rectangle-3.png",
             link: "/",
-            title: "Etiam vestibulum lectus ac mauris volutpat"
+            content: "Etiam vestibulum lectus ac mauris volutpat"
           },
           {
             image: "@assets/images/rectangle-3.png",
             link: "/",
-            title: "Donec vitae leo et quam facilisis tristique"
+            content: "Donec vitae leo et quam facilisis tristique"
           }
         ],
         button: {
-          link: "/",
-          title: "Meer nieuws"
+          route: "/",
+          content: "Meer nieuws"
         },
         title: "Recepten"
       }
-    ],
-
-    id: uuid(),
-    topMargin: "",
-    bottomMargin: "",
-    name: "SidebarComponent"
+    ]
   };
 };

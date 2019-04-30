@@ -73,6 +73,12 @@ export class PageService {
         generateDummyProductOverviewModule(),
         generateDummySidebarModule()
       ]
+    } as PageModel,
+    {
+      id: uuid(),
+      route: "https://terrasana.com/product",
+      description: "Test Page for building modules",
+      wordPressPostModules: [generateDummySidebarModule()]
     } as PageModel
   ];
 

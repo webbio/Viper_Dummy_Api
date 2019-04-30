@@ -2,20 +2,23 @@ import { Injectable } from "@nestjs/common";
 import { ProductCardsFilterReturn } from "./product-card.model";
 import uuid = require("uuid");
 import { generateDummyProductOverviewModule } from "src/model/product-overview";
+import { generateDummySidebarModule } from "src/model/sidebar-module";
 @Injectable()
 export class ProductCardService {
-  private GenerateCardList(length: number) {
+  /* private GenerateCardList(length: number) {
     let cardList = [];
     for (let i = 0; i <= length; i++) {}
     return cardList;
-  }
+  }*/
 
-  public getCards(filter?: string): ProductCardsFilterReturn {
-    const TOTAL_ITEMS = 1;
+  public getProducts(filter?: string): ProductCardsFilterReturn {
     // const cardList = this.GenerateCardList(TOTAL_ITEMS);
-    let cardList = [];
+    let productCardList = [];
+    let sidebar = [];
 
-    cardList.push(
+    sidebar.push(generateDummySidebarModule());
+
+    productCardList.push(
       {
         link: "/",
         title: "Noedels",
@@ -158,27 +161,27 @@ export class ProductCardService {
       }
     );
 
-    let totalItems = TOTAL_ITEMS;
     if (filter) {
-      totalItems = 0;
       filter = filter.toUpperCase();
       let filteredList = [];
-      for (let i = 0; i < TOTAL_ITEMS; i++) {
-        if (cardList[i].title.toUpperCase().includes(filter)) {
-          filteredList.push(cardList[i]);
+      for (let i = 0; i < productCardList.length; i++) {
+        if (productCardList[i].category.toUpperCase().includes(filter)) {
+          filteredList.push(productCardList[i]);
         }
       }
 
       return {
-        productOverviewCard: cardList,
+        productOverviewCard: filteredList,
+        sidebar: sidebar,
         id: "0",
         bottomMargin: "0",
         topMargin: "0",
         name: ""
       };
-    } else {
+    } else if (!filter) {
       return {
-        productOverviewCard: cardList,
+        productOverviewCard: productCardList,
+        sidebar: sidebar,
         id: "0",
         bottomMargin: "0",
         topMargin: "0",

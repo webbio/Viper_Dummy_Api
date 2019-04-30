@@ -1,5 +1,6 @@
 import { WordPressPostModule } from "src/model/wordpress-post-module";
 import { ApiModelProperty } from "@nestjs/swagger";
+import { SidebarModule } from "src/model/sidebar-module";
 
 export class ProductOverviewCardModel extends WordPressPostModule {
   @ApiModelProperty()
@@ -23,4 +24,6 @@ export class ProductOverviewCardModel extends WordPressPostModule {
 export class ProductCardsFilterReturn extends WordPressPostModule {
   @ApiModelProperty({ type: [ProductOverviewCardModel] })
   public productOverviewCard: ProductOverviewCardModel[];
+  @ApiModelProperty({ type: [SidebarModule] })
+  public sidebar: SidebarModule[];
 }

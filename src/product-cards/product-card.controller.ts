@@ -16,7 +16,7 @@ export class ProductCardController {
   })
   @Get()
   searchCards(@Query() query) {
-    const cards = this.pageService.getCards(query.filter);
+    const cards = this.pageService.getProducts(query.filter);
     return cards;
   }
 }
