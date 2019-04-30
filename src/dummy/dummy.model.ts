@@ -13,6 +13,7 @@ import { ContactModule } from "src/model/contact-module";
 import { ProductOverviewModule } from "src/model/product-overview";
 import { SalePointModule } from "src/model/sale-point-module";
 import { BodyTextExpandedModule } from "src/model/bodytext-expanded-module";
+import { NotYetImplemented } from "src/model/not-yet-implemented-module";
 
 export class DummyModel {
   @ApiModelProperty()
@@ -63,4 +64,7 @@ export class DummyModel {
 
   @ApiModelProperty()
   public bodyTextExpandedModule?: BodyTextExpandedModule;
+
+  @ApiModelProperty()
+  public notYetImplemented?: NotYetImplemented;
 }
