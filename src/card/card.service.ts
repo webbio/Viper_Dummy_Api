@@ -1,5 +1,5 @@
 import { Injectable } from "@nestjs/common";
-import { CardModel, CardPaginationReturn } from "./card.model";
+import { CardPaginationReturn } from "./card.model";
 import uuid = require("uuid");
 @Injectable()
 export class CardService {
@@ -9,12 +9,21 @@ export class CardService {
       cardList.push({
         buttonText: "Lees meer",
         category: "Recept",
-        leftItemIcon: "",
-        leftItemText: "left item",
-        picture: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.1ebed0b8.jpg",
-        rightItemIcon: "",
-        rightItemText: "right item",
-        title: `Item #${i}`,
+        cardLabels: [
+          {
+            title: "First Item",
+            icon: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/type.svg"
+          },
+          {
+            title: "Second Item",
+            icon: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/type.svg"
+          }
+        ],
+        picture: {
+          url: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.1ebed0b8.jpg",
+          alt: "item"
+        },
+        title: `Title #${i}`,
         URL: "/",
         id: uuid(),
         name: "ItemOverviewCard",
@@ -27,10 +36,9 @@ export class CardService {
 
   public getCards(skip: number, take: number, filter?: string): CardPaginationReturn {
     const TOTAL_ITEMS = 202;
-    const cardList = this.GenerateCardList(TOTAL_ITEMS);
     let paginatedList = [];
     if (skip > TOTAL_ITEMS) return null;
-    skip += 1;
+    const cardList = this.GenerateCardList(TOTAL_ITEMS);
     const finalPosition = skip + take;
     let totalItems = TOTAL_ITEMS;
     if (filter) {

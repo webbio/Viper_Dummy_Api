@@ -29,7 +29,7 @@ export const generateBodyTextExpandedModule = (): BodyTextExpandedModule => {
     bottomMargin: "0px",
     containerAlignment: "center",
     containerSize: "large",
-    name: "bodyTextExpanded",
+    name: "bodyTextExpandedModule",
     socialMediaButtons: generateDummySocialMediaButtons(),
     topMargin: "0px"
   };
