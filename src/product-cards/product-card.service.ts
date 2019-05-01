@@ -16,7 +16,7 @@ export class ProductCardService {
     let productCardList = [];
     let sidebar = [];
 
-    sidebar.push(generateDummySidebarModule());
+    //sidebar.push(generateDummySidebarModule());
 
     productCardList.push(
       {
@@ -188,5 +188,23 @@ export class ProductCardService {
         name: ""
       };
     }
+  } /*
+  private updateFilterOption(id: number): void {
+    let sidebar = [];
+
+    sidebar.push(generateDummySidebarModule());
+    console.log(sidebar);
+    for (let i = 0; sidebar.length; i++) {
+      for (let i = 0; sidebar[i].filters.length; i++) {
+        for (let i = 0; sidebar[i].filters[i].options.length; i++) {
+          if (sidebar[i].filters[i].options[i].id === id) {
+            sidebar[i].filters[i].options[i].isChecked = !sidebar[i].filters[i]
+              .options[i].isChecked;
+          }
+          console.log(sidebar[i].isChecked);
+        }
+      }
+    }
   }
+  fct = this.updateFilterOption(2);*/
 }
