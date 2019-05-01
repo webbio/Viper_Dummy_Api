@@ -19,6 +19,7 @@ import { FeaturedItemModule } from "src/model/featured-item";
 import { ToggleModule } from "src/model/toggle-module";
 import { ExpandablePanel } from "src/model/expandable-panel";
 import { CardModel } from "src/model/card-model";
+import { RecipeDetailModule } from "src/model/recipe-detail-module";
 
 export class DummyModel {
   @ApiModelProperty()
@@ -69,6 +70,9 @@ export class DummyModel {
 
   @ApiModelProperty()
   public FeaturedItemModule?: FeaturedItemModule;
+
+  @ApiModelProperty()
+  public recipeDetailModule?: RecipeDetailModule;
 
   @ApiModelProperty()
   public salePointModule?: SalePointModule;
