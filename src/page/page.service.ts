@@ -15,6 +15,8 @@ import { generateDummyContactModule, ContactModule } from "src/model/contact-mod
 import { generateDummyOurTeamModule } from "src/model/our-team-module";
 import { generateDummySalePointModule, SalePointModule } from "src/model/sale-point-module";
 import { generateBodyTextExpandedModule, BodyTextExpandedModule } from "src/model/bodytext-expanded-module";
+import { generateDummyInstagramWallModule, InstagramWalllModule } from "src/model/instagram-wall";
+import { generateDummyFeaturedItemModule, FeaturedItemModule } from "src/model/featured-item";
 
 @Injectable()
 export class PageService {
@@ -31,6 +33,8 @@ export class PageService {
         generateDummyCTAModule(),
         generateDummyFooterModule(),
         generateDummyItemOverviewModule() as ItemOverviewModule,
+        generateDummyInstagramWallModule() as InstagramWalllModule,
+        generateDummyFeaturedItemModule() as FeaturedItemModule,
         generateDummySalePointModule() as SalePointModule,
         generateDummyOurTeamModule() as OurTeamModule,
         generateDummyContactModule() as ContactModule
@@ -47,7 +51,7 @@ export class PageService {
       id: uuid(),
       route: "https://terrasana.com/playground",
       description: "Test Page for building modules",
-      wordPressPostModules: [generateDummyCTAModule(), generateDummyItemOverviewModule()]
+      wordPressPostModules: [generateDummyFeaturedItemModule()]
     } as PageModel
   ];
 

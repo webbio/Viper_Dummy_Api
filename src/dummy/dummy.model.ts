@@ -15,6 +15,8 @@ import { ContactModule } from "src/model/contact-module";
 import { ProductOverviewModule } from "src/model/product-overview";
 import { SalePointModule } from "src/model/sale-point-module";
 import { BodyTextExpandedModule } from "src/model/bodytext-expanded-module";
+import { InstagramWalllModule } from "src/model/instagram-wall";
+import { FeaturedItemModule } from "src/model/featured-item";
 
 export class DummyModel {
   @ApiModelProperty()
@@ -56,8 +58,17 @@ export class DummyModel {
 
   @ApiModelProperty()
   public card?: CardModel;
+
   @ApiModelProperty()
   public cardPaginationReturn?: CardPaginationReturn;
+
+  @ApiModelProperty()
+  public InstagramWalllModule?: InstagramWalllModule;
+
+  @ApiModelProperty()
+  public FeaturedItemModule?: FeaturedItemModule;
+
+  @ApiModelProperty()
   public salePointModule?: SalePointModule;
 
   @ApiModelProperty()
