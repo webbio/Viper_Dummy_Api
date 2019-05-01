@@ -14,7 +14,7 @@ export class ProductCardService {
   public getProducts(filter?: string): ProductCardsFilterReturn {
     // const cardList = this.GenerateCardList(TOTAL_ITEMS);
     let productCardList = [];
-    let sidebar = [];
+    //let sidebar = [];
 
     //sidebar.push(generateDummySidebarModule());
 
@@ -172,7 +172,6 @@ export class ProductCardService {
 
       return {
         productOverviewCard: filteredList,
-        sidebar: sidebar,
         id: "0",
         bottomMargin: "0",
         topMargin: "0",
@@ -181,7 +180,6 @@ export class ProductCardService {
     } else if (!filter) {
       return {
         productOverviewCard: productCardList,
-        sidebar: sidebar,
         id: "0",
         bottomMargin: "0",
         topMargin: "0",

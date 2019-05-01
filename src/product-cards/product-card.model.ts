@@ -24,6 +24,4 @@ export class ProductOverviewCardModel extends WordPressPostModule {
 export class ProductCardsFilterReturn extends WordPressPostModule {
   @ApiModelProperty({ type: [ProductOverviewCardModel] })
   public productOverviewCard: ProductOverviewCardModel[];
-  @ApiModelProperty({ type: [SidebarModule] })
-  public sidebar: SidebarModule[];
 }

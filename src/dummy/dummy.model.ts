@@ -21,6 +21,8 @@ import { ExpandablePanel } from "src/model/expandable-panel";
 import { CardModel } from "src/model/card-model";
 import { SidebarModule } from "src/model/sidebar-module";
 import { ProductCardsFilterReturn } from "src/product-cards/product-card.model";
+import { ContactForm } from "src/model/contact-form";
+import { SidebarReturn } from "src/product-filter/product-filter.model";
 
 export class DummyModel {
   @ApiModelProperty()
@@ -82,6 +84,9 @@ export class DummyModel {
   public contactModule?: ContactModule;
 
   @ApiModelProperty()
+  public ContactForm?: ContactForm;
+
+  @ApiModelProperty()
   public productOverview?: ProductOverviewModule;
 
   @ApiModelProperty()
@@ -98,4 +103,7 @@ export class DummyModel {
 
   @ApiModelProperty()
   public productCardFilter?: ProductCardsFilterReturn;
+
+  @ApiModelProperty()
+  public productSidebarFilter?: SidebarReturn;
 }

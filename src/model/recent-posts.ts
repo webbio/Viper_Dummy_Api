@@ -18,17 +18,20 @@ export const generateDummyRecentPostsModule = (): RecentPostsModule[] => {
     {
       posts: [
         {
-          image: "@assets/images/rectangle-3.png",
+          image:
+            "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/sidebar/BE17E98D-C92A-4476-8BBF-1073422F58DA.png",
           link: "/",
           content: "Recept van de maand: freakshake met…"
         },
         {
-          image: "@assets/images/rectangle-3.png",
+          image:
+            "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/sidebar/BE17E98D-C92A-4476-8BBF-1073422F58DA.png",
           link: "/",
           content: "Aenean ullamcorper mi sit amet lacus accumsan..."
         },
         {
-          image: "@assets/images/rectangle-3.png",
+          image:
+            "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/sidebar/BE17E98D-C92A-4476-8BBF-1073422F58DA.png",
           link: "/",
           content: "Duis blandit tortor a erat"
         }
@@ -37,22 +40,26 @@ export const generateDummyRecentPostsModule = (): RecentPostsModule[] => {
         route: "/",
         content: "Meer nieuws"
       },
-      title: "News"
+      title: "News",
+      max: 3
     },
     {
       posts: [
         {
-          image: "@assets/images/rectangle-3.png",
+          image:
+            "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/sidebar/BE17E98D-C92A-4476-8BBF-1073422F58DA.png",
           link: "/",
           content: "Nunc a dolor eget nisi accumsan mollis"
         },
         {
-          image: "@assets/images/rectangle-3.png",
+          image:
+            "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/sidebar/BE17E98D-C92A-4476-8BBF-1073422F58DA.png",
           link: "/",
           content: "Etiam vestibulum lectus ac mauris volutpat"
         },
         {
-          image: "@assets/images/rectangle-3.png",
+          image:
+            "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/sidebar/BE17E98D-C92A-4476-8BBF-1073422F58DA.png",
           link: "/",
           content: "Donec vitae leo et quam facilisis tristique"
         }
@@ -61,7 +68,8 @@ export const generateDummyRecentPostsModule = (): RecentPostsModule[] => {
         route: "/",
         content: "Meer nieuws"
       },
-      title: "Recepten"
+      title: "Recepten",
+      max: 2
     }
   ];
 };

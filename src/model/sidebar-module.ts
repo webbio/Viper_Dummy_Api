@@ -7,7 +7,7 @@ import {
 } from "./recent-posts";
 import uuid = require("uuid");
 
-export class SidebarModule extends WordPressPostModule {
+export class SidebarModule {
   @ApiModelProperty()
   public placeholder?: string;
   @ApiModelProperty({ type: [FilterModule] })
@@ -28,10 +28,6 @@ export const generateDummySidebarModule = (): SidebarModule => {
     searchItem: {
       placeholder: "Zoek je product"
     },
-    recentPosts: generateDummyRecentPostsModule(),
-    id: uuid(),
-    topMargin: "",
-    bottomMargin: "",
-    name: "SalePointComponent"
+    recentPosts: generateDummyRecentPostsModule()
   };
 };
