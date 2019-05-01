@@ -19,6 +19,8 @@ import { FeaturedItemModule } from "src/model/featured-item";
 import { ToggleModule } from "src/model/toggle-module";
 import { ExpandablePanel } from "src/model/expandable-panel";
 import { CardModel } from "src/model/card-model";
+import { SidebarModule } from "src/model/sidebar-module";
+import { ProductCardsFilterReturn } from "src/product-cards/product-card.model";
 
 export class DummyModel {
   @ApiModelProperty()
@@ -90,4 +92,10 @@ export class DummyModel {
 
   @ApiModelProperty()
   public expandablePanel?: ExpandablePanel;
+
+  @ApiModelProperty()
+  public sidebarModule?: SidebarModule;
+
+  @ApiModelProperty()
+  public productCardFilter?: ProductCardsFilterReturn;
 }

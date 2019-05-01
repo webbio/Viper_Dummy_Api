@@ -1,16 +1,24 @@
-import { WordPressPostModule } from "./wordpress-post-module";
-import * as uuid from "uuid";
-import { ApiModelProperty } from "@nestjs/swagger";
-import { ProductCard } from "./product-card";
+import { Injectable } from "@nestjs/common";
+import { ProductCardsFilterReturn } from "./product-card.model";
+import uuid = require("uuid");
+import { generateDummyProductOverviewModule } from "src/model/product-overview";
+import { generateDummySidebarModule } from "src/model/sidebar-module";
+@Injectable()
+export class ProductCardService {
+  /* private GenerateCardList(length: number) {
+    let cardList = [];
+    for (let i = 0; i <= length; i++) {}
+    return cardList;
+  }*/
 
-export class ProductOverviewModule extends WordPressPostModule {
-  @ApiModelProperty({ type: [ProductCard] })
-  public productCards: ProductCard[];
-}
+  public getProducts(filter?: string): ProductCardsFilterReturn {
+    // const cardList = this.GenerateCardList(TOTAL_ITEMS);
+    let productCardList = [];
+    let sidebar = [];
 
-export const generateDummyProductOverviewModule = (): ProductOverviewModule => {
-  return {
-    productCards: [
+    //sidebar.push(generateDummySidebarModule());
+
+    productCardList.push(
       {
         link: "/",
         title: "Noedels",
@@ -151,10 +159,52 @@ export const generateDummyProductOverviewModule = (): ProductOverviewModule => {
         cardVariant: "card--product",
         modifyClass: ""
       }
-    ],
-    id: uuid(),
-    topMargin: "",
-    bottomMargin: "",
-    name: "ProductOverviewModule"
-  };
-};
+    );
+
+    if (filter) {
+      filter = filter.toUpperCase();
+      let filteredList = [];
+      for (let i = 0; i < productCardList.length; i++) {
+        if (productCardList[i].category.toUpperCase().includes(filter)) {
+          filteredList.push(productCardList[i]);
+        }
+      }
+
+      return {
+        productOverviewCard: filteredList,
+        sidebar: sidebar,
+        id: "0",
+        bottomMargin: "0",
+        topMargin: "0",
+        name: ""
+      };
+    } else if (!filter) {
+      return {
+        productOverviewCard: productCardList,
+        sidebar: sidebar,
+        id: "0",
+        bottomMargin: "0",
+        topMargin: "0",
+        name: ""
+      };
+    }
+  } /*
+  private updateFilterOption(id: number): void {
+    let sidebar = [];
+
+    sidebar.push(generateDummySidebarModule());
+    console.log(sidebar);
+    for (let i = 0; sidebar.length; i++) {
+      for (let i = 0; sidebar[i].filters.length; i++) {
+        for (let i = 0; sidebar[i].filters[i].options.length; i++) {
+          if (sidebar[i].filters[i].options[i].id === id) {
+            sidebar[i].filters[i].options[i].isChecked = !sidebar[i].filters[i]
+              .options[i].isChecked;
+          }
+          console.log(sidebar[i].isChecked);
+        }
+      }
+    }
+  }
+  fct = this.updateFilterOption(2);*/
+}

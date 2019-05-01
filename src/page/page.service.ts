@@ -9,14 +9,43 @@ import { generateDummyFooterModule } from "src/model/footer-component";
 import { ItemOverviewModule } from "src/model/item-overview-module";
 import { generateDummySocialMediaButtons } from "src/model/social-media-buttons";
 import { OurTeamModule } from "src/model/our-team-module";
-import { generateDummyContactModule, ContactModule } from "src/model/contact-module";
+import {
+  generateDummyContactModule,
+  ContactModule
+} from "src/model/contact-module";
 import { generateDummyOurTeamModule } from "src/model/our-team-module";
-import { generateDummySalePointModule, SalePointModule } from "src/model/sale-point-module";
-import { generateBodyTextExpandedModule, BodyTextExpandedModule } from "src/model/bodytext-expanded-module";
-import { generateDummyInstagramWallModule, InstagramWalllModule } from "src/model/instagram-wall";
-import { generateDummyFeaturedItemModule, FeaturedItemModule } from "src/model/featured-item";
-import { WelcomeModule, generateDummyWelcomeModule } from "src/model/welcome-module";
-import { NavBarModule, generateDummyNavBarModule } from "src/model/nav-bar-module";
+import {
+  generateDummySalePointModule,
+  SalePointModule
+} from "src/model/sale-point-module";
+import {
+  generateBodyTextExpandedModule,
+  BodyTextExpandedModule
+} from "src/model/bodytext-expanded-module";
+import {
+  generateDummyInstagramWallModule,
+  InstagramWalllModule
+} from "src/model/instagram-wall";
+import {
+  generateDummyFeaturedItemModule,
+  FeaturedItemModule
+} from "src/model/featured-item";
+import {
+  WelcomeModule,
+  generateDummyWelcomeModule
+} from "src/model/welcome-module";
+import {
+  NavBarModule,
+  generateDummyNavBarModule
+} from "src/model/nav-bar-module";
+import {
+  generateDummyProductOverviewModule,
+  ProductOverviewModule
+} from "src/model/product-overview";
+import {
+  generateDummySidebarModule,
+  SidebarModule
+} from "src/model/sidebar-module";
 
 @Injectable()
 export class PageService {
@@ -36,7 +65,9 @@ export class PageService {
         generateDummyFeaturedItemModule() as FeaturedItemModule,
         generateDummySalePointModule() as SalePointModule,
         generateDummyOurTeamModule() as OurTeamModule,
-        generateDummyContactModule() as ContactModule
+        generateDummyContactModule() as ContactModule,
+        generateDummyProductOverviewModule() as ProductOverviewModule,
+        generateDummySidebarModule() as SidebarModule
         // generateDummyProductOverviewModule() as ProductOverviewModule,
       ]
     } as PageModel,
@@ -44,13 +75,19 @@ export class PageService {
       id: uuid(),
       route: "https://terrasana.com/about-us",
       description: "Home",
-      wordPressPostModules: [generateDummyCTAModule(), generateDummyInfoHeaderModule()]
+      wordPressPostModules: [
+        generateDummyCTAModule(),
+        generateDummyInfoHeaderModule()
+      ]
     } as PageModel,
     {
       id: uuid(),
       route: "https://terrasana.com/playground",
       description: "Test Page for building modules",
-      wordPressPostModules: [generateDummyFeaturedItemModule()]
+      wordPressPostModules: [
+        generateDummyProductOverviewModule(),
+        generateDummySidebarModule()
+      ]
     } as PageModel
   ];
 
