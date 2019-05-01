@@ -4,7 +4,7 @@ export class CTAButton {
   @ApiModelProperty()
   public title: string;
   @ApiModelProperty()
-  public variant: string;
+  public variant: "primary" | "secondary" | "small";
   @ApiModelProperty()
   public href: string;
   @ApiModelProperty()

@@ -4,9 +4,9 @@ import * as uuid from "uuid";
 import * as _ from "lodash";
 import { WelcomeModule, generateDummyWelcomeModule } from "src/model/welcome-module";
 import { NavBarModule, generateDummyNavBarModule } from "src/model/nav-bar-module";
-import { generateDummyCTAModuleHomePage } from "src/model/cta-module";
+import { generateDummyCTAModuleHomePage1, generateDummyCTAModuleHomePage2 } from "src/model/cta-module";
 import { generateDummyInfoHeaderModule } from "src/model/info-header-module";
-import { generateBodyTextModule, getHomepageBodyTextHtml } from "src/model/bodytext-module";
+import { generateBodyTextModule } from "src/model/bodytext-module";
 import { generateDummyFooterModule } from "src/model/footer-component";
 import { generateDummyInstagramWallModule, InstagramWalllModule } from "src/model/instagram-wall";
 import { generateDummyFeaturedItemModule, FeaturedItemModule } from "src/model/featured-item";
@@ -28,8 +28,12 @@ export class PageService {
       wordPressPostModules: [
         generateDummyNavBarModule() as NavBarModule,
         generateDummyWelcomeModule() as WelcomeModule,
-        generateDummyCTAModuleHomePage(),
-        generateNotYetImplemented("Module Name Test")
+        generateDummyCTAModuleHomePage1(),
+        generateNotYetImplemented("Related Products Module"),
+        generateDummyInstagramWallModule(),
+        generateDummyCTAModuleHomePage2(),
+        generateNotYetImplemented("Newsletter Module"),
+        generateDummyFooterModule()
       ]
     } as PageModel,
     {
