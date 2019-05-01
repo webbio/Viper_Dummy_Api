@@ -6,6 +6,7 @@ import { HowToModel } from "./how-to-model";
 import { IngredientModel } from "./ingredient-model";
 import { ItemRecipeInfo } from "./item-recipe-info";
 import { RelatedProduct } from "./related-product";
+import { SocialMediaButtons } from "./social-media-buttons";
 
 export class RecipeDetailModule extends WordPressPostModule {
   @ApiModelProperty()
@@ -20,6 +21,9 @@ export class RecipeDetailModule extends WordPressPostModule {
   @ApiModelProperty()
   public howTo: HowToModel;
 
+  @ApiModelProperty()
+  public socialMediaButtons: SocialMediaButtons;
+
   @ApiModelProperty({ type: [ItemRecipeInfo] })
   public itensRecipeInfo: ItemRecipeInfo[];
 
@@ -28,6 +32,9 @@ export class RecipeDetailModule extends WordPressPostModule {
 
   @ApiModelProperty()
   public ingredientsPics: string[];
+
+  @ApiModelProperty()
+  public sidebarTitle: string;
 
   @ApiModelProperty()
   public buttonTextRelatedPosts: string;
@@ -44,6 +51,30 @@ export class RecipeDetailModule extends WordPressPostModule {
 
 export const generateDummyRecipeDetailModule = (): RecipeDetailModule => {
   return {
+    socialMediaButtons: {
+      footerButtons: [
+        {
+          href: "fb",
+          icon: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/facebook.svg"
+        },
+        {
+          href: "linked",
+          icon: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/linkedin.svg"
+        },
+        {
+          href: "twitter",
+          icon: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/twitter.svg"
+        },
+        {
+          href: "mail",
+          icon: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/mail.svg"
+        }
+      ],
+      id: "44",
+      topMargin: "1",
+      bottomMargin: "5",
+      name: "RecipeDetailHeader"
+    },
     howTo: {
       steps: [
         "Leg een vel bakpapier op een bakplaat en vervarm de oven voor op 175°C.",
@@ -79,6 +110,7 @@ export const generateDummyRecipeDetailModule = (): RecipeDetailModule => {
       { name: "Ahornisiroop", amount: "80g" },
       { name: "Kokosolie", amount: "120g" }
     ],
+    sidebarTitle: "Ingrediënten",
     ingredientsPics: [
       "https://dummyimage.com/112x120/000/fff.jpg",
       "https://dummyimage.com/112x120/000/fff.jpg",

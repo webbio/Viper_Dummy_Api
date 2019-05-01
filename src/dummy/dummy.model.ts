@@ -8,14 +8,13 @@ import { SocialMediaButtons } from "src/model/social-media-buttons";
 import { InfoHeader } from "src/model/info-header-module";
 import { BodyTextModule } from "src/model/bodytext-module";
 import { WelcomeModule } from "src/model/welcome-module";
-import { OurTeamModule } from "src/model/ourTeam-module";
 import { ContactModule } from "src/model/contact-module";
 import { ProductOverviewModule } from "src/model/product-overview";
 import { SalePointModule } from "src/model/sale-point-module";
 import { BodyTextExpandedModule } from "src/model/bodytext-expanded-module";
 import { InstagramWalllModule } from "src/model/instagram-wall";
 import { ItemOverviewModule } from "src/model/item-overview-module";
-import { CardModel, CardPaginationReturn } from "src/card/card.model";
+import { CardPaginationReturn } from "src/card/card.model";
 import { HowToModel } from "src/model/how-to-model";
 import { IngredientModel } from "src/model/ingredient-model";
 import { ItemRecipeInfo } from "src/model/item-recipe-info";
@@ -25,6 +24,8 @@ import { RelatedProduct } from "src/model/related-product";
 import { ToggleModule } from "src/model/toggle-module";
 import { ExpandablePanel } from "src/model/expandable-panel";
 import { FeaturedItemModule } from "src/model/featured-item";
+import { OurTeamModule } from "src/model/our-team-module";
+import { CardModel } from "src/model/card-model";
 
 export class DummyModel {
   @ApiModelProperty()
