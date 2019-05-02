@@ -6,7 +6,5 @@ export class FilterOptionsModule {
   @ApiModelProperty()
   public slug?: string;
   @ApiModelProperty()
-  public isClicked?: boolean;
-  @ApiModelProperty()
   public id?: number;
 }

@@ -5,18 +5,8 @@ import { generateDummyProductOverviewModule } from "src/model/product-overview";
 import { generateDummySidebarModule } from "src/model/sidebar-module";
 @Injectable()
 export class ProductCardService {
-  /* private GenerateCardList(length: number) {
-    let cardList = [];
-    for (let i = 0; i <= length; i++) {}
-    return cardList;
-  }*/
-
-  public getProducts(filter?: string): ProductCardsFilterReturn {
-    // const cardList = this.GenerateCardList(TOTAL_ITEMS);
+  public getProducts(filter: string[]) {
     let productCardList = [];
-    //let sidebar = [];
-
-    //sidebar.push(generateDummySidebarModule());
 
     productCardList.push(
       {
@@ -160,49 +150,30 @@ export class ProductCardService {
         modifyClass: ""
       }
     );
-
-    if (filter) {
-      filter = filter.toUpperCase();
-      let filteredList = [];
-      for (let i = 0; i < productCardList.length; i++) {
-        if (productCardList[i].category.toUpperCase().includes(filter)) {
-          filteredList.push(productCardList[i]);
-        }
-      }
-
-      return {
-        productOverviewCard: filteredList,
-        id: "0",
-        bottomMargin: "0",
-        topMargin: "0",
-        name: ""
-      };
-    } else if (!filter) {
-      return {
-        productOverviewCard: productCardList,
-        id: "0",
-        bottomMargin: "0",
-        topMargin: "0",
-        name: ""
-      };
-    }
-  } /*
-  private updateFilterOption(id: number): void {
-    let sidebar = [];
-
-    sidebar.push(generateDummySidebarModule());
-    console.log(sidebar);
-    for (let i = 0; sidebar.length; i++) {
-      for (let i = 0; sidebar[i].filters.length; i++) {
-        for (let i = 0; sidebar[i].filters[i].options.length; i++) {
-          if (sidebar[i].filters[i].options[i].id === id) {
-            sidebar[i].filters[i].options[i].isChecked = !sidebar[i].filters[i]
-              .options[i].isChecked;
-          }
-          console.log(sidebar[i].isChecked);
-        }
-      }
-    }
+    let filteredList = [];
+    filter = [""];
+    filter &&
+      filter.map(categories =>
+        categories
+          ? (productCardList.map(
+              list =>
+                list.category.toUpperCase().includes(categories) &&
+                filteredList.push(list)
+            ),
+            {
+              productOverviewCard: filteredList,
+              id: "0",
+              bottomMargin: "0",
+              topMargin: "0",
+              name: ""
+            })
+          : {
+              productOverviewCard: productCardList,
+              id: "0",
+              bottomMargin: "0",
+              topMargin: "0",
+              name: ""
+            }
+      );
   }
-  fct = this.updateFilterOption(2);*/
 }

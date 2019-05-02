@@ -13,4 +13,15 @@ export class ProductFilterController {
     const sidebar = this.pageService.getSidebarData();
     return sidebar;
   }
+  /*  @ApiImplicitQuery({
+    name: "category",
+    description: "",
+    required: false,
+    type: String
+  })
+  
+  @Get("/find")
+  findFilter(@Query() query) {
+    this.pageService.getFilterStatus(query.category);
+  }*/
 }
