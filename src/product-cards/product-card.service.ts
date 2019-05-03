@@ -5,9 +5,20 @@ import { generateDummyProductOverviewModule } from "src/model/product-overview";
 import { generateDummySidebarModule } from "src/model/sidebar-module";
 @Injectable()
 export class ProductCardService {
+  filteredList: string[] = [];
+
+  public checkCategoryExists(category: string) {
+    for (let i = 0; this.filteredList.length; i++) {
+      if (this.filteredList[i] !== "") {
+        if (this.filteredList[i] === category.toUpperCase()) {
+          this.filteredList[i] = "";
+        }
+      }
+    }
+  }
+
   public getProducts(filter: string[]) {
     let productCardList = [];
-
     productCardList.push(
       {
         link: "/",
@@ -150,30 +161,33 @@ export class ProductCardService {
         modifyClass: ""
       }
     );
-    let filteredList = [];
-    filter = [""];
-    filter &&
-      filter.map(categories =>
-        categories
-          ? (productCardList.map(
-              list =>
-                list.category.toUpperCase().includes(categories) &&
-                filteredList.push(list)
-            ),
-            {
-              productOverviewCard: filteredList,
-              id: "0",
-              bottomMargin: "0",
-              topMargin: "0",
-              name: ""
-            })
-          : {
-              productOverviewCard: productCardList,
-              id: "0",
-              bottomMargin: "0",
-              topMargin: "0",
-              name: ""
-            }
-      );
+
+    if (filter) {
+      for (let y = 0; filter.length; y++) {
+        const cat = filter[y].toUpperCase();
+        this.checkCategoryExists(filter[y]);
+        for (let i = 0; i < productCardList.length; i++) {
+          if (productCardList[i].category.toUpperCase().includes(cat)) {
+            this.filteredList.push(productCardList[i]);
+          }
+        }
+
+        return {
+          productOverviewCard: this.filteredList,
+          id: "0",
+          bottomMargin: "0",
+          topMargin: "0",
+          name: ""
+        };
+      }
+    } else if (!filter) {
+      return {
+        productOverviewCard: productCardList,
+        id: "0",
+        bottomMargin: "0",
+        topMargin: "0",
+        name: ""
+      };
+    }
   }
 }
