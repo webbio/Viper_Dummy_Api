@@ -9,6 +9,8 @@ export class FilterModule {
   public title?: string;
   @ApiModelProperty()
   public max?: number;
+  @ApiModelProperty()
+  public button?: string;
 }
 
 export const generateDummyFilterModule = (): FilterModule[] => {
@@ -32,7 +34,8 @@ export const generateDummyFilterModule = (): FilterModule[] => {
         }
       ],
       title: "Snel filteren",
-      max: 2
+      max: 2,
+      button: "Meer producten"
     },
     {
       options: [
@@ -73,7 +76,8 @@ export const generateDummyFilterModule = (): FilterModule[] => {
         }
       ],
       title: "Producten",
-      max: 4
+      max: 4,
+      button: "Meer producten"
     }
   ];
 };
