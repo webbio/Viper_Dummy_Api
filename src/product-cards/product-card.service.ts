@@ -19,6 +19,7 @@ export class ProductCardService {
 
   public getProducts(filter: string[]) {
     let productCardList = [];
+    console.log(this.filteredList);
     productCardList.push(
       {
         link: "/",
@@ -165,7 +166,8 @@ export class ProductCardService {
     if (filter) {
       for (let y = 0; filter.length; y++) {
         const cat = filter[y].toUpperCase();
-        this.checkCategoryExists(filter[y]);
+        this.checkCategoryExists(cat);
+
         for (let i = 0; i < productCardList.length; i++) {
           if (productCardList[i].category.toUpperCase().includes(cat)) {
             this.filteredList.push(productCardList[i]);
