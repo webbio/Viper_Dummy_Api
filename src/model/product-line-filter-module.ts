@@ -1,9 +1,13 @@
 import { WordPressPostModule } from "./wordpress-post-module";
 import uuid = require("uuid");
 import { FilterOptions } from "./filter-options";
-import { NewsItem, generateDummyNewsModule } from "./news";
-import { Recipe, generateDummyRecipesModule } from "./recipe";
+import { NewsItem, generateDummyNews } from "./news";
+import { Recipe, generateDummyRecipes } from "./recipe";
 import { ApiModelProperty } from "@nestjs/swagger";
+import {
+  ProductOverview,
+  generateDummyProductOverview
+} from "./product-overview";
 
 export class ProductLineFilterModule extends WordPressPostModule {
   @ApiModelProperty({ type: [FilterOptions] })
@@ -18,6 +22,9 @@ export class ProductLineFilterModule extends WordPressPostModule {
   @ApiModelProperty({ type: [Recipe] })
   public relatedRecipeItems: Recipe[];
 
+  @ApiModelProperty()
+  public productOverview: ProductOverview;
+
   // todo: add products for initial state
 }
 
@@ -27,6 +34,7 @@ export const generateProductLineFilterModule = (): ProductLineFilterModule => {
     topMargin: "",
     bottomMargin: "",
     name: "ProductLineFilterModule",
+    productOverview: generateDummyProductOverview(),
     quickFilterOptions: [
       {
         content: "Glutenvrij",
@@ -81,7 +89,7 @@ export const generateProductLineFilterModule = (): ProductLineFilterModule => {
         id: 10
       }
     ],
-    relatedNewsItems: generateDummyNewsModule(),
-    relatedRecipeItems: generateDummyRecipesModule()
+    relatedNewsItems: generateDummyNews(),
+    relatedRecipeItems: generateDummyRecipes()
   };
 };

@@ -1,7 +1,7 @@
 import { ApiModelProperty } from "@nestjs/swagger";
-import { NewsItem, generateDummyNewsModule } from "./news";
+import { NewsItem, generateDummyNews } from "./news";
 import { Link } from "./link";
-import { Recipe, generateDummyRecipesModule } from "./recipe";
+import { Recipe, generateDummyRecipes } from "./recipe";
 
 export class SidebarWidgetModule {
   @ApiModelProperty({ type: [NewsItem] })
@@ -18,7 +18,7 @@ export class SidebarWidgetModule {
 export const generateDummySidebarWidgetModule = (): SidebarWidgetModule[] => {
   return [
     {
-      news: generateDummyNewsModule(),
+      news: generateDummyNews(),
       recipes: [],
       button: {
         route: "/",
@@ -29,7 +29,7 @@ export const generateDummySidebarWidgetModule = (): SidebarWidgetModule[] => {
     },
     {
       news: [],
-      recipes: generateDummyRecipesModule(),
+      recipes: generateDummyRecipes(),
       button: {
         route: "/",
         content: "Meer nieuws"

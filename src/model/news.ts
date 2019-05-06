@@ -9,7 +9,7 @@ export class NewsItem {
   @ApiModelProperty()
   public link?: string;
 }
-export const generateDummyNewsModule = (): NewsItem[] => {
+export const generateDummyNews = (): NewsItem[] => {
   return [
     {
       image:

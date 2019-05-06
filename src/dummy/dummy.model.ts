@@ -21,14 +21,14 @@ import { ToggleModule } from "src/model/toggle-module";
 import { ExpandablePanel } from "src/model/expandable-panel";
 import { OurTeamModule } from "src/model/our-team-module";
 import { ContactModule } from "src/model/contact-module";
-import { ProductOverviewModule } from "src/model/product-overview";
+import { ProductOverview } from "src/model/product-overview";
 import { SalePointModule } from "src/model/sale-point-module";
 import { BodyTextExpandedModule } from "src/model/bodytext-expanded-module";
 import { NotYetImplemented } from "src/model/not-yet-implemented-module";
 import { CardModel } from "src/model/card-model";
 import { ProductLineStoryOverviewModule } from "src/model/product-line-story-overview-module";
 import { SidebarModule } from "src/model/sidebar-module";
-import { ProductCardsFilterReturn } from "src/product-cards/product-card.model";
+import { ProductCardsFilter } from "src/product-cards/product-card.model";
 import { SidebarReturn } from "src/product-filter/product-filter.model";
 import { ContactForm } from "src/model/contact-form";
 import { ProductLineFilterModule } from "src/model/product-line-filter-module";
@@ -113,7 +113,7 @@ export class DummyModel {
   public ContactForm?: ContactForm;
 
   @ApiModelProperty()
-  public productOverview?: ProductOverviewModule;
+  public productOverview?: ProductOverview;
 
   @ApiModelProperty()
   public bodyTextExpandedModule?: BodyTextExpandedModule;
@@ -131,7 +131,7 @@ export class DummyModel {
   public sidebarModule?: SidebarModule;
 
   @ApiModelProperty()
-  public productCardFilter?: ProductCardsFilterReturn;
+  public productCardFilter?: ProductCardsFilter;
 
   @ApiModelProperty()
   public productSidebarFilter?: SidebarReturn;

@@ -1,12 +1,12 @@
 import { WordPressPostModule } from "./wordpress-post-module";
 import { ApiModelProperty } from "@nestjs/swagger";
-import { FilterModule, generateDummyFilterModule } from "./filter";
+import { Filter, generateDummyFilter } from "./filter";
 import {
   SidebarWidgetModule,
   generateDummySidebarWidgetModule
 } from "./sidebar-widgets";
 import uuid = require("uuid");
-import { Recipe, generateDummyRecipesModule } from "./recipe";
+import { Recipe, generateDummyRecipes } from "./recipe";
 import {
   FeaturedItemModule,
   generateDummyFeaturedItemModule
@@ -15,8 +15,8 @@ import {
 export class SidebarModule {
   @ApiModelProperty()
   public placeholder?: string;
-  @ApiModelProperty({ type: [FilterModule] })
-  public filters?: FilterModule[];
+  @ApiModelProperty({ type: [Filter] })
+  public filters?: Filter[];
   @ApiModelProperty()
   public sidebarBox?: any;
   @ApiModelProperty()
@@ -28,7 +28,7 @@ export class SidebarModule {
 export const generateDummySidebarModule = (): SidebarModule => {
   return {
     placeholder: "Zoek je product",
-    filters: generateDummyFilterModule(),
+    filters: generateDummyFilter(),
     sidebarBox: "",
     searchItem: {
       placeholder: "Zoek je product"

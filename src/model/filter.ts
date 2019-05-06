@@ -2,7 +2,7 @@ import { WordPressPostModule } from "./wordpress-post-module";
 import { ApiModelProperty } from "@nestjs/swagger";
 import { FilterOptions } from "./filter-options";
 
-export class FilterModule {
+export class Filter {
   @ApiModelProperty({ type: [FilterOptions] })
   public options?: FilterOptions[];
   @ApiModelProperty()
@@ -13,7 +13,7 @@ export class FilterModule {
   public button?: string;
 }
 
-export const generateDummyFilterModule = (): FilterModule[] => {
+export const generateDummyFilter = (): Filter[] => {
   return [
     {
       options: [

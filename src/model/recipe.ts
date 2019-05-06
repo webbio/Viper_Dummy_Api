@@ -22,7 +22,7 @@ export class Recipe {
   @ApiModelProperty()
   public link: string;
 }
-export const generateDummyRecipesModule = (): Recipe[] => {
+export const generateDummyRecipes = (): Recipe[] => {
   return [
     {
       imageUrl:
