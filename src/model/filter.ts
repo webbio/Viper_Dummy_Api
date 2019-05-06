@@ -18,18 +18,18 @@ export const generateDummyFilterModule = (): FilterModule[] => {
     {
       options: [
         {
-          label: "Glutenvrij",
-          slug: "Glutenvrij",
+          content: "Glutenvrij",
+          value: "Glutenvrij",
           id: 1
         },
         {
-          label: "Vegetarisch",
-          slug: "vegetarisch",
+          content: "Vegetarisch",
+          value: "vegetarisch",
           id: 2
         },
         {
-          label: "Veganistisch",
-          slug: "veganistisch",
+          content: "Veganistisch",
+          value: "veganistisch",
           id: 3
         }
       ],
@@ -40,38 +40,38 @@ export const generateDummyFilterModule = (): FilterModule[] => {
     {
       options: [
         {
-          label: "Zeewieren",
-          slug: "zeewieren",
+          content: "Zeewieren",
+          value: "zeewieren",
           id: 4
         },
         {
-          label: "Paddenstoelen en seitan",
-          slug: "paddenstoelen-en-seitan",
+          content: "Paddenstoelen en seitan",
+          value: "paddenstoelen-en-seitan",
           id: 5
         },
         {
-          label: "Veganistisch",
-          slug: "veganistisch-2",
+          content: "Veganistisch",
+          value: "veganistisch-2",
           id: 6
         },
         {
-          label: "Sojasauzen",
-          slug: "sojasauzen",
+          content: "Sojasauzen",
+          value: "sojasauzen",
           id: 7
         },
         {
-          label: "Rijst, bonen, zaden",
-          slug: "rijst-bonen-zaden",
+          content: "Rijst, bonen, zaden",
+          value: "rijst-bonen-zaden",
           id: 8
         },
         {
-          label: "Paddenstoelen en seitan",
-          slug: "paddenstoelenenseitan",
+          content: "Paddenstoelen en seitan",
+          value: "paddenstoelenenseitan",
           id: 9
         },
         {
-          label: "Noedels",
-          slug: "noedels",
+          content: "Noedels",
+          value: "noedels",
           id: 10
         }
       ],

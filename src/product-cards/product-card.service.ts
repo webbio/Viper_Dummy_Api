@@ -19,6 +19,9 @@ export class ProductCardService {
 
   public getProducts(filter: string[]) {
     let productCardList = [];
+    let sidebar = [];
+
+    sidebar.push(generateDummySidebarModule());
     productCardList.push(
       {
         link: "/",
@@ -174,6 +177,7 @@ export class ProductCardService {
 
         return {
           productOverviewCard: this.filteredList,
+          sidebar: sidebar,
           id: "0",
           bottomMargin: "0",
           topMargin: "0",
@@ -183,6 +187,7 @@ export class ProductCardService {
     } else if (!filter) {
       return {
         productOverviewCard: productCardList,
+        sidebar: sidebar,
         id: "0",
         bottomMargin: "0",
         topMargin: "0",
@@ -190,4 +195,13 @@ export class ProductCardService {
       };
     }
   }
+  /*
+  public getSidebarData() {
+    return {
+      id: "0",
+      bottomMargin: "0",
+      topMargin: "0",
+      name: ""
+    };
+  }*/
 }

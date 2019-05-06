@@ -2,10 +2,15 @@ import { WordPressPostModule } from "./wordpress-post-module";
 import { ApiModelProperty } from "@nestjs/swagger";
 import { FilterModule, generateDummyFilterModule } from "./filter";
 import {
-  RecentPostsModule,
-  generateDummyRecentPostsModule
-} from "./recent-posts";
+  SidebarWidgetModule,
+  generateDummySidebarWidgetModule
+} from "./sidebar-widgets";
 import uuid = require("uuid");
+import { Recipe, generateDummyRecipesModule } from "./recipe";
+import {
+  FeaturedItemModule,
+  generateDummyFeaturedItemModule
+} from "./featured-item";
 
 export class SidebarModule {
   @ApiModelProperty()
@@ -16,8 +21,8 @@ export class SidebarModule {
   public sidebarBox?: any;
   @ApiModelProperty()
   public searchItem?: any;
-  @ApiModelProperty({ type: [RecentPostsModule] })
-  public recentPosts?: RecentPostsModule[];
+  @ApiModelProperty({ type: [SidebarWidgetModule] })
+  public widgets?: SidebarWidgetModule[];
 }
 
 export const generateDummySidebarModule = (): SidebarModule => {
@@ -28,6 +33,6 @@ export const generateDummySidebarModule = (): SidebarModule => {
     searchItem: {
       placeholder: "Zoek je product"
     },
-    recentPosts: generateDummyRecentPostsModule()
+    widgets: generateDummySidebarWidgetModule()
   };
 };

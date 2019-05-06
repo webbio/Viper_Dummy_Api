@@ -29,7 +29,8 @@ export const generateDummyFeaturedItemModule = (): FeaturedItemModule => {
     buttonText: "Bekijk meer recepten",
     recipes: [
       {
-        imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg",
+        imageUrl:
+          "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg",
         time: "20 minuten",
         numPeople: "1 persoon",
         content: "Soba met frisse gember-sojasaus",
@@ -38,7 +39,8 @@ export const generateDummyFeaturedItemModule = (): FeaturedItemModule => {
         link: "./"
       },
       {
-        imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg",
+        imageUrl:
+          "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg",
         time: "20 minuten",
         numPeople: "2 persoon",
         content: "Yaki soba (gebakken sobanoedels)",
@@ -47,7 +49,8 @@ export const generateDummyFeaturedItemModule = (): FeaturedItemModule => {
         link: "./"
       },
       {
-        imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg",
+        imageUrl:
+          "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg",
         time: "15 minuten",
         numPeople: "3 persoon",
         content: "Udon met daikon in miso-tamarisaus",

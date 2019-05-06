@@ -2,9 +2,9 @@ import { ApiModelProperty } from "@nestjs/swagger";
 
 export class FilterOptionsModule {
   @ApiModelProperty()
-  public label?: string;
+  public content?: string;
   @ApiModelProperty()
-  public slug?: string;
+  public value?: any;
   @ApiModelProperty()
   public id?: number;
 }

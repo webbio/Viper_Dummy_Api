@@ -19,4 +19,9 @@ export class ProductCardController {
     const cards = this.pageService.getProducts(query.filter);
     return cards;
   }
+  /*  @Get()
+  getSidebar() {
+    const sidebar = this.pageService.getSidebarData();
+    return sidebar;
+  }*/
 }
