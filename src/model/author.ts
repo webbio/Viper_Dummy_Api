@@ -1,6 +1,6 @@
 import { ApiModelProperty } from "@nestjs/swagger";
 
-export class Poster {
+export class Author {
   @ApiModelProperty()
   public iconURL: string;
   @ApiModelProperty()

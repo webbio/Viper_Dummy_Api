@@ -21,16 +21,16 @@ export class InfoHeader extends WordPressPostModule {
   public buttonLinkURL: string;
 }
 
-export const generateDummyInfoHeaderModule = (): InfoHeader => {
+export const generateDummyInfoHeaderModule = (title: string): InfoHeader => {
   return {
-    titleText: "Nieuwtjes",
+    titleText: title,
     bodyText:
       "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
     buttonText: "Terug naar home",
     buttonLinkURL: "/",
     buttonLinkText: "Download baekje",
-    align: "left",
-    bgcolor: "#F5FAFA",
+    align: "center",
+    bgcolor: "#FFFFFF",
     imageURL: "",
     id: uuid(),
     name: "infoHeaderModule",

@@ -22,7 +22,7 @@ export class FeaturedItemModule extends WordPressPostModule {
 export const generateDummyFeaturedItemModule = (): FeaturedItemModule => {
   return {
     id: uuid(),
-    name: "featured item module",
+    name: "featuredItemModule",
     topMargin: "0px",
     bottomMargin: "0px",
     title: "Recepten met Noedels",
