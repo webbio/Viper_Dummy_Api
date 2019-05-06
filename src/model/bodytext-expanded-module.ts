@@ -2,18 +2,18 @@ import { BodyTextModule } from "./bodytext-module";
 import { ApiModelProperty } from "@nestjs/swagger";
 import { SocialMediaButtons, generateDummySocialMediaButtons } from "./social-media-buttons";
 import uuid = require("uuid");
-import { Poster } from "./poster";
+import { Author } from "./author";
 
 export class BodyTextExpandedModule extends BodyTextModule {
   @ApiModelProperty()
-  public poster: Poster;
+  public author: Author;
   @ApiModelProperty()
   public socialMediaButtons: SocialMediaButtons;
 }
 
 export const generateBodyTextExpandedModule = (): BodyTextExpandedModule => {
   return {
-    poster: {
+    author: {
       iconURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/img%403x.png",
       displayName: "Sarah de Jong",
       title: "Marketing Manager",

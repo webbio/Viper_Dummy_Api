@@ -1,10 +1,10 @@
 import { WordPressPostModule } from "./wordpress-post-module";
 import { ApiModelProperty } from "@nestjs/swagger";
-import { FilterOptionsModule } from "./filter-options";
+import { FilterOptions } from "./filter-options";
 
 export class FilterModule {
-  @ApiModelProperty({ type: [FilterOptionsModule] })
-  public options?: FilterOptionsModule[];
+  @ApiModelProperty({ type: [FilterOptions] })
+  public options?: FilterOptions[];
   @ApiModelProperty()
   public title?: string;
   @ApiModelProperty()

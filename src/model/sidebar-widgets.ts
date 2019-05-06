@@ -1,12 +1,11 @@
 import { ApiModelProperty } from "@nestjs/swagger";
-import { FilterOptionsModule } from "./filter-options";
-import { NewsModule, generateDummyNewsModule } from "./news";
+import { NewsItem, generateDummyNewsModule } from "./news";
 import { Link } from "./link";
 import { Recipe, generateDummyRecipesModule } from "./recipe";
 
 export class SidebarWidgetModule {
-  @ApiModelProperty({ type: [NewsModule] })
-  public news?: NewsModule[];
+  @ApiModelProperty({ type: [NewsItem] })
+  public news?: NewsItem[];
   @ApiModelProperty({ type: [Recipe] })
   public recipes?: Recipe[];
   @ApiModelProperty()

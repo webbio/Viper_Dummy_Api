@@ -1,7 +1,7 @@
 import { ApiModelProperty } from "@nestjs/swagger";
 import { Link } from "./link";
 
-export class NewsModule {
+export class NewsItem {
   @ApiModelProperty()
   public image?: string;
   @ApiModelProperty()
@@ -9,7 +9,7 @@ export class NewsModule {
   @ApiModelProperty()
   public link?: string;
 }
-export const generateDummyNewsModule = (): NewsModule[] => {
+export const generateDummyNewsModule = (): NewsItem[] => {
   return [
     {
       image:

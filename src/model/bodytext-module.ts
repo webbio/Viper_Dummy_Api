@@ -15,9 +15,20 @@ export class BodyTextModule extends WordPressPostModule {
   public containerAlignment: "left" | "center" | "right";
 }
 
-export const generateBodyTextModule = (): BodyTextModule => {
+export const generateBodyTextModule = (html: string): BodyTextModule => {
   return {
-    html: `<head>
+    html,
+    id: uuid(),
+    name: "bodyTextModule",
+    bottomMargin: "0px",
+    topMargin: "0px",
+    containerSize: "medium",
+    containerAlignment: "center"
+  };
+};
+
+export const getHomepageBodyTextHtml = () => {
+  return `<head>
             <style>
                 body {
                 background-color: white;
@@ -32,12 +43,5 @@ export const generateBodyTextModule = (): BodyTextModule => {
                 <h1>Dit is de BodyText module</h1>
                 <p>Deze html wordt vanaf de API gestuurd. Dit kan straks door de klant zelf ingevoerd worden!</p>
                 <p><img width="300px" src="https://i.imgur.com/1E2lPDD.jpg" /></p>
-            </body>`,
-    id: uuid(),
-    name: "bodyTextModule",
-    bottomMargin: "0px",
-    topMargin: "0px",
-    containerSize: "medium",
-    containerAlignment: "center"
-  };
+            </body>`;
 };

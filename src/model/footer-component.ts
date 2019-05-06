@@ -19,62 +19,59 @@ export const generateDummyFooterModule = (): FooterModule => {
       {
         title: "Onze producten",
         links: [
-          { content: "Triangle", route: "route" },
-          { content: "Latte", route: "route" },
-          { content: "Notenpasta", route: "route" },
-          { content: "Row superfood", route: "route" },
-          { content: "Mideterrane keuken", route: "route" },
-          { content: "Japan moderne keuken", route: "route" }
+          { content: "Triangle", route: "product-single" },
+          { content: "Latte", route: "product-single" },
+          { content: "Notenpasta", route: "product-single" },
+          { content: "Row superfood", route: "product-single" },
+          { content: "Mideterrane keuken", route: "product-single" },
+          { content: "Japan moderne keuken", route: "product-single" }
         ]
       },
       {
         title: "Terrasana",
         links: [
-          { content: "Over ons", route: "route" },
-          { content: "Nieuws", route: "route" },
-          { content: "FAQ", route: "route" },
-          { content: "Alle produten", route: "route" },
-          { content: "Recepten", route: "route" }
+          { content: "Over ons", route: "about-us" },
+          { content: "Nieuws", route: "news-overview" },
+          { content: "FAQ", route: "faq-overview" },
+          { content: "Alle producten", route: "product-line-overview" },
+          { content: "Recepten", route: "recipe-overview" }
         ]
       },
       {
         title: "Koken met Terrasana",
         links: [
-          { content: "Raw Superfood Recepten", route: "route" },
-          { content: "RawSuperfood Smoothies", route: "route" },
-          { content: "Ontbijt", route: "route" },
-          { content: "Voorgerecht", route: "route" },
-          { content: "Soepen", route: "route" },
-          { content: "Pannenkoeken", route: "route" }
+          { content: "Raw Superfood Recepten", route: "recipe-single" },
+          { content: "RawSuperfood Smoothies", route: "recipe-single" },
+          { content: "Ontbijt", route: "recipe-single" },
+          { content: "Voorgerecht", route: "recipe-single" },
+          { content: "Soepen", route: "recipe-single" },
+          { content: "Pannenkoeken", route: "recipe-single" }
         ]
       },
       {
         title: "Contact",
         links: [
-          { content: "Verkooppunten", route: "route" },
-          { content: "Direct contact", route: "route" },
-          { content: "Zakelijk", route: "route" }
+          { content: "Verkooppunten", route: "about-us" },
+          { content: "Direct contact", route: "contact" },
+          { content: "Zakelijk", route: "business" }
         ]
       }
     ],
     footerLinks: [
       {
         content: "Privacy policy",
-        route: "route"
+        route: ""
       },
       {
         content: "Algemene voorwaarden",
-        route: "route"
+        route: ""
       },
       {
         content: "Disclaimer",
-        route: "route"
+        route: ""
       }
     ],
     logo: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/footergroup.svg",
-
-    //footerLinks: [{ content: "content", route: "" }, { content: "content", route: "" }],
-
     id: uuid(),
     topMargin: "",
     bottomMargin: "",
