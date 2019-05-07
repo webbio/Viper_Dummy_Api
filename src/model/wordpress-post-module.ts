@@ -29,5 +29,8 @@ export class WordPressPostModule {
   public decorCurveHorizontalAlignment?: "left" | "right";
 
   @ApiModelProperty({ required: false })
-  public bgdecor?: string | "pattern";
+  public bgdecor?: string;
+
+  @ApiModelProperty({ required: false })
+  public pattern?: boolean;
 }

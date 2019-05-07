@@ -23,6 +23,10 @@ export const generateDummyInstagramWallModule = (): InstagramWalllModule => {
     topMargin: "0px",
     bottomMargin: "0px",
     title: "Wij hebben veel producten in huis!",
+    patternBackground: true,
+    decorCurveVerticalAlignment: "top",
+    topPadding: "50px",
+
     posts: [
       {
         imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg",
