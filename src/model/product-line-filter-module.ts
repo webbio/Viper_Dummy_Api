@@ -9,7 +9,7 @@ import {
   generateDummyProductOverview
 } from "./product-overview";
 
-export class ProductLineFilterModule extends WordPressPostModule {
+export class ProductLineFilterModule {
   @ApiModelProperty({ type: [FilterOptions] })
   public quickFilterOptions: FilterOptions[];
 
@@ -22,19 +22,11 @@ export class ProductLineFilterModule extends WordPressPostModule {
   @ApiModelProperty({ type: [Recipe] })
   public relatedRecipeItems: Recipe[];
 
-  @ApiModelProperty()
-  public productOverview: ProductOverview;
-
   // todo: add products for initial state
 }
 
 export const generateProductLineFilterModule = (): ProductLineFilterModule => {
   return {
-    id: uuid(),
-    topMargin: "",
-    bottomMargin: "",
-    name: "ProductLineFilterModule",
-    productOverview: generateDummyProductOverview(),
     quickFilterOptions: [
       {
         content: "Glutenvrij",
@@ -64,7 +56,7 @@ export const generateProductLineFilterModule = (): ProductLineFilterModule => {
         id: 5
       },
       {
-        content: "Veganistisch",
+        content: "Veganistischs",
         value: undefined,
         id: 6
       },
