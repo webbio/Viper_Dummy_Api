@@ -1,18 +1,24 @@
-import { WordPressPostModule } from "./wordpress-post-module";
-import * as uuid from "uuid";
-import { ApiModelProperty } from "@nestjs/swagger";
+import { WordPressPostModule } from './wordpress-post-module';
+import * as uuid from 'uuid';
+import { ApiModelProperty } from '@nestjs/swagger';
 
-export class InfoHeader extends WordPressPostModule {
+export class InfoHeaderModule extends WordPressPostModule {
   @ApiModelProperty()
   public titleText: string;
   @ApiModelProperty()
-  public bodyText: string;
+  public bodyText?: string;
   @ApiModelProperty()
-  public buttonText: string;
+  public backButtonText: string;
   @ApiModelProperty()
-  public imageURL: string;
+  public backButtonURL: string;
+  @ApiModelProperty()
+  public imageURL?: string;
+  @ApiModelProperty()
+  public htmlArea?: string;
   @ApiModelProperty()
   public align: string;
+  @ApiModelProperty()
+  public imageAlign?: string;
   @ApiModelProperty()
   public bgcolor: string;
   @ApiModelProperty()
@@ -21,20 +27,23 @@ export class InfoHeader extends WordPressPostModule {
   public buttonLinkURL: string;
 }
 
-export const generateDummyInfoHeaderModule = (title: string): InfoHeader => {
-  return {
-    titleText: title,
-    bodyText:
-      "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
-    buttonText: "Terug naar home",
-    buttonLinkURL: "/",
-    buttonLinkText: "Download baekje",
-    align: "center",
-    bgcolor: "#FFFFFF",
-    imageURL: "",
-    id: uuid(),
-    name: "infoHeaderModule",
-    bottomMargin: "0px",
-    topMargin: ""
-  };
-};
+export const generateDummyInfoHeaderModule = (title: string): InfoHeaderModule => {
+         return {
+           titleText: title,
+           bodyText:
+             'Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.',
+           backButtonText: 'Terug naar home',
+           backButtonURL: '/',
+           buttonLinkURL: '/',
+           htmlArea: "<h3>HTML area!</h3>",
+           buttonLinkText: 'Download baekje',
+           align: 'right',
+           bgcolor: '#FFFFFF',
+           imageAlign: 'right',
+           imageURL: 'https://dummyimage.com/360x265/000/fff',
+           id: uuid(),
+           name: 'infoHeaderModule',
+           bottomMargin: '18px',
+           topMargin: '',
+         };
+       };
