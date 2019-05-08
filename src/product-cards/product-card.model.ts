@@ -3,7 +3,7 @@ import { ApiModelProperty } from "@nestjs/swagger";
 import { SidebarModule } from "src/model/sidebar-module";
 import { ProductOverview } from "src/model/product-overview";
 import { ProductCard } from "src/model/product-card";
-import { CategoryCard } from "src/model/categoryCard";
+import { CategoryCard } from "src/model/category-card";
 import { ProductLineFilterModule } from "src/model/product-line-filter-module";
 
 export class ProductCardsFilter extends WordPressPostModule {

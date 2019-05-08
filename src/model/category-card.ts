@@ -28,7 +28,7 @@ export const generateDummyCategoryCard = (): CategoryCard[] => {
     {
       link: "/",
       title: "Paddenstolen en seitan",
-      category: "Paddenstolen en seitan",
+      category: "Paddenstoelen en seitan",
       button: { title: "Bekijk alle 12" }
     }
   ];

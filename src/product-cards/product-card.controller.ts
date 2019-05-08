@@ -1,4 +1,12 @@
-import { Controller, Get, Param, Post, Body, Query } from "@nestjs/common";
+import {
+  Controller,
+  Get,
+  Param,
+  Post,
+  Body,
+  Query,
+  Delete
+} from "@nestjs/common";
 import { ProductCardService } from "./product-card.service";
 
 import { ApiUseTags, ApiImplicitQuery } from "@nestjs/swagger";
@@ -18,6 +26,17 @@ export class ProductCardController {
   searchCards(@Query() query) {
     const cards = this.pageService.getProducts(query.filter);
     return cards;
+  }
+
+  @ApiImplicitQuery({
+    name: "filters",
+    description: "Filter by cardName",
+    required: false,
+    type: String
+  })
+  @Get("remove")
+  removeCards(@Query() query) {
+    this.pageService.removeFilter(query.filters);
   }
   /*  @Get()
   getSidebar() {

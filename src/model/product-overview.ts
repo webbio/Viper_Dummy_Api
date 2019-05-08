@@ -2,7 +2,7 @@ import { WordPressPostModule } from "./wordpress-post-module";
 import * as uuid from "uuid";
 import { ApiModelProperty } from "@nestjs/swagger";
 import { ProductCard, generateDummyProductCard } from "./product-card";
-import { CategoryCard, generateDummyCategoryCard } from "./categoryCard";
+import { CategoryCard, generateDummyCategoryCard } from "./category-card";
 
 export class ProductOverview {
   @ApiModelProperty({ type: [ProductCard] })

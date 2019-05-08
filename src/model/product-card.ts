@@ -84,7 +84,7 @@ export const generateDummyProductCard = (): ProductCard[] => {
     {
       link: "/",
       title: "Title",
-      category: "Paddenstolen en seitan",
+      category: "Paddenstoelen en seitan",
       image:
         "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/PaddenStoelen+en+seitan/1.png",
       content: "Content"
@@ -92,7 +92,7 @@ export const generateDummyProductCard = (): ProductCard[] => {
     {
       link: "/",
       title: "Title",
-      category: "Paddenstolen en seitan",
+      category: "Paddenstoelen en seitan",
       image:
         "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/PaddenStoelen+en+seitan/2.jpg",
       content: "Content"
@@ -100,7 +100,7 @@ export const generateDummyProductCard = (): ProductCard[] => {
     {
       link: "/",
       title: "Title",
-      category: "Paddenstolen en seitan",
+      category: "Paddenstoelen en seitan",
       image:
         "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/PaddenStoelen+en+seitan/3.jpg",
       content: "Content"
