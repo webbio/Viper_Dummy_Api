@@ -1,13 +1,7 @@
-import { WordPressPostModule } from "./wordpress-post-module";
-import uuid = require("uuid");
 import { FilterOptions } from "./filter-options";
 import { NewsItem, generateDummyNews } from "./news";
 import { Recipe, generateDummyRecipes } from "./recipe";
 import { ApiModelProperty } from "@nestjs/swagger";
-import {
-  ProductOverview,
-  generateDummyProductOverview
-} from "./product-overview";
 
 export class ProductLineFilterModule {
   @ApiModelProperty({ type: [FilterOptions] })
@@ -30,55 +24,50 @@ export const generateProductLineFilterModule = (): ProductLineFilterModule => {
     quickFilterOptions: [
       {
         content: "Glutenvrij",
-        value: undefined,
+        value: false,
         id: 1
       },
       {
         content: "Vegetarisch",
-        value: undefined,
+        value: false,
         id: 2
       },
       {
         content: "Veganistisch",
-        value: undefined,
+        value: false,
         id: 3
       }
     ],
     productFilterOptions: [
       {
         content: "Zeewieren",
-        value: undefined,
+        value: false,
         id: 4
       },
       {
         content: "Paddenstoelen en seitan",
-        value: undefined,
+        value: false,
         id: 5
       },
       {
         content: "Veganistischs",
-        value: undefined,
+        value: false,
         id: 6
       },
       {
         content: "Sojasauzen",
-        value: undefined,
+        value: false,
         id: 7
       },
       {
         content: "Rijst, bonen, zaden",
-        value: undefined,
+        value: false,
         id: 8
       },
       {
-        content: "Paddenstoelen en seitan",
-        value: undefined,
-        id: 9
-      },
-      {
         content: "Noedels",
-        value: undefined,
-        id: 10
+        value: false,
+        id: 9
       }
     ],
     relatedNewsItems: generateDummyNews(),

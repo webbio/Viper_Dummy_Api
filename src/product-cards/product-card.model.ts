@@ -1,7 +1,5 @@
 import { WordPressPostModule } from "src/model/wordpress-post-module";
 import { ApiModelProperty } from "@nestjs/swagger";
-import { SidebarModule } from "src/model/sidebar-module";
-import { ProductOverview } from "src/model/product-overview";
 import { ProductCard } from "src/model/product-card";
 import { CategoryCard } from "src/model/category-card";
 import { ProductLineFilterModule } from "src/model/product-line-filter-module";

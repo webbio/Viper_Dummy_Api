@@ -11,6 +11,8 @@ export class ProductCard {
   public image?: string;
   @ApiModelProperty()
   public category?: string;
+  @ApiModelProperty()
+  public subCategory?: string;
 }
 
 export const generateDummyProductCard = (): ProductCard[] => {
@@ -21,7 +23,8 @@ export const generateDummyProductCard = (): ProductCard[] => {
       category: "Noedels",
       image:
         "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/1.png",
-      content: "Content"
+      content: "Content",
+      subCategory: "Glutenvrij"
     },
     {
       link: "/",
@@ -29,7 +32,8 @@ export const generateDummyProductCard = (): ProductCard[] => {
       category: "Noedels",
       image:
         "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.png",
-      content: "Content"
+      content: "Content",
+      subCategory: "Glutenvrij"
     },
     {
       link: "/",
@@ -37,7 +41,8 @@ export const generateDummyProductCard = (): ProductCard[] => {
       category: "Noedels",
       image:
         "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg",
-      content: "Content"
+      content: "Content",
+      subCategory: "Vegetarisch"
     },
     {
       link: "/",
@@ -45,7 +50,8 @@ export const generateDummyProductCard = (): ProductCard[] => {
       category: "Noedels",
       image:
         "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/4.jpg",
-      content: "Content"
+      content: "Content",
+      subCategory: "Vegetarisch"
     },
 
     {
@@ -54,7 +60,8 @@ export const generateDummyProductCard = (): ProductCard[] => {
       category: "Zeewieren",
       image:
         "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Zeewieren/1.jpg",
-      content: "Content"
+      content: "Content",
+      subCategory: "Veganistisch"
     },
     {
       link: "/",
@@ -62,7 +69,8 @@ export const generateDummyProductCard = (): ProductCard[] => {
       category: "Zeewieren",
       image:
         "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Zeewieren/2.jpg",
-      content: "Content"
+      content: "Content",
+      subCategory: "Glutenvrij"
     },
     {
       link: "/",
@@ -70,7 +78,8 @@ export const generateDummyProductCard = (): ProductCard[] => {
       category: "Zeewieren",
       image:
         "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Zeewieren/3.jpg",
-      content: "Content"
+      content: "Content",
+      subCategory: "Vegetarisch"
     },
     {
       link: "/",
@@ -78,7 +87,8 @@ export const generateDummyProductCard = (): ProductCard[] => {
       category: "Zeewieren",
       image:
         "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Zeewieren/4.jpg",
-      content: "Content"
+      content: "Content",
+      subCategory: "Vegetarisch"
     },
 
     {
@@ -87,7 +97,8 @@ export const generateDummyProductCard = (): ProductCard[] => {
       category: "Paddenstoelen en seitan",
       image:
         "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/PaddenStoelen+en+seitan/1.png",
-      content: "Content"
+      content: "Content",
+      subCategory: "Glutenvrij"
     },
     {
       link: "/",
@@ -95,7 +106,8 @@ export const generateDummyProductCard = (): ProductCard[] => {
       category: "Paddenstoelen en seitan",
       image:
         "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/PaddenStoelen+en+seitan/2.jpg",
-      content: "Content"
+      content: "Content",
+      subCategory: "Vegetarisch"
     },
     {
       link: "/",
@@ -103,7 +115,8 @@ export const generateDummyProductCard = (): ProductCard[] => {
       category: "Paddenstoelen en seitan",
       image:
         "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/PaddenStoelen+en+seitan/3.jpg",
-      content: "Content"
+      content: "Content",
+      subCategory: "Veganistisch"
     }
   ];
 };

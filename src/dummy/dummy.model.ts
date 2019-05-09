@@ -27,9 +27,7 @@ import { BodyTextExpandedModule } from "src/model/bodytext-expanded-module";
 import { NotYetImplemented } from "src/model/not-yet-implemented-module";
 import { CardModel } from "src/model/card-model";
 import { ProductLineStoryOverviewModule } from "src/model/product-line-story-overview-module";
-import { SidebarModule } from "src/model/sidebar-module";
 import { ProductCardsFilter } from "src/product-cards/product-card.model";
-import { SidebarReturn } from "src/product-filter/product-filter.model";
 import { ContactForm } from "src/model/contact-form";
 import { ProductLineFilterModule } from "src/model/product-line-filter-module";
 
@@ -128,13 +126,7 @@ export class DummyModel {
   public expandablePanel?: ExpandablePanel;
 
   @ApiModelProperty()
-  public sidebarModule?: SidebarModule;
-
-  @ApiModelProperty()
   public productCardFilter?: ProductCardsFilter;
-
-  @ApiModelProperty()
-  public productSidebarFilter?: SidebarReturn;
 
   @ApiModelProperty()
   public productLineStoryOverviewModule?: ProductLineStoryOverviewModule;

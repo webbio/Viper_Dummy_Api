@@ -1,16 +1,11 @@
 import { Injectable } from "@nestjs/common";
-import { ProductCardsFilter } from "./product-card.model";
-import uuid = require("uuid");
-import { generateDummySidebarModule } from "src/model/sidebar-module";
+
 import { generateDummyProductCard, ProductCard } from "src/model/product-card";
 import {
   generateDummyCategoryCard,
   CategoryCard
 } from "src/model/category-card";
-import {
-  generateDummyProductOverview,
-  ProductOverview
-} from "src/model/product-overview";
+
 import {
   generateProductLineFilterModule,
   ProductLineFilterModule
@@ -20,29 +15,29 @@ export class ProductCardService {
   sidebar: ProductLineFilterModule;
   productCardList: ProductCard[];
   categoryCardList: CategoryCard[];
-  newFilter: string[] = [""];
+  newCategoryFilter: string[] = [""];
+  newProductFilter: string[] = [""];
 
-  public getProducts(filter: string) {
+  public getCategories(filter: string) {
     this.sidebar = generateProductLineFilterModule();
     this.productCardList = generateDummyProductCard();
     this.categoryCardList = generateDummyCategoryCard();
+
     let filteredList: CategoryCard[] = [];
     if (filter) {
-      // console.log("filter: " + filter);
-      if (!this.newFilter.includes(filter)) {
-        this.newFilter.push(filter);
-        // console.log(this.newFilter);
+      this.removeFilter(filter);
+      if (!this.newCategoryFilter.includes(filter)) {
+        this.newCategoryFilter.push(filter);
       }
     }
-    if (this.newFilter.length > 1) {
-      this.newFilter.map(newFilter =>
+    if (this.newCategoryFilter.length > 1) {
+      this.newCategoryFilter.map(newFilter =>
         this.categoryCardList.map(
           categoryCard =>
             categoryCard.category === newFilter &&
             filteredList.push(categoryCard)
         )
       );
-      // console.log(filteredList);
       return {
         categoryCard: filteredList,
         productCard: this.productCardList,
@@ -57,14 +52,42 @@ export class ProductCardService {
     }
   }
 
-  public removeFilter(filter: string) {
+  public getProducts(filter: string) {
+    this.sidebar = generateProductLineFilterModule();
+    this.productCardList = generateDummyProductCard();
+    let filteredList: ProductCard[] = [];
     if (filter) {
-      for (let i = 0; this.newFilter.length; i++) {
-        if (this.newFilter[i] === filter) {
-          this.newFilter[i] == ""; //.slice(i, 1);
-          console.log("afters: " + this.newFilter);
-        }
+      if (!this.newProductFilter.includes(filter)) {
+        this.newProductFilter.push(filter);
       }
+
+      if (this.newProductFilter.length > 1) {
+        this.newProductFilter.map(newFilter =>
+          this.productCardList.map(
+            productCard =>
+              productCard.subCategory === newFilter &&
+              filteredList.push(productCard)
+          )
+        );
+        return {
+          productCard: filteredList,
+          sidebar: this.sidebar
+        };
+      }
+    } else {
+      return {
+        productCard: this.productCardList,
+        sidebar: this.sidebar
+      };
     }
+  }
+
+  public removeFilter(filter: string) {
+    if (filter === "clearProductfilter") {
+      this.newProductFilter = [""];
+    } else if (filter === "clearCategoryfilter") {
+      this.newCategoryFilter = [""];
+    }
+    return true;
   }
 }
