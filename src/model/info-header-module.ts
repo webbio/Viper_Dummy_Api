@@ -21,20 +21,25 @@ export class InfoHeader extends WordPressPostModule {
   public buttonLinkURL: string;
 }
 
-export const generateDummyInfoHeaderModule = (title: string): InfoHeader => {
+export const generateDummyInfoHeaderModule = (): InfoHeader => {
   return {
-    titleText: title,
+    titleText: "Nieuwtjes",
     bodyText:
       "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
     buttonText: "Terug naar home",
     buttonLinkURL: "/",
     buttonLinkText: "Download baekje",
-    align: "center",
-    bgcolor: "#FFFFFF",
+    align: "left",
+    bgcolor: "#F5FAFA",
     imageURL: "",
     id: uuid(),
     name: "infoHeaderModule",
     bottomMargin: "0px",
-    topMargin: ""
+    topMargin: "",
+    curve: {
+      decorCurveHorizontalAlignment: "left",
+      decorCurveVerticalAlignment: "top", // refactor this to have default value top
+      curveBackground: "pattern1"
+    }
   };
 };

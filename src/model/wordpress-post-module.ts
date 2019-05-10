@@ -1,4 +1,5 @@
 import { ApiModelProperty } from "@nestjs/swagger";
+import { Curve } from "./curve";
 
 export class WordPressPostModule {
   @ApiModelProperty()
@@ -14,23 +15,15 @@ export class WordPressPostModule {
   public bottomMargin: string;
 
   @ApiModelProperty({ required: false })
-  public patternBackground?: boolean;
-
-  @ApiModelProperty({ required: false })
   public topPadding?: string;
 
   @ApiModelProperty({ required: false })
   public bottomPadding?: string;
 
+  // background, can be set as a pattern or color
   @ApiModelProperty({ required: false })
-  public decorCurveVerticalAlignment?: "top" | "bottom";
+  public background?: string;
 
   @ApiModelProperty({ required: false })
-  public decorCurveHorizontalAlignment?: "left" | "right";
-
-  @ApiModelProperty({ required: false })
-  public bgdecor?: string;
-
-  @ApiModelProperty({ required: false })
-  public pattern?: boolean;
+  public curve?: Curve;
 }
