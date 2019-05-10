@@ -61,7 +61,7 @@ export const generateDummyProductCard = (): ProductCard[] => {
       image:
         "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Zeewieren/1.jpg",
       content: "Content",
-      subCategory: "Veganistisch"
+      subCategory: "Glutenvrij"
     },
     {
       link: "/",
@@ -116,7 +116,7 @@ export const generateDummyProductCard = (): ProductCard[] => {
       image:
         "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/PaddenStoelen+en+seitan/3.jpg",
       content: "Content",
-      subCategory: "Veganistisch"
+      subCategory: "Glutenvrij"
     }
   ];
 };
