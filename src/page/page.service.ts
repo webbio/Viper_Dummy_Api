@@ -19,7 +19,8 @@ import { generateBodyTextExpandedModule, BodyTextExpandedModule } from "src/mode
 import { generateNotYetImplemented } from "src/model/not-yet-implemented-module";
 import { generateDummyProductOverviewModule } from "src/model/product-overview";
 import { generateProductLineStoryOverviewModule } from "src/model/product-line-story-overview-module";
-
+import { generateDummyRelatedProductsSlider } from "src/model/related-products-slider";
+import { generateDummyGallerySliderModule } from "src/model/gallery-slider";
 @Injectable()
 export class PageService {
   private pageList: PageModel[] = [
@@ -31,10 +32,11 @@ export class PageService {
         generateDummyNavBarModule(),
         generateDummyWelcomeModule(),
         generateDummyCTAModuleHomePage1(),
-        generateNotYetImplemented("Related Products Module"),
+        generateDummyRelatedProductsSlider(),
         generateDummyInstagramWallModule(),
         generateDummyCTAModuleHomePage2(),
         generateNotYetImplemented("Newsletter Module"),
+        generateDummyGallerySliderModule(),
         generateDummyFooterModule()
       ]
     } as PageModel,
