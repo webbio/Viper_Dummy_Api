@@ -12,4 +12,7 @@ export class Curve {
   // inside the curve, pattern or color
   @ApiModelProperty({ required: false })
   public curveBackground: string;
+
+  @ApiModelProperty({ required: false })
+  public showInMiddle?: boolean;
 }
