@@ -23,7 +23,7 @@ export class ProductCardController {
     type: String
   })
   @Get("/categories")
-  searchCategories(@Query() query) {
+  getCategories(@Query() query) {
     const cards = this.pageService.getCategories(query.filter);
     return cards;
   }
@@ -34,20 +34,21 @@ export class ProductCardController {
     type: String
   })
   @Get("/products")
-  searchProducts(@Query() query) {
+  getProducts(@Query() query) {
     const cards = this.pageService.getProducts(query.filter);
     return cards;
   }
 
   @ApiImplicitQuery({
     name: "filters",
-    description: "delete by cardName",
+    description: "search by cardName",
     required: false,
     type: String
   })
-  @Get("/remove")
-  removeCards(@Query() query) {
-    this.pageService.removeFilter(query.filters);
+  @Get("/search")
+  searchProduct(@Query() query) {
+    const cards = this.pageService.searchProducts(query.filter);
+    return cards;
   }
   /*  @Get()
   getSidebar() {

@@ -25,14 +25,13 @@ export class ProductCardService {
 
     let filteredList: CategoryCard[] = [];
     if (filter) {
-      this.removeFilter(filter);
       if (!this.newCategoryFilter.includes(filter)) {
         this.newCategoryFilter.push(filter);
       }
     }
     if (this.newCategoryFilter.length > 1) {
-      this.newCategoryFilter.map(newFilter =>
-        this.categoryCardList.map(
+      this.newCategoryFilter.forEach(newFilter =>
+        this.categoryCardList.forEach(
           categoryCard =>
             categoryCard.category === newFilter &&
             filteredList.push(categoryCard)
@@ -62,8 +61,8 @@ export class ProductCardService {
       }
 
       if (this.newProductFilter.length > 1) {
-        this.newProductFilter.map(newFilter =>
-          this.productCardList.map(
+        this.newProductFilter.forEach(newFilter =>
+          this.productCardList.forEach(
             productCard =>
               productCard.subCategory === newFilter &&
               filteredList.push(productCard)
@@ -74,20 +73,31 @@ export class ProductCardService {
           sidebar: this.sidebar
         };
       }
-    } else {
-      return {
-        productCard: this.productCardList,
-        sidebar: this.sidebar
-      };
     }
   }
 
-  public removeFilter(filter: string) {
-    if (filter === "clearProductfilter") {
-      this.newProductFilter = [""];
-    } else if (filter === "clearCategoryfilter") {
-      this.newCategoryFilter = [""];
+  public searchProducts(filter: string) {
+    this.sidebar = generateProductLineFilterModule();
+    this.productCardList = generateDummyProductCard();
+    let filteredList: ProductCard[] = [];
+    if (filter) {
+      if (!this.newProductFilter.includes(filter)) {
+        this.newProductFilter.push(filter);
+      }
+
+      if (this.newProductFilter.length > 1) {
+        this.newProductFilter.forEach(newFilter =>
+          this.productCardList.forEach(
+            productCard =>
+              productCard.category.includes(newFilter) &&
+              filteredList.push(productCard)
+          )
+        );
+        return {
+          productCard: filteredList,
+          sidebar: this.sidebar
+        };
+      }
     }
-    return true;
   }
 }

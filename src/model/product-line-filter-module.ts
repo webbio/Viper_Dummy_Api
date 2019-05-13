@@ -15,8 +15,6 @@ export class ProductLineFilterModule {
 
   @ApiModelProperty({ type: [Recipe] })
   public relatedRecipeItems: Recipe[];
-
-  // todo: add products for initial state
 }
 
 export const generateProductLineFilterModule = (): ProductLineFilterModule => {
