@@ -27,23 +27,32 @@ export class InfoHeaderModule extends WordPressPostModule {
   public buttonLinkURL: string;
 }
 
-export const generateDummyInfoHeaderModule = (title: string): InfoHeaderModule => {
-         return {
-           titleText: title,
-           bodyText:
-             'Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.',
-           backButtonText: 'Terug naar home',
-           backButtonURL: '/',
-           buttonLinkURL: '/',
-           htmlArea: "<h3>HTML area!</h3>",
-           buttonLinkText: 'Download baekje',
-           align: 'right',
-           bgcolor: '#FFFFFF',
-           imageAlign: 'right',
-           imageURL: 'https://dummyimage.com/360x265/000/fff',
-           id: uuid(),
-           name: 'infoHeaderModule',
-           bottomMargin: '18px',
-           topMargin: '',
-         };
-       };
+export const generateDummyInfoHeaderModule = (
+  title: string,
+  bodyText: string,
+  align: string,
+  imageURL: string,
+  imageAlign: string,
+  buttonLinkText: string,
+  buttonLinkURL: string,
+  backButtonText: string,
+  backButtonURL:  string,
+): InfoHeaderModule => {
+  return {
+    titleText: title,
+    bodyText,
+    backButtonText,
+    backButtonURL,
+    buttonLinkURL,
+    htmlArea: '',
+    buttonLinkText,
+    align,
+    bgcolor: '#FFFFFF',
+    imageAlign,
+    imageURL,
+    id: uuid(),
+    name: 'infoHeaderModule',
+    bottomMargin: '0px',
+    topMargin: '0px',
+  };
+};
