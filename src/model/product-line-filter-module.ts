@@ -5,7 +5,7 @@ import { ApiModelProperty } from "@nestjs/swagger";
 import { WordPressPostModule } from "./wordpress-post-module";
 import uuid = require("uuid");
 
-export class ProductLineFilterModule extends WordPressPostModule {
+export class ProductLineFilterModule {
   @ApiModelProperty({ type: [FilterOptions] })
   public quickFilterOptions: FilterOptions[];
 
@@ -21,10 +21,6 @@ export class ProductLineFilterModule extends WordPressPostModule {
 
 export const generateProductLineFilterModule = (): ProductLineFilterModule => {
   return {
-    id: uuid(),
-    topMargin: "",
-    bottomMargin: "",
-    name: "ProductLineFilterModule",
     quickFilterOptions: [
       {
         content: "Glutenvrij",

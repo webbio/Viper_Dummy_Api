@@ -2,47 +2,24 @@ import { Injectable } from "@nestjs/common";
 import { PageModel } from "./page.model";
 import * as uuid from "uuid";
 import * as _ from "lodash";
-import {
-  WelcomeModule,
-  generateDummyWelcomeModule
-} from "src/model/welcome-module";
-import {
-  NavBarModule,
-  generateDummyNavBarModule
-} from "src/model/nav-bar-module";
-import {
-  generateDummyCTAModuleHomePage1,
-  generateDummyCTAModuleHomePage2
-} from "src/model/cta-module";
+import { WelcomeModule, generateDummyWelcomeModule } from "src/model/welcome-module";
+import { NavBarModule, generateDummyNavBarModule } from "src/model/nav-bar-module";
+import { generateDummyCTAModuleHomePage1, generateDummyCTAModuleHomePage2 } from "src/model/cta-module";
 import { generateDummyInfoHeaderModule } from "src/model/info-header-module";
 import { generateBodyTextModule } from "src/model/bodytext-module";
 import { generateDummyFooterModule } from "src/model/footer-component";
-import {
-  generateDummyInstagramWallModule,
-  InstagramWalllModule
-} from "src/model/instagram-wall";
-import {
-  generateDummyFeaturedItemModule,
-  FeaturedItemModule
-} from "src/model/featured-item";
+import { generateDummyInstagramWallModule, InstagramWalllModule } from "src/model/instagram-wall";
+import { generateDummyFeaturedItemModule, FeaturedItemModule } from "src/model/featured-item";
 import { generateDummySocialMediaButtons } from "src/model/social-media-buttons";
 import { OurTeamModule } from "src/model/our-team-module";
-import {
-  generateDummyContactModule,
-  ContactModule
-} from "src/model/contact-module";
+import { generateDummyContactModule, ContactModule } from "src/model/contact-module";
 import { generateDummyOurTeamModule } from "src/model/our-team-module";
-import {
-  generateDummySalePointModule,
-  SalePointModule
-} from "src/model/sale-point-module";
-import {
-  generateBodyTextExpandedModule,
-  BodyTextExpandedModule
-} from "src/model/bodytext-expanded-module";
+import { generateDummySalePointModule, SalePointModule } from "src/model/sale-point-module";
+import { generateBodyTextExpandedModule, BodyTextExpandedModule } from "src/model/bodytext-expanded-module";
 import { generateNotYetImplemented } from "src/model/not-yet-implemented-module";
 import { generateProductLineStoryOverviewModule } from "src/model/product-line-story-overview-module";
 import { generateProductLineFilterModule } from "src/model/product-line-filter-module";
+import { generateProductLineSingleModule } from "src/model/product-line-single-module";
 
 @Injectable()
 export class PageService {
@@ -82,7 +59,7 @@ export class PageService {
       wordPressPostModules: [
         generateDummyNavBarModule(),
         generateDummyInfoHeaderModule("Japan Moderne Keuken"),
-        generateProductLineFilterModule(),
+        generateProductLineSingleModule(),
         generateNotYetImplemented("Related Recipes Module"),
         generateNotYetImplemented("Newsletter Module"),
         generateDummyFooterModule()
@@ -153,9 +130,7 @@ export class PageService {
       description: "Nieuws",
       wordPressPostModules: [
         generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule(
-          "Gezonde snack? Probeer onze nieuwe snackmixen!"
-        ),
+        generateDummyInfoHeaderModule("Gezonde snack? Probeer onze nieuwe snackmixen!"),
         generateBodyTextExpandedModule(),
         generateNotYetImplemented("Related News Module"),
         generateNotYetImplemented("Related Products Module"),
