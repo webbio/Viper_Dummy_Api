@@ -2,8 +2,10 @@ import { FilterOptions } from "./filter-options";
 import { NewsItem, generateDummyNews } from "./news";
 import { Recipe, generateDummyRecipes } from "./recipe";
 import { ApiModelProperty } from "@nestjs/swagger";
+import { WordPressPostModule } from "./wordpress-post-module";
+import uuid = require("uuid");
 
-export class ProductLineFilterModule {
+export class ProductLineFilterModule extends WordPressPostModule {
   @ApiModelProperty({ type: [FilterOptions] })
   public quickFilterOptions: FilterOptions[];
 
@@ -19,6 +21,10 @@ export class ProductLineFilterModule {
 
 export const generateProductLineFilterModule = (): ProductLineFilterModule => {
   return {
+    id: uuid(),
+    topMargin: "",
+    bottomMargin: "",
+    name: "ProductLineFilterModule",
     quickFilterOptions: [
       {
         content: "Glutenvrij",
