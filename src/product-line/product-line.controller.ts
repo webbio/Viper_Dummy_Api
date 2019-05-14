@@ -7,15 +7,15 @@ import {
   Query,
   Delete
 } from "@nestjs/common";
-import { ProductCardService } from "./product-card.service";
+import { ProductLineService } from "./product-line.service";
 
 import { ApiUseTags, ApiImplicitQuery } from "@nestjs/swagger";
 
 @ApiUseTags("product-card")
 @Controller("product-card")
-export class ProductCardController {
-  constructor(private readonly pageService: ProductCardService) {}
-
+export class ProductLineController {
+  constructor(private readonly pageService: ProductLineService) {}
+  /*
   @ApiImplicitQuery({
     name: "filter",
     description: "Filter by category",
@@ -38,17 +38,17 @@ export class ProductCardController {
     const cards = this.pageService.getProducts(query.filter);
     return cards;
   }
-
+*/
   @ApiImplicitQuery({
-    name: "filters",
-    description: "search by cardName",
-    required: false,
+    name: "filter",
+    description: "search",
+    required: true,
     type: String
   })
   @Get("/search")
   searchProduct(@Query() query) {
-    const cards = this.pageService.searchProducts(query.filter);
-    return cards;
+    const products = this.pageService.searchProducts(query.filter);
+    return products;
   }
   /*  @Get()
   getSidebar() {

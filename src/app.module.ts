@@ -6,8 +6,8 @@ import { DummyController } from "./dummy/dummy.controller";
 import { DummyService } from "./dummy/dummy.service";
 import { CardController } from "./card/card.controller";
 import { CardService } from "./card/card.service";
-import { ProductCardService } from "./product-cards/product-card.service";
-import { ProductCardController } from "./product-cards/product-card.controller";
+import { ProductLineService } from "./product-line/product-line.service";
+import { ProductLineController } from "./product-line/product-line.controller";
 
 @Module({
   imports: [],
@@ -15,14 +15,14 @@ import { ProductCardController } from "./product-cards/product-card.controller";
     PageController,
     CardController,
     DummyController,
-    ProductCardController
+    ProductLineController
   ],
   providers: [
     AppService,
     PageService,
     CardService,
     DummyService,
-    ProductCardService
+    ProductLineService
   ]
 })
 export class AppModule {}

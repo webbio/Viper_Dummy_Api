@@ -1,5 +1,8 @@
 import { WordPressPostModule } from "./wordpress-post-module";
-import { ProductLineFilterModule, generateProductLineFilterModule } from "./product-line-filter-module";
+import {
+  ProductLineFilterModule,
+  generateProductLineFilterModule
+} from "./product-line-filter-module";
 import { ApiModelProperty } from "@nestjs/swagger";
 import uuid = require("uuid");
 import { ProductCard, generateDummyProductCard } from "./product-card";
@@ -12,10 +15,6 @@ export class ProductLineSingleModule extends WordPressPostModule {
   public productCardList: ProductCard[];
   @ApiModelProperty({ type: [CategoryCard] })
   public categoryCardList: CategoryCard[];
-  @ApiModelProperty()
-  public newCategoryFilter: string[];
-  @ApiModelProperty()
-  public newProductFilter: string[];
 }
 
 export const generateProductLineSingleModule = (): ProductLineSingleModule => {
@@ -23,11 +22,9 @@ export const generateProductLineSingleModule = (): ProductLineSingleModule => {
     id: uuid(),
     topMargin: "",
     bottomMargin: "",
-    name: "generateProductLineFilterModule",
+    name: "ProductLineFilterModule",
     filter: generateProductLineFilterModule(),
     productCardList: generateDummyProductCard(),
-    categoryCardList: generateDummyCategoryCard(),
-    newCategoryFilter: [],
-    newProductFilter: []
+    categoryCardList: generateDummyCategoryCard()
   };
 };

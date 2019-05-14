@@ -6,21 +6,14 @@ import {
   CategoryCard
 } from "src/model/category-card";
 
-import {
-  generateProductLineFilterModule,
-  ProductLineFilterModule
-} from "src/model/product-line-filter-module";
 @Injectable()
-export class ProductCardService {
-  sidebar: ProductLineFilterModule;
+export class ProductLineService {
   productCardList: ProductCard[];
   categoryCardList: CategoryCard[];
   newCategoryFilter: string[] = [""];
   newProductFilter: string[] = [""];
-
+  /*
   public getCategories(filter: string) {
-    this.sidebar = generateProductLineFilterModule();
-    this.productCardList = generateDummyProductCard();
     this.categoryCardList = generateDummyCategoryCard();
 
     let filteredList: CategoryCard[] = [];
@@ -38,21 +31,12 @@ export class ProductCardService {
         )
       );
       return {
-        categoryCard: filteredList,
-        productCard: this.productCardList,
-        sidebar: this.sidebar
-      };
-    } else {
-      return {
-        categoryCard: this.categoryCardList,
-        productCard: this.productCardList,
-        sidebar: this.sidebar
+        categoryCard: filteredList
       };
     }
   }
 
   public getProducts(filter: string) {
-    this.sidebar = generateProductLineFilterModule();
     this.productCardList = generateDummyProductCard();
     let filteredList: ProductCard[] = [];
     if (filter) {
@@ -69,35 +53,27 @@ export class ProductCardService {
           )
         );
         return {
-          productCard: filteredList,
-          sidebar: this.sidebar
+          productCard: filteredList
         };
       }
     }
   }
-
+*/
   public searchProducts(filter: string) {
-    this.sidebar = generateProductLineFilterModule();
     this.productCardList = generateDummyProductCard();
     let filteredList: ProductCard[] = [];
-    if (filter) {
-      if (!this.newProductFilter.includes(filter)) {
-        this.newProductFilter.push(filter);
-      }
 
-      if (this.newProductFilter.length > 1) {
-        this.newProductFilter.forEach(newFilter =>
-          this.productCardList.forEach(
-            productCard =>
-              productCard.category.includes(newFilter) &&
-              filteredList.push(productCard)
-          )
-        );
-        return {
-          productCard: filteredList,
-          sidebar: this.sidebar
-        };
-      }
+    if (filter) {
+      this.productCardList.forEach(
+        productCard =>
+          productCard.subCategory
+            .toUpperCase()
+            .includes(filter.toUpperCase()) && filteredList.push(productCard)
+      );
+      // console.log(filteredList);
+      return {
+        productCardList: filteredList
+      };
     }
   }
 }

@@ -27,9 +27,10 @@ import { BodyTextExpandedModule } from "src/model/bodytext-expanded-module";
 import { NotYetImplemented } from "src/model/not-yet-implemented-module";
 import { CardModel } from "src/model/card-model";
 import { ProductLineStoryOverviewModule } from "src/model/product-line-story-overview-module";
-import { ProductCardsFilter } from "src/product-cards/product-card.model";
+/* import { ProductCardsFilter } from "src/product-line/product-line.model"; */
 import { ContactForm } from "src/model/contact-form";
 import { ProductLineFilterModule } from "src/model/product-line-filter-module";
+import { ProductLineSingleModule } from "src/model/product-line-single-module";
 
 export class DummyModel {
   @ApiModelProperty()
@@ -125,12 +126,15 @@ export class DummyModel {
   @ApiModelProperty()
   public expandablePanel?: ExpandablePanel;
 
-  @ApiModelProperty()
-  public productCardFilter?: ProductCardsFilter;
+  // @ApiModelProperty()
+  // public productCardFilter?: ProductCardsFilter;
 
   @ApiModelProperty()
   public productLineStoryOverviewModule?: ProductLineStoryOverviewModule;
 
   @ApiModelProperty()
   public productLineFilterModule?: ProductLineFilterModule;
+
+  @ApiModelProperty()
+  public productLineSingleModule?: ProductLineSingleModule;
 }

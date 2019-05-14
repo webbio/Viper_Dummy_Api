@@ -3,7 +3,7 @@ import { ApiModelProperty } from "@nestjs/swagger";
 import { ProductCard } from "src/model/product-card";
 import { CategoryCard } from "src/model/category-card";
 import { ProductLineFilterModule } from "src/model/product-line-filter-module";
-
+/*
 export class ProductCardsFilter extends WordPressPostModule {
   @ApiModelProperty({ type: [ProductCard] })
   public productCard: ProductCard[];
@@ -14,3 +14,4 @@ export class ProductCardsFilter extends WordPressPostModule {
   @ApiModelProperty()
   public search?: string;
 }
+*/
