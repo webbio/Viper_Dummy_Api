@@ -2,10 +2,8 @@ import { FilterOptions } from "./filter-options";
 import { NewsItem, generateDummyNews } from "./news";
 import { Recipe, generateDummyRecipes } from "./recipe";
 import { ApiModelProperty } from "@nestjs/swagger";
-import { WordPressPostModule } from "./wordpress-post-module";
-import uuid = require("uuid");
 
-export class ProductLineFilterModule {
+export class ProductLineFilter {
   @ApiModelProperty({ type: [FilterOptions] })
   public quickFilterOptions: FilterOptions[];
 
@@ -19,7 +17,7 @@ export class ProductLineFilterModule {
   public relatedRecipeItems: Recipe[];
 }
 
-export const generateProductLineFilterModule = (): ProductLineFilterModule => {
+export const generateProductLineFilter = (): ProductLineFilter => {
   return {
     quickFilterOptions: [
       {

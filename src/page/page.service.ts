@@ -42,8 +42,12 @@ import {
 } from "src/model/bodytext-expanded-module";
 import { generateNotYetImplemented } from "src/model/not-yet-implemented-module";
 import { generateProductLineStoryOverviewModule } from "src/model/product-line-story-overview-module";
-import { generateProductLineFilterModule } from "src/model/product-line-filter-module";
+import { generateProductLineFilter } from "src/model/product-line-filter";
 import { generateProductLineSingleModule } from "src/model/product-line-single-module";
+import {
+  ProductOverviewSimpleModule,
+  generateProductOverviewSimpleModule
+} from "src/model/product-overview-simple-module";
 
 @Injectable()
 export class PageService {
@@ -84,6 +88,19 @@ export class PageService {
         generateDummyNavBarModule(),
         generateDummyInfoHeaderModule("Japan Moderne Keuken"),
         generateProductLineSingleModule(),
+        generateNotYetImplemented("Related Recipes Module"),
+        generateNotYetImplemented("Newsletter Module"),
+        generateDummyFooterModule()
+      ]
+    } as PageModel,
+    {
+      id: uuid(),
+      route: "https://terrasana.com/product-line-singles/:category",
+      description: "Homepage",
+      wordPressPostModules: [
+        generateDummyNavBarModule(),
+        generateDummyInfoHeaderModule("Japan Moderne Keuken"),
+        generateProductOverviewSimpleModule(),
         generateNotYetImplemented("Related Recipes Module"),
         generateNotYetImplemented("Newsletter Module"),
         generateDummyFooterModule()

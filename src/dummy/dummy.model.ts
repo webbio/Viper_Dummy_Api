@@ -29,8 +29,9 @@ import { CardModel } from "src/model/card-model";
 import { ProductLineStoryOverviewModule } from "src/model/product-line-story-overview-module";
 /* import { ProductCardsFilter } from "src/product-line/product-line.model"; */
 import { ContactForm } from "src/model/contact-form";
-import { ProductLineFilterModule } from "src/model/product-line-filter-module";
+import { ProductLineFilter } from "src/model/product-line-filter";
 import { ProductLineSingleModule } from "src/model/product-line-single-module";
+import { ProductOverviewSimpleModule } from "src/model/product-overview-simple-module";
 
 export class DummyModel {
   @ApiModelProperty()
@@ -133,8 +134,8 @@ export class DummyModel {
   public productLineStoryOverviewModule?: ProductLineStoryOverviewModule;
 
   @ApiModelProperty()
-  public productLineFilterModule?: ProductLineFilterModule;
+  public productLineSingleModule?: ProductLineSingleModule;
 
   @ApiModelProperty()
-  public productLineSingleModule?: ProductLineSingleModule;
+  public productOverviewSimpleModule?: ProductOverviewSimpleModule;
 }

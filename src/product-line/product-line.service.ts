@@ -35,30 +35,25 @@ export class ProductLineService {
       };
     }
   }
-
-  public getProducts(filter: string) {
+*/
+  public getProducts(category: string) {
+    console.log("salut");
     this.productCardList = generateDummyProductCard();
     let filteredList: ProductCard[] = [];
-    if (filter) {
-      if (!this.newProductFilter.includes(filter)) {
-        this.newProductFilter.push(filter);
-      }
 
-      if (this.newProductFilter.length > 1) {
-        this.newProductFilter.forEach(newFilter =>
-          this.productCardList.forEach(
-            productCard =>
-              productCard.subCategory === newFilter &&
-              filteredList.push(productCard)
-          )
-        );
-        return {
-          productCard: filteredList
-        };
-      }
+    if (category) {
+      this.productCardList.forEach(
+        productCard =>
+          productCard.category.toUpperCase() === category.toUpperCase() &&
+          filteredList.push(productCard)
+      );
+      // console.log(filteredList);
+      return {
+        productCardList: filteredList
+      };
     }
   }
-*/
+
   public searchProducts(filter: string) {
     this.productCardList = generateDummyProductCard();
     let filteredList: ProductCard[] = [];

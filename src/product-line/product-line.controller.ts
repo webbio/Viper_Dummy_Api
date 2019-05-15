@@ -26,28 +26,29 @@ export class ProductLineController {
   getCategories(@Query() query) {
     const cards = this.pageService.getCategories(query.filter);
     return cards;
-  }
+  }*/
+
   @ApiImplicitQuery({
-    name: "filter",
-    description: "Filter by sub cateogry",
+    name: "category",
+    description: "Filter by  cateogry",
     required: false,
     type: String
   })
   @Get("/products")
   getProducts(@Query() query) {
-    const cards = this.pageService.getProducts(query.filter);
+    const cards = this.pageService.getProducts(query.category);
     return cards;
   }
-*/
+
   @ApiImplicitQuery({
-    name: "filter",
+    name: "search",
     description: "search",
     required: true,
     type: String
   })
   @Get("/search")
   searchProduct(@Query() query) {
-    const products = this.pageService.searchProducts(query.filter);
+    const products = this.pageService.searchProducts(query.search);
     return products;
   }
   /*  @Get()
