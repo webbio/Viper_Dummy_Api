@@ -21,6 +21,7 @@ import { generateDummyProductOverviewModule } from 'src/model/product-overview';
 import { generateProductLineStoryOverviewModule } from 'src/model/product-line-story-overview-module';
 import { generateDummyNewsletterModule } from 'src/model/newsletter-module';
 import { generateDummyRecipeDetailModule } from 'src/model/recipe-detail-module';
+import { generateDummyFaqModule } from 'src/model/faq-overview-module';
 
 @Injectable()
 export class PageService {
@@ -239,8 +240,8 @@ export class PageService {
       description: 'Veelgestelde vragen',
       wordPressPostModules: [
         generateDummyNavBarModule(),
-        // generateDummyInfoHeaderModule('Alle veelgestelde vragen'),
-        generateNotYetImplemented('FAQ overview Module'),
+        generateDummyInfoHeaderModule('Alle veelgestelde vragen',"Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.", "center", "","", "","","Terug naar home", "/"),
+        generateDummyFaqModule(),
         generateNotYetImplemented('Related Products Module'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
@@ -284,7 +285,7 @@ export class PageService {
         generateDummyInfoHeaderModule(
           'Contact met terrasana',
           '',
-          'left',
+          'right',
           'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/Screenshot+2019-05-10+at+16.19.17.png',
           'right',
           '',
