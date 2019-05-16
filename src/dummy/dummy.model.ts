@@ -33,6 +33,7 @@ import { ContactForm } from "src/model/contact-form";
 import { ProductOverview } from "src/model/product-overview";
 import { ProductLineSingleModule } from "src/model/product-line-single-module";
 import { ProductOverviewSimpleModule } from "src/model/product-overview-simple-module";
+import { FAQOverviewModule } from "src/model/faq-overview-module";
 
 export class DummyModel {
   @ApiModelProperty()
@@ -128,9 +129,6 @@ export class DummyModel {
   @ApiModelProperty()
   public expandablePanel?: ExpandablePanel;
 
-  // @ApiModelProperty()
-  // public productCardFilter?: ProductCardsFilter;
-
   @ApiModelProperty()
   public newsletterModule?: NewsletterModule;
 
@@ -148,4 +146,7 @@ export class DummyModel {
 
   @ApiModelProperty()
   public navbarSearchItem?: NavbarSearchItem;
+
+  @ApiModelProperty()
+  public faqOverviewModule?: FAQOverviewModule;
 }

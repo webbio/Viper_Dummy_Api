@@ -12,6 +12,8 @@ export class ProductOverviewSimpleModule extends WordPressPostModule {
   public filter: ProductLineFilter;
   @ApiModelProperty({ type: [ProductCard] })
   public productCardList: ProductCard[];
+  @ApiModelProperty()
+  public totalItems: number;
 }
 
 export const generateProductOverviewSimpleModule = (): ProductOverviewSimpleModule => {
@@ -21,6 +23,7 @@ export const generateProductOverviewSimpleModule = (): ProductOverviewSimpleModu
     bottomMargin: "",
     name: "ProductOverviewSimpleModule",
     filter: generateProductLineFilter(),
-    productCardList: generateDummyProductCard()
+    productCardList: generateDummyProductCard(),
+    totalItems: 5
   };
 };

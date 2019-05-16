@@ -1,16 +1,10 @@
 import { Injectable } from "@nestjs/common";
-import * as URI from "urijs";
 import { PageModel } from "./page.model";
 import * as uuid from "uuid";
 import * as _ from "lodash";
-import {
-  WelcomeModule,
-  generateDummyWelcomeModule
-} from "src/model/welcome-module";
-import {
-  NavBarModule,
-  generateDummyNavBarModule
-} from "src/model/nav-bar-module";
+import * as URI from "urijs";
+import { generateDummyWelcomeModule } from "src/model/welcome-module";
+import { generateDummyNavBarModule } from "src/model/nav-bar-module";
 import {
   generateDummyCTAModuleHomePage1,
   generateDummyCTAModuleHomePage2
@@ -18,39 +12,18 @@ import {
 import { generateDummyInfoHeaderModule } from "src/model/info-header-module";
 import { generateBodyTextModule } from "src/model/bodytext-module";
 import { generateDummyFooterModule } from "src/model/footer-component";
-import {
-  generateDummyInstagramWallModule,
-  InstagramWalllModule
-} from "src/model/instagram-wall";
-import {
-  generateDummyFeaturedItemModule,
-  FeaturedItemModule
-} from "src/model/featured-item";
-import { generateDummySocialMediaButtons } from "src/model/social-media-buttons";
-import { OurTeamModule } from "src/model/our-team-module";
-import {
-  generateDummyContactModule,
-  ContactModule
-} from "src/model/contact-module";
+import { generateDummyInstagramWallModule } from "src/model/instagram-wall";
+import { generateDummyContactModule } from "src/model/contact-module";
 import { generateDummyOurTeamModule } from "src/model/our-team-module";
-import {
-  generateDummySalePointModule,
-  SalePointModule
-} from "src/model/sale-point-module";
-import {
-  generateBodyTextExpandedModule,
-  BodyTextExpandedModule
-} from "src/model/bodytext-expanded-module";
+import { generateDummySalePointModule } from "src/model/sale-point-module";
+import { generateBodyTextExpandedModule } from "src/model/bodytext-expanded-module";
 import { generateNotYetImplemented } from "src/model/not-yet-implemented-module";
 import { generateProductLineStoryOverviewModule } from "src/model/product-line-story-overview-module";
-import { generateProductLineFilter } from "src/model/product-line-filter";
-import { generateProductLineSingleModule } from "src/model/product-line-single-module";
-import {
-  ProductOverviewSimpleModule,
-  generateProductOverviewSimpleModule
-} from "src/model/product-overview-simple-module";
 import { generateDummyNewsletterModule } from "src/model/newsletter-module";
 import { generateDummyRecipeDetailModule } from "src/model/recipe-detail-module";
+import { generateDummyFaqModule } from "src/model/faq-overview-module";
+import { generateProductLineSingleModule } from "src/model/product-line-single-module";
+import { generateProductOverviewSimpleModule } from "src/model/product-overview-simple-module";
 
 @Injectable()
 export class PageService {
@@ -270,8 +243,18 @@ export class PageService {
       description: "Veelgestelde vragen",
       wordPressPostModules: [
         generateDummyNavBarModule(),
-        // generateDummyInfoHeaderModule('Alle veelgestelde vragen'),
-        generateNotYetImplemented("FAQ overview Module"),
+        generateDummyInfoHeaderModule(
+          "Alle veelgestelde vragen",
+          "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
+          "center",
+          "",
+          "",
+          "",
+          "",
+          "Terug naar home",
+          "/"
+        ),
+        generateDummyFaqModule(),
         generateNotYetImplemented("Related Products Module"),
         generateDummyNewsletterModule(),
         generateDummyFooterModule()
@@ -315,8 +298,8 @@ export class PageService {
         generateDummyInfoHeaderModule(
           "Contact met terrasana",
           "",
-          "left",
-          "s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/Screenshot+2019-05-10+at+16.19.17.png",
+          "right",
+          "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/Screenshot+2019-05-10+at+16.19.17.png",
           "right",
           "",
           "",
@@ -373,7 +356,7 @@ export class PageService {
     if (route === "") {
       routeToUse = "terrasana.com/";
     }
-    var uri = new URI(routeToUse);
+    let uri = new URI(routeToUse);
 
     routeToUse = uri.domain();
     routeToUse += uri.segment()[0] !== "" ? "/" + uri.segment()[0] : "";

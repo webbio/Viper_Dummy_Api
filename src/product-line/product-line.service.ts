@@ -85,19 +85,23 @@ export class ProductLineService {
     }
     const productList = this.generateData(TOTAL_ITEMS);
     const finalPosition = skip + take;
+    let totalItems = TOTAL_ITEMS;
     if (category) {
+      totalItems = 0;
       const filteredList = [];
       for (let i = 0; i < TOTAL_ITEMS; i++) {
         if (productList[i].category.toUpperCase() === category.toUpperCase()) {
           filteredList.push(productList[i]);
         }
       }
+      totalItems = filteredList.length;
       for (let i = skip; i < finalPosition; i++) {
         if (filteredList[i] != undefined) {
           paginatedList.push(filteredList[i]);
         }
       }
     } else {
+      totalItems = productList.length;
       for (let i = skip; i < finalPosition; i++) {
         if (productList[i] != undefined) {
           paginatedList.push(productList[i]);
@@ -106,6 +110,7 @@ export class ProductLineService {
     }
 
     return {
+      totalItems: totalItems,
       productCardList: paginatedList
     };
   }
