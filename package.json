@@ -25,12 +25,15 @@
     "@nestjs/platform-express": "^6.0.0",
     "@nestjs/swagger": "^3.0.2",
     "@types/lodash": "^4.14.123",
+    "@types/urijs": "^1.19.0",
     "@types/uuid": "^3.4.4",
     "lodash": "^4.17.11",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
     "rxjs": "^6.3.3",
     "swagger-ui-express": "^4.0.2",
+    "uri": "^0.1.0",
+    "urijs": "^1.19.1",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
