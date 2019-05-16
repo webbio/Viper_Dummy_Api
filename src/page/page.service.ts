@@ -95,7 +95,7 @@ export class PageService {
     } as PageModel,
     {
       id: uuid(),
-      route: "https://terrasana.com/product-line-singles/:category",
+      route: "terrasana.com/product-line-single/:category",
       description: "Homepage",
       wordPressPostModules: [
         generateDummyNavBarModule(),

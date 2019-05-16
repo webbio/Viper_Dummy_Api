@@ -5,6 +5,10 @@ import {
   generateDummyCategoryCard,
   CategoryCard
 } from "src/model/category-card";
+import {
+  ProductLineFilter,
+  generateProductLineFilter
+} from "src/model/product-line-filter";
 
 @Injectable()
 export class ProductLineService {
@@ -12,6 +16,7 @@ export class ProductLineService {
   categoryCardList: CategoryCard[];
   newCategoryFilter: string[] = [""];
   newProductFilter: string[] = [""];
+  sidebar: ProductLineFilter;
   /*
   public getCategories(filter: string) {
     this.categoryCardList = generateDummyCategoryCard();
@@ -39,6 +44,7 @@ export class ProductLineService {
   public getProducts(category: string) {
     console.log("salut");
     this.productCardList = generateDummyProductCard();
+    this.sidebar = generateProductLineFilter();
     let filteredList: ProductCard[] = [];
 
     if (category) {
@@ -49,7 +55,8 @@ export class ProductLineService {
       );
       // console.log(filteredList);
       return {
-        productCardList: filteredList
+        productCardList: filteredList,
+        filter: this.sidebar
       };
     }
   }
