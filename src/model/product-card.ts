@@ -1,4 +1,5 @@
 import { ApiModelProperty } from "@nestjs/swagger";
+import { ProductLineService } from "src/product-line/product-line.service";
 
 export class ProductCard {
   @ApiModelProperty()

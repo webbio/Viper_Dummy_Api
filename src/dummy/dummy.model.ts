@@ -4,7 +4,6 @@ import { NavBarModule } from "src/model/nav-bar-module";
 import { CTAModule } from "src/model/cta-module";
 import { FooterModule } from "src/model/footer-component";
 import { SocialMediaButtons } from "src/model/social-media-buttons";
-import { InfoHeader } from "src/model/info-header-module";
 import { BodyTextModule } from "src/model/bodytext-module";
 import { WelcomeModule } from "src/model/welcome-module";
 import { InstagramWalllModule } from "src/model/instagram-wall";
@@ -21,15 +20,17 @@ import { ToggleModule } from "src/model/toggle-module";
 import { ExpandablePanel } from "src/model/expandable-panel";
 import { OurTeamModule } from "src/model/our-team-module";
 import { ContactModule } from "src/model/contact-module";
-import { ProductOverview } from "src/model/product-overview";
 import { SalePointModule } from "src/model/sale-point-module";
 import { BodyTextExpandedModule } from "src/model/bodytext-expanded-module";
 import { NotYetImplemented } from "src/model/not-yet-implemented-module";
 import { CardModel } from "src/model/card-model";
 import { ProductLineStoryOverviewModule } from "src/model/product-line-story-overview-module";
-/* import { ProductCardsFilter } from "src/product-line/product-line.model"; */
+import { InfoHeaderModule } from "src/model/info-header-module";
+import { NavbarSearchCategory } from "src/navbar-search/navbar-search-category";
+import { NavbarSearchItem } from "src/navbar-search/navbar-search-item";
+import { NewsletterModule } from "src/model/newsletter-module";
 import { ContactForm } from "src/model/contact-form";
-import { ProductLineFilter } from "src/model/product-line-filter";
+import { ProductOverview } from "src/model/product-overview";
 import { ProductLineSingleModule } from "src/model/product-line-single-module";
 import { ProductOverviewSimpleModule } from "src/model/product-overview-simple-module";
 
@@ -60,7 +61,7 @@ export class DummyModel {
   public navBarModule?: NavBarModule;
 
   @ApiModelProperty()
-  public infoHeaderModule?: InfoHeader;
+  public infoHeaderModule?: InfoHeaderModule;
 
   @ApiModelProperty()
   public bodyTextModule?: BodyTextModule;
@@ -131,6 +132,9 @@ export class DummyModel {
   // public productCardFilter?: ProductCardsFilter;
 
   @ApiModelProperty()
+  public newsletterModule?: NewsletterModule;
+
+  @ApiModelProperty()
   public productLineStoryOverviewModule?: ProductLineStoryOverviewModule;
 
   @ApiModelProperty()
@@ -138,4 +142,10 @@ export class DummyModel {
 
   @ApiModelProperty()
   public productOverviewSimpleModule?: ProductOverviewSimpleModule;
+
+  @ApiModelProperty()
+  public navbarSearchCategory?: NavbarSearchCategory;
+
+  @ApiModelProperty()
+  public navbarSearchItem?: NavbarSearchItem;
 }

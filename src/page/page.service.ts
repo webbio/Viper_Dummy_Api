@@ -1,4 +1,5 @@
 import { Injectable } from "@nestjs/common";
+import * as URI from "urijs";
 import { PageModel } from "./page.model";
 import * as uuid from "uuid";
 import * as _ from "lodash";
@@ -48,13 +49,15 @@ import {
   ProductOverviewSimpleModule,
   generateProductOverviewSimpleModule
 } from "src/model/product-overview-simple-module";
+import { generateDummyNewsletterModule } from "src/model/newsletter-module";
+import { generateDummyRecipeDetailModule } from "src/model/recipe-detail-module";
 
 @Injectable()
 export class PageService {
   private pageList: PageModel[] = [
     {
       id: uuid(),
-      route: "https://terrasana.com/",
+      route: "terrasana.com", // still need to fill instagram module properly
       description: "Homepage with modules",
       wordPressPostModules: [
         generateDummyNavBarModule(),
@@ -63,84 +66,120 @@ export class PageService {
         generateNotYetImplemented("Related Products Module"),
         generateDummyInstagramWallModule(),
         generateDummyCTAModuleHomePage2(),
-        generateNotYetImplemented("Newsletter Module"),
+        generateDummyNewsletterModule(),
         generateDummyFooterModule()
       ]
     } as PageModel,
     {
       id: uuid(),
-      route: "https://terrasana.com/product-line-overview",
+      route: "terrasana.com/product-line-overview",
       description: "Homepage",
       wordPressPostModules: [
         generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule("Onze productlijnen"),
+        generateDummyInfoHeaderModule(
+          "Onze productlijnen",
+          "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
+          "center",
+          "",
+          "",
+          "Meer Over Japan Moderne Keuken",
+          "/product-line-single",
+          "Terug naar home",
+          "/"
+        ),
         generateProductLineStoryOverviewModule(),
         generateNotYetImplemented("Related Products Module"),
-        generateNotYetImplemented("Newsletter Module"),
+        generateDummyNewsletterModule(),
         generateDummyFooterModule()
       ]
     } as PageModel,
     {
       id: uuid(),
-      route: "https://terrasana.com/product-line-single",
+      route: "terrasana.com/product-line-single",
       description: "Homepage",
       wordPressPostModules: [
         generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule("Japan Moderne Keuken"),
+        generateDummyInfoHeaderModule(
+          "Japan Moderne Keuken",
+          "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
+          "center",
+          "",
+          "",
+          "Meer Over Japan Moderne Keuken",
+          "/product-line-single",
+          "Terug naar home",
+          "/"
+        ),
         generateProductLineSingleModule(),
         generateNotYetImplemented("Related Recipes Module"),
-        generateNotYetImplemented("Newsletter Module"),
+        generateDummyNewsletterModule(),
         generateDummyFooterModule()
       ]
     } as PageModel,
+
     {
       id: uuid(),
-      route: "terrasana.com/product-line-single/:category",
-      description: "Homepage",
-      wordPressPostModules: [
-        generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule("Japan Moderne Keuken"),
-        generateProductOverviewSimpleModule(),
-        generateNotYetImplemented("Related Recipes Module"),
-        generateNotYetImplemented("Newsletter Module"),
-        generateDummyFooterModule()
-      ]
-    } as PageModel,
-    {
-      id: uuid(),
-      route: "https://terrasana.com/product-line-story-single",
+      route: "terrasana.com/product-line-story-single",
       description: "Productlijnen overzicht",
       wordPressPostModules: [
         generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule("Japan Moderne Keuken"),
+        generateDummyInfoHeaderModule(
+          "Japan Moderne Keuken",
+          "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
+          "center",
+          "",
+          "",
+          "Meer Over Japan Moderne Keuken",
+          "/product-line-single",
+          "Terug naar home",
+          "/"
+        ),
         generateBodyTextModule("add dummy bodytext html"),
         generateNotYetImplemented("Related Products Module"),
         generateBodyTextModule("add dummy bodytext html"),
         generateNotYetImplemented("Picture Slider Module"),
         generateDummyCTAModuleHomePage2(), // add new CTA module for this page (always japanese products)
         generateNotYetImplemented("Related Recipe Module"),
-        generateNotYetImplemented("Newsletter Module"),
+        generateDummyNewsletterModule(),
         generateDummyFooterModule()
       ]
     } as PageModel,
     {
       id: uuid(),
-      route: "https://terrasana.com/product-group",
+      route: "terrasana.com/product-group",
       description: "Productgroepen",
       wordPressPostModules: [
         generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule("Noedels"),
-        generateNotYetImplemented("ProductLine Filter Module"),
+        generateDummyInfoHeaderModule(
+          "Downloads",
+          "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
+          "center",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ),
+        generateProductOverviewSimpleModule(),
         generateNotYetImplemented("FAQ Module"),
         generateNotYetImplemented("Related Recipe Module"),
         generateNotYetImplemented("Related Products Module"),
-        generateNotYetImplemented("Newsletter Module"),
+        generateDummyNewsletterModule(),
         generateDummyFooterModule()
       ]
     } as PageModel,
     {
       id: uuid(),
-      route: "https://terrasana.com/product-single",
+      route: "terrasana.com/info-header",
+      description: "InfoHeader",
+      wordPressPostModules: [
+        // generateDummyInfoHeaderModule('Noedels'),
+      ]
+    } as PageModel,
+    {
+      id: uuid(),
+      route: "terrasana.com/product-single",
       description: "Product",
       wordPressPostModules: [
         generateDummyNavBarModule(),
@@ -148,150 +187,178 @@ export class PageService {
         generateNotYetImplemented("Product Single Tab Module"),
         generateNotYetImplemented("Related Product Module"),
         generateNotYetImplemented("Related Recipe Module"),
-        generateNotYetImplemented("Newsletter Module"),
+        generateDummyNewsletterModule(),
         generateDummyFooterModule()
       ]
     } as PageModel,
     {
       id: uuid(),
-      route: "https://terrasana.com/news-overview",
-      description: "Nieuws",
-      wordPressPostModules: [
-        generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule("Nieuwtjes"),
-        generateNotYetImplemented("News Overview Module"),
-        generateNotYetImplemented("Related Products Module"),
-        generateNotYetImplemented("Newsletter Module"),
-        generateDummyFooterModule()
-      ]
-    } as PageModel,
-    {
-      id: uuid(),
-      route: "https://terrasana.com/news-single",
+      route: "terrasana.com/news-overview",
       description: "Nieuws",
       wordPressPostModules: [
         generateDummyNavBarModule(),
         generateDummyInfoHeaderModule(
-          "Gezonde snack? Probeer onze nieuwe snackmixen!"
+          "NIEUWTJES",
+          "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
+          "center",
+          "",
+          "",
+          "",
+          "",
+          "Terug naar home",
+          "/"
+        ),
+        // main component
+        generateNotYetImplemented("Related Products Module"),
+        generateDummyNewsletterModule(),
+        generateDummyFooterModule()
+      ]
+    } as PageModel,
+    {
+      id: uuid(),
+      route: "terrasana.com/news-single",
+      description: "Nieuws",
+      wordPressPostModules: [
+        generateDummyNavBarModule(),
+        generateDummyInfoHeaderModule(
+          "Gezonde snack? Probeer onze nieuwe snackmixen!",
+          "",
+          "center",
+          "",
+          "",
+          "",
+          "",
+          "Terug naar Nieuwtjes",
+          "/news-overview"
         ),
         generateBodyTextExpandedModule(),
         generateNotYetImplemented("Related News Module"),
         generateNotYetImplemented("Related Products Module"),
-        generateNotYetImplemented("Newsletter Module"),
+        generateDummyNewsletterModule(),
         generateDummyFooterModule()
       ]
     } as PageModel,
     {
       id: uuid(),
-      route: "https://terrasana.com/recipe-overview",
+      route: "terrasana.com/recipe-overview",
       description: "Recepten",
       wordPressPostModules: [
         generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule("Recepten"),
+        // generateDummyInfoHeaderModule('Recepten'),
         generateNotYetImplemented("Recipe Overview Module"),
         generateNotYetImplemented("Related Products Module"),
-        generateNotYetImplemented("Newsletter Module"),
+        generateDummyNewsletterModule(),
         generateDummyFooterModule()
       ]
     } as PageModel,
     {
       id: uuid(),
-      route: "https://terrasana.com/recipe-single",
+      route: "terrasana.com/recipe-single",
       description: "Recepten",
       wordPressPostModules: [
         generateDummyNavBarModule(),
         generateNotYetImplemented("Recipe Header Module"),
-        generateNotYetImplemented("Recipe Details Module"),
+        generateDummyRecipeDetailModule(),
         generateNotYetImplemented("Related Products Module"),
-        generateNotYetImplemented("Newsletter Module"),
+        generateDummyNewsletterModule(),
         generateDummyFooterModule()
       ]
     } as PageModel,
     {
       id: uuid(),
-      route: "https://terrasana.com/faq-overview",
+      route: "terrasana.com/faq-overview",
       description: "Veelgestelde vragen",
       wordPressPostModules: [
         generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule("Alle veelgestelde vragen"),
+        // generateDummyInfoHeaderModule('Alle veelgestelde vragen'),
         generateNotYetImplemented("FAQ overview Module"),
         generateNotYetImplemented("Related Products Module"),
-        generateNotYetImplemented("Newsletter Module"),
+        generateDummyNewsletterModule(),
         generateDummyFooterModule()
       ]
     } as PageModel,
     {
       id: uuid(),
-      route: "https://terrasana.com/faq-single",
+      route: "terrasana.com/faq-single",
       description: "Veelgestelde vragen",
       wordPressPostModules: [
         generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule("Hoe worden de noedels gemaakt?"),
+        // generateDummyInfoHeaderModule('Hoe worden de noedels gemaakt?'),
         generateBodyTextModule("add dummy bodytext html"),
         generateNotYetImplemented("Related FAQ Module"),
         generateNotYetImplemented("Related Products Module"),
-        generateNotYetImplemented("Newsletter Module"),
+        generateDummyNewsletterModule(),
         generateDummyFooterModule()
       ]
     } as PageModel,
     {
       id: uuid(),
-      route: "https://terrasana.com/about-us",
+      route: "terrasana.com/about-us",
       description: "Informatief",
       wordPressPostModules: [
         generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule("Ontmoet het team achter terrasana?"),
+        // generateDummyInfoHeaderModule('Ontmoet het team achter terrasana?'),
         generateBodyTextModule("add dummy bodytext html"),
         generateDummyOurTeamModule(),
         generateNotYetImplemented("Related Recipes Module"),
         generateNotYetImplemented("Related Products Module"),
-        generateNotYetImplemented("Newsletter Module"),
+        generateDummyNewsletterModule(),
         generateDummyFooterModule()
       ]
     } as PageModel,
     {
       id: uuid(),
-      route: "https://terrasana.com/contact",
+      route: "terrasana.com/contact",
       description: "Contact",
       wordPressPostModules: [
         generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule("Contact met terrasana"),
+        generateDummyInfoHeaderModule(
+          "Contact met terrasana",
+          "",
+          "left",
+          "s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/Screenshot+2019-05-10+at+16.19.17.png",
+          "right",
+          "",
+          "",
+          "Terug",
+          "/"
+        ),
         generateDummyContactModule(),
         generateDummySalePointModule(),
         generateNotYetImplemented("Related Links Module"),
         generateDummyInstagramWallModule(),
         generateDummyCTAModuleHomePage2(),
-        generateNotYetImplemented("Newsletter Module"),
+        generateDummyNewsletterModule(),
         generateDummyFooterModule()
       ]
     } as PageModel,
     {
       id: uuid(),
-      route: "https://terrasana.com/business",
+      route: "terrasana.com/business",
       description: "Zakelijk",
       wordPressPostModules: [generateDummyNavBarModule()]
     } as PageModel,
     {
       id: uuid(),
-      route: "https://terrasana.com/business-downloads-product-line",
+      route: "terrasana.com/business-downloads-product-line",
       description: "Zakelijk",
       wordPressPostModules: [generateDummyNavBarModule()]
     } as PageModel,
     {
       id: uuid(),
-      route: "https://terrasana.com/business-downloads-product-line-detail",
+      route: "terrasana.com/business-downloads-product-line-detail",
       description: "Zakelijk",
       wordPressPostModules: [generateDummyNavBarModule()]
     } as PageModel,
     {
       id: uuid(),
-      route: "https://terrasana.com/business-login",
+      route: "terrasana.com/business-login",
       description: "Zakelijk",
       wordPressPostModules: [generateDummyNavBarModule()]
     } as PageModel,
     {
       id: uuid(),
-      route: "https://terrasana.com/business-new-account",
+      route: "terrasana.com/business-new-account",
       description: "Zakelijk",
       wordPressPostModules: [generateDummyNavBarModule()]
     } as PageModel
@@ -304,8 +371,12 @@ export class PageService {
   public getPageByRoute(route: string): PageModel {
     let routeToUse = route;
     if (route === "") {
-      routeToUse = "https://terrasana.com/";
+      routeToUse = "terrasana.com/";
     }
+    var uri = new URI(routeToUse);
+
+    routeToUse = uri.domain();
+    routeToUse += uri.segment()[0] !== "" ? "/" + uri.segment()[0] : "";
 
     return _.find(this.pageList, (page: PageModel) => {
       return _.isEqual(page.route, routeToUse);

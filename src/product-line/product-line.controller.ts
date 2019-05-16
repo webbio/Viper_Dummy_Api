@@ -31,12 +31,28 @@ export class ProductLineController {
   @ApiImplicitQuery({
     name: "category",
     description: "Filter by  cateogry",
-    required: false,
+    required: true,
     type: String
+  })
+  @ApiImplicitQuery({
+    name: "skip",
+    description: "Skip for pagination",
+    required: true,
+    type: Number
+  })
+  @ApiImplicitQuery({
+    name: "take",
+    description: "How many per page",
+    required: true,
+    type: Number
   })
   @Get("/products")
   getProducts(@Query() query) {
-    const cards = this.pageService.getProducts(query.category);
+    const cards = this.pageService.getProducts(
+      query.category,
+      parseInt(query.skip),
+      parseInt(query.take)
+    );
     return cards;
   }
 
