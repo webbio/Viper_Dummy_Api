@@ -36,7 +36,6 @@ export class PageService {
         generateDummyInstagramWallModule(),
         generateDummyCTAModuleHomePage2(),
         generateNotYetImplemented("Newsletter Module"),
-        generateDummyGallerySliderModule(),
         generateDummyFooterModule()
       ]
     } as PageModel,

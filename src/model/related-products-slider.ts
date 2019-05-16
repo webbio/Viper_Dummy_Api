@@ -34,6 +34,21 @@ export const generateDummyRelatedProductsSlider = (): RelatedProductsSlider => {
         URL: "/"
       },
       {
+        title: "100% Bruine rijstnoedels",
+        picture: "https://dummyimage.com/197x130/000/fff.jpg",
+        URL: "/"
+      },
+      {
+        title: "100% Bruine rijstnoedels",
+        picture: "https://dummyimage.com/197x130/000/fff.jpg",
+        URL: "/"
+      },
+      {
+        title: "100% Bruine rijstnoedels",
+        picture: "https://dummyimage.com/197x130/000/fff.jpg",
+        URL: "/"
+      },
+      {
         title: "Boekweitnoedels met zoete aardappel",
         picture: "https://dummyimage.com/197x130/000/fff.jpg",
         URL: "/"
