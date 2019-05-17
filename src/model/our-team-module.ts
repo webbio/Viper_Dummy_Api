@@ -15,7 +15,7 @@ export const generateDummyOurTeamModule = (): OurTeamModule => {
         link: "/",
         title: "Sarah de jong",
         image:
-          "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/ourTeam/0.png",
+          "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/ourTeam/0.jpg",
         position: "Marketing Manager",
         social: true
       },
