@@ -5,10 +5,7 @@ import * as _ from "lodash";
 import * as URI from "urijs";
 import { generateDummyWelcomeModule } from "src/model/welcome-module";
 import { generateDummyNavBarModule } from "src/model/nav-bar-module";
-import {
-  generateDummyCTAModuleHomePage1,
-  generateDummyCTAModuleHomePage2
-} from "src/model/cta-module";
+import { generateDummyCTAModuleHomePage1, generateDummyCTAModuleHomePage2 } from "src/model/cta-module";
 import { generateDummyInfoHeaderModule } from "src/model/info-header-module";
 import { generateBodyTextModule } from "src/model/bodytext-module";
 import { generateDummyFooterModule } from "src/model/footer-component";
@@ -19,15 +16,12 @@ import { generateDummySalePointModule } from "src/model/sale-point-module";
 import { generateBodyTextExpandedModule } from "src/model/bodytext-expanded-module";
 import { generateNotYetImplemented } from "src/model/not-yet-implemented-module";
 import { generateProductLineStoryOverviewModule } from "src/model/product-line-story-overview-module";
-<<<<<<< HEAD
 import { generateDummyRelatedProductsSlider } from "src/model/related-products-slider";
 import { generateDummyGallerySliderModule } from "src/model/gallery-slider";
-=======
 import { generateDummyNewsletterModule } from "src/model/newsletter-module";
 import { generateDummyRecipeDetailModule } from "src/model/recipe-detail-module";
 import { generateDummyFaqModule } from "src/model/faq-overview-module";
 
->>>>>>> master
 @Injectable()
 export class PageService {
   private pageList: PageModel[] = [
