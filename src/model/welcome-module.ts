@@ -84,7 +84,7 @@ export const generateDummyWelcomeModule = (): WelcomeModule => {
       content: "RECEPT: vegan & glutenvrij courgettebrood",
       route: "/products",
       imageUrl:
-        "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/small-card3.png"
+        "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/small-card3.jpg"
     }
   } as WelcomeModule;
 };
