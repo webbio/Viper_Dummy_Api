@@ -4,7 +4,6 @@ import { NavBarModule } from "src/model/nav-bar-module";
 import { CTAModule } from "src/model/cta-module";
 import { FooterModule } from "src/model/footer-component";
 import { SocialMediaButtons } from "src/model/social-media-buttons";
-import { InfoHeader } from "src/model/info-header-module";
 import { BodyTextModule } from "src/model/bodytext-module";
 import { WelcomeModule } from "src/model/welcome-module";
 import { InstagramWalllModule } from "src/model/instagram-wall";
