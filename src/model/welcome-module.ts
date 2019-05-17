@@ -52,13 +52,13 @@ export const generateDummyWelcomeModule = (): WelcomeModule => {
       buttonType: ButtonType.Large,
       content: "Producten",
       route: "/products",
-      imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/card1.png"
+      imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/card1.jpg"
     },
     mainButton2: {
       buttonType: ButtonType.Large,
       content: "Recepten",
       route: "/recipes",
-      imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/card2.png"
+      imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/card2.jpg"
     },
     smallButton1: {
       buttonType: ButtonType.Medium,

@@ -47,7 +47,8 @@ export const generateDummyCTAModuleHomePage1 = (): CTAModule => {
 export const generateDummyCTAModuleHomePage2 = (): CTAModule => {
   return {
     titleText: "Maak je eigen biologische wraps!",
-    bodyText: "Binnen een half uur je eigen biologische hoemoes. Lees hier hoe dat moet!",
+    bodyText:
+      "Binnen een half uur je eigen biologische hoemoes. Lees hier hoe dat moet!",
     buttons: [
       {
         href: "#",
@@ -76,6 +77,7 @@ export const generateDummyCTAModuleHomePage2 = (): CTAModule => {
     topMargin: "0px",
     containerAlignment: "left",
     contentAlignment: "left",
-    imageURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/rectangle-5.png"
+    imageURL:
+      "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/rectangle-5.jpg"
   };
 };

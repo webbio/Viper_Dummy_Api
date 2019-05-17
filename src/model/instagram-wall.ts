@@ -4,7 +4,6 @@ import { ApiModelProperty, ApiImplicitBody, ApiUseTags } from "@nestjs/swagger";
 import { Module } from "@nestjs/common";
 import { PageController } from "src/page/page.controller";
 import { IntagramPosts } from "./instagram-posts";
-import { Background } from "./background";
 
 @Module({
   controllers: [PageController]
@@ -21,20 +20,9 @@ export const generateDummyInstagramWallModule = (): InstagramWalllModule => {
   return {
     id: uuid(),
     name: "InstagramModule",
-    topMargin: "50px",
+    topMargin: "0px",
     bottomMargin: "0px",
-    title: "Wij hebben veel producten in huis!",
-    decorCurveVerticalAlignment: "top",
-    topPadding: "50px",
-    background: {
-      backgroundColour: "red"
-    },
-    curve: {
-      decorCurveVerticalAlignment: "middle",
-      curveBackground: {
-        backgroundColour: "orange"
-      }
-    },
+    title: "Bekijk onze instagram wall!",
     posts: [
       {
         imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg",
@@ -59,11 +47,11 @@ export const generateDummyInstagramWallModule = (): InstagramWalllModule => {
       },
       {
         imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg",
-        title: "Title "
+        title: "Do you like to make your ice..."
       },
       {
         imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg",
-        title: "Title 111"
+        title: "Irresistable quesadillas! Wanna make them too? It's super easy..."
       },
       {
         imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg",

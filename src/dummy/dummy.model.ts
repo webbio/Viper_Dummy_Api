@@ -30,6 +30,12 @@ import { RelatedProductsSlider } from "src/model/related-products-slider";
 import { ProductLineStoryOverviewModule } from "src/model/product-line-story-overview-module";
 import { GallerySliderModule } from "src/model/gallery-slider";
 
+import { InfoHeaderModule } from "src/model/info-header-module";
+import { NavbarSearchCategory } from "src/navbar-search/navbar-search-category";
+import { NavbarSearchItem } from "src/navbar-search/navbar-search-item";
+import { NewsletterModule } from "src/model/newsletter-module";
+import { FAQOverviewModule } from "src/model/faq-overview-module";
+
 export class DummyModel {
   @ApiModelProperty()
   public id: string;
@@ -57,7 +63,7 @@ export class DummyModel {
   public navBarModule?: NavBarModule;
 
   @ApiModelProperty()
-  public infoHeaderModule?: InfoHeader;
+  public infoHeaderModule?: InfoHeaderModule;
 
   @ApiModelProperty()
   public bodyTextModule?: BodyTextModule;
@@ -129,4 +135,16 @@ export class DummyModel {
 
   @ApiModelProperty()
   public gallerySlider?: GallerySliderModule;
+
+  @ApiModelProperty()
+  public newsletterModule?: NewsletterModule;
+
+  @ApiModelProperty()
+  public navbarSearchCategory?: NavbarSearchCategory;
+
+  @ApiModelProperty()
+  public navbarSearchItem?: NavbarSearchItem;
+
+  @ApiModelProperty()
+  public faqOverviewModule?: FAQOverviewModule;
 }
