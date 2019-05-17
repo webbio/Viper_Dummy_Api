@@ -1,9 +1,9 @@
 import { ApiModelProperty } from "@nestjs/swagger";
-
+import { Background } from "./background";
 export class Curve {
   // show the curve at the top or the bottom
   @ApiModelProperty({ required: false })
-  public decorCurveVerticalAlignment?: "top" | "bottom";
+  public decorCurveVerticalAlignment?: "top" | "bottom" | "middle";
 
   // show the curve on the left or the right
   @ApiModelProperty({ required: false })
@@ -11,8 +11,5 @@ export class Curve {
 
   // inside the curve, pattern or color
   @ApiModelProperty({ required: false })
-  public curveBackground: string;
-
-  @ApiModelProperty({ required: false })
-  public showInMiddle?: boolean;
+  public curveBackground?: Background;
 }

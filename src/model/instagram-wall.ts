@@ -4,6 +4,7 @@ import { ApiModelProperty, ApiImplicitBody, ApiUseTags } from "@nestjs/swagger";
 import { Module } from "@nestjs/common";
 import { PageController } from "src/page/page.controller";
 import { IntagramPosts } from "./instagram-posts";
+import { Background } from "./background";
 
 @Module({
   controllers: [PageController]
@@ -20,13 +21,20 @@ export const generateDummyInstagramWallModule = (): InstagramWalllModule => {
   return {
     id: uuid(),
     name: "InstagramModule",
-    topMargin: "0px",
+    topMargin: "50px",
     bottomMargin: "0px",
     title: "Wij hebben veel producten in huis!",
-    patternBackground: true,
     decorCurveVerticalAlignment: "top",
     topPadding: "50px",
-
+    background: {
+      backgroundColour: "red"
+    },
+    curve: {
+      decorCurveVerticalAlignment: "middle",
+      curveBackground: {
+        backgroundColour: "orange"
+      }
+    },
     posts: [
       {
         imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg",

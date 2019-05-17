@@ -1,6 +1,6 @@
 import { ApiModelProperty } from "@nestjs/swagger";
 import { Curve } from "./curve";
-
+import { Background } from "./background";
 export class WordPressPostModule {
   @ApiModelProperty()
   public id: string;
@@ -22,7 +22,7 @@ export class WordPressPostModule {
 
   // background, can be set as a pattern or color
   @ApiModelProperty({ required: false })
-  public background?: string;
+  public background?: Background;
 
   @ApiModelProperty({ required: false })
   public curve?: Curve;
