@@ -1,6 +1,6 @@
-import { ApiModelProperty } from "@nestjs/swagger";
-import { MarkerInformation } from "./markers-info";
-import { MapLocation } from "./location";
+import { ApiModelProperty } from '@nestjs/swagger';
+import { MarkerInformation } from './markers-info';
+import { MapLocation } from './location';
 
 export class Markers {
   @ApiModelProperty()

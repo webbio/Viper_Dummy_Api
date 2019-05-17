@@ -1,7 +1,7 @@
-import { FilterOptions } from "./filter-options";
-import { NewsItem, generateDummyNews } from "./news";
-import { Recipe, generateDummyRecipes } from "./recipe";
-import { ApiModelProperty } from "@nestjs/swagger";
+import { FilterOptions } from './filter-options';
+import { NewsItem, generateDummyNews } from './news';
+import { Recipe, generateDummyRecipes } from './recipe';
+import { ApiModelProperty } from '@nestjs/swagger';
 
 export class ProductLineFilter {
   @ApiModelProperty({ type: [FilterOptions] })
@@ -21,54 +21,54 @@ export const generateProductLineFilter = (): ProductLineFilter => {
   return {
     quickFilterOptions: [
       {
-        content: "Glutenvrij",
+        content: 'Glutenvrij',
         value: false,
-        id: 1
+        id: 1,
       },
       {
-        content: "Vegetarisch",
+        content: 'Vegetarisch',
         value: false,
-        id: 2
+        id: 2,
       },
       {
-        content: "Veganistisch",
+        content: 'Veganistisch',
         value: false,
-        id: 3
-      }
+        id: 3,
+      },
     ],
     productFilterOptions: [
       {
-        content: "Zeewieren",
+        content: 'Zeewieren',
         value: false,
-        id: 4
+        id: 4,
       },
       {
-        content: "Paddenstoelen en seitan",
+        content: 'Paddenstoelen en seitan',
         value: false,
-        id: 5
+        id: 5,
       },
       {
-        content: "Veganistischs",
+        content: 'Veganistischs',
         value: false,
-        id: 6
+        id: 6,
       },
       {
-        content: "Sojasauzen",
+        content: 'Sojasauzen',
         value: false,
-        id: 7
+        id: 7,
       },
       {
-        content: "Rijst, bonen, zaden",
+        content: 'Rijst, bonen, zaden',
         value: false,
-        id: 8
+        id: 8,
       },
       {
-        content: "Noedels",
+        content: 'Noedels',
         value: false,
-        id: 9
-      }
+        id: 9,
+      },
     ],
     relatedNewsItems: generateDummyNews(),
-    relatedRecipeItems: generateDummyRecipes()
+    relatedRecipeItems: generateDummyRecipes(),
   };
 };

@@ -1,11 +1,11 @@
-import { WordPressPostModule } from "./wordpress-post-module";
+import { WordPressPostModule } from './wordpress-post-module';
 import {
   ProductLineFilter,
-  generateProductLineFilter
-} from "./product-line-filter";
-import { ApiModelProperty } from "@nestjs/swagger";
-import uuid = require("uuid");
-import { ProductCard, generateDummyProductCard } from "./product-card";
+  generateProductLineFilter,
+} from './product-line-filter';
+import { ApiModelProperty } from '@nestjs/swagger';
+import uuid = require('uuid');
+import { ProductCard, generateDummyProductCard } from './product-card';
 
 export class ProductOverviewSimpleModule extends WordPressPostModule {
   @ApiModelProperty()
@@ -19,11 +19,11 @@ export class ProductOverviewSimpleModule extends WordPressPostModule {
 export const generateProductOverviewSimpleModule = (): ProductOverviewSimpleModule => {
   return {
     id: uuid(),
-    topMargin: "",
-    bottomMargin: "",
-    name: "ProductOverviewSimpleModule",
+    topMargin: '',
+    bottomMargin: '',
+    name: 'ProductOverviewSimpleModule',
     filter: generateProductLineFilter(),
     productCardList: generateDummyProductCard(),
-    totalItems: 5
+    totalItems: 5,
   };
 };

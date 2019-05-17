@@ -6,5 +6,3 @@ export class NavbarSearchItem {
   @ApiModelProperty()
   public url?: string;
 }
-
-

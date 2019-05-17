@@ -1,5 +1,5 @@
-import { ApiModelProperty } from "@nestjs/swagger";
-import { ProductLineService } from "src/product-line/product-line.service";
+import { ApiModelProperty } from '@nestjs/swagger';
+import { ProductLineService } from 'src/product-line/product-line.service';
 
 export class ProductCard {
   @ApiModelProperty()
@@ -19,105 +19,105 @@ export class ProductCard {
 export const generateDummyProductCard = (): ProductCard[] => {
   return [
     {
-      link: "/",
-      title: "Pack of noedels",
-      category: "Noedels",
+      link: '/',
+      title: 'Pack of noedels',
+      category: 'Noedels',
       image:
-        "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/1.png",
-      content: "Content",
-      subCategory: "Glutenvrij"
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/1.png',
+      content: 'Content',
+      subCategory: 'Glutenvrij',
     },
     {
-      link: "/",
-      title: "Yellow Noedels",
-      category: "Noedels",
+      link: '/',
+      title: 'Yellow Noedels',
+      category: 'Noedels',
       image:
-        "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.png",
-      content: "Content",
-      subCategory: "Glutenvrij"
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.png',
+      content: 'Content',
+      subCategory: 'Glutenvrij',
     },
     {
-      link: "/",
-      title: "Green Noedels",
-      category: "Noedels",
+      link: '/',
+      title: 'Green Noedels',
+      category: 'Noedels',
       image:
-        "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg",
-      content: "Content",
-      subCategory: "Vegetarisch"
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg',
+      content: 'Content',
+      subCategory: 'Vegetarisch',
     },
     {
-      link: "/",
-      title: "Simple Noedels",
-      category: "Noedels",
+      link: '/',
+      title: 'Simple Noedels',
+      category: 'Noedels',
       image:
-        "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/4.jpg",
-      content: "Content",
-      subCategory: "Vegetarisch"
-    },
-
-    {
-      link: "/",
-      title: "Title",
-      category: "Zeewieren",
-      image:
-        "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Zeewieren/1.jpg",
-      content: "Content",
-      subCategory: "Glutenvrij"
-    },
-    {
-      link: "/",
-      title: "Title",
-      category: "Zeewieren",
-      image:
-        "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Zeewieren/2.jpg",
-      content: "Content",
-      subCategory: "Glutenvrij"
-    },
-    {
-      link: "/",
-      title: "Title",
-      category: "Zeewieren",
-      image:
-        "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Zeewieren/3.jpg",
-      content: "Content",
-      subCategory: "Vegetarisch"
-    },
-    {
-      link: "/",
-      title: "Title",
-      category: "Zeewieren",
-      image:
-        "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Zeewieren/4.jpg",
-      content: "Content",
-      subCategory: "Vegetarisch"
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/4.jpg',
+      content: 'Content',
+      subCategory: 'Vegetarisch',
     },
 
     {
-      link: "/",
-      title: "Title",
-      category: "Paddenstoelen en seitan",
+      link: '/',
+      title: 'Title',
+      category: 'Zeewieren',
       image:
-        "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/PaddenStoelen+en+seitan/1.png",
-      content: "Content",
-      subCategory: "Glutenvrij"
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Zeewieren/1.jpg',
+      content: 'Content',
+      subCategory: 'Glutenvrij',
     },
     {
-      link: "/",
-      title: "Title",
-      category: "Paddenstoelen en seitan",
+      link: '/',
+      title: 'Title',
+      category: 'Zeewieren',
       image:
-        "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/PaddenStoelen+en+seitan/2.jpg",
-      content: "Content",
-      subCategory: "Vegetarisch"
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Zeewieren/2.jpg',
+      content: 'Content',
+      subCategory: 'Glutenvrij',
     },
     {
-      link: "/",
-      title: "Title",
-      category: "Paddenstoelen en seitan",
+      link: '/',
+      title: 'Title',
+      category: 'Zeewieren',
       image:
-        "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/PaddenStoelen+en+seitan/3.jpg",
-      content: "Content",
-      subCategory: "Glutenvrij"
-    }
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Zeewieren/3.jpg',
+      content: 'Content',
+      subCategory: 'Vegetarisch',
+    },
+    {
+      link: '/',
+      title: 'Title',
+      category: 'Zeewieren',
+      image:
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Zeewieren/4.jpg',
+      content: 'Content',
+      subCategory: 'Vegetarisch',
+    },
+
+    {
+      link: '/',
+      title: 'Title',
+      category: 'Paddenstoelen en seitan',
+      image:
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/PaddenStoelen+en+seitan/1.png',
+      content: 'Content',
+      subCategory: 'Glutenvrij',
+    },
+    {
+      link: '/',
+      title: 'Title',
+      category: 'Paddenstoelen en seitan',
+      image:
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/PaddenStoelen+en+seitan/2.jpg',
+      content: 'Content',
+      subCategory: 'Vegetarisch',
+    },
+    {
+      link: '/',
+      title: 'Title',
+      category: 'Paddenstoelen en seitan',
+      image:
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/PaddenStoelen+en+seitan/3.jpg',
+      content: 'Content',
+      subCategory: 'Glutenvrij',
+    },
   ];
 };

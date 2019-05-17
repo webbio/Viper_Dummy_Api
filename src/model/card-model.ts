@@ -1,7 +1,7 @@
-import { WordPressPostModule } from "./wordpress-post-module";
-import { ApiModelProperty } from "@nestjs/swagger";
-import { CardLabel } from "./card-label";
-import { Image } from "./image";
+import { WordPressPostModule } from './wordpress-post-module';
+import { ApiModelProperty } from '@nestjs/swagger';
+import { CardLabel } from './card-label';
+import { Image } from './image';
 
 export class CardModel extends WordPressPostModule {
   @ApiModelProperty()

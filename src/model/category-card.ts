@@ -1,4 +1,4 @@
-import { ApiModelProperty } from "@nestjs/swagger";
+import { ApiModelProperty } from '@nestjs/swagger';
 
 export class CategoryCard {
   @ApiModelProperty()
@@ -6,30 +6,28 @@ export class CategoryCard {
   @ApiModelProperty()
   public title?: string;
   @ApiModelProperty()
-  public button?: any;
+  public buttonText?: string;
   @ApiModelProperty()
   public category?: string;
 }
 
-export const generateDummyCategoryCard = (): CategoryCard[] => {
-  return [
-    {
-      link: "/",
-      title: "Noedels",
-      category: "Noedels",
-      button: { title: "Bekijk alle 12" }
-    },
-    {
-      link: "/",
-      title: "Zeewieren",
-      category: "Zeewieren",
-      button: { title: "Bekijk alle 12" }
-    },
-    {
-      link: "/",
-      title: "Paddenstolen en seitan",
-      category: "Paddenstoelen en seitan",
-      button: { title: "Bekijk alle 12" }
-    }
-  ];
-};
+export const generateDummyCategoryCard = (): CategoryCard[] => [
+  {
+    link: '/',
+    title: 'Noedels',
+    category: 'Noedels',
+    buttonText: 'Bekijk alle 12',
+  },
+  {
+    link: '/',
+    title: 'Zeewieren',
+    category: 'Zeewieren',
+    buttonText: 'Bekijk alle 12',
+  },
+  {
+    link: '/',
+    title: 'Paddenstolen en seitan',
+    category: 'Paddenstoelen en seitan',
+    buttonText: 'Bekijk alle 12',
+  },
+];

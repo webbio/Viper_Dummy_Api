@@ -35,7 +35,8 @@ export const generateDummyFaqModule = (): FAQOverviewModule => {
           },
           {
             title: 'Quisque nisi magna bibendum in augue at',
-            content: 'Maecenas viverra dolor justo, quis tincidunt urna scelerisque sheet. Aliquam erat volutpat.',
+            content:
+              'Maecenas viverra dolor justo, quis tincidunt urna scelerisque sheet. Aliquam erat volutpat.',
           },
         ],
       },
@@ -68,8 +69,10 @@ export const generateDummyFaqModule = (): FAQOverviewModule => {
               'Maecenas ultricies lectus vel lacinia pretium. Curabitur dictum aliquet mollis. Pellentesque vehicula ex a nisl semper, fermentum pulvinar est faucibus. Sed quis consequat dui. Vestibulum vehicula velit eu maximus dictum. Aenean ut ipsum vitae enim elementum efficitur eget sed eros. Nullam scelerisque, eros vitae lacinia maximus, elit libero posuere nunc, vel tristique diam magna laoreet mi. Sed pellentesque rutrum tellus at lobortis. Integer eros turpis, ultricies eleifend gravida.',
           },
           {
-            title: 'Suspendisse rhoncus sem id ante pellentesque eget ullamcorper leo tincidunt',
-            content: 'Maecenas viverra dolor justo, quis tincidunt urna scelerisque sheet. Aliquam erat volutpat.',
+            title:
+              'Suspendisse rhoncus sem id ante pellentesque eget ullamcorper leo tincidunt',
+            content:
+              'Maecenas viverra dolor justo, quis tincidunt urna scelerisque sheet. Aliquam erat volutpat.',
           },
           {
             title: 'Praesent tempor turpis id diam auctor cursus',

@@ -1,29 +1,29 @@
-import { ApiModelProperty } from "@nestjs/swagger";
-import { WordPressPostModule } from "./wordpress-post-module";
-import uuid = require("uuid");
-import { ContainerSize } from "src/enums/container-size";
-import { ContainerAlignment } from "src/enums/container-alignment";
+import { ApiModelProperty } from '@nestjs/swagger';
+import { WordPressPostModule } from './wordpress-post-module';
+import uuid = require('uuid');
+import { ContainerSize } from 'src/enums/container-size';
+import { ContainerAlignment } from 'src/enums/container-alignment';
 
 export class BodyTextModule extends WordPressPostModule {
   @ApiModelProperty()
   public html: string;
 
   @ApiModelProperty()
-  public containerSize: "full" | "large" | "medium" | "small";
+  public containerSize: 'full' | 'large' | 'medium' | 'small';
 
   @ApiModelProperty()
-  public containerAlignment: "left" | "center" | "right";
+  public containerAlignment: 'left' | 'center' | 'right';
 }
 
 export const generateBodyTextModule = (html: string): BodyTextModule => {
   return {
     html,
     id: uuid(),
-    name: "bodyTextModule",
-    bottomMargin: "0px",
-    topMargin: "0px",
-    containerSize: "medium",
-    containerAlignment: "center"
+    name: 'bodyTextModule',
+    bottomMargin: '0px',
+    topMargin: '0px',
+    containerSize: 'medium',
+    containerAlignment: 'center',
   };
 };
 

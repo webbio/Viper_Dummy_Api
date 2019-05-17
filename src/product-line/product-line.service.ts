@@ -1,5 +1,5 @@
-import { Injectable } from "@nestjs/common";
-import { generateDummyProductCard, ProductCard } from "src/model/product-card";
+import { Injectable } from '@nestjs/common';
+import { generateDummyProductCard, ProductCard } from 'src/model/product-card';
 
 @Injectable()
 export class ProductLineService {
@@ -10,13 +10,13 @@ export class ProductLineService {
     data = generateDummyProductCard();
     for (let i = 0; i < dataLength; i++) {
       data.push({
-        link: "/",
-        title: "Test" + i,
-        category: "Noedels",
+        link: '/',
+        title: 'Test' + i,
+        category: 'Noedels',
         image:
-          "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/1.png",
-        content: "Content",
-        subCategory: "Glutenvrij"
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/1.png',
+        content: 'Content',
+        subCategory: 'Glutenvrij',
       });
     }
     return data;
@@ -41,37 +41,37 @@ export class ProductLineService {
       }
       totalItems = filteredList.length;
       for (let i = skip; i < finalPosition; i++) {
-        if (filteredList[i] != undefined) {
+        if (filteredList[i] !== undefined) {
           paginatedList.push(filteredList[i]);
         }
       }
     } else {
       totalItems = productList.length;
       for (let i = skip; i < finalPosition; i++) {
-        if (productList[i] != undefined) {
+        if (productList[i] !== undefined) {
           paginatedList.push(productList[i]);
         }
       }
     }
 
     return {
-      totalItems: totalItems,
-      productCardList: paginatedList
+      totalItems,
+      productCardList: paginatedList,
     };
   }
 
   public searchProducts(filter: string) {
     this.productCardList = generateDummyProductCard();
-    let filteredList: ProductCard[] = [];
+    const filteredList: ProductCard[] = [];
 
     if (filter) {
       this.productCardList.forEach(
         productCard =>
           productCard.title.toUpperCase().includes(filter.toUpperCase()) &&
-          filteredList.push(productCard)
+          filteredList.push(productCard),
       );
       return {
-        productCardList: filteredList
+        productCardList: filteredList,
       };
     }
   }
