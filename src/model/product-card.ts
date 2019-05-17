@@ -20,7 +20,7 @@ export const generateDummyProductCard = (): ProductCard[] => {
   return [
     {
       link: "/",
-      title: "Title",
+      title: "Pack of noedels",
       category: "Noedels",
       image:
         "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/1.png",
@@ -29,7 +29,7 @@ export const generateDummyProductCard = (): ProductCard[] => {
     },
     {
       link: "/",
-      title: "Title",
+      title: "Yellow Noedels",
       category: "Noedels",
       image:
         "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.png",
@@ -38,7 +38,7 @@ export const generateDummyProductCard = (): ProductCard[] => {
     },
     {
       link: "/",
-      title: "Title",
+      title: "Green Noedels",
       category: "Noedels",
       image:
         "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg",
@@ -47,7 +47,7 @@ export const generateDummyProductCard = (): ProductCard[] => {
     },
     {
       link: "/",
-      title: "Title",
+      title: "Simple Noedels",
       category: "Noedels",
       image:
         "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/4.jpg",
