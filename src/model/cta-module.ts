@@ -78,6 +78,6 @@ export const generateDummyCTAModuleHomePage2 = (): CTAModule => {
     containerAlignment: 'left',
     contentAlignment: 'left',
     imageURL:
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/rectangle-5.png',
+      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/rectangle-5.jpg',
   };
 };

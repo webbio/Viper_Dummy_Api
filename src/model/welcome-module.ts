@@ -47,20 +47,23 @@ export const generateDummyWelcomeModule = (): WelcomeModule => {
     headerText: 'Proef en voel dat het goed is.',
     bodyText:
       'We houden van echt eten, waarmee je iets goed doet voor jezelf én de wereld om je heen. Samen. Dat is positive eating!',
-    bottomBackgroundPatternUrl: '',
-    topBackgroundImageUrl: '',
+    bottomBackgroundPatternUrl:
+      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
+    topBackgroundImageUrl:
+      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/rectangle-copy.jpg',
     mainButton1: {
       buttonType: ButtonType.Large,
       content: 'Producten',
       route: '/products',
-      imageUrl: '',
+      imageUrl:
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/card1.jpg',
     },
     mainButton2: {
       buttonType: ButtonType.Large,
       content: 'Recepten',
       route: '/recipes',
       imageUrl:
-        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/card2.png',
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/card2.jpg',
     },
     smallButton1: {
       buttonType: ButtonType.Medium,
@@ -81,7 +84,7 @@ export const generateDummyWelcomeModule = (): WelcomeModule => {
       content: 'RECEPT: vegan & glutenvrij courgettebrood',
       route: '/products',
       imageUrl:
-        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/small-card3.png',
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/small-card3.jpg',
     },
   } as WelcomeModule;
 };
