@@ -4,7 +4,6 @@ import { NavBarModule } from 'src/model/nav-bar-module';
 import { CTAModule } from 'src/model/cta-module';
 import { FooterModule } from 'src/model/footer-component';
 import { SocialMediaButtons } from 'src/model/social-media-buttons';
-import { InfoHeader } from 'src/model/info-header-module';
 import { BodyTextModule } from 'src/model/bodytext-module';
 import { WelcomeModule } from 'src/model/welcome-module';
 import { InstagramWalllModule } from 'src/model/instagram-wall';
@@ -27,7 +26,12 @@ import { BodyTextExpandedModule } from 'src/model/bodytext-expanded-module';
 import { NotYetImplemented } from 'src/model/not-yet-implemented-module';
 import { CardModel } from 'src/model/card-model';
 import { ProductLineStoryOverviewModule } from 'src/model/product-line-story-overview-module';
-import { RelatedLinks } from 'src/model/related-links';
+import { InfoHeaderModule } from 'src/model/info-header-module';
+import { NavbarSearchCategory } from 'src/navbar-search/navbar-search-category';
+import { NavbarSearchItem } from 'src/navbar-search/navbar-search-item';
+import { NewsletterModule } from 'src/model/newsletter-module';
+import { FAQOverviewModule } from 'src/model/faq-overview-module';
+import { RelatedLinksModule } from 'src/model/related-links-module';
 
 export class DummyModel {
   @ApiModelProperty()
@@ -56,7 +60,7 @@ export class DummyModel {
   public navBarModule?: NavBarModule;
 
   @ApiModelProperty()
-  public infoHeaderModule?: InfoHeader;
+  public infoHeaderModule?: InfoHeaderModule;
 
   @ApiModelProperty()
   public bodyTextModule?: BodyTextModule;
@@ -121,8 +125,20 @@ export class DummyModel {
   public expandablePanel?: ExpandablePanel;
 
   @ApiModelProperty()
+  public relatedLinksModule?: RelatedLinksModule;
+
+  @ApiModelProperty()
+  public newsletterModule?: NewsletterModule;
+
+  @ApiModelProperty()
   public productLineStoryOverviewModule?: ProductLineStoryOverviewModule;
 
   @ApiModelProperty()
-  public relatedLinks?: RelatedLinks;
+  public navbarSearchCategory?: NavbarSearchCategory;
+
+  @ApiModelProperty()
+  public navbarSearchItem?: NavbarSearchItem;
+
+  @ApiModelProperty()
+  public faqOverviewModule?: FAQOverviewModule;
 }

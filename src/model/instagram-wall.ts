@@ -22,7 +22,7 @@ export const generateDummyInstagramWallModule = (): InstagramWalllModule => {
     name: 'InstagramModule',
     topMargin: '0px',
     bottomMargin: '0px',
-    title: 'Wij hebben veel producten in huis!',
+    title: 'Bekijk onze instagram wall!',
     posts: [
       {
         imageUrl:
@@ -53,12 +53,13 @@ export const generateDummyInstagramWallModule = (): InstagramWalllModule => {
       {
         imageUrl:
           'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
-        title: 'Title ',
+        title: 'Do you like to make your ice...',
       },
       {
         imageUrl:
           'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
-        title: 'Title 111',
+        title:
+          'Irresistable quesadillas! Wanna make them too? It\'s super easy...',
       },
       {
         imageUrl:

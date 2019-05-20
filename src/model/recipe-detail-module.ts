@@ -101,12 +101,12 @@ export const generateDummyRecipeDetailModule = (): RecipeDetailModule => {
       {
         text: '15 koekjes',
         icon:
-          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/person.svg',
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/person.svg',
       },
       {
         text: '15-20 minuten',
         icon:
-          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/time.svg',
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/time.svg',
       },
       {
         text: 'Vegan',
@@ -123,31 +123,42 @@ export const generateDummyRecipeDetailModule = (): RecipeDetailModule => {
       { name: 'Raw cacaopoeder', amount: '15g' },
       { name: 'Witte amandelpasta', amount: '50g' },
       { name: 'Ahornisiroop', amount: '80g' },
-      { name: 'Kokosolie', amount: '120g' },
+      { name: 'Kokosolie', amount: '50g' },
+      { name: 'Havermout', amount: '120g' },
     ],
     sidebarTitle: 'Ingrediënten',
+
+    // ingredientsPics: [
+    //   'https://dummyimage.com/112x120/000/fff.jpg',
+    //   'https://dummyimage.com/112x120/000/fff.jpg',
+    //   'https://dummyimage.com/112x120/000/fff.jpg',
+    // ],
     ingredientsPics: [
-      'https://dummyimage.com/112x120/000/fff.jpg',
-      'https://dummyimage.com/112x120/000/fff.jpg',
-      'https://dummyimage.com/112x120/000/fff.jpg',
+      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/Screenshot+2019-05-14+at+09.54.34.jpg',
+      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/Screenshot+2019-05-14+at+09.54.37.jpg',
+      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/Screenshot+2019-05-14+at+09.54.41.jpg',
     ],
+
     productsRelatedPosts: [
       {
         title: '100% Bruine rijstnoedels',
         amount: '50g',
-        picture: 'https://dummyimage.com/197x130/000/fff.jpg',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/Screenshot+2019-05-14+at+09.54.09.png',
         URL: '/',
       },
       {
         title: 'Boekweitnoedels met zoete aardappel',
         amount: '50g',
-        picture: 'https://dummyimage.com/197x130/000/fff.jpg',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/Screenshot+2019-05-14+at+09.55.45.png',
         URL: '/',
       },
       {
         title: 'Bruine rijstnoedels met pompoen en gember',
         amount: '50g',
-        picture: 'https://dummyimage.com/197x130/000/fff.jpg',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/Screenshot+2019-05-14+at+09.54.26.png',
         URL: '/',
       },
     ],

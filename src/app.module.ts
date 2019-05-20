@@ -6,10 +6,12 @@ import { DummyController } from "./dummy/dummy.controller";
 import { DummyService } from "./dummy/dummy.service";
 import { CardController } from "./card/card.controller";
 import { CardService } from "./card/card.service";
+import { NavbarSearchController } from "./navbar-search/navbar-search.controller";
+import { NavbarSearchService } from "./navbar-search/navbar-search.service";
 
 @Module({
   imports: [],
-  controllers: [PageController, CardController, DummyController],
-  providers: [AppService, PageService, CardService, DummyService]
+  controllers: [PageController, CardController, DummyController, NavbarSearchController],
+  providers: [AppService, PageService, CardService, DummyService, NavbarSearchService]
 })
 export class AppModule {}
