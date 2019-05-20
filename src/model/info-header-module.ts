@@ -1,6 +1,6 @@
-import { WordPressPostModule } from "./wordpress-post-module";
-import * as uuid from "uuid";
-import { ApiModelProperty } from "@nestjs/swagger";
+import { WordPressPostModule } from './wordpress-post-module';
+import * as uuid from 'uuid';
+import { ApiModelProperty } from '@nestjs/swagger';
 
 export class InfoHeader extends WordPressPostModule {
   @ApiModelProperty()
@@ -25,16 +25,16 @@ export const generateDummyInfoHeaderModule = (title: string): InfoHeader => {
   return {
     titleText: title,
     bodyText:
-      "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
-    buttonText: "Terug naar home",
-    buttonLinkURL: "/",
-    buttonLinkText: "Download baekje",
-    align: "center",
-    bgcolor: "#FFFFFF",
-    imageURL: "",
+      'Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.',
+    buttonText: 'Terug naar home',
+    buttonLinkURL: '/',
+    buttonLinkText: 'Download baekje',
+    align: 'center',
+    bgcolor: '#FFFFFF',
+    imageURL: '',
     id: uuid(),
-    name: "infoHeaderModule",
-    bottomMargin: "0px",
-    topMargin: ""
+    name: 'infoHeaderModule',
+    bottomMargin: '0px',
+    topMargin: '',
   };
 };
