@@ -91,7 +91,7 @@ const generateProductLineStoryOverviewModule = (): ProductLineOverviewModule => 
     bottomMargin: ' 0px',
     topMargin: '0px',
     name: 'ProductLineStoryOverviewModule',
-    productsLine: generateProductLineCardList(10),
+    productsLine: generateProductLineCardList(9),
   };
 };
 
