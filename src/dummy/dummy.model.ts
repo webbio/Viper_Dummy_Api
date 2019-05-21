@@ -25,12 +25,13 @@ import { SalePointModule } from 'src/model/sale-point-module';
 import { BodyTextExpandedModule } from 'src/model/bodytext-expanded-module';
 import { NotYetImplemented } from 'src/model/not-yet-implemented-module';
 import { CardModel } from 'src/model/card-model';
-import { ProductLineStoryOverviewModule } from 'src/model/product-line-story-overview-module';
 import { InfoHeaderModule } from 'src/model/info-header-module';
 import { NavbarSearchCategory } from 'src/navbar-search/navbar-search-category';
 import { NavbarSearchItem } from 'src/navbar-search/navbar-search-item';
 import { NewsletterModule } from 'src/model/newsletter-module';
 import { FAQOverviewModule } from 'src/model/faq-overview-module';
+import { ProductLineOverviewCard, ProductLineOverviewModule } from 'src/product-line/product-line-card';
+import { ProductLineStoryOverviewModule } from 'dist/src/model/product-line-story-overview-module';
 
 export class DummyModel {
          @ApiModelProperty()
@@ -80,6 +81,9 @@ export class DummyModel {
 
          @ApiModelProperty()
          public cardPaginationReturn?: CardPaginationReturn;
+
+         @ApiModelProperty()
+         public productLineReturn?: ProductLineOverviewModule;
 
          @ApiModelProperty()
          public howTo?: HowToModel;
@@ -137,4 +141,7 @@ export class DummyModel {
 
          @ApiModelProperty()
          public faqOverviewModule?: FAQOverviewModule;
+
+         @ApiModelProperty()
+         public productLineOverviewModel?: ProductLineOverviewCard;
        }
