@@ -21,7 +21,7 @@ import { generateNotYetImplemented } from "src/model/not-yet-implemented-module"
 import { generateDummyNewsletterModule } from "src/model/newsletter-module";
 import { generateDummyRecipeDetailModule } from "src/model/recipe-detail-module";
 import { generateDummyFaqModule } from "src/model/faq-overview-module";
-import { generateProductLineStoryOverviewModule } from "src/product-line/product-line-generator";
+import { generateProductLineStoryOverviewModule } from "src/product-line-overview/product-line-generator";
 
 
 @Injectable()

@@ -30,7 +30,7 @@ import { NavbarSearchCategory } from 'src/navbar-search/navbar-search-category';
 import { NavbarSearchItem } from 'src/navbar-search/navbar-search-item';
 import { NewsletterModule } from 'src/model/newsletter-module';
 import { FAQOverviewModule } from 'src/model/faq-overview-module';
-import { ProductLineOverviewCard, ProductLineOverviewModule } from 'src/product-line/product-line-card';
+import { ProductLineOverviewCard, ProductLineOverviewModule } from 'src/product-line-overview/product-line-card';
 import { ProductLineStoryOverviewModule } from 'dist/src/model/product-line-story-overview-module';
 
 export class DummyModel {

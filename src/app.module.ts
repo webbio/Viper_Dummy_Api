@@ -8,12 +8,11 @@ import { CardController } from "./card/card.controller";
 import { CardService } from "./card/card.service";
 import { NavbarSearchController } from "./navbar-search/navbar-search.controller";
 import { NavbarSearchService } from "./navbar-search/navbar-search.service";
-import { ProductLineOverviewController } from "./product-line/product-line.controller";
-import { ProductLineOverviewService } from "./product-line/product-line.service";
+
 
 @Module({
   imports: [],
-  controllers: [PageController, CardController, DummyController, NavbarSearchController, ProductLineOverviewController],
-  providers: [AppService, PageService, CardService, DummyService, NavbarSearchService, ProductLineOverviewService]
+  controllers: [PageController, CardController, DummyController, NavbarSearchController],
+  providers: [AppService, PageService, CardService, DummyService, NavbarSearchService]
 })
 export class AppModule {}

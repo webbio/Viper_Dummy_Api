@@ -1,9 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import uuid = require('uuid');
-import { ApiModelProperty } from '@nestjs/swagger';
-import { ProductLineOverviewCard, ProductLineOverviewModule } from './product-line-card';
+import { ProductLineOverviewModule } from './product-line-card';
 import { generateProductLineCardList } from './product-line-generator';
-import { WordPressPostModule } from 'src/model/wordpress-post-module';
 @Injectable()
 export class ProductLineOverviewService {
   public getProductCards(filter?: string): ProductLineOverviewModule {
