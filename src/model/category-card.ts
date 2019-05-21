@@ -13,19 +13,19 @@ export class CategoryCard {
 
 export const generateDummyCategoryCard = (): CategoryCard[] => [
   {
-    link: '/',
+    link: '/product-group/',
     title: 'Noedels',
     category: 'Noedels',
     buttonText: 'Bekijk alle 12',
   },
   {
-    link: '/',
+    link: '/product-group/',
     title: 'Zeewieren',
     category: 'Zeewieren',
     buttonText: 'Bekijk alle 12',
   },
   {
-    link: '/',
+    link: '/product-group/',
     title: 'Paddenstolen en seitan',
     category: 'Paddenstoelen en seitan',
     buttonText: 'Bekijk alle 12',

@@ -15,6 +15,21 @@ export class ProductLineFilter {
 
   @ApiModelProperty({ type: [Recipe] })
   public relatedRecipeItems: Recipe[];
+
+  @ApiModelProperty()
+  public quickFilterTitle: string;
+
+  @ApiModelProperty()
+  public productFilterTitle: string;
+
+  @ApiModelProperty()
+  public quickFilterMax: number;
+
+  @ApiModelProperty()
+  public productFilterMax: number;
+
+  @ApiModelProperty()
+  public showMoreButton: string;
 }
 
 export const generateProductLineFilter = (): ProductLineFilter => {
@@ -36,6 +51,12 @@ export const generateProductLineFilter = (): ProductLineFilter => {
         id: 3,
       },
     ],
+    quickFilterTitle: 'Snel filteren',
+    productFilterTitle: 'Producten',
+    showMoreButton: 'Meer',
+    productFilterMax: 5,
+    quickFilterMax: 3,
+
     productFilterOptions: [
       {
         content: 'Zeewieren',
