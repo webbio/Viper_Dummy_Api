@@ -18,7 +18,7 @@ import { generateDummyOurTeamModule } from 'src/model/our-team-module';
 import { generateDummySalePointModule } from 'src/model/sale-point-module';
 import { generateBodyTextExpandedModule } from 'src/model/bodytext-expanded-module';
 import { generateNotYetImplemented } from 'src/model/not-yet-implemented-module';
-import { generateProductLineStoryOverviewModule } from 'src/model/product-line-story-overview-module';
+
 import { generateDummyRelatedProductsSlider } from 'src/model/related-products-slider';
 import { generateDummyGallerySliderModule } from 'src/model/gallery-slider';
 import { generateDummyNewsletterModule } from 'src/model/newsletter-module';
@@ -64,7 +64,6 @@ export class PageService {
           'Terug naar home',
           '/',
         ),
-        generateProductLineStoryOverviewModule(),
         generateNotYetImplemented('Related Products Module'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),

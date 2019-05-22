@@ -9,6 +9,7 @@ import { CardService } from "./card/card.service";
 import { NavbarSearchController } from "./navbar-search/navbar-search.controller";
 import { NavbarSearchService } from "./navbar-search/navbar-search.service";
 
+
 @Module({
   imports: [],
   controllers: [PageController, CardController, DummyController, NavbarSearchController],
