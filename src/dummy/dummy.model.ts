@@ -1,39 +1,40 @@
-import { WordPressPostModule } from "src/model/wordpress-post-module";
-import { ApiModelProperty } from "@nestjs/swagger";
-import { NavBarModule } from "src/model/nav-bar-module";
-import { CTAModule } from "src/model/cta-module";
-import { FooterModule } from "src/model/footer-component";
-import { SocialMediaButtons } from "src/model/social-media-buttons";
-import { BodyTextModule } from "src/model/bodytext-module";
-import { WelcomeModule } from "src/model/welcome-module";
-import { InstagramWalllModule } from "src/model/instagram-wall";
-import { FeaturedItemModule } from "src/model/featured-item";
-import { ItemOverviewModule } from "src/model/item-overview-module";
-import { CardPaginationReturn } from "src/card/card.model";
-import { HowToModel } from "src/model/how-to-model";
-import { IngredientModel } from "src/model/ingredient-model";
-import { ItemRecipeInfo } from "src/model/item-recipe-info";
-import { RecipeDetailModule } from "src/model/recipe-detail-module";
-import { RecipeHeadCard } from "src/model/recipe-head-card";
-import { RelatedProduct } from "src/model/related-product";
-import { ToggleModule } from "src/model/toggle-module";
-import { ExpandablePanel } from "src/model/expandable-panel";
-import { OurTeamModule } from "src/model/our-team-module";
-import { ContactModule } from "src/model/contact-module";
-import { ProductOverviewModule } from "src/model/product-overview";
-import { SalePointModule } from "src/model/sale-point-module";
-import { BodyTextExpandedModule } from "src/model/bodytext-expanded-module";
-import { NotYetImplemented } from "src/model/not-yet-implemented-module";
-import { CardModel } from "src/model/card-model";
-import { RelatedProductsSlider } from "src/model/related-products-slider";
-import { ProductLineStoryOverviewModule } from "src/model/product-line-story-overview-module";
-import { GallerySliderModule } from "src/model/gallery-slider";
-
-import { InfoHeaderModule } from "src/model/info-header-module";
-import { NavbarSearchCategory } from "src/navbar-search/navbar-search-category";
-import { NavbarSearchItem } from "src/navbar-search/navbar-search-item";
-import { NewsletterModule } from "src/model/newsletter-module";
-import { FAQOverviewModule } from "src/model/faq-overview-module";
+import { WordPressPostModule } from 'src/model/wordpress-post-module';
+import { ApiModelProperty } from '@nestjs/swagger';
+import { NavBarModule } from 'src/model/nav-bar-module';
+import { CTAModule } from 'src/model/cta-module';
+import { FooterModule } from 'src/model/footer-component';
+import { SocialMediaButtons } from 'src/model/social-media-buttons';
+import { BodyTextModule } from 'src/model/bodytext-module';
+import { WelcomeModule } from 'src/model/welcome-module';
+import { InstagramWalllModule } from 'src/model/instagram-wall';
+import { FeaturedItemModule } from 'src/model/featured-item';
+import { ItemOverviewModule } from 'src/model/item-overview-module';
+import { CardPaginationReturn } from 'src/card/card.model';
+import { HowToModel } from 'src/model/how-to-model';
+import { IngredientModel } from 'src/model/ingredient-model';
+import { ItemRecipeInfo } from 'src/model/item-recipe-info';
+import { RecipeDetailModule } from 'src/model/recipe-detail-module';
+import { RecipeHeadCard } from 'src/model/recipe-head-card';
+import { RelatedProduct } from 'src/model/related-product';
+import { ToggleModule } from 'src/model/toggle-module';
+import { ExpandablePanel } from 'src/model/expandable-panel';
+import { OurTeamModule } from 'src/model/our-team-module';
+import { ContactModule } from 'src/model/contact-module';
+import { ProductOverviewModule } from 'src/model/product-overview';
+import { SalePointModule } from 'src/model/sale-point-module';
+import { BodyTextExpandedModule } from 'src/model/bodytext-expanded-module';
+import { NotYetImplemented } from 'src/model/not-yet-implemented-module';
+import { CardModel } from 'src/model/card-model';
+import { RelatedProductsSlider } from 'src/model/related-products-slider';
+import { ProductLineStoryOverviewModule } from 'src/model/product-line-story-overview-module';
+import { GallerySliderModule } from 'src/model/gallery-slider';
+import { MoreProducts } from 'src/model/more-products';
+import { InfoHeaderModule } from 'src/model/info-header-module';
+import { NavbarSearchCategory } from 'src/navbar-search/navbar-search-category';
+import { NavbarSearchItem } from 'src/navbar-search/navbar-search-item';
+import { NewsletterModule } from 'src/model/newsletter-module';
+import { FAQOverviewModule } from 'src/model/faq-overview-module';
+import { ProductDetailHeader } from 'src/model/product-detail-header';
 
 export class DummyModel {
   @ApiModelProperty()
@@ -146,4 +147,10 @@ export class DummyModel {
 
   @ApiModelProperty()
   public faqOverviewModule?: FAQOverviewModule;
+
+  @ApiModelProperty()
+  public moreProducts?: MoreProducts;
+
+  @ApiModelProperty()
+  public productDetailHeader?: ProductDetailHeader;
 }
