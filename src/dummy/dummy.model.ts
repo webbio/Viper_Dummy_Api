@@ -31,6 +31,7 @@ import { NavbarSearchCategory } from 'src/navbar-search/navbar-search-category';
 import { NavbarSearchItem } from 'src/navbar-search/navbar-search-item';
 import { NewsletterModule } from 'src/model/newsletter-module';
 import { FAQOverviewModule } from 'src/model/faq-overview-module';
+import { TabsModule } from 'src/model/tab-module';
 
 export class DummyModel {
   @ApiModelProperty()
@@ -137,4 +138,7 @@ export class DummyModel {
 
   @ApiModelProperty()
   public faqOverviewModule?: FAQOverviewModule;
+
+  @ApiModelProperty()
+  public tabs?: TabsModule;
 }

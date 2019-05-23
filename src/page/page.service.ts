@@ -22,6 +22,7 @@ import { generateProductLineStoryOverviewModule } from 'src/model/product-line-s
 import { generateDummyNewsletterModule } from 'src/model/newsletter-module';
 import { generateDummyRecipeDetailModule } from 'src/model/recipe-detail-module';
 import { generateDummyFaqModule } from 'src/model/faq-overview-module';
+import { generateDummyTabs } from 'src/model/tab-module';
 
 @Injectable()
 export class PageService {
@@ -154,7 +155,7 @@ export class PageService {
       wordPressPostModules: [
         generateDummyNavBarModule(),
         generateNotYetImplemented('Product Single Header Module'),
-        generateDummySalePointModule(),
+        generateDummyTabs(),
         generateNotYetImplemented('Related Product Module'),
         generateNotYetImplemented('Related Recipe Module'),
         generateDummyNewsletterModule(),
