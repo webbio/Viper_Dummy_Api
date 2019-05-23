@@ -29,6 +29,7 @@ export class ProductLineService {
 
   public getProductsWithPagination(
     category: string,
+    filter: string[],
     skip: number,
     take: number,
   ) {
@@ -37,9 +38,12 @@ export class ProductLineService {
     if (skip > TOTAL_ITEMS) {
       return null;
     }
+
     const productList = this.generateData(TOTAL_ITEMS);
-    const finalPosition = skip + take;
+    const finalPosition: number = skip + take;
     let totalItems = TOTAL_ITEMS;
+    let filteredProductList: ProductCard[] = [];
+
     if (category) {
       totalItems = 0;
       const filteredList = [];
@@ -48,10 +52,20 @@ export class ProductLineService {
           filteredList.push(productList[i]);
         }
       }
-      totalItems = filteredList.length;
+      if (filter) {
+        filteredList.forEach(
+          product =>
+            filter.includes(product.subCategory) &&
+            filteredProductList.push(product),
+        );
+      } else {
+        filteredProductList = filteredList;
+      }
+      totalItems = filteredProductList.length;
+
       for (let i = skip; i < finalPosition; i++) {
-        if (filteredList[i] !== undefined) {
-          paginatedList.push(filteredList[i]);
+        if (filteredProductList[i] !== undefined) {
+          paginatedList.push(filteredProductList[i]);
         }
       }
     } else {
@@ -62,6 +76,7 @@ export class ProductLineService {
         }
       }
     }
+    console.log(paginatedList.length);
 
     return {
       totalItems,
@@ -86,7 +101,6 @@ export class ProductLineService {
   }
 
   public getCategoryList(categories: string[], products: string[]) {
-    console.log(categories);
     this.categoryCardList = generateDummyCategoryCard();
     this.productCardList = generateDummyProductCard();
     const filteredCategoryList: CategoryCard[] = [];
@@ -108,7 +122,6 @@ export class ProductLineService {
         ),
       );
       if (products) {
-        console.log(products);
         productList.forEach(
           product =>
             products.includes(product.subCategory) &&
@@ -126,7 +139,6 @@ export class ProductLineService {
 
   public getProducts(products: string[]) {
     this.productCardList = generateDummyProductCard();
-
     const filteredProductList: ProductCard[] = [];
     if (products) {
       this.productCardList.forEach(

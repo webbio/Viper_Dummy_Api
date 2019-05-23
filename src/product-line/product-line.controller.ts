@@ -14,6 +14,13 @@ export class ProductLineController {
     type: String,
   })
   @ApiImplicitQuery({
+    name: 'filter',
+    description: 'filter',
+    required: true,
+    isArray: true,
+    type: String,
+  })
+  @ApiImplicitQuery({
     name: 'skip',
     description: 'Skip for pagination',
     required: true,
@@ -29,8 +36,9 @@ export class ProductLineController {
   getProductsWithPagination(@Query() query) {
     const cards = this.pageService.getProductsWithPagination(
       query.category,
-      query.skip,
-      query.take,
+      query.filter,
+      parseInt(query.skip),
+      parseInt(query.take),
     );
     return cards;
   }
