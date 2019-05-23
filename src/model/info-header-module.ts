@@ -36,7 +36,7 @@ export const generateDummyInfoHeaderModule = (
   buttonLinkText: string,
   buttonLinkURL: string,
   backButtonText: string,
-  backButtonURL:  string,
+  backButtonURL: string,
 ): InfoHeaderModule => {
   return {
     titleText: title,

@@ -8,7 +8,10 @@ import { BodyTextModule } from 'src/model/bodytext-module';
 import { WelcomeModule } from 'src/model/welcome-module';
 import { InstagramWalllModule } from 'src/model/instagram-wall';
 import { FeaturedItemModule } from 'src/model/featured-item';
-import { ItemOverviewModule, ItemOverviewStateModule } from 'src/model/item-overview-module';
+import {
+  ItemOverviewModule,
+  ItemOverviewStateModule,
+} from 'src/model/item-overview-module';
 import { HowToModel } from 'src/model/how-to-model';
 import { IngredientModel } from 'src/model/ingredient-model';
 import { ItemRecipeInfo } from 'src/model/item-recipe-info';
@@ -29,8 +32,12 @@ import { NavbarSearchCategory } from 'src/navbar-search/navbar-search-category';
 import { NavbarSearchItem } from 'src/navbar-search/navbar-search-item';
 import { NewsletterModule } from 'src/model/newsletter-module';
 import { FAQOverviewModule } from 'src/model/faq-overview-module';
-import { ProductLineOverviewCard, ProductLineOverviewModule } from 'src/product-line-overview/product-line-card';
+import {
+  ProductLineOverviewCard,
+  ProductLineOverviewModule,
+} from 'src/product-line-overview/product-line-card';
 import { ProductLineStoryOverviewModule } from 'dist/src/model/product-line-story-overview-module';
+import { RelatedLinksModule } from 'src/model/related-links-module';
 
 export class DummyModel {
   @ApiModelProperty()
@@ -143,4 +150,6 @@ export class DummyModel {
 
   @ApiModelProperty()
   public productLineOverviewModel?: ProductLineOverviewCard;
+  @ApiModelProperty()
+  public relatedLinksModule?: RelatedLinksModule;
 }

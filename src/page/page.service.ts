@@ -18,11 +18,11 @@ import { generateDummyOurTeamModule } from 'src/model/our-team-module';
 import { generateDummySalePointModule } from 'src/model/sale-point-module';
 import { generateBodyTextExpandedModule } from 'src/model/bodytext-expanded-module';
 import { generateNotYetImplemented } from 'src/model/not-yet-implemented-module';
+import { generateProductLineStoryOverviewModule } from 'src/model/product-line-story-overview-module';
 import { generateDummyNewsletterModule } from 'src/model/newsletter-module';
 import { generateDummyRecipeDetailModule } from 'src/model/recipe-detail-module';
 import { generateDummyFaqModule } from 'src/model/faq-overview-module';
-import { generateProductLineStoryOverviewModule } from 'src/product-line-overview/product-line-generator';
-import { generateDummyItemOverviewData } from 'src/model/item-overview-module';
+import { generateDummyRelatedLinksModule } from 'src/model/related-links-module';
 
 @Injectable()
 export class PageService {
@@ -215,18 +215,8 @@ export class PageService {
       description: 'Recepten',
       wordPressPostModules: [
         generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule(
-          'Recipes',
-          'Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.',
-          'center',
-          '',
-          '',
-          '',
-          '',
-          'Terug naar home',
-          '/',
-        ),
-        generateDummyItemOverviewData(),
+        // generateDummyInfoHeaderModule('Recepten'),
+        generateNotYetImplemented('Recipe Overview Module'),
         generateNotYetImplemented('Related Products Module'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
@@ -316,7 +306,7 @@ export class PageService {
         ),
         generateDummyContactModule(),
         generateDummySalePointModule(),
-        generateNotYetImplemented('Related Links Module'),
+        generateDummyRelatedLinksModule(),
         generateDummyInstagramWallModule(),
         generateDummyCTAModuleHomePage2(),
         generateDummyNewsletterModule(),
