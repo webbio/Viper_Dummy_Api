@@ -1,10 +1,8 @@
-import { ApiModelProperty } from "@nestjs/swagger";
+import { ApiModelProperty } from '@nestjs/swagger';
 
-export class Phone{
-    @ApiModelProperty()
-    public phone?: string;
-    @ApiModelProperty()
-    public contactName?: string;
-
-
-  }
+export class Phone {
+  @ApiModelProperty()
+  public phone?: string;
+  @ApiModelProperty()
+  public contactName?: string;
+}

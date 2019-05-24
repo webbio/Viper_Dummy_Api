@@ -25,56 +25,70 @@ export const generateDummyInstagramWallModule = (): InstagramWalllModule => {
     title: 'Bekijk onze instagram wall!',
     posts: [
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
         title: 'Back to school lunch box! #lunchbox #backtoschool #snackmix',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
         title: 'Peanut butter cookies with...',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
         title: 'What do you like to put...',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
         title: 'How colorful do you want your pasta to be? (Gluten-free)...',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
         title:
           'Yes, another (vegan) poké bowl! The veggies and rice were delicious, but the sauce definitely was the best...',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
         title: 'Do you like to make your ice...',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
-        title: "Irresistable quesadillas! Wanna make them too? It's super easy...",
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        title:
+          'Irresistable quesadillas! Wanna make them too? It\'s super easy...',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
         title: 'Title 111',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
         title: 'Title 1',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
         title: 'Title ',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
         title: 'Title ',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
         title: 'Title 1',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
         title: 'Title 2',
       },
     ],

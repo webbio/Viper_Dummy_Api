@@ -11,6 +11,7 @@ import { ProductLineController } from './product-line/product-line.controller';
 import { NavbarSearchController } from './navbar-search/navbar-search.controller';
 import { NavbarSearchService } from './navbar-search/navbar-search.service';
 
+
 @Module({
   imports: [],
   controllers: [

@@ -24,6 +24,7 @@ import { generateDummyRecipeDetailModule } from 'src/model/recipe-detail-module'
 import { generateDummyFaqModule } from 'src/model/faq-overview-module';
 import { generateProductLineSingleModule } from 'src/model/product-line-single-module';
 import { generateProductOverviewSimpleModule } from 'src/model/product-overview-simple-module';
+import { generateDummyRelatedLinksModule } from 'src/model/related-links-module';
 
 @Injectable()
 export class PageService {
@@ -299,7 +300,7 @@ export class PageService {
           'Contact met terrasana',
           '',
           'right',
-          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/Screenshot+2019-05-10+at+16.19.17.png',
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/Screenshot+2019-05-10+at+16.19.17.jpg',
           'right',
           '',
           '',
@@ -309,6 +310,7 @@ export class PageService {
         generateDummyContactModule(),
         generateDummySalePointModule(),
         generateNotYetImplemented('Related Links Module'),
+        generateDummyRelatedLinksModule(),
         generateDummyInstagramWallModule(),
         generateDummyCTAModuleHomePage2(),
         generateDummyNewsletterModule(),
