@@ -25,83 +25,104 @@ export const generateDummyRelatedProductsSlider = (title: string): RelatedProduc
     name: 'RelatedProductsSlider',
     topMargin: '0px',
     bottomMargin: '0px',
+    bottomPadding: "32px",
+    background: {
+      backgroundPattern: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png'
+    },
+    curve: {
+      curveBackground:{
+        backgroundColour: "#f5fafa",
+      },
+      decorCurveVerticalAlignment:"middle",
+    },
     title,
     buttonText: 'Bekijk alle producten',
     relatedProducts: [
       {
         title: '100% Bruine rijstnoedels',
-        picture: 'https://dummyimage.com/197x130/000/fff.jpg',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/Screenshot+2019-05-14+at+09.54.09.png',
         URL: '/product-line-single',
       },
       {
         title: '100% Bruine rijstnoedels',
-        picture: 'https://dummyimage.com/197x130/000/fff.jpg',
+        picture: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg',
+
         URL: '/product-line-single',
       },
       {
         title: '100% Bruine rijstnoedels',
-        picture: 'https://dummyimage.com/197x130/000/fff.jpg',
+        picture: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg',
         URL: '/product-line-single',
       },
       {
         title: '100% Bruine rijstnoedels',
-        picture: 'https://dummyimage.com/197x130/000/fff.jpg',
+        picture: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/7.jpg',
         URL: '/product-line-single',
       },
       {
         title: 'Boekweitnoedels met zoete aardappel',
-        picture: 'https://dummyimage.com/197x130/000/fff.jpg',
+        picture: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/6.jpg',
         URL: '/product-line-single',
       },
       {
         title: 'Bruine rijstnoedels met pompoen en gember',
+        picture: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg',
 
-        picture: 'https://dummyimage.com/197x130/000/fff.jpg',
         URL: '/product-line-single',
       },
       {
         title: 'Bruine rijstnoedels met pompoen en gember',
-        picture: 'https://dummyimage.com/197x130/000/fff.jpg',
+        picture: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg',
+
         URL: '/product-line-single',
       },
       {
         title: 'Bruine rijstnoedels met pompoen en gember',
-        picture: 'https://dummyimage.com/197x130/000/fff.jpg',
+        picture: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/7.jpg',
+
         URL: '/product-line-single',
       },
       {
         title: 'Bruine rijstnoedels met pompoen en gember',
-        picture: 'https://dummyimage.com/197x130/000/fff.jpg',
+        picture: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/6.jpg',
         URL: '/product-line-single',
       },
       {
         title: 'Bruine rijstnoedels met pompoen en gember',
-        picture: 'https://dummyimage.com/197x130/000/fff.jpg',
+        picture: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg',
+
         URL: '/product-line-single',
       },
       {
         title: 'Bruine rijstnoedels met pompoen en gember',
-        picture: 'https://dummyimage.com/197x130/000/fff.jpg',
+        picture: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg',
+
         URL: '/product-line-single',
       },
       {
         title: 'Bruine rijstnoedels met pompoen en gember',
-        picture: 'https://dummyimage.com/197x130/000/fff.jpg',
+        picture: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Zeewieren/1.jpg',
+
         URL: '/product-line-single',
       },
       {
         title: 'Bruine rijstnoedels met pompoen en gember',
-        picture: 'https://dummyimage.com/197x130/000/fff.jpg',
+        picture: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Zeewieren/3.jpg',
+
         URL: '/product-line-single',
       },
       {
         title: 'Bruine rijstnoedels met pompoen en gember',
-        picture: 'https://dummyimage.com/197x130/000/fff.jpg',
+        picture: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Zeewieren/4.jpg',
+
         URL: '/product-line-single',
       },
       {
         title: 'pino',
-        picture: 'https://dummyimage.com/197x130/000/fff.jpg',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/PaddenStoelen+en+seitan/1.png',
+
         URL: '/product-line-single',
       },
     ],
