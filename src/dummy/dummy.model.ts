@@ -31,7 +31,6 @@ import { NewsletterModule } from "src/model/newsletter-module";
 import { FAQOverviewModule } from "src/model/faq-overview-module";
 import { ProductLineOverviewCard, ProductLineOverviewModule } from "src/product-line-overview/product-line-card";
 import { RelatedLinksModule } from "src/model/related-links-module";
-import { ProductLineStoryOverviewModule } from "src/model/product-line-story-overview-module";
 
 export class DummyModel {
   @ApiModelProperty()
@@ -78,9 +77,6 @@ export class DummyModel {
 
   @ApiModelProperty()
   public card?: CardModel;
-
-  @ApiModelProperty()
-  public productLineReturn?: ProductLineOverviewModule;
 
   @ApiModelProperty()
   public itemOverviewStateModule?: ItemOverviewStateModule;
