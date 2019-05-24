@@ -42,9 +42,10 @@ export const generateDummyWelcomeModule = (): WelcomeModule => {
       backgroundPattern:
         'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
     },
+    bottomPadding: '115px',
     curve: {
       curveBackground: {
-        backgroundColour: '#fff',
+        backgroundColour: '#f5fafa',
       },
       decorCurveVerticalAlignment: 'bottom',
     },
