@@ -22,7 +22,7 @@ export const generateDummyProductCard = (): ProductCard[] => {
       title: 'Pack of noedels',
       category: 'Noedels',
       image:
-        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/1.png',
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/6.jpg',
       content: 'Content',
       subCategory: 'Glutenvrij',
     },
@@ -31,7 +31,7 @@ export const generateDummyProductCard = (): ProductCard[] => {
       title: 'Yellow Noedels',
       category: 'Noedels',
       image:
-        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.png',
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg',
       content: 'Content',
       subCategory: 'Glutenvrij',
     },
@@ -49,7 +49,7 @@ export const generateDummyProductCard = (): ProductCard[] => {
       title: 'Simple Noedels',
       category: 'Noedels',
       image:
-        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/4.jpg',
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/7.jpg',
       content: 'Content',
       subCategory: 'Vegetarisch',
     },
