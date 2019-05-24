@@ -38,6 +38,16 @@ export class WelcomeModule extends WordPressPostModule {
 export const generateDummyWelcomeModule = (): WelcomeModule => {
   return {
     id: uuid(),
+    background: {
+      backgroundPattern:
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
+    },
+    curve: {
+      curveBackground: {
+        backgroundColour: '#fff',
+      },
+      decorCurveVerticalAlignment: 'bottom',
+    },
     name: 'WelcomeModule',
     topMargin: '0px',
     bottomMargin: '0px',
