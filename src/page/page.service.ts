@@ -5,10 +5,7 @@ import * as _ from 'lodash';
 import * as URI from 'urijs';
 import { generateDummyWelcomeModule } from 'src/model/welcome-module';
 import { generateDummyNavBarModule } from 'src/model/nav-bar-module';
-import {
-  generateDummyCTAModuleHomePage1,
-  generateDummyCTAModuleHomePage2,
-} from 'src/model/cta-module';
+import { generateDummyCTAModuleHomePage1, generateDummyCTAModuleHomePage2 } from 'src/model/cta-module';
 import { generateDummyInfoHeaderModule } from 'src/model/info-header-module';
 import { generateBodyTextModule } from 'src/model/bodytext-module';
 import { generateDummyFooterModule } from 'src/model/footer-component';
@@ -293,8 +290,20 @@ export class PageService {
       description: 'Informatief',
       wordPressPostModules: [
         generateDummyNavBarModule(),
-        // generateDummyInfoHeaderModule('Ontmoet het team achter terrasana?'),
-        generateBodyTextModule('add dummy bodytext html'),
+        generateDummyInfoHeaderModule(
+          'Ontmoet het team achter Terrasana',
+          '',
+          'right',
+          'https://d2ddoduugvun08.cloudfront.net/items/2E0z1A2O210L0G3w140J/Image%202019-05-24%20at%2011.51.39%20AM.png?X-CloudApp-Visitor-Id=3342233&v=3a301060',
+          'right',
+          '',
+          '',
+          'Terug naar home',
+          '/',
+        ),
+        generateBodyTextModule(
+          'Bij ons weet je niet alleen zeker dat de producten écht biologisch zijn, maar ook dat we alles met de grootste zorg uitkiezen en samenstellen. We hebben aandacht voor kwaliteit, natuur, milieu, smaak en productiewijze. We zijn altijd op zoek naar de mooiste en meest verantwoorde ingrediënten. Onze medewerkers weten wat ze in handen hebben en bereiden met hart en ziel veel zelf. Geen poespas maar pure en eerlijke producten.',
+        ),
         generateDummyOurTeamModule(),
         generateNotYetImplemented('Related Recipes Module'),
         generateNotYetImplemented('Related Products Module'),
