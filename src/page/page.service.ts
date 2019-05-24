@@ -219,7 +219,17 @@ export class PageService {
       description: 'Recepten',
       wordPressPostModules: [
         generateDummyNavBarModule(),
-        // generateDummyInfoHeaderModule('Recepten'),
+        generateDummyInfoHeaderModule(
+          'NIEUWTJES',
+          'Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.',
+          'center',
+          '',
+          'center',
+          '',
+          '',
+          'Terug naar home',
+          '/',
+        ),
         generateDummyItemOverviewData(),
         generateNotYetImplemented('Recipe Overview Module'),
         generateNotYetImplemented('Related Products Module'),
