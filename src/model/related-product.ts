@@ -6,8 +6,8 @@ import { buttonFooter } from './buttonFooter';
 export class RelatedProduct {
   @ApiModelProperty()
   public title: string;
-  @ApiModelProperty()
-  public amount: string;
+  @ApiModelProperty({ required: false })
+  public amount?: string;
   @ApiModelProperty()
   public picture: string;
   @ApiModelProperty()

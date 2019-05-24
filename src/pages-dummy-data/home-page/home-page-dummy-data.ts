@@ -42,9 +42,7 @@ const generateDummyWelcomeModule = (): WelcomeModule => {
     headerText: 'Proef en voel dat het goed is.',
     bodyText:
       'We houden van echt eten, waarmee je iets goed doet voor jezelf én de wereld om je heen. Samen. Dat is positive eating!',
-    bottomBackgroundPatternUrl:
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
-    topBackgroundImageUrl:
+    welcomeImage:
       'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/rectangle-copy.png',
     mainButton1: {
       buttonType: ButtonType.Large,

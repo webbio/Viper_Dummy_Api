@@ -12,4 +12,7 @@ export class Link {
 
   @ApiModelProperty({ required: false })
   public hoverColor?: string;
+
+  @ApiModelProperty({ required: false })
+  public icon?: string;
 }
