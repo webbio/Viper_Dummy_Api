@@ -19,90 +19,90 @@ export class RelatedProductsSlider extends WordPressPostModule {
   public buttonText: string;
 }
 
-export const generateDummyRelatedProductsSlider = (): RelatedProductsSlider => {
+export const generateDummyRelatedProductsSlider = (title: string): RelatedProductsSlider => {
   return {
     id: uuid(),
     name: 'RelatedProductsSlider',
     topMargin: '0px',
     bottomMargin: '0px',
-    title: 'Wij hebben veel producten in huis!',
+    title,
     buttonText: 'Bekijk alle producten',
     relatedProducts: [
       {
         title: '100% Bruine rijstnoedels',
         picture: 'https://dummyimage.com/197x130/000/fff.jpg',
-        URL: '/',
+        URL: '/product-line-single',
       },
       {
         title: '100% Bruine rijstnoedels',
         picture: 'https://dummyimage.com/197x130/000/fff.jpg',
-        URL: '/',
+        URL: '/product-line-single',
       },
       {
         title: '100% Bruine rijstnoedels',
         picture: 'https://dummyimage.com/197x130/000/fff.jpg',
-        URL: '/',
+        URL: '/product-line-single',
       },
       {
         title: '100% Bruine rijstnoedels',
         picture: 'https://dummyimage.com/197x130/000/fff.jpg',
-        URL: '/',
+        URL: '/product-line-single',
       },
       {
         title: 'Boekweitnoedels met zoete aardappel',
         picture: 'https://dummyimage.com/197x130/000/fff.jpg',
-        URL: '/',
+        URL: '/product-line-single',
       },
       {
         title: 'Bruine rijstnoedels met pompoen en gember',
 
         picture: 'https://dummyimage.com/197x130/000/fff.jpg',
-        URL: '/',
+        URL: '/product-line-single',
       },
       {
         title: 'Bruine rijstnoedels met pompoen en gember',
         picture: 'https://dummyimage.com/197x130/000/fff.jpg',
-        URL: '/',
+        URL: '/product-line-single',
       },
       {
         title: 'Bruine rijstnoedels met pompoen en gember',
         picture: 'https://dummyimage.com/197x130/000/fff.jpg',
-        URL: '/',
+        URL: '/product-line-single',
       },
       {
         title: 'Bruine rijstnoedels met pompoen en gember',
         picture: 'https://dummyimage.com/197x130/000/fff.jpg',
-        URL: '/',
+        URL: '/product-line-single',
       },
       {
         title: 'Bruine rijstnoedels met pompoen en gember',
         picture: 'https://dummyimage.com/197x130/000/fff.jpg',
-        URL: '/',
+        URL: '/product-line-single',
       },
       {
         title: 'Bruine rijstnoedels met pompoen en gember',
         picture: 'https://dummyimage.com/197x130/000/fff.jpg',
-        URL: '/',
+        URL: '/product-line-single',
       },
       {
         title: 'Bruine rijstnoedels met pompoen en gember',
         picture: 'https://dummyimage.com/197x130/000/fff.jpg',
-        URL: '/',
+        URL: '/product-line-single',
       },
       {
         title: 'Bruine rijstnoedels met pompoen en gember',
         picture: 'https://dummyimage.com/197x130/000/fff.jpg',
-        URL: '/',
+        URL: '/product-line-single',
       },
       {
         title: 'Bruine rijstnoedels met pompoen en gember',
         picture: 'https://dummyimage.com/197x130/000/fff.jpg',
-        URL: '/',
+        URL: '/product-line-single',
       },
       {
         title: 'pino',
         picture: 'https://dummyimage.com/197x130/000/fff.jpg',
-        URL: '/',
+        URL: '/product-line-single',
       },
     ],
   } as RelatedProductsSlider;
