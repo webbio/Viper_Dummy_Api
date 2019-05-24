@@ -24,7 +24,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'gezonde snack',
       },
       title: `Gezonde snack? Probeer onze nieuwe snackmixen!`,
-      URL: '/',
+      URL: '/product-line-single',
     });
   }
   if (amount >= 2) {
@@ -47,7 +47,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Phasellus lobortis',
       },
       title: `Phasellus lobortis ipsum`,
-      URL: '/',
+      URL: '/product-line-single',
     });
   }
   if (amount >= 3) {
@@ -70,7 +70,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Integer id mauris id lorem condimentum blandit`,
-      URL: '/',
+      URL: '/product-line-single',
     });
   }
   if (amount >= 4) {
@@ -93,7 +93,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Nullam sollicitudin orci sollicitudin velit blandit in pellentesque neque sollicitudin`,
-      URL: '/news-single',
+      URL: '/product-line-single',
     });
   }
 
@@ -117,7 +117,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Consectetur adipiscing elit sed finibus`,
-      URL: '/news-single',
+      URL: '/product-line-single',
     });
   }
   if (amount >= 6) {
@@ -140,7 +140,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Duis vestibulum lectus quis faucibus facilisis`,
-      URL: '/news-single',
+      URL: '/product-line-single',
     });
   }
   if (amount >= 7) {
@@ -163,7 +163,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Aenean mollis venenatis nulla non tincidunt`,
-      URL: '/news-single',
+      URL: '/product-line-single',
     });
   }
   if (amount >= 8) {
@@ -186,7 +186,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Nam sed mi mattis malesuada ante ac vehicula ex`,
-      URL: '/news-single',
+      URL: '/product-line-single',
     });
   }
   if (amount >= 9) {
@@ -209,7 +209,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Nam ut turpis ac neque porttitor blandit`,
-      URL: '/news-single',
+      URL: '/product-line-single',
     });
   }
   return cardList;
