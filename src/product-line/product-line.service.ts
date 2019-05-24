@@ -76,7 +76,6 @@ export class ProductLineService {
         }
       }
     }
-    console.log(paginatedList.length);
 
     return {
       totalItems,
