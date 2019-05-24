@@ -27,11 +27,15 @@ import { SalePointModule } from 'src/model/sale-point-module';
 import { BodyTextExpandedModule } from 'src/model/bodytext-expanded-module';
 import { NotYetImplemented } from 'src/model/not-yet-implemented-module';
 import { CardModel } from 'src/model/card-model';
+import { RelatedProductsSlider } from 'src/model/related-products-slider';
+import { GallerySliderModule } from 'src/model/gallery-slider';
+import { MoreProducts } from 'src/model/more-products';
 import { InfoHeaderModule } from 'src/model/info-header-module';
 import { NavbarSearchCategory } from 'src/navbar-search/navbar-search-category';
 import { NavbarSearchItem } from 'src/navbar-search/navbar-search-item';
 import { NewsletterModule } from 'src/model/newsletter-module';
 import { FAQOverviewModule } from 'src/model/faq-overview-module';
+import { ProductDetailHeader } from 'src/model/product-detail-header';
 import {
   ProductLineOverviewCard,
   ProductLineOverviewModule,
@@ -94,6 +98,9 @@ export class DummyModel {
   public howTo?: HowToModel;
 
   @ApiModelProperty()
+  public productLineReturn?: ProductLineOverviewModule;
+
+  @ApiModelProperty()
   public ingredientModel?: IngredientModel;
 
   @ApiModelProperty()
@@ -118,13 +125,7 @@ export class DummyModel {
   public contactModule?: ContactModule;
 
   @ApiModelProperty()
-  public ContactForm?: ContactForm;
-
-  @ApiModelProperty()
   public productOverview?: ProductOverview;
-
-  @ApiModelProperty()
-  public productLineReturn?: ProductLineOverviewModule;
 
   @ApiModelProperty()
   public bodyTextExpandedModule?: BodyTextExpandedModule;
@@ -139,16 +140,13 @@ export class DummyModel {
   public expandablePanel?: ExpandablePanel;
 
   @ApiModelProperty()
+  public relatedProductsSlider?: RelatedProductsSlider;
+
+  @ApiModelProperty()
+  public gallerySlider?: GallerySliderModule;
+
+  @ApiModelProperty()
   public newsletterModule?: NewsletterModule;
-
-  @ApiModelProperty()
-  public productLineStoryOverviewModule?: ProductLineOverviewModule;
-
-  @ApiModelProperty()
-  public productLineSingleModule?: ProductLineSingleModule;
-
-  @ApiModelProperty()
-  public productOverviewSimpleModule?: ProductOverviewSimpleModule;
 
   @ApiModelProperty()
   public navbarSearchCategory?: NavbarSearchCategory;
@@ -160,7 +158,26 @@ export class DummyModel {
   public faqOverviewModule?: FAQOverviewModule;
 
   @ApiModelProperty()
+  public moreProducts?: MoreProducts;
+
+  @ApiModelProperty()
+  public productDetailHeader?: ProductDetailHeader;
+
+  @ApiModelProperty()
   public productLineOverviewModel?: ProductLineOverviewCard;
+
+  @ApiModelProperty()
+  public ContactForm?: ContactForm;
+
+  @ApiModelProperty()
+  public productLineStoryOverviewModule?: ProductLineOverviewModule;
+
+  @ApiModelProperty()
+  public productLineSingleModule?: ProductLineSingleModule;
+
+  @ApiModelProperty()
+  public productOverviewSimpleModule?: ProductOverviewSimpleModule;
+
   @ApiModelProperty()
   public relatedLinksModule?: RelatedLinksModule;
 }

@@ -4,6 +4,7 @@ import { ApiModelProperty, ApiImplicitBody, ApiUseTags } from '@nestjs/swagger';
 import { Module } from '@nestjs/common';
 import { PageController } from 'src/page/page.controller';
 import { IntagramPosts } from './instagram-posts';
+import { Background } from './background';
 
 @Module({
   controllers: [PageController],
@@ -23,6 +24,18 @@ export const generateDummyInstagramWallModule = (): InstagramWalllModule => {
     topMargin: '0px',
     bottomMargin: '0px',
     title: 'Bekijk onze instagram wall!',
+    background: {
+      backgroundColour: 'red',
+    },
+    curve: {
+      decorCurveVerticalAlignment: 'middle',
+      decorCurveHorizontalAlignment: 'right',
+      curveBackground: {
+        backgroundColour: 'yellow',
+        backgroundPattern:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
+      },
+    },
     posts: [
       {
         imageUrl:
@@ -35,15 +48,18 @@ export const generateDummyInstagramWallModule = (): InstagramWalllModule => {
         title: 'Peanut butter cookies with...',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/instagramWall/mask.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/instagramWall/mask.jpg',
         title: 'What do you like to put...',
       },
       {
-        imageUrl: 'https://www.tasteofhome.com/wp-content/uploads/2018/01/exps103184_UH153291D05_01_2b-3-696x696.jpg',
+        imageUrl:
+          'https://www.tasteofhome.com/wp-content/uploads/2018/01/exps103184_UH153291D05_01_2b-3-696x696.jpg',
         title: 'How colorful do you want your pasta to be? (Gluten-free)...',
       },
       {
-        imageUrl: 'https://simple-veganista.com/wp-content/uploads/2018/09/vegan-poke-bowl-with-tofu.jpg',
+        imageUrl:
+          'https://simple-veganista.com/wp-content/uploads/2018/09/vegan-poke-bowl-with-tofu.jpg',
         title:
           'Yes, another (vegan) poké bowl! The veggies and rice were delicious, but the sauce definitely was the best...',
       },
@@ -53,8 +69,10 @@ export const generateDummyInstagramWallModule = (): InstagramWalllModule => {
         title: 'Do you like to make your ice...',
       },
       {
-        imageUrl: 'https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/chicken_and_cheese_65643_16x9.jpg',
-        title: 'Irresistable quesadillas! Wanna make them too? It\'s super easy...',
+        imageUrl:
+          'https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/chicken_and_cheese_65643_16x9.jpg',
+        title:
+          'Irresistable quesadillas! Wanna make them too? It\'s super easy...',
       },
       {
         imageUrl:
@@ -67,19 +85,23 @@ export const generateDummyInstagramWallModule = (): InstagramWalllModule => {
         title: 'Back to school lunch box! #lunchbox #backtoschool #snackmix',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
         title: 'Peanut butter cookies with...',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/instagramWall/mask.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/instagramWall/mask.jpg',
         title: 'What do you like to put...',
       },
       {
-        imageUrl: 'https://www.tasteofhome.com/wp-content/uploads/2018/01/exps103184_UH153291D05_01_2b-3-696x696.jpg',
+        imageUrl:
+          'https://www.tasteofhome.com/wp-content/uploads/2018/01/exps103184_UH153291D05_01_2b-3-696x696.jpg',
         title: 'How colorful do you want your pasta to be? (Gluten-free)...',
       },
       {
-        imageUrl: 'https://simple-veganista.com/wp-content/uploads/2018/09/vegan-poke-bowl-with-tofu.jpg',
+        imageUrl:
+          'https://simple-veganista.com/wp-content/uploads/2018/09/vegan-poke-bowl-with-tofu.jpg',
         title:
           'Yes, another (vegan) poké bowl! The veggies and rice were delicious, but the sauce definitely was the best...',
       },
