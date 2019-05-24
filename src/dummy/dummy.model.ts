@@ -36,7 +36,6 @@ import {
   ProductLineOverviewCard,
   ProductLineOverviewModule,
 } from 'src/product-line-overview/product-line-card';
-import { ProductLineStoryOverviewModule } from 'dist/src/model/product-line-story-overview-module';
 import { RelatedLinksModule } from 'src/model/related-links-module';
 import { CardPaginationReturn } from 'dist/src/card/card.model';
 import { ContactForm } from 'src/model/contact-form';
@@ -93,6 +92,9 @@ export class DummyModel {
   public cardPaginationReturn?: CardPaginationReturn;
 
   @ApiModelProperty()
+  public itemOverviewStateModule?: ItemOverviewStateModule;
+
+  @ApiModelProperty()
   public howTo?: HowToModel;
 
   @ApiModelProperty()
@@ -129,9 +131,6 @@ export class DummyModel {
   public productLineReturn?: ProductLineOverviewModule;
 
   @ApiModelProperty()
-  public itemOverviewStateModule?: ItemOverviewStateModule;
-
-  @ApiModelProperty()
   public bodyTextExpandedModule?: BodyTextExpandedModule;
 
   @ApiModelProperty()
@@ -147,7 +146,7 @@ export class DummyModel {
   public newsletterModule?: NewsletterModule;
 
   @ApiModelProperty()
-  public productLineStoryOverviewModule?: ProductLineStoryOverviewModule;
+  public productLineStoryOverviewModule?: ProductLineOverviewModule;
 
   @ApiModelProperty()
   public productLineSingleModule?: ProductLineSingleModule;

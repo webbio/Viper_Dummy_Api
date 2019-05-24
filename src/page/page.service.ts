@@ -18,13 +18,13 @@ import { generateDummyOurTeamModule } from 'src/model/our-team-module';
 import { generateDummySalePointModule } from 'src/model/sale-point-module';
 import { generateBodyTextExpandedModule } from 'src/model/bodytext-expanded-module';
 import { generateNotYetImplemented } from 'src/model/not-yet-implemented-module';
-import { generateProductLineStoryOverviewModule } from 'src/model/product-line-story-overview-module';
 import { generateDummyNewsletterModule } from 'src/model/newsletter-module';
 import { generateDummyRecipeDetailModule } from 'src/model/recipe-detail-module';
 import { generateDummyFaqModule } from 'src/model/faq-overview-module';
 import { generateProductLineSingleModule } from 'src/model/product-line-single-module';
 import { generateProductOverviewSimpleModule } from 'src/model/product-overview-simple-module';
 import { generateDummyRelatedLinksModule } from 'src/model/related-links-module';
+import { generateProductLineStoryOverviewModule } from 'src/product-line-overview/product-line-generator';
 
 @Injectable()
 export class PageService {
@@ -197,9 +197,9 @@ export class PageService {
         generateDummyInfoHeaderModule(
           'Gezonde snack? Probeer onze nieuwe snackmixen!',
           '',
-          'center',
-          '',
-          '',
+          'right',
+          'https://www.wbcsd.org/var/site/storage/images/media/images/fresh_pa/80809-1-eng-GB/FRESH_PA_i1140.jpg',
+          'right',
           '',
           '',
           'Terug naar Nieuwtjes',
