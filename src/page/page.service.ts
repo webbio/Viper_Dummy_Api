@@ -21,6 +21,8 @@ import { generateNotYetImplemented } from 'src/model/not-yet-implemented-module'
 import { generateDummyNewsletterModule } from 'src/model/newsletter-module';
 import { generateDummyRecipeDetailModule } from 'src/model/recipe-detail-module';
 import { generateDummyFaqModule } from 'src/model/faq-overview-module';
+import { generateProductLineSingleModule } from 'src/model/product-line-single-module';
+import { generateProductOverviewSimpleModule } from 'src/model/product-overview-simple-module';
 import { generateDummyRelatedLinksModule } from 'src/model/related-links-module';
 import { generateProductLineStoryOverviewModule } from 'src/product-line-overview/product-line-generator';
 import { generateDummyItemOverviewData } from 'src/model/item-overview-module';
@@ -83,12 +85,13 @@ export class PageService {
           'Terug naar home',
           '/',
         ),
-        generateNotYetImplemented('ProductLine Filter Module'),
+        generateProductLineSingleModule(),
         generateNotYetImplemented('Related Recipes Module'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
     } as PageModel,
+
     {
       id: uuid(),
       route: 'terrasana.com/product-line-story-single',
@@ -133,7 +136,7 @@ export class PageService {
           '',
           '',
         ),
-        generateNotYetImplemented('ProductLine Filter Module'),
+        generateProductOverviewSimpleModule(),
         generateNotYetImplemented('FAQ Module'),
         generateNotYetImplemented('Related Recipe Module'),
         generateNotYetImplemented('Related Products Module'),
@@ -308,6 +311,7 @@ export class PageService {
         ),
         generateDummyContactModule(),
         generateDummySalePointModule(),
+        generateNotYetImplemented('Related Links Module'),
         generateDummyRelatedLinksModule(),
         generateDummyInstagramWallModule(),
         generateDummyCTAModuleHomePage2(),

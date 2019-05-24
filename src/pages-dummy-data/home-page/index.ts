@@ -1,1 +1,1 @@
-export {homePagemodules} from "./home-page-dummy-data"
+export { homePagemodules } from './home-page-dummy-data';

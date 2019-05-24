@@ -1,7 +1,7 @@
-import { WordPressPostModule } from "./wordpress-post-module";
-import * as uuid from "uuid";
-import { ApiModelProperty } from "@nestjs/swagger";
-import { buttonFooter } from "./buttonFooter";
+import { WordPressPostModule } from './wordpress-post-module';
+import * as uuid from 'uuid';
+import { ApiModelProperty } from '@nestjs/swagger';
+import { buttonFooter } from './buttonFooter';
 
 export class SocialMediaButtons extends WordPressPostModule {
   @ApiModelProperty({ type: [buttonFooter] })
@@ -12,30 +12,30 @@ export const generateDummySocialMediaButtons = (): SocialMediaButtons => {
   return {
     footerButtons: [
       {
-        href: "fb",
+        href: 'fb',
         icon:
-          "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/facebook.svg"
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/facebook.svg',
       },
       {
-        href: "linked",
+        href: 'linked',
         icon:
-          "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/linkedin.svg"
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/linkedin.svg',
       },
       {
-        href: "twitter",
+        href: 'twitter',
         icon:
-          "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/twitter.svg"
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/twitter.svg',
       },
       {
-        href: "mail",
+        href: 'mail',
         icon:
-          "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/mail.svg"
-      }
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/mail.svg',
+      },
     ],
 
     id: uuid(),
-    topMargin: "",
-    bottomMargin: "",
-    name: "FooterComponent"
+    topMargin: '',
+    bottomMargin: '',
+    name: 'FooterComponent',
   };
 };

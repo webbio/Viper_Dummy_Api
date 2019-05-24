@@ -60,21 +60,22 @@ export const generateDummyFooterModule = (): FooterModule => {
     footerLinks: [
       {
         content: 'Privacy policy',
-        route: ''
+        route: '',
       },
       {
         content: 'Algemene voorwaarden',
-        route: ''
+        route: '',
       },
       {
         content: 'Disclaimer',
-        route: ''
+        route: '',
       },
     ],
-    logo: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/footergroup.svg',
+    logo:
+      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/footergroup.svg',
     id: uuid(),
     topMargin: '',
     bottomMargin: '',
-    name: 'FooterModule'
+    name: 'FooterModule',
   };
 };
