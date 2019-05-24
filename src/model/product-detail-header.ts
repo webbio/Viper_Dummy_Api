@@ -3,10 +3,6 @@ import { ApiModelProperty, ApiImplicitBody, ApiUseTags } from '@nestjs/swagger';
 import { Module } from '@nestjs/common';
 import { PageController } from 'src/page/page.controller';
 import { Link } from './link';
-import {
-  SocialMediaButtons,
-  generateDummySocialMediaButtons,
-} from './social-media-buttons';
 
 @Module({
   controllers: [PageController],
@@ -25,10 +21,10 @@ export class ProductDetailHeader extends WordPressPostModule {
   public links: Link[];
 
   @ApiModelProperty()
-  public socialMediaButtons: SocialMediaButtons;
-
-  @ApiModelProperty()
   backButtonText: string;
+
+  @ApiModelProperty({ type: [String] })
+  listPictures: string[];
 }
 
 export const generateDummyProductDetailHeader = (): ProductDetailHeader => {
@@ -40,10 +36,13 @@ export const generateDummyProductDetailHeader = (): ProductDetailHeader => {
     header: '100% brunine rijstnoedels',
     subHeader: 'Glutenvrij - 250g ',
     backButtonText: 'Terug naar alle noedels',
+    listPictures: [
+      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/4.jpg',
+      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.png',
+      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg',
+    ],
     body:
       'Deze heerlijke, glutenvrije noedels zijn gemaakt van biologische bruine rijst en water. Verder niets. Ze smaken heerlijk, zijn binnen 5 minuten gaar en passen perfect bij groentegerechten, zeewier, vlees, vis en Japanse smaakmakers als miso, tamari en sesamolie.',
-
-    socialMediaButtons: generateDummySocialMediaButtons(),
     links: [
       {
         content: 'Waar kan ik dit kopen?',

@@ -35,9 +35,9 @@ export class PageService {
       route: 'terrasana.com', // still need to fill instagram module properly
       description: 'Homepage with modules',
       wordPressPostModules: [
-        generateDummyProductDetailHeader(),
         generateDummyNavBarModule(),
         generateDummyWelcomeModule(),
+        generateDummyProductDetailHeader(),
         generateDummyCTAModuleHomePage1(),
         generateDummyRelatedProductsSlider(),
         generateDummyInstagramWallModule(),
