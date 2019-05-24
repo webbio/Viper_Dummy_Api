@@ -23,6 +23,7 @@ import { generateDummyRecipeDetailModule } from 'src/model/recipe-detail-module'
 import { generateDummyFaqModule } from 'src/model/faq-overview-module';
 import { generateDummyRelatedLinksModule } from 'src/model/related-links-module';
 import { generateProductLineStoryOverviewModule } from 'src/product-line-overview/product-line-generator';
+import { generateDummyItemOverviewData } from 'src/model/item-overview-module';
 
 @Injectable()
 export class PageService {
@@ -216,6 +217,7 @@ export class PageService {
       wordPressPostModules: [
         generateDummyNavBarModule(),
         // generateDummyInfoHeaderModule('Recepten'),
+        generateDummyItemOverviewData(),
         generateNotYetImplemented('Recipe Overview Module'),
         generateNotYetImplemented('Related Products Module'),
         generateDummyNewsletterModule(),
