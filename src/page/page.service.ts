@@ -41,7 +41,7 @@ export class PageService {
         generateDummyWelcomeModule(),
         generateDummyProductDetailHeader(),
         generateDummyCTAModuleHomePage1(),
-        generateNotYetImplemented('Related Products Module'),
+        generateDummyRelatedProductsSlider(), 
         generateDummyInstagramWallModule(),
         generateDummyCTAModuleHomePage2(),
         generateDummyNewsletterModule(),
