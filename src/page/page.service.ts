@@ -26,6 +26,11 @@ import { generateDummyRecipeDetailModule } from 'src/model/recipe-detail-module'
 import { generateDummyFaqModule } from 'src/model/faq-overview-module';
 import { generateDummyMoreProducts } from 'src/model/more-products';
 import { generateDummyProductDetailHeader } from 'src/model/product-detail-header';
+import { generateProductLineSingleModule } from 'src/model/product-line-single-module';
+import { generateProductOverviewSimpleModule } from 'src/model/product-overview-simple-module';
+import { generateDummyRelatedLinksModule } from 'src/model/related-links-module';
+import { generateProductLineStoryOverviewModule } from 'src/product-line-overview/product-line-generator';
+import { generateDummyItemOverviewData } from 'src/model/item-overview-module';
 
 @Injectable()
 export class PageService {
@@ -39,11 +44,10 @@ export class PageService {
         generateDummyWelcomeModule(),
         generateDummyProductDetailHeader(),
         generateDummyCTAModuleHomePage1(),
-        generateDummyRelatedProductsSlider(),
+        generateNotYetImplemented('Related Products Module'),
         generateDummyInstagramWallModule(),
         generateDummyCTAModuleHomePage2(),
         generateDummyNewsletterModule(),
-        generateDummyGallerySliderModule(),
         generateDummyFooterModule(),
       ],
     } as PageModel,
@@ -64,6 +68,7 @@ export class PageService {
           'Terug naar home',
           '/',
         ),
+        generateProductLineStoryOverviewModule(),
         generateNotYetImplemented('Related Products Module'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
@@ -86,12 +91,13 @@ export class PageService {
           'Terug naar home',
           '/',
         ),
-        generateNotYetImplemented('ProductLine Filter Module'),
+        generateProductLineSingleModule(),
         generateNotYetImplemented('Related Recipes Module'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
     } as PageModel,
+
     {
       id: uuid(),
       route: 'terrasana.com/product-line-story-single',
@@ -136,7 +142,7 @@ export class PageService {
           '',
           '',
         ),
-        generateNotYetImplemented('ProductLine Filter Module'),
+        generateProductOverviewSimpleModule(),
         generateNotYetImplemented('FAQ Module'),
         generateNotYetImplemented('Related Recipe Module'),
         generateNotYetImplemented('Related Products Module'),
@@ -198,9 +204,9 @@ export class PageService {
         generateDummyInfoHeaderModule(
           'Gezonde snack? Probeer onze nieuwe snackmixen!',
           '',
-          'center',
-          '',
-          '',
+          'right',
+          'https://www.wbcsd.org/var/site/storage/images/media/images/fresh_pa/80809-1-eng-GB/FRESH_PA_i1140.jpg',
+          'right',
           '',
           '',
           'Terug naar Nieuwtjes',
@@ -220,6 +226,7 @@ export class PageService {
       wordPressPostModules: [
         generateDummyNavBarModule(),
         // generateDummyInfoHeaderModule('Recepten'),
+        generateDummyItemOverviewData(),
         generateNotYetImplemented('Recipe Overview Module'),
         generateNotYetImplemented('Related Products Module'),
         generateDummyNewsletterModule(),
@@ -311,6 +318,7 @@ export class PageService {
         generateDummyContactModule(),
         generateDummySalePointModule(),
         generateNotYetImplemented('Related Links Module'),
+        generateDummyRelatedLinksModule(),
         generateDummyInstagramWallModule(),
         generateDummyCTAModuleHomePage2(),
         generateDummyNewsletterModule(),

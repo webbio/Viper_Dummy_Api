@@ -1,5 +1,5 @@
-import { ApiModelProperty } from "@nestjs/swagger";
-import { Link } from "./link";
+import { ApiModelProperty } from '@nestjs/swagger';
+import { Link } from './link';
 
 export class footerSection {
   @ApiModelProperty()

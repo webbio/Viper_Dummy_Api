@@ -1,6 +1,6 @@
-import { WordPressPostModule } from "./wordpress-post-module";
-import * as uuid from "uuid";
-import { ApiModelProperty } from "@nestjs/swagger";
+import { WordPressPostModule } from './wordpress-post-module';
+import * as uuid from 'uuid';
+import { ApiModelProperty } from '@nestjs/swagger';
 
 export class InfoHeaderModule extends WordPressPostModule {
   @ApiModelProperty()
@@ -36,7 +36,7 @@ export const generateDummyInfoHeaderModule = (
   buttonLinkText: string,
   buttonLinkURL: string,
   backButtonText: string,
-  backButtonURL: string
+  backButtonURL: string,
 ): InfoHeaderModule => {
   return {
     titleText: title,
@@ -44,15 +44,15 @@ export const generateDummyInfoHeaderModule = (
     backButtonText,
     backButtonURL,
     buttonLinkURL,
-    htmlArea: "",
+    htmlArea: '',
     buttonLinkText,
     align,
-    bgcolor: "#FFFFFF",
+    bgcolor: '#FFFFFF',
     imageAlign,
     imageURL,
     id: uuid(),
-    name: "infoHeaderModule",
-    bottomMargin: "0px",
-    topMargin: "0px"
+    name: 'infoHeaderModule',
+    bottomMargin: '0px',
+    topMargin: '0px',
   };
 };

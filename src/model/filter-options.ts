@@ -1,10 +1,10 @@
 import { ApiModelProperty } from '@nestjs/swagger';
 
-export class ImageLink {
+export class FilterOptions {
   @ApiModelProperty()
-  logo: string;
+  public content?: string;
   @ApiModelProperty()
-  tooltip: string;
+  public value?: any;
   @ApiModelProperty()
-  url: string;
+  public id?: number;
 }
