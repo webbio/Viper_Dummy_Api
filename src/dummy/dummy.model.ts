@@ -37,7 +37,6 @@ import {
   ProductLineOverviewModule,
 } from 'src/product-line-overview/product-line-card';
 import { RelatedLinksModule } from 'src/model/related-links-module';
-import { CardPaginationReturn } from 'dist/src/card/card.model';
 import { ContactForm } from 'src/model/contact-form';
 import { ProductLineSingleModule } from 'src/model/product-line-single-module';
 import { ProductOverviewSimpleModule } from 'src/model/product-overview-simple-module';
@@ -87,9 +86,6 @@ export class DummyModel {
 
   @ApiModelProperty()
   public card?: CardModel;
-
-  @ApiModelProperty()
-  public cardPaginationReturn?: CardPaginationReturn;
 
   @ApiModelProperty()
   public itemOverviewStateModule?: ItemOverviewStateModule;
