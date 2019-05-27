@@ -31,8 +31,10 @@ export const generateDummyNavBarModule = (): NavBarModule => {
       { content: 'Recepten', route: 'recipe-overview' },
       { content: 'Verkooppunten', route: 'about-us' },
     ],
-    first_logo: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/logo.svg',
-    second_logo: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/group-2.svg',
+    first_logo:
+      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/logo.svg',
+    second_logo:
+      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/group-2.svg',
     id: uuid(),
     name: 'Navbar',
     bottomMargin: '0px',

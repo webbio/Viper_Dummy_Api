@@ -22,8 +22,10 @@ const generateDummyNavBarModule = (): NavBarModule => {
       { content: 'Recepten', route: 'recipe-overview' },
       { content: 'Verkooppunten', route: 'about-us' },
     ],
-    first_logo: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/group.svg',
-    second_logo: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/group-2.svg',
+    first_logo:
+      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/group.svg',
+    second_logo:
+      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/group-2.svg',
     id: uuid(),
     name: 'Navbar',
     bottomMargin: '0px',
@@ -40,38 +42,42 @@ const generateDummyWelcomeModule = (): WelcomeModule => {
     headerText: 'Proef en voel dat het goed is.',
     bodyText:
       'We houden van echt eten, waarmee je iets goed doet voor jezelf én de wereld om je heen. Samen. Dat is positive eating!',
-    bottomBackgroundPatternUrl:
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
-    topBackgroundImageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/rectangle-copy.png',
+    welcomeImage:
+      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/rectangle-copy.png',
     mainButton1: {
       buttonType: ButtonType.Large,
       content: 'Producten',
       route: '/products',
-      imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/card1.png',
+      imageUrl:
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/card1.png',
     },
     mainButton2: {
       buttonType: ButtonType.Large,
       content: 'Recepten',
       route: '/recipes',
-      imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/card2.png',
+      imageUrl:
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/card2.png',
     },
     smallButton1: {
       buttonType: ButtonType.Medium,
       content: 'Recept van de maand: freakshake met curcuma latte!',
       route: '/products',
-      imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/small-card1.png',
+      imageUrl:
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/small-card1.png',
     },
     smallButton2: {
       buttonType: ButtonType.Medium,
       content: 'Gezonde snack? Probeer onze nieuwe snackmixen!',
       route: '/products',
-      imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/small-card2.png',
+      imageUrl:
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/small-card2.png',
     },
     smallButton3: {
       buttonType: ButtonType.Medium,
       content: 'RECEPT: vegan & glutenvrij courgettebrood',
       route: '/products',
-      imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/small-card3.png',
+      imageUrl:
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/small-card3.png',
     },
   } as WelcomeModule;
 };
@@ -80,7 +86,7 @@ export const generateDummyCTAModuleHomePage1 = (): CTAModule => {
   return {
     titleText: 'Wat goed eten is, weten we bij Terrarana al 35 jaar.',
     bodyText:
-      'Bij ons weet je niet alleen zeker dat de producten écht biologisch zijn, maar ook dat we alles met de grootste zorg uitkiezen en samenstellen. We hebben aandacht voor kwaliteit, natuur, milieu, smaak en productiewijze. We zijn altijd op zoek naar de mooiste en meest verantwoorde ingrediënten. Onze medewerkers weten wat ze in handen hebben en bereiden met hart en ziel veel zelf. Geen poespas maar pure en eerlijke producten.',
+      'Bij ons weet je niet alleen zeker dat de producten echt biologisch zijn, maar ook dat we alles met de grootste zorg uitkiezen en samenstellen. We hebben aandacht voor kwaliteit, natuur, milieu, smaak en productiewijze. We zijn altijd op zoek naar de mooiste en meest verantwoorde ingrediënten. Onze medewerkers weten wat ze in handen hebben en bereiden met hart en ziel veel zelf. Geen poespas maar pure en eerlijke producten.',
     buttons: [
       {
         href: '#',
@@ -105,7 +111,8 @@ export const generateDummyCTAModuleHomePage1 = (): CTAModule => {
 export const generateDummyCTAModuleHomePage2 = (): CTAModule => {
   return {
     titleText: 'Maak je eigen biologische wraps!',
-    bodyText: 'Binnen een half uur je eigen biologische hoemoes. Lees hier hoe dat moet!',
+    bodyText:
+      'Binnen een half uur je eigen biologische hoemoes. Lees hier hoe dat moet!',
     buttons: [
       {
         href: '#',
@@ -134,7 +141,8 @@ export const generateDummyCTAModuleHomePage2 = (): CTAModule => {
     topMargin: '0px',
     containerAlignment: 'left',
     contentAlignment: 'left',
-    imageURL: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/rectangle-5.png',
+    imageURL:
+      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/rectangle-5.png',
   };
 };
 
@@ -147,56 +155,69 @@ export const generateDummyInstagramWallModule = (): InstagramWalllModule => {
     title: 'Wij hebben veel producten in huis!',
     posts: [
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
         title: 'Back to school lunch box! #lunchbox #backtoschool #snackmix',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
         title: 'Peanut butter cookies with...',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
         title: 'What do you like to put...',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
         title: 'How colorful do you want your pasta to be? (Gluten-free)...',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
         title:
           'Yes, another (vegan) poké bowl! The veggies and rice were delicious, but the sauce definitely was the best...',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
         title: 'Title ',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
         title: 'Title 111',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
         title: 'Title 111',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
         title: 'Title 1',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
         title: 'Title ',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
         title: 'Title ',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
         title: 'Title 1',
       },
       {
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+        imageUrl:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
         title: 'Title 2',
       },
     ],
@@ -209,7 +230,7 @@ const generateNotYetImplemented = (): NotYetImplemented => {
     bottomMargin: '40px',
     topMargin: '40px',
     name: 'notYetImplemented',
-    moduleName : 'Related Products Module',
+    moduleName: 'Related Products Module',
   };
 };
 
@@ -271,7 +292,8 @@ const generateDummyFooterModule = (): FooterModule => {
         route: '',
       },
     ],
-    logo: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/footergroup.svg',
+    logo:
+      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/footergroup.svg',
     id: uuid(),
     topMargin: '',
     bottomMargin: '',

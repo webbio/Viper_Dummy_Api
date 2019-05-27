@@ -36,7 +36,7 @@ export const generateDummySalePointModule = (): SalePointModule => {
     imageLinks: [
       {
         logo:
-          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/SalePoint/ekoplaza.jpg',
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/SalePoint/F254B1AF-6027-4FED-AE89-9C5D712BC104.png',
         tooltip: 'Natuurwinkel',
         url: 'https://www.natuurwinkel.nl/',
       },

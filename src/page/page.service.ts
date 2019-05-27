@@ -18,10 +18,19 @@ import { generateDummyOurTeamModule } from 'src/model/our-team-module';
 import { generateDummySalePointModule } from 'src/model/sale-point-module';
 import { generateBodyTextExpandedModule } from 'src/model/bodytext-expanded-module';
 import { generateNotYetImplemented } from 'src/model/not-yet-implemented-module';
-import { generateProductLineStoryOverviewModule } from 'src/model/product-line-story-overview-module';
+
+import { generateDummyRelatedProductsSlider } from 'src/model/related-products-slider';
+import { generateDummyGallerySliderModule } from 'src/model/gallery-slider';
 import { generateDummyNewsletterModule } from 'src/model/newsletter-module';
 import { generateDummyRecipeDetailModule } from 'src/model/recipe-detail-module';
 import { generateDummyFaqModule } from 'src/model/faq-overview-module';
+import { generateDummyMoreProducts } from 'src/model/more-products';
+import { generateDummyProductDetailHeader } from 'src/model/product-detail-header';
+import { generateProductLineSingleModule } from 'src/model/product-line-single-module';
+import { generateProductOverviewSimpleModule } from 'src/model/product-overview-simple-module';
+import { generateDummyRelatedLinksModule } from 'src/model/related-links-module';
+import { generateProductLineStoryOverviewModule } from 'src/product-line-overview/product-line-generator';
+import { generateDummyItemOverviewData } from 'src/model/item-overview-module';
 import { generateDummyTabs } from 'src/model/tab-module';
 
 @Injectable()
@@ -34,8 +43,9 @@ export class PageService {
       wordPressPostModules: [
         generateDummyNavBarModule(),
         generateDummyWelcomeModule(),
+        generateDummyProductDetailHeader(),
         generateDummyCTAModuleHomePage1(),
-        generateNotYetImplemented('Related Products Module'),
+        generateDummyRelatedProductsSlider('Gerelateerde Producten'),
         generateDummyInstagramWallModule(),
         generateDummyCTAModuleHomePage2(),
         generateDummyNewsletterModule(),
@@ -60,7 +70,7 @@ export class PageService {
           '/',
         ),
         generateProductLineStoryOverviewModule(),
-        generateNotYetImplemented('Related Products Module'),
+        generateDummyRelatedProductsSlider('ONZE JAPANSE PRODUCTEN'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
@@ -72,22 +82,22 @@ export class PageService {
       wordPressPostModules: [
         generateDummyNavBarModule(),
         generateDummyInfoHeaderModule(
-          'Japan Moderne Keuken',
+          'RECIPES OVERVIEW',
           'Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.',
           'center',
           '',
           '',
-          'Meer Over Japan Moderne Keuken',
-          '/product-line-single',
+          '',
+          '/',
           'Terug naar home',
           '/',
         ),
-        generateNotYetImplemented('ProductLine Filter Module'),
-        generateNotYetImplemented('Related Recipes Module'),
+        generateProductLineSingleModule(),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
     } as PageModel,
+
     {
       id: uuid(),
       route: 'terrasana.com/product-line-story-single',
@@ -106,10 +116,9 @@ export class PageService {
           '/',
         ),
         generateBodyTextModule('add dummy bodytext html'),
-        generateNotYetImplemented('Related Products Module'),
+        generateDummyRelatedProductsSlider('ONZE JAPANSE PRODUCTEN'),
         generateBodyTextModule('add dummy bodytext html'),
         generateNotYetImplemented('Picture Slider Module'),
-        generateDummyCTAModuleHomePage2(), // add new CTA module for this page (always japanese products)
         generateNotYetImplemented('Related Recipe Module'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
@@ -132,10 +141,9 @@ export class PageService {
           '',
           '',
         ),
-        generateNotYetImplemented('ProductLine Filter Module'),
+        generateProductOverviewSimpleModule(),
         generateNotYetImplemented('FAQ Module'),
         generateNotYetImplemented('Related Recipe Module'),
-        generateNotYetImplemented('Related Products Module'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
@@ -156,7 +164,8 @@ export class PageService {
         generateDummyNavBarModule(),
         generateNotYetImplemented('Product Single Header Module'),
         generateDummyTabs(),
-        generateNotYetImplemented('Related Product Module'),
+        generateNotYetImplemented('Product Single Tab Module'),
+        generateDummyRelatedProductsSlider('Gerelateerde Producten'),
         generateNotYetImplemented('Related Recipe Module'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
@@ -179,8 +188,7 @@ export class PageService {
           'Terug naar home',
           '/',
         ),
-        // main component
-        generateNotYetImplemented('Related Products Module'),
+        generateDummyRelatedProductsSlider('Gerelateerde Producten'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
@@ -192,19 +200,19 @@ export class PageService {
       wordPressPostModules: [
         generateDummyNavBarModule(),
         generateDummyInfoHeaderModule(
-          'Gezonde snack? Probeer onze nieuwe snackmixen!',
+          'NIEUWS',
+          'Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.',
+          'center',
           '',
           'center',
           '',
           '',
-          '',
-          '',
-          'Terug naar Nieuwtjes',
-          '/news-overview',
+          'Terug naar home',
+          '/',
         ),
         generateBodyTextExpandedModule(),
         generateNotYetImplemented('Related News Module'),
-        generateNotYetImplemented('Related Products Module'),
+        generateDummyRelatedProductsSlider('Gerelateerde Producten'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
@@ -215,9 +223,19 @@ export class PageService {
       description: 'Recepten',
       wordPressPostModules: [
         generateDummyNavBarModule(),
-        // generateDummyInfoHeaderModule('Recepten'),
-        generateNotYetImplemented('Recipe Overview Module'),
-        generateNotYetImplemented('Related Products Module'),
+        generateDummyInfoHeaderModule(
+          'Recipe',
+          'Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.',
+          'center',
+          '',
+          'center',
+          'Meer over Japan Moderne Keuken',
+          '/product-line-single',
+          'Terug naar home',
+          '/',
+        ),
+        generateDummyItemOverviewData(),
+        generateDummyRelatedProductsSlider('Gerelateerde Producten'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
@@ -230,7 +248,7 @@ export class PageService {
         generateDummyNavBarModule(),
         generateNotYetImplemented('Recipe Header Module'),
         generateDummyRecipeDetailModule(),
-        generateNotYetImplemented('Related Products Module'),
+        generateDummyRelatedProductsSlider('Gerelateerde Producten'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
@@ -253,7 +271,7 @@ export class PageService {
           '/',
         ),
         generateDummyFaqModule(),
-        generateNotYetImplemented('Related Products Module'),
+        generateDummyRelatedProductsSlider('Gerelateerde Producten'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
@@ -267,7 +285,7 @@ export class PageService {
         // generateDummyInfoHeaderModule('Hoe worden de noedels gemaakt?'),
         generateBodyTextModule('add dummy bodytext html'),
         generateNotYetImplemented('Related FAQ Module'),
-        generateNotYetImplemented('Related Products Module'),
+        generateDummyRelatedProductsSlider('Gerelateerde Producten'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
@@ -278,11 +296,23 @@ export class PageService {
       description: 'Informatief',
       wordPressPostModules: [
         generateDummyNavBarModule(),
-        // generateDummyInfoHeaderModule('Ontmoet het team achter terrasana?'),
-        generateBodyTextModule('add dummy bodytext html'),
+        generateDummyInfoHeaderModule(
+          'Ontmoet het team achter Terrasana',
+          '',
+          'right',
+          'https://d2ddoduugvun08.cloudfront.net/items/2E0z1A2O210L0G3w140J/Image%202019-05-24%20at%2011.51.39%20AM.png?X-CloudApp-Visitor-Id=3342233&v=3a301060',
+          'right',
+          '',
+          '',
+          'Terug naar home',
+          '/',
+        ),
+        generateBodyTextModule(
+          'Bij ons weet je niet alleen zeker dat de producten écht biologisch zijn, maar ook dat we alles met de grootste zorg uitkiezen en samenstellen. We hebben aandacht voor kwaliteit, natuur, milieu, smaak en productiewijze. We zijn altijd op zoek naar de mooiste en meest verantwoorde ingrediënten. Onze medewerkers weten wat ze in handen hebben en bereiden met hart en ziel veel zelf. Geen poespas maar pure en eerlijke producten.',
+        ),
         generateDummyOurTeamModule(),
         generateNotYetImplemented('Related Recipes Module'),
-        generateNotYetImplemented('Related Products Module'),
+        generateDummyRelatedProductsSlider('Gerelateerde Producten'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
@@ -306,7 +336,7 @@ export class PageService {
         ),
         generateDummyContactModule(),
         generateDummySalePointModule(),
-        generateNotYetImplemented('Related Links Module'),
+        generateDummyRelatedLinksModule(),
         generateDummyInstagramWallModule(),
         generateDummyCTAModuleHomePage2(),
         generateDummyNewsletterModule(),

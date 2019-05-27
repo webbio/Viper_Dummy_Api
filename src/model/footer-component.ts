@@ -1,8 +1,8 @@
-import { WordPressPostModule } from "./wordpress-post-module";
-import * as uuid from "uuid";
-import { ApiModelProperty } from "@nestjs/swagger";
-import { footerSection } from "./footer-section";
-import { Link } from "./link";
+import { WordPressPostModule } from './wordpress-post-module';
+import * as uuid from 'uuid';
+import { ApiModelProperty } from '@nestjs/swagger';
+import { footerSection } from './footer-section';
+import { Link } from './link';
 
 export class FooterModule extends WordPressPostModule {
   @ApiModelProperty({ type: [footerSection] })
@@ -17,64 +17,65 @@ export const generateDummyFooterModule = (): FooterModule => {
   return {
     footerSections: [
       {
-        title: "Onze producten",
+        title: 'Onze producten',
         links: [
-          { content: "Triangle", route: "product-single" },
-          { content: "Latte", route: "product-single" },
-          { content: "Notenpasta", route: "product-single" },
-          { content: "Row superfood", route: "product-single" },
-          { content: "Mideterrane keuken", route: "product-single" },
-          { content: "Japan moderne keuken", route: "product-single" }
-        ]
+          { content: 'Triangle', route: 'product-single' },
+          { content: 'Latte', route: 'product-single' },
+          { content: 'Notenpasta', route: 'product-single' },
+          { content: 'Row superfood', route: 'product-single' },
+          { content: 'Mideterrane keuken', route: 'product-single' },
+          { content: 'Japan moderne keuken', route: 'product-single' },
+        ],
       },
       {
-        title: "Terrasana",
+        title: 'Terrasana',
         links: [
-          { content: "Over ons", route: "about-us" },
-          { content: "Nieuws", route: "news-overview" },
-          { content: "FAQ", route: "faq-overview" },
-          { content: "Alle producten", route: "product-line-overview" },
-          { content: "Recepten", route: "recipe-overview" }
-        ]
+          { content: 'Over ons', route: 'about-us' },
+          { content: 'Nieuws', route: 'news-overview' },
+          { content: 'FAQ', route: 'faq-overview' },
+          { content: 'Alle producten', route: 'product-line-overview' },
+          { content: 'Recepten', route: 'recipe-overview' },
+        ],
       },
       {
-        title: "Koken met Terrasana",
+        title: 'Koken met Terrasana',
         links: [
-          { content: "Raw Superfood Recepten", route: "recipe-single" },
-          { content: "RawSuperfood Smoothies", route: "recipe-single" },
-          { content: "Ontbijt", route: "recipe-single" },
-          { content: "Voorgerecht", route: "recipe-single" },
-          { content: "Soepen", route: "recipe-single" },
-          { content: "Pannenkoeken", route: "recipe-single" }
-        ]
+          { content: 'Raw Superfood Recepten', route: 'recipe-single' },
+          { content: 'RawSuperfood Smoothies', route: 'recipe-single' },
+          { content: 'Ontbijt', route: 'recipe-single' },
+          { content: 'Voorgerecht', route: 'recipe-single' },
+          { content: 'Soepen', route: 'recipe-single' },
+          { content: 'Pannenkoeken', route: 'recipe-single' },
+        ],
       },
       {
-        title: "Contact",
+        title: 'Contact',
         links: [
-          { content: "Verkooppunten", route: "about-us" },
-          { content: "Direct contact", route: "contact" },
-          { content: "Zakelijk", route: "business" }
-        ]
-      }
+          { content: 'Verkooppunten', route: 'about-us' },
+          { content: 'Direct contact', route: 'contact' },
+          { content: 'Zakelijk', route: 'business' },
+        ],
+      },
     ],
     footerLinks: [
       {
-        content: "Privacy policy",
-        route: ""
+        content: 'Privacy policy',
+        route: '',
       },
       {
-        content: "Algemene voorwaarden",
-        route: ""
+        content: 'Algemene voorwaarden',
+        route: '',
       },
       {
-        content: "Disclaimer",
-        route: ""
-      }
+        content: 'Disclaimer',
+        route: '',
+      },
     ],
-    logo: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/footergroup.svg",
+    logo:
+      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/footergroup.svg',
     id: uuid(),
-    topMargin: "",
-    bottomMargin: "",
-    name: "FooterModule"
+    topMargin: '',
+    bottomMargin: '',
+    name: 'FooterModule',
   };
 };

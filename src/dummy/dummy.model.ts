@@ -8,8 +8,10 @@ import { BodyTextModule } from 'src/model/bodytext-module';
 import { WelcomeModule } from 'src/model/welcome-module';
 import { InstagramWalllModule } from 'src/model/instagram-wall';
 import { FeaturedItemModule } from 'src/model/featured-item';
-import { ItemOverviewModule } from 'src/model/item-overview-module';
-import { CardPaginationReturn } from 'src/card/card.model';
+import {
+  ItemOverviewModule,
+  ItemOverviewStateModule,
+} from 'src/model/item-overview-module';
 import { HowToModel } from 'src/model/how-to-model';
 import { IngredientModel } from 'src/model/ingredient-model';
 import { ItemRecipeInfo } from 'src/model/item-recipe-info';
@@ -20,18 +22,29 @@ import { ToggleModule } from 'src/model/toggle-module';
 import { ExpandablePanel } from 'src/model/expandable-panel';
 import { OurTeamModule } from 'src/model/our-team-module';
 import { ContactModule } from 'src/model/contact-module';
-import { ProductOverviewModule } from 'src/model/product-overview';
+import { ProductOverview } from 'src/model/product-overview';
 import { SalePointModule } from 'src/model/sale-point-module';
 import { BodyTextExpandedModule } from 'src/model/bodytext-expanded-module';
 import { NotYetImplemented } from 'src/model/not-yet-implemented-module';
 import { CardModel } from 'src/model/card-model';
-import { ProductLineStoryOverviewModule } from 'src/model/product-line-story-overview-module';
+import { RelatedProductsSlider } from 'src/model/related-products-slider';
+import { GallerySliderModule } from 'src/model/gallery-slider';
+import { MoreProducts } from 'src/model/more-products';
 import { InfoHeaderModule } from 'src/model/info-header-module';
 import { NavbarSearchCategory } from 'src/navbar-search/navbar-search-category';
 import { NavbarSearchItem } from 'src/navbar-search/navbar-search-item';
 import { NewsletterModule } from 'src/model/newsletter-module';
 import { FAQOverviewModule } from 'src/model/faq-overview-module';
 import { TabsModule } from 'src/model/tab-module';
+import { ProductDetailHeader } from 'src/model/product-detail-header';
+import {
+  ProductLineOverviewCard,
+  ProductLineOverviewModule,
+} from 'src/product-line-overview/product-line-card';
+import { RelatedLinksModule } from 'src/model/related-links-module';
+import { ContactForm } from 'src/model/contact-form';
+import { ProductLineSingleModule } from 'src/model/product-line-single-module';
+import { ProductOverviewSimpleModule } from 'src/model/product-overview-simple-module';
 
 export class DummyModel {
   @ApiModelProperty()
@@ -80,7 +93,7 @@ export class DummyModel {
   public card?: CardModel;
 
   @ApiModelProperty()
-  public cardPaginationReturn?: CardPaginationReturn;
+  public itemOverviewStateModule?: ItemOverviewStateModule;
 
   @ApiModelProperty()
   public howTo?: HowToModel;
@@ -110,9 +123,6 @@ export class DummyModel {
   public contactModule?: ContactModule;
 
   @ApiModelProperty()
-  public productOverview?: ProductOverviewModule;
-
-  @ApiModelProperty()
   public bodyTextExpandedModule?: BodyTextExpandedModule;
 
   @ApiModelProperty()
@@ -128,9 +138,6 @@ export class DummyModel {
   public newsletterModule?: NewsletterModule;
 
   @ApiModelProperty()
-  public productLineStoryOverviewModule?: ProductLineStoryOverviewModule;
-
-  @ApiModelProperty()
   public navbarSearchCategory?: NavbarSearchCategory;
 
   @ApiModelProperty()
@@ -141,4 +148,28 @@ export class DummyModel {
 
   @ApiModelProperty()
   public tabs?: TabsModule;
+
+  @ApiModelProperty()
+  public productLineReturn?: ProductLineOverviewModule;
+
+  @ApiModelProperty()
+  public moreProducts?: MoreProducts;
+
+  @ApiModelProperty()
+  public productDetailHeader?: ProductDetailHeader;
+
+  @ApiModelProperty()
+  public productLineOverviewModel?: ProductLineOverviewCard;
+
+  @ApiModelProperty()
+  public ContactForm?: ContactForm;
+
+  @ApiModelProperty()
+  public productLineSingleModule?: ProductLineSingleModule;
+
+  @ApiModelProperty()
+  public productOverviewSimpleModule?: ProductOverviewSimpleModule;
+
+  @ApiModelProperty()
+  public relatedLinksModule?: RelatedLinksModule;
 }
