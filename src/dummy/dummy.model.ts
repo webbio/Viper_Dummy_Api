@@ -44,6 +44,8 @@ import { RelatedLinksModule } from 'src/model/related-links-module';
 import { ContactForm } from 'src/model/contact-form';
 import { ProductLineSingleModule } from 'src/model/product-line-single-module';
 import { ProductOverviewSimpleModule } from 'src/model/product-overview-simple-module';
+import { LoginModule } from 'src/model/login';
+import { SignUpModule } from 'src/model/sign-up';
 
 export class DummyModel {
   @ApiModelProperty()
@@ -180,4 +182,10 @@ export class DummyModel {
 
   @ApiModelProperty()
   public relatedLinksModule?: RelatedLinksModule;
+
+  @ApiModelProperty()
+  public loginModule?: LoginModule;
+
+  @ApiModelProperty()
+  public signUpModule?: SignUpModule;
 }
