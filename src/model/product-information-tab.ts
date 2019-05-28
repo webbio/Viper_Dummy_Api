@@ -2,14 +2,14 @@ import { ApiModelProperty } from '@nestjs/swagger';
 
 import { TabInformation } from './tab-information';
 
-export class ProductInformatie {
+export class ProductInformation {
   @ApiModelProperty()
   public title: string;
   @ApiModelProperty({ type: [TabInformation] })
   public tabInformation: TabInformation[];
 }
 
-export const generateDummyProductInformatieTabs = (): ProductInformatie[] => {
+export const generateDummyProductInformationTabs = (): ProductInformation[] => {
   return [
     {
       title: 'VOEDINGSWAARDEN',

@@ -20,7 +20,7 @@ export class SalePointModule extends WordPressPostModule {
   public pattern?: boolean;
   @ApiModelProperty({ type: [Markers] })
   public markers?: Markers[];
-  @ApiModelProperty({ type: [Markers] })
+  @ApiModelProperty({ type: [MapLocation] })
   public mapcenter?: MapLocation;
   @ApiModelProperty()
   public markerOpen?: boolean;

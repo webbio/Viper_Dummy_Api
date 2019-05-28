@@ -1,15 +1,8 @@
 import { ApiModelProperty } from '@nestjs/swagger';
-import { WordPressPostModule } from './wordpress-post-module';
-import { TabsHeader } from './tabs-header';
-import * as uuid from 'uuid';
-import {
-  SalePointModule,
-  generateDummySalePointModule,
-} from './sale-point-module';
 import { Link } from './link';
 import { TabInformation } from './tab-information';
 
-export class B2BGegevensTab {
+export class B2BDataTab {
   @ApiModelProperty()
   public title: string;
   @ApiModelProperty()
@@ -24,7 +17,7 @@ export class B2BGegevensTab {
   public downloadLinks: Link[];
 }
 
-export const generateDummyB2BGegevensTabs = (): B2BGegevensTab => {
+export const generateDummyB2BDataTabs = (): B2BDataTab => {
   return {
     title: 'B2B GEGEVENS',
     content:

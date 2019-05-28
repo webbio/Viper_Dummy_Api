@@ -1,20 +1,16 @@
 import { ApiModelProperty } from '@nestjs/swagger';
 import { WordPressPostModule } from './wordpress-post-module';
-import { TabsHeader } from './tabs-header';
 import * as uuid from 'uuid';
 import {
   SalePointModule,
   generateDummySalePointModule,
 } from './sale-point-module';
+import { generateDummyB2BDataTabs, B2BDataTab } from './b2b-data-tab';
 import {
-  generateDummyB2BGegevensTabs,
-  B2BGegevensTab,
-} from './b2b-gegevens-tab';
-import {
-  ProductInformatie,
-  generateDummyProductInformatieTabs,
-} from './product-informatie-tab';
-import { generateDummyAlgemeneInformatieTab } from './algemene-informatie-tab';
+  ProductInformation,
+  generateDummyProductInformationTabs,
+} from './product-information-tab';
+import { generateDummyGeneralInformationTab } from './general-information-tab';
 import { BodyTextModule } from './bodytext-module';
 
 export class TabsModule extends WordPressPostModule {
@@ -22,12 +18,12 @@ export class TabsModule extends WordPressPostModule {
   public tabsTitle: string[];
   @ApiModelProperty({ type: SalePointModule })
   public salePoints: SalePointModule;
-  @ApiModelProperty({ type: B2BGegevensTab })
-  public b2bGegevens: B2BGegevensTab;
-  @ApiModelProperty({ type: [ProductInformatie] })
-  public productInformatie: ProductInformatie[];
+  @ApiModelProperty({ type: B2BDataTab })
+  public b2bData: B2BDataTab;
+  @ApiModelProperty({ type: [ProductInformation] })
+  public productInformation: ProductInformation[];
   @ApiModelProperty({ type: BodyTextModule })
-  public algemeneInformatie: BodyTextModule;
+  public generalInformation: BodyTextModule;
 }
 
 export const generateDummyTabs = (): TabsModule => {
@@ -38,10 +34,10 @@ export const generateDummyTabs = (): TabsModule => {
       'Verkooppunten',
       'B2B gegevens',
     ],
-    b2bGegevens: generateDummyB2BGegevensTabs(),
-    productInformatie: generateDummyProductInformatieTabs(),
+    b2bData: generateDummyB2BDataTabs(),
+    productInformation: generateDummyProductInformationTabs(),
     salePoints: generateDummySalePointModule(),
-    algemeneInformatie: generateDummyAlgemeneInformatieTab(),
+    generalInformation: generateDummyGeneralInformationTab(),
     id: uuid(),
     topMargin: '',
     bottomMargin: '',

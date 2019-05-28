@@ -1,10 +1,9 @@
-import { ApiModelProperty } from '@nestjs/swagger';
 import { BodyTextModule } from './bodytext-module';
 import uuid = require('uuid');
 
 export class BodyTextTab extends BodyTextModule {}
 
-export const generateDummyAlgemeneInformatieTab = (): BodyTextModule => {
+export const generateDummyGeneralInformationTab = (): BodyTextModule => {
   return {
     html: `<h4>Algemene productinformatie</h4>
     <p>
@@ -33,7 +32,7 @@ export const generateDummyAlgemeneInformatieTab = (): BodyTextModule => {
     bottomMargin: '',
     containerAlignment: 'left',
     containerSize: 'full',
-    name: 'AlgemeneInformatieTab',
+    name: 'GeneralInformationTab',
     topMargin: '',
   };
 };
