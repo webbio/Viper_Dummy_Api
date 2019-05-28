@@ -5,7 +5,7 @@ import { ItemOverviewModule, ItemOverviewStateModule } from 'src/model/item-over
 import { getCards } from './card-methods';
 @Injectable()
 export class CardService {
-  public getCards(skip: number, take: number, filter?: string): ItemOverviewStateModule {
-    return getCards(skip, take, filter);
+  public getCards(skip: number, take: number, filter?: string, category?: string): ItemOverviewStateModule {
+    return getCards(skip, take, filter, category);
   }
 }

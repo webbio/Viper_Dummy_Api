@@ -1,27 +1,25 @@
 import uuid = require('uuid');
 
-export const categories = ['Noedels', 'Zeewieren', 'Paddenstoelen en seitan', 'Veganistischs', 'Sojasauzen', 'Rijst'];
+export const categories = () => [
+  'Noedels',
+  'Zeewieren',
+  'Paddenstoelen en seitan',
+  'Veganistischs',
+  'Sojasauzen',
+  'Rijst',
+];
 
-export const generateRandomCategory = () => {
-  return categories[Math.floor(Math.random() * 6)];
-};
+export const generateRandomCategory = () => categories[Math.floor(Math.random() * 6)];
 
 const generateRecipesUpTo9 = (amount: number): any[] => {
   const cardList: any[] = [];
-  const timeIcon = 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/time.svg';
-  const personIcon = 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/person.svg';
   if (amount === 1) {
     cardList.push({
       buttonText: 'Lees meer',
-      category: 'Recept',
+      category: 'Nieuws',
       cardLabels: [
         {
-          title: '1 persoon',
-          icon: personIcon,
-        },
-        {
-          title: '15 min',
-          icon: timeIcon,
+          title: '22 jan 2018',
         },
       ],
       picture: {
@@ -30,22 +28,17 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'gezonde snack',
       },
       title: `Gezonde snack? Probeer onze nieuwe snackmixen!`,
-      URL: '/recipe-single',
-      categoryDetail: categories[0],
+      URL: '/product-line-single',
+      categoryDetail: generateRandomCategory()
     });
   }
   if (amount >= 2) {
     cardList.push({
       buttonText: 'Lees meer',
-      category: 'Recept',
+      category: 'Nieuws',
       cardLabels: [
         {
-          title: '2 personen',
-          icon: personIcon,
-        },
-        {
-          title: '20 min',
-          icon: timeIcon,
+          title: '22 jan 2018',
         },
       ],
       picture: {
@@ -54,22 +47,17 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Phasellus lobortis',
       },
       title: `Phasellus lobortis ipsum`,
-      URL: '/recipe-single',
-      categoryDetail: categories[1],
+      URL: '/product-line-single',
+      categoryDetail: generateRandomCategory()
     });
   }
   if (amount >= 3) {
     cardList.push({
       buttonText: 'Lees meer',
-      category: 'Recept',
+      category: 'Nieuws',
       cardLabels: [
         {
-          title: '4 personen',
-          icon: personIcon,
-        },
-        {
-          title: '1 persoon',
-          icon: timeIcon,
+          title: '22 jan 2018',
         },
       ],
       picture: {
@@ -78,22 +66,17 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Integer id mauris id lorem condimentum blandit`,
-      URL: '/recipe-single',
-      categoryDetail: categories[3],
+      URL: '/product-line-single',
+      categoryDetail: generateRandomCategory()
     });
   }
   if (amount >= 4) {
     cardList.push({
       buttonText: 'Lees meer',
-      category: 'Recept',
+      category: 'Nieuws',
       cardLabels: [
         {
-          title: '2 personen',
-          icon: personIcon,
-        },
-        {
-          title: '20 min',
-          icon: timeIcon,
+          title: '22 jan 2018',
         },
       ],
       picture: {
@@ -102,23 +85,18 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Nullam sollicitudin orci sollicitudin velit blandit in pellentesque neque sollicitudin`,
-      URL: '/recipe-single',
-      categoryDetail: categories[2],
+      URL: '/product-line-single',
+      categoryDetail: generateRandomCategory()
     });
   }
 
   if (amount >= 5) {
     cardList.push({
       buttonText: 'Lees meer',
-      category: 'Recept',
+      category: 'Nieuws',
       cardLabels: [
         {
-          title: '2 persoon',
-          icon: personIcon,
-        },
-        {
-          title: '45 min',
-          icon: timeIcon,
+          title: '22 jan 2018',
         },
       ],
       picture: {
@@ -127,22 +105,17 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Consectetur adipiscing elit sed finibus`,
-      URL: '/recipe-single',
-      categoryDetail: categories[5],
+      URL: '/product-line-single',
+      categoryDetail: generateRandomCategory()
     });
   }
   if (amount >= 6) {
     cardList.push({
       buttonText: 'Lees meer',
-      category: 'Recept',
+      category: 'Nieuws',
       cardLabels: [
         {
-          title: '2 personen',
-          icon: personIcon,
-        },
-        {
-          title: '25 min',
-          icon: timeIcon,
+          title: '22 jan 2018',
         },
       ],
       picture: {
@@ -151,22 +124,17 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Duis vestibulum lectus quis faucibus facilisis`,
-      URL: '/recipe-single',
-      categoryDetail: categories[5],
+      URL: '/product-line-single',
+      categoryDetail: generateRandomCategory()
     });
   }
   if (amount >= 7) {
     cardList.push({
       buttonText: 'Lees meer',
-      category: 'Recept',
+      category: 'Nieuws',
       cardLabels: [
         {
-          title: '1 persoon',
-          icon: personIcon,
-        },
-        {
-          title: '25 min',
-          icon: timeIcon,
+          title: '22 jan 2018',
         },
       ],
       picture: {
@@ -175,22 +143,17 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Aenean mollis venenatis nulla non tincidunt`,
-      URL: '/recipe-single',
-      categoryDetail: categories[2],
+      URL: '/product-line-single',
+      categoryDetail: generateRandomCategory()
     });
   }
   if (amount >= 8) {
     cardList.push({
       buttonText: 'Lees meer',
-      category: 'Recept',
+      category: 'Nieuws',
       cardLabels: [
         {
-          title: '1 persoon',
-          icon: personIcon,
-        },
-        {
-          title: '15 min',
-          icon: timeIcon,
+          title: '22 jan 2018',
         },
       ],
       picture: {
@@ -199,22 +162,17 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Nam sed mi mattis malesuada ante ac vehicula ex`,
-      URL: '/recipe-single',
-      categoryDetail: categories[3],
+      URL: '/product-line-single',
+      categoryDetail: generateRandomCategory()
     });
   }
   if (amount >= 9) {
     cardList.push({
       buttonText: 'Lees meer',
-      category: 'Recept',
+      category: 'Nieuws',
       cardLabels: [
         {
-          title: '5 personen',
-          icon: personIcon,
-        },
-        {
-          title: '35 min',
-          icon: timeIcon,
+          title: '22 jan 2018',
         },
       ],
       picture: {
@@ -223,8 +181,8 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Nam ut turpis ac neque porttitor blandit`,
-      URL: '/recipe-single',
-      categoryDetail: categories[0],
+      URL: '/product-line-single',
+      categoryDetail: generateRandomCategory()
     });
   }
   return cardList;

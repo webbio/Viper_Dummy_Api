@@ -28,6 +28,7 @@ import { generateProductOverviewSimpleModule } from "src/model/product-overview-
 import { generateDummyRelatedLinksModule } from "src/model/related-links-module";
 import { generateProductLineStoryOverviewModule } from "src/product-line-overview/product-line-generator";
 import { generateDummyItemOverviewData } from "src/model/item-overview-module";
+import { generateDummyNewsOverviewData } from "src/model/news-overview-module";
 
 @Injectable()
 export class PageService {
@@ -168,28 +169,6 @@ export class PageService {
     } as PageModel,
     {
       id: uuid(),
-      route: "terrasana.com/news-overview",
-      description: "Nieuws",
-      wordPressPostModules: [
-        generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule(
-          "NIEUWTJES",
-          "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
-          "center",
-          "",
-          "",
-          "",
-          "",
-          "Terug naar home",
-          "/"
-        ),
-        generateDummyRelatedProductsSlider("Gerelateerde Producten"),
-        generateDummyNewsletterModule(),
-        generateDummyFooterModule()
-      ]
-    } as PageModel,
-    {
-      id: uuid(),
       route: "terrasana.com/news-single",
       description: "Nieuws",
       wordPressPostModules: [
@@ -219,7 +198,7 @@ export class PageService {
       wordPressPostModules: [
         generateDummyNavBarModule(),
         generateDummyInfoHeaderModule(
-          'Recipe',
+          'Recipes',
           'Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.',
           'center',
           '',
@@ -230,7 +209,30 @@ export class PageService {
           '/',
         ),
         generateDummyItemOverviewData(),
-        generateDummyRelatedProductsSlider('Gerelateerde Producten'),
+        generateDummyRelatedProductsSlider('Gerelateerde Producten', true),
+        generateDummyNewsletterModule(),
+        generateDummyFooterModule()
+      ]
+    } as PageModel,
+    {
+      id: uuid(),
+      route: "terrasana.com/news-overview",
+      description: "Nieuws",
+      wordPressPostModules: [
+        generateDummyNavBarModule(),
+        generateDummyInfoHeaderModule(
+          'Nieuwtjes',
+          'Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.',
+          'center',
+          '',
+          'center',
+          '',
+          '',
+          'Terug naar home',
+          '/',
+        ),
+        generateDummyNewsOverviewData(),
+        generateDummyRelatedProductsSlider('Gerelateerde Producten', true),
         generateDummyNewsletterModule(),
         generateDummyFooterModule()
       ]
