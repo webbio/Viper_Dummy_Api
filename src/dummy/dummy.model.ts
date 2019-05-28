@@ -172,4 +172,7 @@ export class DummyModel {
 
   @ApiModelProperty()
   public relatedLinksModule?: RelatedLinksModule;
+
+  @ApiModelProperty()
+  public relatedProductsSlider?: RelatedProductsSlider;
 }
