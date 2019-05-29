@@ -20,6 +20,12 @@ export class NewsOverviewController {
     type: Number
   })
   @ApiImplicitQuery({
+    name: 'category',
+    description: 'Filter by category',
+    required: false,
+    type: String,
+  })
+  @ApiImplicitQuery({
     name: "filter",
     description: "Filter by cardName",
     required: false,
@@ -27,7 +33,7 @@ export class NewsOverviewController {
   })
   @Get()
   searchCards(@Query() query) {
-    const cards = this.pageService.getCards(parseInt(query.skip), parseInt(query.take), query.filter);
+    const cards = this.pageService.getCards(parseInt(query.skip), parseInt(query.take), query.filter, query.category);
     return cards;
   }
 }
