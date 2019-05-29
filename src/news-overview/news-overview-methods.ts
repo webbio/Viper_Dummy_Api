@@ -1,9 +1,9 @@
 import { ItemOverviewModule, ItemOverviewStateModule } from 'src/model/item-overview-module';
-import { GenerateRecipesCardList } from './card-generator';
+import { GenerateRecipesCardList } from './news-overview-generator';
 import { CardModel } from 'src/model/card-model';
 
 export const getCards = (skip: number, take: number, filter?: string, category?: string): ItemOverviewStateModule => {
-  const TOTAL_ITEMS = 202;
+  const TOTAL_ITEMS = 32;
   const paginatedList = [];
   if (skip > TOTAL_ITEMS) {
     return null;
@@ -11,12 +11,13 @@ export const getCards = (skip: number, take: number, filter?: string, category?:
   let cardList = GenerateRecipesCardList(TOTAL_ITEMS);
   const finalPosition = skip + take;
   let filteredList: CardModel[] = [];
+
   if (category) {
     const categoryUpperCase = category.toUpperCase();
     cardList = cardList.filter((item: CardModel) => item.categoryDetail.toUpperCase() == categoryUpperCase);
   }
-
   let totalItems = cardList.length;
+
   if (filter) {
     totalItems = 0;
     filter = filter.toUpperCase();
@@ -28,6 +29,7 @@ export const getCards = (skip: number, take: number, filter?: string, category?:
       }
     }
   } else {
+    totalItems = cardList.length;
     for (let i = skip; i < finalPosition; i++) {
       if (cardList[i] != undefined) {
         paginatedList.push(cardList[i]);

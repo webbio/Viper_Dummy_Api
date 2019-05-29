@@ -10,13 +10,15 @@ import { ProductLineService } from './product-line/product-line.service';
 import { ProductLineController } from './product-line/product-line.controller';
 import { NavbarSearchController } from './navbar-search/navbar-search.controller';
 import { NavbarSearchService } from './navbar-search/navbar-search.service';
-
+import { NewsOverviewController } from './news-overview/news-overview.controller';
+import { NewsOverviewService } from './news-overview/news-overview.service';
 
 @Module({
   imports: [],
   controllers: [
     PageController,
     CardController,
+    NewsOverviewController,
     DummyController,
     ProductLineController,
     NavbarSearchController,
@@ -25,6 +27,7 @@ import { NavbarSearchService } from './navbar-search/navbar-search.service';
     AppService,
     PageService,
     CardService,
+    NewsOverviewService,
     DummyService,
     ProductLineService,
     NavbarSearchService,
