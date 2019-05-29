@@ -68,7 +68,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
           icon: personIcon,
         },
         {
-          title: '1 persoon',
+          title: '30 min',
           icon: timeIcon,
         },
       ],

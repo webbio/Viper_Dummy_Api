@@ -1,13 +1,7 @@
 import uuid = require('uuid');
 
-export const categories = [
-  'Noedels',
-  'Zeewieren',
-  'Paddenstoelen en seitan',
-  'Veganistischs',
-  'Sojasauzen',
-  'Rijst',
-];
+export const categories = ['Noedels', 'Zeewieren', 'Paddenstoelen en seitan', 'Veganistischs', 'Sojasauzen', 'Rijst'];
+
 
 const generateRecipesUpTo9 = (amount: number): any[] => {
   const cardList: any[] = [];
@@ -27,7 +21,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
       },
       title: `Gezonde snack? Probeer onze nieuwe snackmixen!`,
       URL: '/product-line-single',
-      categoryDetail: categories[0]
+      categoryDetail: categories[0],
     });
   }
   if (amount >= 2) {
@@ -46,7 +40,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
       },
       title: `Phasellus lobortis ipsum`,
       URL: '/product-line-single',
-      categoryDetail: categories[1]
+      categoryDetail: categories[1],
     });
   }
   if (amount >= 3) {
@@ -65,7 +59,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
       },
       title: `Integer id mauris id lorem condimentum blandit`,
       URL: '/product-line-single',
-      categoryDetail: categories[2]
+      categoryDetail: categories[2],
     });
   }
   if (amount >= 4) {
@@ -84,7 +78,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
       },
       title: `Nullam sollicitudin orci sollicitudin velit blandit in pellentesque neque sollicitudin`,
       URL: '/product-line-single',
-      categoryDetail: categories[3]
+      categoryDetail: categories[3],
     });
   }
 
@@ -104,7 +98,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
       },
       title: `Consectetur adipiscing elit sed finibus`,
       URL: '/product-line-single',
-      categoryDetail: categories[4]
+      categoryDetail: categories[4],
     });
   }
   if (amount >= 6) {
@@ -123,7 +117,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
       },
       title: `Duis vestibulum lectus quis faucibus facilisis`,
       URL: '/product-line-single',
-      categoryDetail: categories[2]
+      categoryDetail: categories[2],
     });
   }
   if (amount >= 7) {
@@ -142,7 +136,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
       },
       title: `Aenean mollis venenatis nulla non tincidunt`,
       URL: '/product-line-single',
-      categoryDetail: categories[5]
+      categoryDetail: categories[5],
     });
   }
   if (amount >= 8) {
@@ -161,7 +155,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
       },
       title: `Nam sed mi mattis malesuada ante ac vehicula ex`,
       URL: '/product-line-single',
-      categoryDetail: categories[2]
+      categoryDetail: categories[2],
     });
   }
   if (amount >= 9) {
@@ -180,7 +174,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
       },
       title: `Nam ut turpis ac neque porttitor blandit`,
       URL: '/product-line-single',
-      categoryDetail: categories[4]
+      categoryDetail: categories[4],
     });
   }
   return cardList;
