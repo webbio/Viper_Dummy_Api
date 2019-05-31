@@ -19,18 +19,19 @@ import { generateDummySalePointModule } from 'src/model/sale-point-module';
 import { generateBodyTextExpandedModule } from 'src/model/bodytext-expanded-module';
 import { generateNotYetImplemented } from 'src/model/not-yet-implemented-module';
 
-import { generateDummyRelatedProductsSlider } from 'src/model/related-products-slider';
-import { generateDummyGallerySliderModule } from 'src/model/gallery-slider';
-import { generateDummyNewsletterModule } from 'src/model/newsletter-module';
-import { generateDummyRecipeDetailModule } from 'src/model/recipe-detail-module';
-import { generateDummyFaqModule } from 'src/model/faq-overview-module';
-import { generateDummyMoreProducts } from 'src/model/more-products';
-import { generateDummyProductDetailHeader } from 'src/model/product-detail-header';
-import { generateProductLineSingleModule } from 'src/model/product-line-single-module';
-import { generateProductOverviewSimpleModule } from 'src/model/product-overview-simple-module';
-import { generateDummyRelatedLinksModule } from 'src/model/related-links-module';
-import { generateProductLineStoryOverviewModule } from 'src/product-line-overview/product-line-generator';
-import { generateDummyItemOverviewData } from 'src/model/item-overview-module';
+import { generateDummyRelatedProductsSlider } from "src/model/related-products-slider";
+import { generateDummyGallerySliderModule } from "src/model/gallery-slider";
+import { generateDummyNewsletterModule } from "src/model/newsletter-module";
+import { generateDummyRecipeDetailModule } from "src/model/recipe-detail-module";
+import { generateDummyFaqModule } from "src/model/faq-overview-module";
+import { generateDummyMoreProducts } from "src/model/more-products";
+import { generateDummyProductDetailHeader } from "src/model/product-detail-header";
+import { generateProductLineSingleModule } from "src/model/product-line-single-module";
+import { generateProductOverviewSimpleModule } from "src/model/product-overview-simple-module";
+import { generateDummyRelatedLinksModule } from "src/model/related-links-module";
+import { generateProductLineStoryOverviewModule } from "src/product-line-overview/product-line-generator";
+import { generateDummyItemOverviewData } from "src/model/item-overview-module";
+import { generateDummyNewsOverviewData } from "src/model/news-overview-module";
 
 @Injectable()
 export class PageService {
@@ -187,19 +188,21 @@ export class PageService {
           'Terug naar home',
           '/',
         ),
-        generateDummyRelatedProductsSlider('Gerelateerde Producten'),
+        generateBodyTextExpandedModule(),
+        generateNotYetImplemented("Related News Module"),
+        generateDummyRelatedProductsSlider("Gerelateerde Producten"),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
     } as PageModel,
     {
       id: uuid(),
-      route: 'terrasana.com/news-single',
-      description: 'Nieuws',
+      route: "terrasana.com/recipe-overview",
+      description: "Recepten",
       wordPressPostModules: [
         generateDummyNavBarModule(),
         generateDummyInfoHeaderModule(
-          'NIEUWS',
+          'Recipes',
           'Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.',
           'center',
           '',
@@ -218,23 +221,23 @@ export class PageService {
     } as PageModel,
     {
       id: uuid(),
-      route: 'terrasana.com/recipe-overview',
-      description: 'Recepten',
+      route: "terrasana.com/news-overview",
+      description: "Nieuws",
       wordPressPostModules: [
         generateDummyNavBarModule(),
         generateDummyInfoHeaderModule(
-          'Recipe',
+          'Nieuwtjes',
           'Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.',
           'center',
           '',
           'center',
-          'Meer over Japan Moderne Keuken',
-          '/product-line-single',
+          '',
+          '',
           'Terug naar home',
           '/',
         ),
-        generateDummyItemOverviewData(),
-        generateDummyRelatedProductsSlider('Gerelateerde Producten'),
+        generateDummyNewsOverviewData(),
+        generateDummyRelatedProductsSlider('Gerelateerde Producten', true),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
