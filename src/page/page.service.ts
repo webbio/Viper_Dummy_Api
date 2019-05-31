@@ -42,7 +42,6 @@ export class PageService {
       wordPressPostModules: [
         generateDummyNavBarModule(),
         generateDummyWelcomeModule(),
-        generateDummyProductDetailHeader(),
         generateDummyCTAModuleHomePage1(),
         generateDummyRelatedProductsSlider('Gerelateerde Producten'),
         generateDummyInstagramWallModule(),
@@ -162,7 +161,7 @@ export class PageService {
       description: 'Product',
       wordPressPostModules: [
         generateDummyNavBarModule(),
-        generateNotYetImplemented('Product Single Header Module'),
+        generateDummyProductDetailHeader(),
         generateNotYetImplemented('Product Single Tab Module'),
         generateDummyMoreProducts(),
         generateNotYetImplemented('Related product'),
