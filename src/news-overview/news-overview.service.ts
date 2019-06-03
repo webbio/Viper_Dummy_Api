@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import uuid = require('uuid');
-import { GenerateRecipesCardList } from './card-generator';
+import { GenerateRecipesCardList } from './news-overview-generator';
 import { ItemOverviewModule, ItemOverviewStateModule } from 'src/model/item-overview-module';
-import { getCards } from './card-methods';
+import { getCards } from './news-overview-methods';
 @Injectable()
-export class CardService {
+export class NewsOverviewService {
   public getCards(skip: number, take: number, filter?: string, category?: string): ItemOverviewStateModule {
     return getCards(skip, take, filter, category);
   }

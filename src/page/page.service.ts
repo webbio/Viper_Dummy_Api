@@ -31,6 +31,8 @@ import { generateProductOverviewSimpleModule } from 'src/model/product-overview-
 import { generateDummyRelatedLinksModule } from 'src/model/related-links-module';
 import { generateProductLineStoryOverviewModule } from 'src/product-line-overview/product-line-generator';
 import { generateDummyItemOverviewData } from 'src/model/item-overview-module';
+import { generateDummyNewsOverviewData } from 'src/model/news-overview-module';
+import { generateDummyNotFoundModule } from 'src/model/not-found-module';
 import { generateDummyLoginModule } from 'src/model/login';
 import { generateDummySignUpModule } from 'src/model/sign-up';
 
@@ -44,7 +46,6 @@ export class PageService {
       wordPressPostModules: [
         generateDummyNavBarModule(),
         generateDummyWelcomeModule(),
-        generateDummyProductDetailHeader(),
         generateDummyCTAModuleHomePage1(),
         generateDummyRelatedProductsSlider('Gerelateerde Producten'),
         generateDummyInstagramWallModule(),
@@ -163,10 +164,11 @@ export class PageService {
       description: 'Product',
       wordPressPostModules: [
         generateDummyNavBarModule(),
-        generateNotYetImplemented('Product Single Header Module'),
+        generateDummyProductDetailHeader(),
         generateNotYetImplemented('Product Single Tab Module'),
+        generateDummyMoreProducts(),
+        generateNotYetImplemented('Related product'),
         generateDummyRelatedProductsSlider('Gerelateerde Producten'),
-        generateNotYetImplemented('Related Recipe Module'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
@@ -188,6 +190,8 @@ export class PageService {
           'Terug naar home',
           '/',
         ),
+        generateBodyTextExpandedModule(),
+        generateNotYetImplemented('Related News Module'),
         generateDummyRelatedProductsSlider('Gerelateerde Producten'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
@@ -195,12 +199,12 @@ export class PageService {
     } as PageModel,
     {
       id: uuid(),
-      route: 'terrasana.com/news-single',
-      description: 'Nieuws',
+      route: 'terrasana.com/recipe-overview',
+      description: 'Recepten',
       wordPressPostModules: [
         generateDummyNavBarModule(),
         generateDummyInfoHeaderModule(
-          'NIEUWS',
+          'Recipes',
           'Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.',
           'center',
           '',
@@ -219,23 +223,23 @@ export class PageService {
     } as PageModel,
     {
       id: uuid(),
-      route: 'terrasana.com/recipe-overview',
-      description: 'Recepten',
+      route: 'terrasana.com/news-overview',
+      description: 'Nieuws',
       wordPressPostModules: [
         generateDummyNavBarModule(),
         generateDummyInfoHeaderModule(
-          'Recipe',
+          'Nieuwtjes',
           'Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.',
           'center',
           '',
           'center',
-          'Meer over Japan Moderne Keuken',
-          '/product-line-single',
+          '',
+          '',
           'Terug naar home',
           '/',
         ),
-        generateDummyItemOverviewData(),
-        generateDummyRelatedProductsSlider('Gerelateerde Producten'),
+        generateDummyNewsOverviewData(),
+        generateDummyRelatedProductsSlider('Gerelateerde Producten', true),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
@@ -314,6 +318,16 @@ export class PageService {
         generateNotYetImplemented('Related Recipes Module'),
         generateDummyRelatedProductsSlider('Gerelateerde Producten'),
         generateDummyNewsletterModule(),
+        generateDummyFooterModule(),
+      ],
+    } as PageModel,
+    {
+      id: uuid(),
+      route: 'terrasana.com/not-found',
+      description: 'Not Found module',
+      wordPressPostModules: [
+        generateDummyNavBarModule(),
+        generateDummyNotFoundModule(),
         generateDummyFooterModule(),
       ],
     } as PageModel,
