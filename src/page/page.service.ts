@@ -19,19 +19,20 @@ import { generateDummySalePointModule } from 'src/model/sale-point-module';
 import { generateBodyTextExpandedModule } from 'src/model/bodytext-expanded-module';
 import { generateNotYetImplemented } from 'src/model/not-yet-implemented-module';
 
-import { generateDummyRelatedProductsSlider } from "src/model/related-products-slider";
-import { generateDummyGallerySliderModule } from "src/model/gallery-slider";
-import { generateDummyNewsletterModule } from "src/model/newsletter-module";
-import { generateDummyRecipeDetailModule } from "src/model/recipe-detail-module";
-import { generateDummyFaqModule } from "src/model/faq-overview-module";
-import { generateDummyMoreProducts } from "src/model/more-products";
-import { generateDummyProductDetailHeader } from "src/model/product-detail-header";
-import { generateProductLineSingleModule } from "src/model/product-line-single-module";
-import { generateProductOverviewSimpleModule } from "src/model/product-overview-simple-module";
-import { generateDummyRelatedLinksModule } from "src/model/related-links-module";
-import { generateProductLineStoryOverviewModule } from "src/product-line-overview/product-line-generator";
-import { generateDummyItemOverviewData } from "src/model/item-overview-module";
-import { generateDummyNewsOverviewData } from "src/model/news-overview-module";
+import { generateDummyRelatedProductsSlider } from 'src/model/related-products-slider';
+import { generateDummyGallerySliderModule } from 'src/model/gallery-slider';
+import { generateDummyNewsletterModule } from 'src/model/newsletter-module';
+import { generateDummyRecipeDetailModule } from 'src/model/recipe-detail-module';
+import { generateDummyFaqModule } from 'src/model/faq-overview-module';
+import { generateDummyMoreProducts } from 'src/model/more-products';
+import { generateDummyProductDetailHeader } from 'src/model/product-detail-header';
+import { generateProductLineSingleModule } from 'src/model/product-line-single-module';
+import { generateProductOverviewSimpleModule } from 'src/model/product-overview-simple-module';
+import { generateDummyRelatedLinksModule } from 'src/model/related-links-module';
+import { generateProductLineStoryOverviewModule } from 'src/product-line-overview/product-line-generator';
+import { generateDummyItemOverviewData } from 'src/model/item-overview-module';
+import { generateDummyNewsOverviewData } from 'src/model/news-overview-module';
+import { generateDummyFeaturedItemModule } from 'src/model/featured-item';
 
 @Injectable()
 export class PageService {
@@ -189,16 +190,16 @@ export class PageService {
           '/',
         ),
         generateBodyTextExpandedModule(),
-        generateNotYetImplemented("Related News Module"),
-        generateDummyRelatedProductsSlider("Gerelateerde Producten"),
+        generateNotYetImplemented('Related News Module'),
+        generateDummyRelatedProductsSlider('Gerelateerde Producten'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
     } as PageModel,
     {
       id: uuid(),
-      route: "terrasana.com/recipe-overview",
-      description: "Recepten",
+      route: 'terrasana.com/recipe-overview',
+      description: 'Recepten',
       wordPressPostModules: [
         generateDummyNavBarModule(),
         generateDummyInfoHeaderModule(
@@ -221,8 +222,8 @@ export class PageService {
     } as PageModel,
     {
       id: uuid(),
-      route: "terrasana.com/news-overview",
-      description: "Nieuws",
+      route: 'terrasana.com/news-overview',
+      description: 'Nieuws',
       wordPressPostModules: [
         generateDummyNavBarModule(),
         generateDummyInfoHeaderModule(
@@ -313,7 +314,7 @@ export class PageService {
           'Bij ons weet je niet alleen zeker dat de producten écht biologisch zijn, maar ook dat we alles met de grootste zorg uitkiezen en samenstellen. We hebben aandacht voor kwaliteit, natuur, milieu, smaak en productiewijze. We zijn altijd op zoek naar de mooiste en meest verantwoorde ingrediënten. Onze medewerkers weten wat ze in handen hebben en bereiden met hart en ziel veel zelf. Geen poespas maar pure en eerlijke producten.',
         ),
         generateDummyOurTeamModule(),
-        generateNotYetImplemented('Related Recipes Module'),
+        generateDummyFeaturedItemModule('Heerlijke recepten!'),
         generateDummyRelatedProductsSlider('Gerelateerde Producten'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
