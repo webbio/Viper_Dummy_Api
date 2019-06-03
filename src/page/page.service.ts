@@ -33,6 +33,9 @@ import { generateProductLineStoryOverviewModule } from 'src/product-line-overvie
 import { generateDummyItemOverviewData } from 'src/model/item-overview-module';
 import { generateDummyNewsOverviewData } from 'src/model/news-overview-module';
 import { generateDummyFeaturedItemModule } from 'src/model/featured-item';
+import { generateDummyNotFoundModule } from 'src/model/not-found-module';
+import { generateDummyLoginModule } from 'src/model/login';
+import { generateDummySignUpModule } from 'src/model/sign-up';
 
 @Injectable()
 export class PageService {
@@ -49,7 +52,6 @@ export class PageService {
         generateDummyInstagramWallModule(),
         generateDummyCTAModuleHomePage2(),
         generateDummyNewsletterModule(),
-
         generateDummyFooterModule(),
       ],
     } as PageModel,
@@ -322,6 +324,16 @@ export class PageService {
     } as PageModel,
     {
       id: uuid(),
+      route: 'terrasana.com/not-found',
+      description: 'Not Found module',
+      wordPressPostModules: [
+        generateDummyNavBarModule(),
+        generateDummyNotFoundModule(),
+        generateDummyFooterModule(),
+      ],
+    } as PageModel,
+    {
+      id: uuid(),
       route: 'terrasana.com/contact',
       description: 'Contact',
       wordPressPostModules: [
@@ -368,13 +380,19 @@ export class PageService {
       id: uuid(),
       route: 'terrasana.com/business-login',
       description: 'Zakelijk',
-      wordPressPostModules: [generateDummyNavBarModule()],
+      wordPressPostModules: [
+        generateDummyNavBarModule(),
+        generateDummyLoginModule(),
+      ],
     } as PageModel,
     {
       id: uuid(),
       route: 'terrasana.com/business-new-account',
       description: 'Zakelijk',
-      wordPressPostModules: [generateDummyNavBarModule()],
+      wordPressPostModules: [
+        generateDummyNavBarModule(),
+        generateDummySignUpModule(),
+      ],
     } as PageModel,
   ];
 
