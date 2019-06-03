@@ -4,5 +4,5 @@ export class TabsHeader {
   @ApiModelProperty()
   public title: string;
   @ApiModelProperty()
-  public moduleTab: string;
+  public tabIndex: number;
 }

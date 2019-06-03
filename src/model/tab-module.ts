@@ -12,10 +12,11 @@ import {
 } from './product-information-tab';
 import { generateDummyGeneralInformationTab } from './general-information-tab';
 import { BodyTextModule } from './bodytext-module';
+import { TabsHeader } from './tabs-header';
 
 export class TabsModule extends WordPressPostModule {
-  @ApiModelProperty()
-  public tabsTitle: string[];
+  @ApiModelProperty({ type: [TabsHeader] })
+  public tabsTitle: TabsHeader[];
   @ApiModelProperty({ type: SalePointModule })
   public salePoints: SalePointModule;
   @ApiModelProperty({ type: B2BDataTab })
@@ -29,10 +30,10 @@ export class TabsModule extends WordPressPostModule {
 export const generateDummyTabs = (): TabsModule => {
   return {
     tabsTitle: [
-      'Algemene informatie',
-      'Productinformatie',
-      'Verkooppunten',
-      'B2B gegevens',
+      { title: 'Algemene informatie', tabIndex: 1 },
+      { title: 'Productinformatie', tabIndex: 2 },
+      { title: 'Verkooppunten', tabIndex: 3 },
+      { title: 'B2B gegevens', tabIndex: 4 },
     ],
     b2bData: generateDummyB2BDataTabs(),
     productInformation: generateDummyProductInformationTabs(),
