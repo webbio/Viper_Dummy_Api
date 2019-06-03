@@ -16,9 +16,19 @@ export class ProductLineOverviewCard {
 
   @ApiModelProperty()
   public buttonText: string;
+
+  @ApiModelProperty()
+  public categoryDetail: string;
+
+  @ApiModelProperty()
+  public diet: string;
 }
 
 export class ProductLineOverviewModule extends WordPressPostModule {
   @ApiModelProperty({ type: [ProductLineOverviewCard] })
   public productsLine: ProductLineOverviewCard[];
+  @ApiModelProperty({ type: [String] })
+  public categories: string[];
+  @ApiModelProperty({ type: [String] })
+  public diets: string[];
 }

@@ -13,6 +13,18 @@ export class ProductLineOverviewController {
     required: false,
     type: String,
   })
+  @ApiImplicitQuery({
+    name: 'category',
+    description: 'Filter by category',
+    required: false,
+    type: String,
+  })
+  @ApiImplicitQuery({
+    name: 'diet',
+    description: 'Filter by diet',
+    required: false,
+    type: String,
+  })
   @Get()
   searchProducts(@Query() query) {
     const cards = this.productLineService.getProductCards(query.filter);

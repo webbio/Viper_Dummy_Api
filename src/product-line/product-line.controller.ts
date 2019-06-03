@@ -17,8 +17,8 @@ export class ProductLineController {
     name: 'filter',
     description: 'filter',
     required: true,
-    isArray: true,
-    type: String,
+    type: Array,
+    collectionFormat: 'multi',
   })
   @ApiImplicitQuery({
     name: 'skip',
@@ -59,15 +59,15 @@ export class ProductLineController {
     name: 'category',
     description: 'category',
     required: true,
-    isArray: true,
-    type: String,
+    type: Array,
+    collectionFormat: 'multi',
   })
   @ApiImplicitQuery({
     name: 'product',
     description: 'product',
     required: true,
-    isArray: true,
-    type: String,
+    type: Array,
+    collectionFormat: 'multi',
   })
   @Get('/category')
   getCategoryList(@Query() query) {
@@ -82,8 +82,8 @@ export class ProductLineController {
     name: 'product',
     description: 'get product',
     required: true,
-    isArray: true,
-    type: String,
+    type: Array,
+    collectionFormat: 'multi',
   })
   @Get('/products')
   getProductList(@Query() query) {

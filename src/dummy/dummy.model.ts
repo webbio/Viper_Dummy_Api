@@ -45,6 +45,13 @@ import { RelatedLinksModule } from 'src/model/related-links-module';
 import { ContactForm } from 'src/model/contact-form';
 import { ProductLineSingleModule } from 'src/model/product-line-single-module';
 import { ProductOverviewSimpleModule } from 'src/model/product-overview-simple-module';
+import { LoginModule } from 'src/model/login';
+import { SignUpModule } from 'src/model/sign-up';
+import {
+  NewsOverviewStateModule,
+  NewsOverviewModule,
+} from 'src/model/news-overview-module';
+import { NotFoundModule } from 'src/model/not-found-module';
 
 export class DummyModel {
   @ApiModelProperty()
@@ -86,14 +93,23 @@ export class DummyModel {
 
   @ApiModelProperty()
   public FeaturedItemModule?: FeaturedItemModule;
+
   @ApiModelProperty()
   public itemOverviewModule?: ItemOverviewModule;
+  @ApiModelProperty()
+  public notFoundModule?: NotFoundModule;
+
+  @ApiModelProperty()
+  public newsOverviewModule?: NewsOverviewModule;
 
   @ApiModelProperty()
   public card?: CardModel;
 
   @ApiModelProperty()
   public itemOverviewStateModule?: ItemOverviewStateModule;
+
+  @ApiModelProperty()
+  public newsOverviewStateModule?: NewsOverviewStateModule;
 
   @ApiModelProperty()
   public howTo?: HowToModel;
@@ -165,14 +181,19 @@ export class DummyModel {
   public ContactForm?: ContactForm;
 
   @ApiModelProperty()
+  public relatedLinksModule?: RelatedLinksModule;
+
+  @ApiModelProperty()
+  public loginModule?: LoginModule;
+
+  @ApiModelProperty()
+  public signUpModule?: SignUpModule;
+  @ApiModelProperty()
+  public productLineStoryOverviewModule?: ProductLineOverviewModule;
+
+  @ApiModelProperty()
   public productLineSingleModule?: ProductLineSingleModule;
 
   @ApiModelProperty()
   public productOverviewSimpleModule?: ProductOverviewSimpleModule;
-
-  @ApiModelProperty()
-  public relatedLinksModule?: RelatedLinksModule;
-
-  @ApiModelProperty()
-  public relatedProductsSlider?: RelatedProductsSlider;
 }

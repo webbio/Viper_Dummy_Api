@@ -26,11 +26,22 @@ export const generateDummyMoreProducts = (): MoreProducts => {
     bottomMargin: '0px',
     title: 'Meer Noedels!',
     buttonText: 'Meer noedels',
+    background: {
+      backgroundColour: '#f5fafa',
+    },
+    bottomPadding: '150px',
+    curve: {
+      decorCurveVerticalAlignment: 'bottom',
+      decorCurveHorizontalAlignment: 'right',
+      curveBackground: {
+        backgroundColour: '#fff',
+      },
+    },
     relatedProducts: [
       {
         title: '100% Bruine rijstnoedels',
         picture:
-          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.png',
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg',
         URL: '/',
       },
       {
@@ -42,7 +53,7 @@ export const generateDummyMoreProducts = (): MoreProducts => {
       {
         title: 'Bruine rijstnoedels met pompoen en gember',
         picture:
-          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.png',
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg',
         URL: '/',
       },
       {
@@ -54,7 +65,7 @@ export const generateDummyMoreProducts = (): MoreProducts => {
       {
         title: '100% Bruine rijstnoedels',
         picture:
-          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.png',
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg',
         URL: '/',
       },
     ],

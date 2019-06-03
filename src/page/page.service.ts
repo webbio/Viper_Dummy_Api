@@ -32,6 +32,11 @@ import { generateDummyRelatedLinksModule } from 'src/model/related-links-module'
 import { generateProductLineStoryOverviewModule } from 'src/product-line-overview/product-line-generator';
 import { generateDummyItemOverviewData } from 'src/model/item-overview-module';
 import { generateDummyTabs } from 'src/model/tab-module';
+import { generateDummyNewsOverviewData } from 'src/model/news-overview-module';
+import { generateDummyFeaturedItemModule } from 'src/model/featured-item';
+import { generateDummyNotFoundModule } from 'src/model/not-found-module';
+import { generateDummyLoginModule } from 'src/model/login';
+import { generateDummySignUpModule } from 'src/model/sign-up';
 
 @Injectable()
 export class PageService {
@@ -43,7 +48,6 @@ export class PageService {
       wordPressPostModules: [
         generateDummyNavBarModule(),
         generateDummyWelcomeModule(),
-        generateDummyProductDetailHeader(),
         generateDummyCTAModuleHomePage1(),
         generateDummyRelatedProductsSlider('Gerelateerde Producten'),
         generateDummyInstagramWallModule(),
@@ -164,9 +168,11 @@ export class PageService {
         generateDummyNavBarModule(),
         generateNotYetImplemented('Product Single Header Module'),
         generateDummyTabs(),
+        generateDummyProductDetailHeader(),
         generateNotYetImplemented('Product Single Tab Module'),
+        generateDummyMoreProducts(),
+        generateNotYetImplemented('Related product'),
         generateDummyRelatedProductsSlider('Gerelateerde Producten'),
-        generateNotYetImplemented('Related Recipe Module'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
@@ -188,6 +194,8 @@ export class PageService {
           'Terug naar home',
           '/',
         ),
+        generateBodyTextExpandedModule(),
+        generateNotYetImplemented('Related News Module'),
         generateDummyRelatedProductsSlider('Gerelateerde Producten'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
@@ -195,12 +203,12 @@ export class PageService {
     } as PageModel,
     {
       id: uuid(),
-      route: 'terrasana.com/news-single',
-      description: 'Nieuws',
+      route: 'terrasana.com/recipe-overview',
+      description: 'Recepten',
       wordPressPostModules: [
         generateDummyNavBarModule(),
         generateDummyInfoHeaderModule(
-          'NIEUWS',
+          'Recipes',
           'Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.',
           'center',
           '',
@@ -219,23 +227,23 @@ export class PageService {
     } as PageModel,
     {
       id: uuid(),
-      route: 'terrasana.com/recipe-overview',
-      description: 'Recepten',
+      route: 'terrasana.com/news-overview',
+      description: 'Nieuws',
       wordPressPostModules: [
         generateDummyNavBarModule(),
         generateDummyInfoHeaderModule(
-          'Recipe',
+          'Nieuwtjes',
           'Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.',
           'center',
           '',
           'center',
-          'Meer over Japan Moderne Keuken',
-          '/product-line-single',
+          '',
+          '',
           'Terug naar home',
           '/',
         ),
-        generateDummyItemOverviewData(),
-        generateDummyRelatedProductsSlider('Gerelateerde Producten'),
+        generateDummyNewsOverviewData(),
+        generateDummyRelatedProductsSlider('Gerelateerde Producten', true),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
@@ -311,9 +319,19 @@ export class PageService {
           'Bij ons weet je niet alleen zeker dat de producten écht biologisch zijn, maar ook dat we alles met de grootste zorg uitkiezen en samenstellen. We hebben aandacht voor kwaliteit, natuur, milieu, smaak en productiewijze. We zijn altijd op zoek naar de mooiste en meest verantwoorde ingrediënten. Onze medewerkers weten wat ze in handen hebben en bereiden met hart en ziel veel zelf. Geen poespas maar pure en eerlijke producten.',
         ),
         generateDummyOurTeamModule(),
-        generateNotYetImplemented('Related Recipes Module'),
+        generateDummyFeaturedItemModule(),
         generateDummyRelatedProductsSlider('Gerelateerde Producten'),
         generateDummyNewsletterModule(),
+        generateDummyFooterModule(),
+      ],
+    } as PageModel,
+    {
+      id: uuid(),
+      route: 'terrasana.com/not-found',
+      description: 'Not Found module',
+      wordPressPostModules: [
+        generateDummyNavBarModule(),
+        generateDummyNotFoundModule(),
         generateDummyFooterModule(),
       ],
     } as PageModel,
@@ -365,13 +383,19 @@ export class PageService {
       id: uuid(),
       route: 'terrasana.com/business-login',
       description: 'Zakelijk',
-      wordPressPostModules: [generateDummyNavBarModule()],
+      wordPressPostModules: [
+        generateDummyNavBarModule(),
+        generateDummyLoginModule(),
+      ],
     } as PageModel,
     {
       id: uuid(),
       route: 'terrasana.com/business-new-account',
       description: 'Zakelijk',
-      wordPressPostModules: [generateDummyNavBarModule()],
+      wordPressPostModules: [
+        generateDummyNavBarModule(),
+        generateDummySignUpModule(),
+      ],
     } as PageModel,
   ];
 
