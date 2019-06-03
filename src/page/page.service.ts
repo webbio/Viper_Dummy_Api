@@ -5,10 +5,7 @@ import * as _ from 'lodash';
 import * as URI from 'urijs';
 import { generateDummyWelcomeModule } from 'src/model/welcome-module';
 import { generateDummyNavBarModule } from 'src/model/nav-bar-module';
-import {
-  generateDummyCTAModuleHomePage1,
-  generateDummyCTAModuleHomePage2,
-} from 'src/model/cta-module';
+import { generateDummyCTAModuleHomePage1, generateDummyCTAModuleHomePage2 } from 'src/model/cta-module';
 import { generateDummyInfoHeaderModule } from 'src/model/info-header-module';
 import { generateBodyTextModule } from 'src/model/bodytext-module';
 import { generateDummyFooterModule } from 'src/model/footer-component';
@@ -19,19 +16,20 @@ import { generateDummySalePointModule } from 'src/model/sale-point-module';
 import { generateBodyTextExpandedModule } from 'src/model/bodytext-expanded-module';
 import { generateNotYetImplemented } from 'src/model/not-yet-implemented-module';
 
-import { generateDummyRelatedProductsSlider } from "src/model/related-products-slider";
-import { generateDummyGallerySliderModule } from "src/model/gallery-slider";
-import { generateDummyNewsletterModule } from "src/model/newsletter-module";
-import { generateDummyRecipeDetailModule } from "src/model/recipe-detail-module";
-import { generateDummyFaqModule } from "src/model/faq-overview-module";
-import { generateDummyMoreProducts } from "src/model/more-products";
-import { generateDummyProductDetailHeader } from "src/model/product-detail-header";
-import { generateProductLineSingleModule } from "src/model/product-line-single-module";
-import { generateProductOverviewSimpleModule } from "src/model/product-overview-simple-module";
-import { generateDummyRelatedLinksModule } from "src/model/related-links-module";
-import { generateProductLineStoryOverviewModule } from "src/product-line-overview/product-line-generator";
-import { generateDummyItemOverviewData } from "src/model/item-overview-module";
-import { generateDummyNewsOverviewData } from "src/model/news-overview-module";
+import { generateDummyRelatedProductsSlider } from 'src/model/related-products-slider';
+import { generateDummyGallerySliderModule } from 'src/model/gallery-slider';
+import { generateDummyNewsletterModule } from 'src/model/newsletter-module';
+import { generateDummyRecipeDetailModule } from 'src/model/recipe-detail-module';
+import { generateDummyFaqModule } from 'src/model/faq-overview-module';
+import { generateDummyMoreProducts } from 'src/model/more-products';
+import { generateDummyProductDetailHeader } from 'src/model/product-detail-header';
+import { generateProductLineSingleModule } from 'src/model/product-line-single-module';
+import { generateProductOverviewSimpleModule } from 'src/model/product-overview-simple-module';
+import { generateDummyRelatedLinksModule } from 'src/model/related-links-module';
+import { generateProductLineStoryOverviewModule } from 'src/product-line-overview/product-line-generator';
+import { generateDummyItemOverviewData } from 'src/model/item-overview-module';
+import { generateDummyNewsOverviewData } from 'src/model/news-overview-module';
+import { generateDummyNotFoundModule } from 'src/model/not-found-module';
 
 @Injectable()
 export class PageService {
@@ -190,16 +188,16 @@ export class PageService {
           '/',
         ),
         generateBodyTextExpandedModule(),
-        generateNotYetImplemented("Related News Module"),
-        generateDummyRelatedProductsSlider("Gerelateerde Producten"),
+        generateNotYetImplemented('Related News Module'),
+        generateDummyRelatedProductsSlider('Gerelateerde Producten'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
     } as PageModel,
     {
       id: uuid(),
-      route: "terrasana.com/recipe-overview",
-      description: "Recepten",
+      route: 'terrasana.com/recipe-overview',
+      description: 'Recepten',
       wordPressPostModules: [
         generateDummyNavBarModule(),
         generateDummyInfoHeaderModule(
@@ -222,8 +220,8 @@ export class PageService {
     } as PageModel,
     {
       id: uuid(),
-      route: "terrasana.com/news-overview",
-      description: "Nieuws",
+      route: 'terrasana.com/news-overview',
+      description: 'Nieuws',
       wordPressPostModules: [
         generateDummyNavBarModule(),
         generateDummyInfoHeaderModule(
@@ -319,6 +317,12 @@ export class PageService {
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
+    } as PageModel,
+    {
+      id: uuid(),
+      route: 'terrasana.com/not-found',
+      description: 'Not Found module',
+      wordPressPostModules: [generateDummyNavBarModule(), generateDummyNotFoundModule(), generateDummyFooterModule()],
     } as PageModel,
     {
       id: uuid(),
