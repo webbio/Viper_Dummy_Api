@@ -1,4 +1,4 @@
-import { ApiModelProperty } from "@nestjs/swagger";
+import { ApiModelProperty } from '@nestjs/swagger';
 
 export class Link {
   @ApiModelProperty()
@@ -12,4 +12,7 @@ export class Link {
 
   @ApiModelProperty({ required: false })
   public hoverColor?: string;
+
+  @ApiModelProperty({ required: false })
+  public icon?: string;
 }

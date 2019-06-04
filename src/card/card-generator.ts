@@ -1,9 +1,15 @@
 import uuid = require('uuid');
 
+export const categories = ['Noedels', 'Zeewieren', 'Paddenstoelen en seitan', 'Veganistischs', 'Sojasauzen', 'Rijst'];
+
+export const generateRandomCategory = () => {
+  return categories[Math.floor(Math.random() * 6)];
+};
+
 const generateRecipesUpTo9 = (amount: number): any[] => {
   const cardList: any[] = [];
-  const timeIcon = "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/time.svg";
-  const personIcon = "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/person.svg"
+  const timeIcon = 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/time.svg';
+  const personIcon = 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/person.svg';
   if (amount === 1) {
     cardList.push({
       buttonText: 'Lees meer',
@@ -24,7 +30,8 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'gezonde snack',
       },
       title: `Gezonde snack? Probeer onze nieuwe snackmixen!`,
-      URL: '/',
+      URL: '/recipe-single',
+      categoryDetail: categories[0],
     });
   }
   if (amount >= 2) {
@@ -47,7 +54,8 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Phasellus lobortis',
       },
       title: `Phasellus lobortis ipsum`,
-      URL: '/',
+      URL: '/recipe-single',
+      categoryDetail: categories[1],
     });
   }
   if (amount >= 3) {
@@ -60,7 +68,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
           icon: personIcon,
         },
         {
-          title: '1 persoon',
+          title: '30 min',
           icon: timeIcon,
         },
       ],
@@ -70,7 +78,8 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Integer id mauris id lorem condimentum blandit`,
-      URL: '/',
+      URL: '/recipe-single',
+      categoryDetail: categories[3],
     });
   }
   if (amount >= 4) {
@@ -93,7 +102,8 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Nullam sollicitudin orci sollicitudin velit blandit in pellentesque neque sollicitudin`,
-      URL: '/news-single',
+      URL: '/recipe-single',
+      categoryDetail: categories[2],
     });
   }
 
@@ -117,7 +127,8 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Consectetur adipiscing elit sed finibus`,
-      URL: '/news-single',
+      URL: '/recipe-single',
+      categoryDetail: categories[5],
     });
   }
   if (amount >= 6) {
@@ -140,7 +151,8 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Duis vestibulum lectus quis faucibus facilisis`,
-      URL: '/news-single',
+      URL: '/recipe-single',
+      categoryDetail: categories[5],
     });
   }
   if (amount >= 7) {
@@ -163,7 +175,8 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Aenean mollis venenatis nulla non tincidunt`,
-      URL: '/news-single',
+      URL: '/recipe-single',
+      categoryDetail: categories[2],
     });
   }
   if (amount >= 8) {
@@ -186,7 +199,8 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Nam sed mi mattis malesuada ante ac vehicula ex`,
-      URL: '/news-single',
+      URL: '/recipe-single',
+      categoryDetail: categories[3],
     });
   }
   if (amount >= 9) {
@@ -209,14 +223,15 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Nam ut turpis ac neque porttitor blandit`,
-      URL: '/news-single',
+      URL: '/recipe-single',
+      categoryDetail: categories[0],
     });
   }
   return cardList;
 };
 
 const GenerateRecipesCardList = (length: number): any[] => {
-  let generateRecipesCardList = [];
+  const generateRecipesCardList = [];
   for (let i = 0; i < length; i += 8) {
     const remain = length + 1 - i;
     const cardsTobeAdd = generateRecipesUpTo9(remain);
@@ -228,4 +243,4 @@ const GenerateRecipesCardList = (length: number): any[] => {
   return generateRecipesCardList;
 };
 
-export { GenerateRecipesCardList};
+export { GenerateRecipesCardList };

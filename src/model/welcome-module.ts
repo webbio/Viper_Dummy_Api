@@ -17,10 +17,7 @@ export class WelcomeModule extends WordPressPostModule {
   public bodyText: string;
 
   @ApiModelProperty()
-  public topBackgroundImageUrl: string;
-
-  @ApiModelProperty()
-  public bottomBackgroundPatternUrl: string;
+  public welcomeImage: string;
 
   @ApiModelProperty()
   public mainButton1: ImageButton;
@@ -41,15 +38,24 @@ export class WelcomeModule extends WordPressPostModule {
 export const generateDummyWelcomeModule = (): WelcomeModule => {
   return {
     id: uuid(),
+    background: {
+      backgroundPattern:
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
+    },
+    bottomPadding: '115px',
+    curve: {
+      curveBackground: {
+        backgroundColour: '#f5fafa',
+      },
+      decorCurveVerticalAlignment: 'bottom',
+    },
     name: 'WelcomeModule',
     topMargin: '0px',
     bottomMargin: '0px',
     headerText: 'Proef en voel dat het goed is.',
     bodyText:
       'We houden van echt eten, waarmee je iets goed doet voor jezelf én de wereld om je heen. Samen. Dat is positive eating!',
-    bottomBackgroundPatternUrl:
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
-    topBackgroundImageUrl:
+    welcomeImage:
       'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/rectangle-copy.jpg',
     mainButton1: {
       buttonType: ButtonType.Large,

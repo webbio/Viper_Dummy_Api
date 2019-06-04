@@ -36,9 +36,22 @@ export const generateDummyInfoHeaderModule = (
   buttonLinkText: string,
   buttonLinkURL: string,
   backButtonText: string,
-  backButtonURL:  string,
+  backButtonURL: string,
 ): InfoHeaderModule => {
   return {
+    background: {
+      backgroundPattern:
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
+    },
+    bottomPadding: '50px',
+    curve: {
+      curveBackground: {
+        
+        backgroundColour: '#f5fafa',
+      },
+      decorCurveHorizontalAlignment: "right",
+      decorCurveVerticalAlignment: 'bottom',
+    },
     titleText: title,
     bodyText,
     backButtonText,

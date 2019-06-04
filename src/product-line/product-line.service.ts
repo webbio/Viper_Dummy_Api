@@ -19,7 +19,7 @@ export class ProductLineService {
         title: 'Test' + i,
         category: 'Noedels',
         image:
-          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/1.png',
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg',
         content: 'Content',
         subCategory: 'Glutenvrij',
       });
@@ -84,7 +84,10 @@ export class ProductLineService {
   }
 
   public searchProducts(filter: string) {
-    this.productCardList = generateDummyProductCard();
+    const TOTAL_ITEMS = 202;
+
+    this.productCardList = this.generateData(TOTAL_ITEMS);
+
     const filteredList: ProductCard[] = [];
 
     if (filter) {

@@ -8,6 +8,8 @@ export class CardModel extends WordPressPostModule {
   public picture: Image;
   @ApiModelProperty()
   public category: string;
+  @ApiModelProperty()
+  public categoryDetail: string;
   @ApiModelProperty({ type: [CardLabel] })
   public cardLabels: CardLabel[];
   @ApiModelProperty()
