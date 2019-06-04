@@ -14,6 +14,13 @@ export class ProductLineController {
     type: String,
   })
   @ApiImplicitQuery({
+    name: 'filter',
+    description: 'filter',
+    required: true,
+    type: Array,
+    collectionFormat: 'multi',
+  })
+  @ApiImplicitQuery({
     name: 'skip',
     description: 'Skip for pagination',
     required: true,
@@ -25,12 +32,13 @@ export class ProductLineController {
     required: true,
     type: Number,
   })
-  @Get('/products')
-  getProducts(@Query() query) {
-    const cards = this.pageService.getProducts(
+  @Get('/productsPagination')
+  getProductsWithPagination(@Query() query) {
+    const cards = this.pageService.getProductsWithPagination(
       query.category,
-      query.skip,
-      query.take,
+      query.filter,
+      parseInt(query.skip),
+      parseInt(query.take),
     );
     return cards;
   }
@@ -44,6 +52,54 @@ export class ProductLineController {
   @Get('/search')
   searchProduct(@Query() query) {
     const products = this.pageService.searchProducts(query.search);
+    return products;
+  }
+
+  @ApiImplicitQuery({
+    name: 'category',
+    description: 'category',
+    required: true,
+    type: Array,
+    collectionFormat: 'multi',
+  })
+  @ApiImplicitQuery({
+    name: 'product',
+    description: 'product',
+    required: true,
+    type: Array,
+    collectionFormat: 'multi',
+  })
+  @Get('/category')
+  getCategoryList(@Query() query) {
+    const categories = this.pageService.getCategoryList(
+      query.category,
+      query.product,
+    );
+    return categories;
+  }
+
+  @ApiImplicitQuery({
+    name: 'product',
+    description: 'get product',
+    required: true,
+    type: Array,
+    collectionFormat: 'multi',
+  })
+  @Get('/products')
+  getProductList(@Query() query) {
+    const products = this.pageService.getProducts(query.product);
+    return products;
+  }
+
+  @Get('/searchWithPagination')
+  searchProductWithPagination(@Query() query) {
+    const products = this.pageService.searchProductsWithPagination(
+      query.search,
+      query.filter,
+      query.category,
+      parseInt(query.skip),
+      parseInt(query.take),
+    );
     return products;
   }
 }

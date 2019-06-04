@@ -1,9 +1,14 @@
 import { Injectable } from '@nestjs/common';
 import { generateDummyProductCard, ProductCard } from 'src/model/product-card';
+import {
+  CategoryCard,
+  generateDummyCategoryCard,
+} from 'src/model/category-card';
 
 @Injectable()
 export class ProductLineService {
   productCardList: ProductCard[];
+  categoryCardList: CategoryCard[];
 
   public generateData(dataLength: number): ProductCard[] {
     let data = [];
@@ -22,15 +27,23 @@ export class ProductLineService {
     return data;
   }
 
-  public getProducts(category: string, skip: number, take: number) {
+  public getProductsWithPagination(
+    category: string,
+    filter: string[],
+    skip: number,
+    take: number,
+  ) {
     const TOTAL_ITEMS = 202;
     const paginatedList = [];
     if (skip > TOTAL_ITEMS) {
       return null;
     }
+
     const productList = this.generateData(TOTAL_ITEMS);
-    const finalPosition = skip + take;
+    const finalPosition: number = skip + take;
     let totalItems = TOTAL_ITEMS;
+    let filteredProductList: ProductCard[] = [];
+
     if (category) {
       totalItems = 0;
       const filteredList = [];
@@ -39,10 +52,20 @@ export class ProductLineService {
           filteredList.push(productList[i]);
         }
       }
-      totalItems = filteredList.length;
+      if (filter) {
+        filteredList.forEach(
+          product =>
+            filter.includes(product.subCategory) &&
+            filteredProductList.push(product),
+        );
+      } else {
+        filteredProductList = filteredList;
+      }
+      totalItems = filteredProductList.length;
+
       for (let i = skip; i < finalPosition; i++) {
-        if (filteredList[i] !== undefined) {
-          paginatedList.push(filteredList[i]);
+        if (filteredProductList[i] !== undefined) {
+          paginatedList.push(filteredProductList[i]);
         }
       }
     } else {
@@ -74,5 +97,119 @@ export class ProductLineService {
         productCardList: filteredList,
       };
     }
+  }
+
+  public getCategoryList(categories: string[], products: string[]) {
+    this.categoryCardList = generateDummyCategoryCard();
+    this.productCardList = generateDummyProductCard();
+    const filteredCategoryList: CategoryCard[] = [];
+    const productList: ProductCard[] = [];
+    let filteredProductList: ProductCard[] = [];
+
+    if (categories) {
+      this.categoryCardList.forEach(
+        categoryCard =>
+          categories.includes(categoryCard.category) &&
+          filteredCategoryList.push(categoryCard),
+      );
+
+      filteredCategoryList.forEach(filteredCategory =>
+        this.productCardList.forEach(
+          product =>
+            filteredCategory.category === product.category &&
+            productList.push(product),
+        ),
+      );
+      if (products) {
+        productList.forEach(
+          product =>
+            products.includes(product.subCategory) &&
+            filteredProductList.push(product),
+        );
+      } else {
+        filteredProductList = productList;
+      }
+      return {
+        categoryCardList: filteredCategoryList,
+        productCardList: filteredProductList,
+      };
+    }
+  }
+
+  public getProducts(products: string[]) {
+    this.productCardList = generateDummyProductCard();
+    const filteredProductList: ProductCard[] = [];
+    if (products) {
+      this.productCardList.forEach(
+        productCard =>
+          products.includes(productCard.subCategory) &&
+          filteredProductList.push(productCard),
+      );
+
+      return {
+        productCardList: filteredProductList,
+      };
+    }
+  }
+  public searchProductsWithPagination(
+    search: string,
+    filter: string[],
+    url: string,
+    skip: number,
+    take: number,
+  ) {
+    const TOTAL_ITEMS = 202;
+    const paginatedList = [];
+    if (skip > TOTAL_ITEMS) {
+      return null;
+    }
+
+    const productList = this.generateData(TOTAL_ITEMS);
+    const finalPosition: number = skip + take;
+    let totalItems = TOTAL_ITEMS;
+    let filteredProductFilter: ProductCard[] = [];
+
+    if (search) {
+      totalItems = 0;
+      const filteredProductURL: ProductCard[] = [];
+
+      for (let i = 0; i < TOTAL_ITEMS; i++) {
+        if (
+          productList[i].category.toUpperCase() === url.toUpperCase() &&
+          productList[i].category.toUpperCase() === search.toUpperCase()
+        ) {
+          filteredProductURL.push(productList[i]);
+        }
+      }
+      if (filter) {
+        filteredProductURL.forEach(
+          product =>
+            filter.includes(product.subCategory) &&
+            filteredProductFilter.push(product),
+        );
+      } else {
+        filteredProductFilter = filteredProductURL;
+      }
+
+      totalItems = filteredProductFilter.length;
+
+      for (let i = skip; i < finalPosition; i++) {
+        if (filteredProductFilter[i] !== undefined) {
+          paginatedList.push(filteredProductFilter[i]);
+        }
+      }
+    } else {
+      totalItems = productList.length;
+      for (let i = skip; i < finalPosition; i++) {
+        if (productList[i] !== undefined) {
+          paginatedList.push(productList[i]);
+        }
+      }
+    }
+
+    return {
+      totalItems,
+      productCardList: paginatedList,
+    };
   }
 }
