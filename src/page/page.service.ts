@@ -31,12 +31,12 @@ import { generateProductOverviewSimpleModule } from 'src/model/product-overview-
 import { generateDummyRelatedLinksModule } from 'src/model/related-links-module';
 import { generateProductLineStoryOverviewModule } from 'src/product-line-overview/product-line-generator';
 import { generateDummyItemOverviewData } from 'src/model/item-overview-module';
-import { generateDummyTabs } from 'src/model/tab-module';
 import { generateDummyNewsOverviewData } from 'src/model/news-overview-module';
 import { generateDummyFeaturedItemModule } from 'src/model/featured-item';
 import { generateDummyNotFoundModule } from 'src/model/not-found-module';
 import { generateDummyLoginModule } from 'src/model/login';
 import { generateDummySignUpModule } from 'src/model/sign-up';
+import { generateDummyTabs } from 'src/model/tab-module';
 
 @Injectable()
 export class PageService {
@@ -166,10 +166,8 @@ export class PageService {
       description: 'Product',
       wordPressPostModules: [
         generateDummyNavBarModule(),
-        generateNotYetImplemented('Product Single Header Module'),
-        generateDummyTabs(),
         generateDummyProductDetailHeader(),
-        generateNotYetImplemented('Product Single Tab Module'),
+        generateDummyTabs(),
         generateDummyMoreProducts(),
         generateNotYetImplemented('Related product'),
         generateDummyRelatedProductsSlider('Gerelateerde Producten'),
@@ -319,7 +317,7 @@ export class PageService {
           'Bij ons weet je niet alleen zeker dat de producten écht biologisch zijn, maar ook dat we alles met de grootste zorg uitkiezen en samenstellen. We hebben aandacht voor kwaliteit, natuur, milieu, smaak en productiewijze. We zijn altijd op zoek naar de mooiste en meest verantwoorde ingrediënten. Onze medewerkers weten wat ze in handen hebben en bereiden met hart en ziel veel zelf. Geen poespas maar pure en eerlijke producten.',
         ),
         generateDummyOurTeamModule(),
-        generateDummyFeaturedItemModule(),
+        generateDummyFeaturedItemModule('Heerlijke recepten!'),
         generateDummyRelatedProductsSlider('Gerelateerde Producten'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
