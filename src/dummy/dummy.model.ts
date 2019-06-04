@@ -86,6 +86,12 @@ export class DummyModel {
   public bodyTextModule?: BodyTextModule;
 
   @ApiModelProperty()
+  public gallerySliderModule?: GallerySliderModule;
+
+  @ApiModelProperty()
+  public relatedProductsSlider?: RelatedProductsSlider;
+
+  @ApiModelProperty()
   public welcomeModule?: WelcomeModule;
 
   @ApiModelProperty()
