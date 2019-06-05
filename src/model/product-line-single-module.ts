@@ -22,6 +22,18 @@ export const generateProductLineSingleModule = (): ProductLineSingleModule => {
     id: uuid(),
     topMargin: '',
     bottomMargin: '',
+    background: {
+      backgroundColour: '#f5fafa',
+    },
+    curve: {
+      curveBackground: {
+        backgroundPattern:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
+      },
+      decorCurveVerticalAlignment: 'bottom',
+      decorCurveHorizontalAlignment: 'right',
+    },
+
     name: 'ProductLineSingleModule',
     filter: generateProductLineFilter(),
     productCardList: generateDummyProductCard(),

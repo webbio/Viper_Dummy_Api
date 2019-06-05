@@ -6,11 +6,11 @@ import { ContactForm } from './contact-form';
 import { AddressInfo } from './address';
 import { Phone } from './phone';
 import { ExpandablePanel } from './expandable-panel';
-import { ToggleModule } from './toggle-module';
+import { Toggle } from './toggle-module';
 
 export class FAQOverviewModule extends WordPressPostModule {
-  @ApiModelProperty({ type: [ToggleModule] })
-  public groups: ToggleModule[];
+  @ApiModelProperty({ type: [Toggle] })
+  public groups: Toggle[];
 
   @ApiModelProperty()
   public sidebarTitle: string;

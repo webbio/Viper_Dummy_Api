@@ -21,14 +21,10 @@ export class CTAModule extends WordPressPostModule {
 export const generateDummyCTAModuleHomePage1 = (): CTAModule => {
   return {
     titleText: 'Wat goed eten is, weten we bij Terrarana al 35 jaar.',
-    curve:{
-      decorCurveVerticalAlignment:'bottom',
-      decorCurveHorizontalAlignment:'right',
-      curveBackground:{
-        backgroundPattern: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png",
-          
-      } 
+    background: {
+      backgroundColour: '#f5fafa',
     },
+
     bodyText:
       'Bij ons weet je niet alleen zeker dat de producten écht biologisch zijn, maar ook dat we alles met de grootste zorg uitkiezen en samenstellen. We hebben aandacht voor kwaliteit, natuur, milieu, smaak en productiewijze. We zijn altijd op zoek naar de mooiste en meest verantwoorde ingrediënten. Onze medewerkers weten wat ze in handen hebben en bereiden met hart en ziel veel zelf. Geen poespas maar pure en eerlijke producten.',
     buttons: [
@@ -57,6 +53,15 @@ export const generateDummyCTAModuleHomePage2 = (): CTAModule => {
     titleText: 'Maak je eigen biologische wraps!',
     bodyText:
       'Binnen een half uur je eigen biologische hoemoes. Lees hier hoe dat moet!',
+    curve: {
+      decorCurveVerticalAlignment: 'bottom',
+      decorCurveHorizontalAlignment: 'right',
+
+      curveBackground: {
+        backgroundPattern:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
+      },
+    },
     buttons: [
       {
         href: '#',

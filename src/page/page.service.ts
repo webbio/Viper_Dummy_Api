@@ -9,7 +9,10 @@ import {
   generateDummyCTAModuleHomePage1,
   generateDummyCTAModuleHomePage2,
 } from 'src/model/cta-module';
-import { generateDummyInfoHeaderModule } from 'src/model/info-header-module';
+import {
+  generateDummyInfoHeaderModule,
+  generateDummyInfoHeaderModule2,
+} from 'src/model/info-header-module';
 import { generateBodyTextModule } from 'src/model/bodytext-module';
 import { generateDummyFooterModule } from 'src/model/footer-component';
 import { generateDummyInstagramWallModule } from 'src/model/instagram-wall';
@@ -19,7 +22,11 @@ import { generateDummySalePointModule } from 'src/model/sale-point-module';
 import { generateBodyTextExpandedModule } from 'src/model/bodytext-expanded-module';
 import { generateNotYetImplemented } from 'src/model/not-yet-implemented-module';
 
-import { generateDummyRelatedProductsSlider } from 'src/model/related-products-slider';
+import {
+  generateDummyRelatedProductsSlider,
+  generateDummyRelatedProductsSlider2,
+  generateDummyRelatedProductsSliderNoCurveBackground,
+} from 'src/model/related-products-slider';
 import { generateDummyGallerySliderModule } from 'src/model/gallery-slider';
 import { generateDummyNewsletterModule } from 'src/model/newsletter-module';
 import { generateDummyRecipeDetailModule } from 'src/model/recipe-detail-module';
@@ -27,17 +34,28 @@ import { generateDummyFaqModule } from 'src/model/faq-overview-module';
 import { generateDummyMoreProducts } from 'src/model/more-products';
 import { generateDummyProductDetailHeader } from 'src/model/product-detail-header';
 import { generateProductLineSingleModule } from 'src/model/product-line-single-module';
-import { generateProductOverviewSimpleModule } from 'src/model/product-overview-simple-module';
+import {
+  generateProductOverviewSimpleModule,
+  generateProductOverviewSimpleModuleCurvePatternBottom,
+} from 'src/model/product-overview-simple-module';
 import { generateDummyRelatedLinksModule } from 'src/model/related-links-module';
 import { generateProductLineStoryOverviewModule } from 'src/product-line-overview/product-line-generator';
 import { generateDummyItemOverviewData } from 'src/model/item-overview-module';
 import { generateDummyNewsOverviewData } from 'src/model/news-overview-module';
-import { generateDummyFeaturedItemModule } from 'src/model/featured-item';
+import {
+  generateDummyFeaturedItemModule,
+  generateDummyFeaturedItemModuleNoPattern,
+  generateDummyFeaturedItemModuleSimple,
+} from 'src/model/featured-item';
 import { generateDummyNotFoundModule } from 'src/model/not-found-module';
 import { generateDummyLoginModule } from 'src/model/login';
 import { generateDummySignUpModule } from 'src/model/sign-up';
 import { generateDummyBusinessOverviewData } from 'src/model/business-overview-module';
 import { generateDummyTabs } from 'src/model/tab-module';
+import {
+  ToggleModule,
+  generateDummyToggleModule,
+} from 'src/model/toggle-module';
 
 @Injectable()
 export class PageService {
@@ -87,7 +105,7 @@ export class PageService {
       wordPressPostModules: [
         generateDummyNavBarModule(),
         generateDummyInfoHeaderModule(
-          'RECIPES OVERVIEW',
+          'JAPAN MODERNE KEUKEN',
           'Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.',
           'center',
           '',
@@ -98,6 +116,7 @@ export class PageService {
           '/',
         ),
         generateProductLineSingleModule(),
+        generateDummyFeaturedItemModule('Gerelateerde recepten'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
@@ -109,7 +128,7 @@ export class PageService {
       description: 'Productlijnen overzicht',
       wordPressPostModules: [
         generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule(
+        generateDummyInfoHeaderModule2(
           'Japan Moderne Keuken',
           'Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.',
           'center',
@@ -121,10 +140,11 @@ export class PageService {
           '/',
         ),
         generateBodyTextModule('add dummy bodytext html'),
-        generateDummyRelatedProductsSlider('ONZE JAPANSE PRODUCTEN'),
-        generateBodyTextModule('add dummy bodytext html'),
-        generateNotYetImplemented('Picture Slider Module'),
-        generateNotYetImplemented('Related Recipe Module'),
+        generateDummyRelatedProductsSlider2('ONZE JAPANSE PRODUCTEN'),
+        generateBodyTextModule('LIGHTBOX'),
+        generateDummyGallerySliderModule(),
+        generateDummyCTAModuleHomePage2(),
+        generateDummyFeaturedItemModule('Gerelateerde recepten'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
@@ -136,7 +156,7 @@ export class PageService {
       wordPressPostModules: [
         generateDummyNavBarModule(),
         generateDummyInfoHeaderModule(
-          'Downloads',
+          'Noedels',
           'Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.',
           'center',
           '',
@@ -146,19 +166,12 @@ export class PageService {
           '',
           '',
         ),
-        generateProductOverviewSimpleModule(),
-        generateNotYetImplemented('FAQ Module'),
-        generateNotYetImplemented('Related Recipe Module'),
+        generateProductOverviewSimpleModuleCurvePatternBottom(),
+        generateDummyToggleModule(),
+        generateDummyFeaturedItemModuleNoPattern('Recepten met Noedels'),
+        generateDummyRelatedProductsSlider('ONZE JAPANSE PRODUCTEN'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
-      ],
-    } as PageModel,
-    {
-      id: uuid(),
-      route: 'terrasana.com/info-header',
-      description: 'InfoHeader',
-      wordPressPostModules: [
-        // generateDummyInfoHeaderModule('Noedels'),
       ],
     } as PageModel,
     {
@@ -170,8 +183,12 @@ export class PageService {
         generateDummyProductDetailHeader(),
         generateDummyTabs(),
         generateDummyMoreProducts(),
-        generateNotYetImplemented('Related product'),
-        generateDummyRelatedProductsSlider('Gerelateerde Producten'),
+        generateDummyFeaturedItemModuleSimple(
+          'Recepten met Bruine Rijstnoedels',
+        ),
+        generateDummyRelatedProductsSliderNoCurveBackground(
+          'Gerelateerde Producten',
+        ),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],

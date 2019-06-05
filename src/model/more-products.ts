@@ -24,6 +24,7 @@ export const generateDummyMoreProducts = (): MoreProducts => {
     name: 'MoreProducts',
     topMargin: '0px',
     bottomMargin: '0px',
+    topPadding: '50px',
     title: 'Meer Noedels!',
     buttonText: 'Meer noedels',
     background: {

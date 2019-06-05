@@ -30,5 +30,50 @@ export const generateDummyFeaturedItemModule = (
     title,
     buttonText: 'Bekijk meer recepten',
     recipes: generateDummyRecipes(),
+    background: {
+      backgroundPattern:
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
+    },
+    topPadding: '50px',
+  } as FeaturedItemModule;
+};
+
+export const generateDummyFeaturedItemModuleNoPattern = (
+  title: string,
+): FeaturedItemModule => {
+  return {
+    id: uuid(),
+    name: 'featuredItemModule',
+    topMargin: '0px',
+    bottomMargin: '0px',
+    title,
+    buttonText: 'Bekijk meer recepten',
+    recipes: generateDummyRecipes(),
+    background: {
+      backgroundColour: '#f5fafa',
+    },
+
+    curve: {
+      curveBackground: {
+        backgroundPattern:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
+      },
+    },
+    topPadding: '150px',
+  } as FeaturedItemModule;
+};
+
+export const generateDummyFeaturedItemModuleSimple = (
+  title: string,
+): FeaturedItemModule => {
+  return {
+    id: uuid(),
+    name: 'featuredItemModule',
+    topMargin: '0px',
+    bottomMargin: '0px',
+    title,
+    buttonText: 'Bekijk meer recepten',
+    recipes: generateDummyRecipes(),
+    topPadding: '150px',
   } as FeaturedItemModule;
 };
