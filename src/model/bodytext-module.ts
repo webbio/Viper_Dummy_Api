@@ -26,7 +26,24 @@ export const generateBodyTextModule = (html: string): BodyTextModule => {
     containerAlignment: 'center',
   };
 };
-
+export const generateBodyTextModuleAboutUs = (html: string): BodyTextModule => {
+  return {
+    html,
+    id: uuid(),
+    name: 'bodyTextModule',
+    bottomMargin: '0px',
+    topMargin: '0px',
+    containerSize: 'medium',
+    containerAlignment: 'center',
+    curve: {
+      decorCurveVerticalAlignment: 'bottom',
+      decorCurveHorizontalAlignment: 'right',
+      curveBackground: {
+        backgroundColour: '#f5fafa',
+      },
+    },
+  };
+};
 export const getHomepageBodyTextHtml = () => {
   return `<head>
             <style>

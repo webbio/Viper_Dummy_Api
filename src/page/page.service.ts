@@ -13,7 +13,10 @@ import {
   generateDummyInfoHeaderModule,
   generateDummyInfoHeaderModule2,
 } from 'src/model/info-header-module';
-import { generateBodyTextModule } from 'src/model/bodytext-module';
+import {
+  generateBodyTextModule,
+  generateBodyTextModuleAboutUs,
+} from 'src/model/bodytext-module';
 import { generateDummyFooterModule } from 'src/model/footer-component';
 import { generateDummyInstagramWallModule } from 'src/model/instagram-wall';
 import { generateDummyContactModule } from 'src/model/contact-module';
@@ -47,6 +50,7 @@ import {
   generateDummyFeaturedItemModuleNoPattern,
   generateDummyFeaturedItemModuleSimple,
   generateDummyFeaturedItemModuleNoPatternCurveWhite,
+  generateDummyFeaturedItemModuleLightBackground,
 } from 'src/model/featured-item';
 import { generateDummyNotFoundModule } from 'src/model/not-found-module';
 import { generateDummyLoginModule } from 'src/model/login';
@@ -142,7 +146,6 @@ export class PageService {
         ),
         generateBodyTextModule('add dummy bodytext html'),
         generateDummyRelatedProductsSlider2('ONZE JAPANSE PRODUCTEN'),
-        generateBodyTextModule('LIGHTBOX'),
         generateDummyGallerySliderModule(),
         generateDummyCTAModuleHomePage2(),
         generateDummyFeaturedItemModule('Gerelateerde recepten'),
@@ -345,7 +348,7 @@ export class PageService {
       description: 'Informatief',
       wordPressPostModules: [
         generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule(
+        generateDummyInfoHeaderModule2(
           'Ontmoet het team achter Terrasana',
           '',
           'right',
@@ -356,11 +359,11 @@ export class PageService {
           'Terug naar home',
           '/',
         ),
-        generateBodyTextModule(
+        generateBodyTextModuleAboutUs(
           'Bij ons weet je niet alleen zeker dat de producten écht biologisch zijn, maar ook dat we alles met de grootste zorg uitkiezen en samenstellen. We hebben aandacht voor kwaliteit, natuur, milieu, smaak en productiewijze. We zijn altijd op zoek naar de mooiste en meest verantwoorde ingrediënten. Onze medewerkers weten wat ze in handen hebben en bereiden met hart en ziel veel zelf. Geen poespas maar pure en eerlijke producten.',
         ),
         generateDummyOurTeamModule(),
-        generateDummyFeaturedItemModule('Heerlijke recepten!'),
+        generateDummyFeaturedItemModuleLightBackground('Heerlijke recepten!'),
         generateDummyRelatedProductsSlider('Gerelateerde Producten'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),

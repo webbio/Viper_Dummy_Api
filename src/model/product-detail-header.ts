@@ -48,8 +48,8 @@ export const generateDummyProductDetailHeader = (): ProductDetailHeader => {
       },
     },
     listPictures: [
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/4.jpg',
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.png',
+      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg',
+      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/7.jpg',
       'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg',
     ],
     body:
