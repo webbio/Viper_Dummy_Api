@@ -20,7 +20,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'gezonde snack',
       },
       title: `Gezonde snack? Probeer onze nieuwe snackmixen!`,
-      URL: '/product-line-single',
+      URL: '/news-single',
       categoryDetail: categories[0],
     });
   }
@@ -39,7 +39,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Phasellus lobortis',
       },
       title: `Phasellus lobortis ipsum`,
-      URL: '/product-line-single',
+      URL: '/news-single',
       categoryDetail: categories[1],
     });
   }
@@ -58,7 +58,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Integer id mauris id lorem condimentum blandit`,
-      URL: '/product-line-single',
+      URL: '/news-single',
       categoryDetail: categories[2],
     });
   }
@@ -77,7 +77,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Nullam sollicitudin orci sollicitudin velit blandit in pellentesque neque sollicitudin`,
-      URL: '/product-line-single',
+      URL: '/news-single',
       categoryDetail: categories[3],
     });
   }
@@ -97,7 +97,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Consectetur adipiscing elit sed finibus`,
-      URL: '/product-line-single',
+      URL: '/news-single',
       categoryDetail: categories[4],
     });
   }
@@ -116,7 +116,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Duis vestibulum lectus quis faucibus facilisis`,
-      URL: '/product-line-single',
+      URL: '/news-single',
       categoryDetail: categories[2],
     });
   }
@@ -135,7 +135,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Aenean mollis venenatis nulla non tincidunt`,
-      URL: '/product-line-single',
+      URL: '/news-single',
       categoryDetail: categories[5],
     });
   }
@@ -154,7 +154,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Nam sed mi mattis malesuada ante ac vehicula ex`,
-      URL: '/product-line-single',
+      URL: '/news-single',
       categoryDetail: categories[2],
     });
   }
@@ -173,7 +173,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
         alt: 'Integer id',
       },
       title: `Nam ut turpis ac neque porttitor blandit`,
-      URL: '/product-line-single',
+      URL: '/news-single',
       categoryDetail: categories[4],
     });
   }
