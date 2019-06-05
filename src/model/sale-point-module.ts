@@ -7,9 +7,9 @@ import { MapLocation } from './location';
 import { ImageLink } from './image-link';
 export class SalePointModule extends WordPressPostModule {
   @ApiModelProperty()
-  public title?: string;
+  public title: string;
   @ApiModelProperty()
-  public content?: string;
+  public content: string;
   @ApiModelProperty({ type: [ImageLink] })
   public imageLinks?: ImageLink[];
   @ApiModelProperty()
@@ -20,7 +20,7 @@ export class SalePointModule extends WordPressPostModule {
   public pattern?: boolean;
   @ApiModelProperty({ type: [Markers] })
   public markers?: Markers[];
-  @ApiModelProperty({ type: [Markers] })
+  @ApiModelProperty({ type: [MapLocation] })
   public mapcenter?: MapLocation;
   @ApiModelProperty()
   public markerOpen?: boolean;
