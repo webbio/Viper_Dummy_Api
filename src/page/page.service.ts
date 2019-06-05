@@ -36,6 +36,7 @@ import { generateDummyFeaturedItemModule } from 'src/model/featured-item';
 import { generateDummyNotFoundModule } from 'src/model/not-found-module';
 import { generateDummyLoginModule } from 'src/model/login';
 import { generateDummySignUpModule } from 'src/model/sign-up';
+import { generateDummyBusinessOverviewData } from 'src/model/business-overview-module';
 import { generateDummyTabs } from 'src/model/tab-module';
 
 @Injectable()
@@ -192,6 +193,31 @@ export class PageService {
           'Terug naar home',
           '/',
         ),
+        generateDummyNewsOverviewData(),
+        generateNotYetImplemented('Related News Module'),
+        generateDummyRelatedProductsSlider('Gerelateerde Producten'),
+        generateDummyNewsletterModule(),
+        generateDummyFooterModule(),
+      ],
+    } as PageModel,
+    {
+      id: uuid(),
+      route: 'terrasana.com/news-single',
+      description: 'Nieuws Single',
+      wordPressPostModules: [
+        generateDummyNavBarModule(),
+        generateDummyInfoHeaderModule(
+          'Gezonde snack? Probeer onze nieuwe snackmixen!',
+          '',
+          'left',
+          'https://www.berkeleywellness.com/sites/default/files/field/image/iStock-919666108-2_field_img_intro_774_500.jpg',
+          'left',
+          '',
+          '',
+          'Terug naar Nieuwtjes',
+          '/news-overview',
+        ),
+        generateDummyItemOverviewData(),
         generateBodyTextExpandedModule(),
         generateNotYetImplemented('Related News Module'),
         generateDummyRelatedProductsSlider('Gerelateerde Producten'),
@@ -216,9 +242,8 @@ export class PageService {
           'Terug naar home',
           '/',
         ),
-        generateBodyTextExpandedModule(),
-        generateNotYetImplemented('Related News Module'),
-        generateDummyRelatedProductsSlider('Gerelateerde Producten'),
+        generateDummyItemOverviewData(),
+        generateDummyRelatedProductsSlider('Gerelateerde Producten', true),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
@@ -327,11 +352,7 @@ export class PageService {
       id: uuid(),
       route: 'terrasana.com/not-found',
       description: 'Not Found module',
-      wordPressPostModules: [
-        generateDummyNavBarModule(),
-        generateDummyNotFoundModule(),
-        generateDummyFooterModule(),
-      ],
+      wordPressPostModules: [generateDummyNavBarModule(), generateDummyNotFoundModule(), generateDummyFooterModule()],
     } as PageModel,
     {
       id: uuid(),
@@ -363,7 +384,8 @@ export class PageService {
       id: uuid(),
       route: 'terrasana.com/business',
       description: 'Zakelijk',
-      wordPressPostModules: [generateDummyNavBarModule()],
+      wordPressPostModules: [generateDummyNavBarModule(), generateDummyBusinessOverviewData()],
+
     } as PageModel,
     {
       id: uuid(),
@@ -381,19 +403,13 @@ export class PageService {
       id: uuid(),
       route: 'terrasana.com/business-login',
       description: 'Zakelijk',
-      wordPressPostModules: [
-        generateDummyNavBarModule(),
-        generateDummyLoginModule(),
-      ],
+      wordPressPostModules: [generateDummyNavBarModule(), generateDummyLoginModule()],
     } as PageModel,
     {
       id: uuid(),
       route: 'terrasana.com/business-new-account',
       description: 'Zakelijk',
-      wordPressPostModules: [
-        generateDummyNavBarModule(),
-        generateDummySignUpModule(),
-      ],
+      wordPressPostModules: [generateDummyNavBarModule(), generateDummySignUpModule()],
     } as PageModel,
   ];
 

@@ -52,6 +52,7 @@ import {
   NewsOverviewModule,
 } from 'src/model/news-overview-module';
 import { NotFoundModule } from 'src/model/not-found-module';
+import { BusinessOverviewModule } from 'src/model/business-overview-module';
 
 export class DummyModel {
   @ApiModelProperty()
@@ -84,6 +85,15 @@ export class DummyModel {
 
   @ApiModelProperty()
   public bodyTextModule?: BodyTextModule;
+
+  @ApiModelProperty()
+  public businessOverviewModule?: BusinessOverviewModule;
+
+  @ApiModelProperty()
+  public gallerySliderModule?: GallerySliderModule;
+
+  @ApiModelProperty()
+  public relatedProductsSlider?: RelatedProductsSlider;
 
   @ApiModelProperty()
   public welcomeModule?: WelcomeModule;
@@ -178,6 +188,11 @@ export class DummyModel {
   public productLineOverviewModel?: ProductLineOverviewCard;
 
   @ApiModelProperty()
+  public signUpModule?: SignUpModule;
+
+  @ApiModelProperty()
+  public productLineStoryOverviewModule?: ProductLineOverviewModule;
+  @ApiModelProperty()
   public ContactForm?: ContactForm;
 
   @ApiModelProperty()
@@ -185,15 +200,6 @@ export class DummyModel {
 
   @ApiModelProperty()
   public loginModule?: LoginModule;
-
-  @ApiModelProperty()
-  public signUpModule?: SignUpModule;
-
-  @ApiModelProperty()
-  public relatedProductsSlider?: RelatedProductsSlider;
-
-  @ApiModelProperty()
-  public productLineStoryOverviewModule?: ProductLineOverviewModule;
 
   @ApiModelProperty()
   public productLineSingleModule?: ProductLineSingleModule;

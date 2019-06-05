@@ -16,10 +16,10 @@ export class NotFoundModule extends WordPressPostModule {
 export const generateDummyNotFoundModule = (): NotFoundModule => {
   return {
     id: uuid(),
-    title:"",
-    text:"",
-    backButtonText: "",
-    homeButtonText: "",
+    title: 'Oeps, er is iets mis gegaan',
+    text: 'Aenean id lorem eleifend, malesuada arcu afringilla mauris. Pellentesque dolor lacus, luctus.',
+    backButtonText: 'Terug naar vorige pagina',
+    homeButtonText: 'Naar home',
     topMargin: '',
     background: { backgroundColour: '#f5fafa' },
     topPadding: '120px',
