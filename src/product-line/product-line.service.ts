@@ -28,6 +28,7 @@ export class ProductLineService {
   }
 
   public getProductsWithPagination(
+    search: string,
     category: string,
     filter: string[],
     skip: number,
@@ -43,6 +44,7 @@ export class ProductLineService {
     const finalPosition: number = skip + take;
     let totalItems = TOTAL_ITEMS;
     let filteredProductList: ProductCard[] = [];
+    let filteredProductListWithSearch: ProductCard[] = [];
 
     if (category) {
       totalItems = 0;
@@ -61,11 +63,20 @@ export class ProductLineService {
       } else {
         filteredProductList = filteredList;
       }
-      totalItems = filteredProductList.length;
+      if (search) {
+        filteredProductList.forEach(
+          productCard =>
+            productCard.title.toUpperCase().includes(search.toUpperCase()) &&
+            filteredProductListWithSearch.push(productCard),
+        );
+      } else {
+        filteredProductListWithSearch = filteredProductList;
+      }
+      totalItems = filteredProductListWithSearch.length;
 
       for (let i = skip; i < finalPosition; i++) {
-        if (filteredProductList[i] !== undefined) {
-          paginatedList.push(filteredProductList[i]);
+        if (filteredProductListWithSearch[i] !== undefined) {
+          paginatedList.push(filteredProductListWithSearch[i]);
         }
       }
     } else {
@@ -83,32 +94,17 @@ export class ProductLineService {
     };
   }
 
-  public searchProducts(filter: string) {
-    const TOTAL_ITEMS = 202;
-
-    this.productCardList = this.generateData(TOTAL_ITEMS);
-
-    const filteredList: ProductCard[] = [];
-
-    if (filter) {
-      this.productCardList.forEach(
-        productCard =>
-          productCard.title.toUpperCase().includes(filter.toUpperCase()) &&
-          filteredList.push(productCard),
-      );
-      return {
-        productCardList: filteredList,
-      };
-    }
-  }
-
-  public getCategoryList(categories: string[], products: string[]) {
+  public getCategoryList(
+    categories: string[],
+    products: string[],
+    search: string,
+  ) {
     this.categoryCardList = generateDummyCategoryCard();
     this.productCardList = generateDummyProductCard();
     const filteredCategoryList: CategoryCard[] = [];
     const productList: ProductCard[] = [];
     let filteredProductList: ProductCard[] = [];
-
+    let filteredProductListWithSearch: ProductCard[] = [];
     if (categories) {
       this.categoryCardList.forEach(
         categoryCard =>
@@ -132,87 +128,49 @@ export class ProductLineService {
       } else {
         filteredProductList = productList;
       }
-      return {
-        categoryCardList: filteredCategoryList,
-        productCardList: filteredProductList,
-      };
+    } else {
+      filteredProductList = this.productCardList;
     }
+
+    if (search) {
+      filteredProductList.forEach(
+        productCard =>
+          productCard.title.toUpperCase().includes(search.toUpperCase()) &&
+          filteredProductListWithSearch.push(productCard),
+      );
+    } else {
+      filteredProductListWithSearch = filteredProductList;
+    }
+    return {
+      categoryCardList: filteredCategoryList,
+      productCardList: filteredProductListWithSearch,
+    };
   }
 
-  public getProducts(products: string[]) {
+  public getProducts(products: string[], search: string) {
     this.productCardList = generateDummyProductCard();
-    const filteredProductList: ProductCard[] = [];
+    let filteredProductList: ProductCard[] = [];
+    let filteredProductListWithSearch: ProductCard[] = [];
     if (products) {
       this.productCardList.forEach(
         productCard =>
           products.includes(productCard.subCategory) &&
           filteredProductList.push(productCard),
       );
-
-      return {
-        productCardList: filteredProductList,
-      };
-    }
-  }
-  public searchProductsWithPagination(
-    search: string,
-    filter: string[],
-    url: string,
-    skip: number,
-    take: number,
-  ) {
-    const TOTAL_ITEMS = 202;
-    const paginatedList = [];
-    if (skip > TOTAL_ITEMS) {
-      return null;
-    }
-
-    const productList = this.generateData(TOTAL_ITEMS);
-    const finalPosition: number = skip + take;
-    let totalItems = TOTAL_ITEMS;
-    let filteredProductFilter: ProductCard[] = [];
-
-    if (search) {
-      totalItems = 0;
-      const filteredProductURL: ProductCard[] = [];
-
-      for (let i = 0; i < TOTAL_ITEMS; i++) {
-        if (
-          productList[i].category.toUpperCase() === url.toUpperCase() &&
-          productList[i].category.toUpperCase() === search.toUpperCase()
-        ) {
-          filteredProductURL.push(productList[i]);
-        }
-      }
-      if (filter) {
-        filteredProductURL.forEach(
-          product =>
-            filter.includes(product.subCategory) &&
-            filteredProductFilter.push(product),
-        );
-      } else {
-        filteredProductFilter = filteredProductURL;
-      }
-
-      totalItems = filteredProductFilter.length;
-
-      for (let i = skip; i < finalPosition; i++) {
-        if (filteredProductFilter[i] !== undefined) {
-          paginatedList.push(filteredProductFilter[i]);
-        }
-      }
     } else {
-      totalItems = productList.length;
-      for (let i = skip; i < finalPosition; i++) {
-        if (productList[i] !== undefined) {
-          paginatedList.push(productList[i]);
-        }
-      }
+      filteredProductList = this.productCardList;
     }
-
+    if (search) {
+      filteredProductList.forEach(
+        productCard =>
+          productCard.title.toUpperCase().includes(search.toUpperCase()) &&
+          filteredProductListWithSearch.push(productCard),
+      );
+    } else {
+      filteredProductListWithSearch = filteredProductList;
+    }
     return {
-      totalItems,
-      productCardList: paginatedList,
+      productCardList: filteredProductListWithSearch,
     };
   }
 }

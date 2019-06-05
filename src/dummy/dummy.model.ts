@@ -188,6 +188,10 @@ export class DummyModel {
 
   @ApiModelProperty()
   public signUpModule?: SignUpModule;
+
+  @ApiModelProperty()
+  public relatedProductsSlider?: RelatedProductsSlider;
+
   @ApiModelProperty()
   public productLineStoryOverviewModule?: ProductLineOverviewModule;
 
