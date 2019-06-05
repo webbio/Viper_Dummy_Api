@@ -46,10 +46,47 @@ export const generateDummyInfoHeaderModule = (
     bottomPadding: '50px',
     curve: {
       curveBackground: {
-        
         backgroundColour: '#f5fafa',
       },
-      decorCurveHorizontalAlignment: "right",
+      decorCurveHorizontalAlignment: 'right',
+      decorCurveVerticalAlignment: 'bottom',
+    },
+    titleText: title,
+    bodyText,
+    backButtonText,
+    backButtonURL,
+    buttonLinkURL,
+    htmlArea: '',
+    buttonLinkText,
+    align,
+    bgcolor: '#FFFFFF',
+    imageAlign,
+    imageURL,
+    id: uuid(),
+    name: 'infoHeaderModule',
+    bottomMargin: '0px',
+    topMargin: '0px',
+  };
+};
+export const generateDummyInfoHeaderModule2 = (
+  title: string,
+  bodyText: string,
+  align: string,
+  imageURL: string,
+  imageAlign: string,
+  buttonLinkText: string,
+  buttonLinkURL: string,
+  backButtonText: string,
+  backButtonURL: string,
+): InfoHeaderModule => {
+  return {
+    background: {
+      backgroundPattern:
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
+    },
+    bottomPadding: '50px',
+    curve: {
+      decorCurveHorizontalAlignment: 'right',
       decorCurveVerticalAlignment: 'bottom',
     },
     titleText: title,

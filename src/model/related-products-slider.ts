@@ -164,3 +164,276 @@ export const generateDummyRelatedProductsSlider = (
     ],
   } as RelatedProductsSlider;
 };
+
+export const generateDummyRelatedProductsSliderNoCurveBackground = (
+  title: string,
+  showDetail?: boolean,
+): RelatedProductsSlider => {
+  return {
+    id: uuid(),
+    name: 'RelatedProductsSlider',
+    topMargin: '0px',
+    bottomMargin: '0px',
+    bottomPadding: '32px',
+    background: {
+      backgroundPattern:
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
+    },
+    curve: {
+      decorCurveVerticalAlignment: 'middle',
+    },
+    title,
+    buttonLink: '/recipe-overview',
+    buttonText: 'Bekijk alle producten',
+    relatedProducts: [
+      {
+        title: '100% Bruine rijstnoedels',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/Screenshot+2019-05-14+at+09.54.09.png',
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: '100% Bruine rijstnoedels',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg',
+
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: '100% Bruine rijstnoedels',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg',
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: '100% Bruine rijstnoedels',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/7.jpg',
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: 'Boekweitnoedels met zoete aardappel',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/6.jpg',
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: 'Bruine rijstnoedels met pompoen en gember',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg',
+
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: 'Bruine rijstnoedels met pompoen en gember',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg',
+
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: 'Bruine rijstnoedels met pompoen en gember',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/7.jpg',
+
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: 'Bruine rijstnoedels met pompoen en gember',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/6.jpg',
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: 'Bruine rijstnoedels met pompoen en gember',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg',
+
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: 'Bruine rijstnoedels met pompoen en gember',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg',
+
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: 'Bruine rijstnoedels met pompoen en gember',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Zeewieren/1.jpg',
+
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: 'Bruine rijstnoedels met pompoen en gember',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Zeewieren/3.jpg',
+
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: 'Bruine rijstnoedels met pompoen en gember',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Zeewieren/4.jpg',
+
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: 'pino',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/PaddenStoelen+en+seitan/1.png',
+
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+    ],
+  } as RelatedProductsSlider;
+};
+
+export const generateDummyRelatedProductsSlider2 = (
+  title: string,
+  showDetail?: boolean,
+): RelatedProductsSlider => {
+  return {
+    id: uuid(),
+    name: 'RelatedProductsSlider',
+    topMargin: '0px',
+    bottomMargin: '0px',
+    bottomPadding: '32px',
+    title,
+    buttonLink: '/recipe-overview',
+    buttonText: 'Bekijk alle producten',
+    relatedProducts: [
+      {
+        title: '100% Bruine rijstnoedels',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/Screenshot+2019-05-14+at+09.54.09.png',
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: '100% Bruine rijstnoedels',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg',
+
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: '100% Bruine rijstnoedels',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg',
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: '100% Bruine rijstnoedels',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/7.jpg',
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: 'Boekweitnoedels met zoete aardappel',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/6.jpg',
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: 'Bruine rijstnoedels met pompoen en gember',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg',
+
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: 'Bruine rijstnoedels met pompoen en gember',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg',
+
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: 'Bruine rijstnoedels met pompoen en gember',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/7.jpg',
+
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: 'Bruine rijstnoedels met pompoen en gember',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/6.jpg',
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: 'Bruine rijstnoedels met pompoen en gember',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg',
+
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: 'Bruine rijstnoedels met pompoen en gember',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg',
+
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: 'Bruine rijstnoedels met pompoen en gember',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Zeewieren/1.jpg',
+
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: 'Bruine rijstnoedels met pompoen en gember',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Zeewieren/3.jpg',
+
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: 'Bruine rijstnoedels met pompoen en gember',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Zeewieren/4.jpg',
+
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+      {
+        title: 'pino',
+        picture:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/PaddenStoelen+en+seitan/1.png',
+
+        URL: '/product-line-single',
+        amount: showDetail ? 'Glutenvrij - 250g' : '',
+      },
+    ],
+  } as RelatedProductsSlider;
+};

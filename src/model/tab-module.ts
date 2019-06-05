@@ -43,5 +43,9 @@ export const generateDummyTabs = (): TabsModule => {
     topMargin: '',
     bottomMargin: '',
     name: 'TabsComponent',
+    topPadding: '50px',
+    background: {
+      backgroundColour: '#f5fafa',
+    },
   };
 };
