@@ -77,3 +77,25 @@ export const generateDummyFeaturedItemModuleSimple = (
     topPadding: '150px',
   } as FeaturedItemModule;
 };
+
+export const generateDummyFeaturedItemModuleNoPatternCurveWhite = (
+  title: string,
+): FeaturedItemModule => {
+  return {
+    id: uuid(),
+    name: 'featuredItemModule',
+    topMargin: '0px',
+    bottomMargin: '0px',
+    title,
+    buttonText: 'Bekijk meer recepten',
+    recipes: generateDummyRecipes(),
+    background: {
+      backgroundColour: '#f5fafa',
+    },
+
+    curve: {
+      decorCurveVerticalAlignment: 'top',
+    },
+    topPadding: '150px',
+  } as FeaturedItemModule;
+};

@@ -46,6 +46,7 @@ import {
   generateDummyFeaturedItemModule,
   generateDummyFeaturedItemModuleNoPattern,
   generateDummyFeaturedItemModuleSimple,
+  generateDummyFeaturedItemModuleNoPatternCurveWhite,
 } from 'src/model/featured-item';
 import { generateDummyNotFoundModule } from 'src/model/not-found-module';
 import { generateDummyLoginModule } from 'src/model/login';
@@ -200,19 +201,18 @@ export class PageService {
       wordPressPostModules: [
         generateDummyNavBarModule(),
         generateDummyInfoHeaderModule(
-          'NIEUWTJES',
+          'Nieuwtjes',
           'Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.',
           'center',
           '',
-          '',
+          'center',
           '',
           '',
           'Terug naar home',
           '/',
         ),
         generateDummyNewsOverviewData(),
-        generateNotYetImplemented('Related News Module'),
-        generateDummyRelatedProductsSlider('Gerelateerde Producten'),
+        generateDummyRelatedProductsSlider('Gerelateerde Producten', true),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
@@ -223,7 +223,7 @@ export class PageService {
       description: 'Nieuws Single',
       wordPressPostModules: [
         generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule(
+        generateDummyInfoHeaderModule2(
           'Gezonde snack? Probeer onze nieuwe snackmixen!',
           '',
           'left',
@@ -234,9 +234,8 @@ export class PageService {
           'Terug naar Nieuwtjes',
           '/news-overview',
         ),
-        generateDummyItemOverviewData(),
         generateBodyTextExpandedModule(),
-        generateNotYetImplemented('Related News Module'),
+        generateDummyFeaturedItemModuleNoPatternCurveWhite('Bekijk ook'),
         generateDummyRelatedProductsSlider('Gerelateerde Producten'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
@@ -265,37 +264,39 @@ export class PageService {
         generateDummyFooterModule(),
       ],
     } as PageModel,
-    {
-      id: uuid(),
-      route: 'terrasana.com/news-overview',
-      description: 'Nieuws',
-      wordPressPostModules: [
-        generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule(
-          'Nieuwtjes',
-          'Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.',
-          'center',
-          '',
-          'center',
-          '',
-          '',
-          'Terug naar home',
-          '/',
-        ),
-        generateDummyNewsOverviewData(),
-        generateDummyRelatedProductsSlider('Gerelateerde Producten', true),
-        generateDummyNewsletterModule(),
-        generateDummyFooterModule(),
-      ],
-    } as PageModel,
+    // {
+    //   id: uuid(),
+    //   route: 'terrasana.com/news-overview',
+    //   description: 'Nieuws',
+    //   wordPressPostModules: [
+    //     generateDummyNavBarModule(),
+    //     generateDummyInfoHeaderModule(
+    //       'Nieuwtjes',
+    //       'Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.',
+    //       'center',
+    //       '',
+    //       'center',
+    //       '',
+    //       '',
+    //       'Terug naar home',
+    //       '/',
+    //     ),
+    //     generateDummyNewsOverviewData(),
+    //     generateDummyRelatedProductsSlider('Gerelateerde Producten', true),
+    //     generateDummyNewsletterModule(),
+    //     generateDummyFooterModule(),
+    //   ],
+    // } as PageModel,
     {
       id: uuid(),
       route: 'terrasana.com/recipe-single',
       description: 'Recepten',
       wordPressPostModules: [
         generateDummyNavBarModule(),
-        generateNotYetImplemented('Recipe Header Module'),
         generateDummyRecipeDetailModule(),
+        generateDummyFeaturedItemModuleNoPatternCurveWhite(
+          'Vergelikbare recepten',
+        ),
         generateDummyRelatedProductsSlider('Gerelateerde Producten'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
@@ -369,7 +370,11 @@ export class PageService {
       id: uuid(),
       route: 'terrasana.com/not-found',
       description: 'Not Found module',
-      wordPressPostModules: [generateDummyNavBarModule(), generateDummyNotFoundModule(), generateDummyFooterModule()],
+      wordPressPostModules: [
+        generateDummyNavBarModule(),
+        generateDummyNotFoundModule(),
+        generateDummyFooterModule(),
+      ],
     } as PageModel,
     {
       id: uuid(),
@@ -401,8 +406,10 @@ export class PageService {
       id: uuid(),
       route: 'terrasana.com/business',
       description: 'Zakelijk',
-      wordPressPostModules: [generateDummyNavBarModule(), generateDummyBusinessOverviewData()],
-
+      wordPressPostModules: [
+        generateDummyNavBarModule(),
+        generateDummyBusinessOverviewData(),
+      ],
     } as PageModel,
     {
       id: uuid(),
@@ -420,13 +427,19 @@ export class PageService {
       id: uuid(),
       route: 'terrasana.com/business-login',
       description: 'Zakelijk',
-      wordPressPostModules: [generateDummyNavBarModule(), generateDummyLoginModule()],
+      wordPressPostModules: [
+        generateDummyNavBarModule(),
+        generateDummyLoginModule(),
+      ],
     } as PageModel,
     {
       id: uuid(),
       route: 'terrasana.com/business-new-account',
       description: 'Zakelijk',
-      wordPressPostModules: [generateDummyNavBarModule(), generateDummySignUpModule()],
+      wordPressPostModules: [
+        generateDummyNavBarModule(),
+        generateDummySignUpModule(),
+      ],
     } as PageModel,
   ];
 

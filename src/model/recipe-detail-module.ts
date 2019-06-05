@@ -74,10 +74,14 @@ export const generateDummyRecipeDetailModule = (): RecipeDetailModule => {
             'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/mail.svg',
         },
       ],
+      curve: {
+        decorCurveVerticalAlignment: 'bottom',
+      },
       id: '44',
       topMargin: '1',
       bottomMargin: '5',
       name: 'RecipeDetailHeader',
+      topPadding: '20px',
     },
     howTo: {
       steps: [
