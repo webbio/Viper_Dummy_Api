@@ -1,6 +1,13 @@
 import uuid = require('uuid');
 
-export const categories = ['Noedels', 'Zeewieren', 'Paddenstoelen en seitan', 'Veganistischs', 'Sojasauzen', 'Rijst'];
+export const categories = [
+  'Noedels',
+  'Zeewieren',
+  'Paddenstoelen en seitan',
+  'Veganistischs',
+  'Sojasauzen',
+  'Rijst',
+];
 
 export const generateRandomCategory = () => {
   return categories[Math.floor(Math.random() * 6)];
@@ -8,8 +15,10 @@ export const generateRandomCategory = () => {
 
 const generateRecipesUpTo9 = (amount: number): any[] => {
   const cardList: any[] = [];
-  const timeIcon = 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/time.svg';
-  const personIcon = 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/person.svg';
+  const timeIcon =
+    'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/time.svg';
+  const personIcon =
+    'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/person.svg';
   if (amount === 1) {
     cardList.push({
       buttonText: 'Lees meer',
