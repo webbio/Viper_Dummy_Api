@@ -71,8 +71,5 @@ export const generateDummyGallerySliderModule = (): GallerySliderModule => {
         caption: 'Donec lacinia nulla sed ligula congue aliquam:',
       },
     ],
-    background: {
-      backgroundColour: '#f5fafa',
-    },
   } as GallerySliderModule;
 };

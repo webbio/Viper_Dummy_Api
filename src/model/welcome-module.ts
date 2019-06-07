@@ -1,4 +1,8 @@
-import { WordPressPostModule } from './wordpress-post-module';
+import {
+  WordPressPostModule,
+  paddingDesktop,
+  paddingMobile,
+} from './wordpress-post-module';
 import { ImageButton } from './image-button';
 import { ButtonType } from '../enums/button-type';
 import * as uuid from 'uuid';
@@ -42,12 +46,16 @@ export const generateDummyWelcomeModule = (): WelcomeModule => {
       backgroundPattern:
         'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
     },
-    bottomPadding: '115px',
+
     curve: {
       curveBackground: {
         backgroundColour: '#f5fafa',
       },
       decorCurveVerticalAlignment: 'bottom',
+    },
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingLarge,
+      mobilePadding: paddingMobile.mobilePaddingLarge,
     },
     name: 'WelcomeModule',
     topMargin: '0px',

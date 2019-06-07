@@ -1,5 +1,5 @@
 import { ApiModelProperty } from '@nestjs/swagger';
-import { WordPressPostModule } from './wordpress-post-module';
+import { WordPressPostModule, paddingSmall } from './wordpress-post-module';
 import * as uuid from 'uuid';
 import {
   SalePointModule,
@@ -43,7 +43,7 @@ export const generateDummyTabs = (): TabsModule => {
     topMargin: '',
     bottomMargin: '',
     name: 'TabsComponent',
-    topPadding: '50px',
+    topPadding: paddingSmall,
     background: {
       backgroundColour: '#f5fafa',
     },

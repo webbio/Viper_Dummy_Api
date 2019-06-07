@@ -43,7 +43,7 @@ export const generateDummyInfoHeaderModule = (
       backgroundPattern:
         'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
     },
-    bottomPadding: '50px',
+
     curve: {
       curveBackground: {
         backgroundColour: '#f5fafa',
@@ -84,7 +84,6 @@ export const generateDummyInfoHeaderModule2 = (
       backgroundPattern:
         'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
     },
-    bottomPadding: '50px',
     curve: {
       decorCurveHorizontalAlignment: 'right',
       decorCurveVerticalAlignment: 'bottom',

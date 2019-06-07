@@ -22,6 +22,7 @@ export const generateProductLineSingleModule = (): ProductLineSingleModule => {
     id: uuid(),
     topMargin: '',
     bottomMargin: '',
+
     background: {
       backgroundColour: '#f5fafa',
     },

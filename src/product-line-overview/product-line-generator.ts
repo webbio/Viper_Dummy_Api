@@ -16,7 +16,7 @@ const generateProductCardsUpTo7 = (
       buttonText: 'Bekijk deze producten',
       link: '/',
       image:
-        'http://c1.quickcachr.fotos.sapo.pt/i/G6102a10b/20523935_jLSiU.jpeg',
+        'https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/productLineOverview/1.jpg',
       title: 'Gezond ontbijten',
       content:
         'Integer non est molestie massa interdum fringilla. Donec finibus arcu tellus...',
@@ -29,7 +29,7 @@ const generateProductCardsUpTo7 = (
       buttonText: 'Bekijk deze producten',
       link: '/',
       image:
-        'https://www.bbcgoodfood.com/sites/default/files/guide/guide-image/2017/04/why-is-japanese-diet-so-healthy-guide-image-700-350.jpg',
+        'https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/productLineOverview/2.jpg',
       title: 'Japan moderne keuken',
       content:
         'Integer non est molestie massa interdum fringilla. Donec finibus arcu tellus...',
@@ -42,7 +42,7 @@ const generateProductCardsUpTo7 = (
       buttonText: 'Bekijk deze producten',
       link: '/',
       image:
-        'https://abrilsuperinteressante.files.wordpress.com/2017/10/por-que-os-cereais-integrais-sc3a3o-mais-caros-que-os-refinados.png',
+        'https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/productLineOverview/3.png',
       title: 'l onze muesli\'s en cereals',
       content:
         'Integer non est molestie massa interdum fringilla. Donec finibus arcu tellus...',
@@ -55,7 +55,7 @@ const generateProductCardsUpTo7 = (
       buttonText: 'Bekijk deze producten',
       link: '/',
       image:
-        'https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzEwNC84MDAvb3JpZ2luYWwvc2h1dHRlcnN0b2NrXzcyMjcxODA3OS5qcGc=',
+        'https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/productLineOverview/1.jpg',
       title: 'Onze Superfoods!',
       content:
         'Integer non est molestie massa interdum fringilla. Donec finibus arcu tellus...',
@@ -69,7 +69,7 @@ const generateProductCardsUpTo7 = (
       buttonText: 'Bekijk deze producten',
       link: '/',
       image:
-        'https://media-cdn.tripadvisor.com/media/photo-s/0c/c9/46/ab/almoco-organico.jpg',
+        'https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/productLineOverview/4.jpg',
       title: 'Heerlijke bio lunches',
       content:
         'Integer non est molestie massa interdum fringilla. Donec finibus arcu tellus...',
@@ -82,7 +82,7 @@ const generateProductCardsUpTo7 = (
       buttonText: 'Bekijk deze producten',
       link: '/',
       image:
-        'https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=1200',
+        'https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/productLineOverview/5.jpg',
       title: 'Lorem ipsum di Tor',
       content:
         'Integer non est molestie massa interdum fringilla. Donec finibus arcu tellus...',
@@ -95,7 +95,7 @@ const generateProductCardsUpTo7 = (
       buttonText: 'Bekijk deze producten',
       link: '/',
       image:
-        'https://www.wandertravel.nl/wp-content/uploads/2017/10/drop800.jpg',
+        'https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/productLineOverview/6.jpg',
       title: 'Biodrop?',
       content:
         'Integer non est molestie massa interdum fringilla. Donec finibus arcu tellus...',

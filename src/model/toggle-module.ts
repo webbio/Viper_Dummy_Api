@@ -1,4 +1,4 @@
-import { WordPressPostModule } from './wordpress-post-module';
+import { WordPressPostModule, paddingSmall } from './wordpress-post-module';
 import { ApiModelProperty } from '@nestjs/swagger';
 import { ExpandablePanel } from './expandable-panel';
 import uuid = require('uuid');
@@ -45,7 +45,8 @@ export const generateDummyToggleModule = (): ToggleModule => {
       ],
     },
     topMargin: '0px',
-    topPadding: '50px',
+    topPadding: paddingSmall,
+    bottomPadding: paddingSmall,
     bottomMargin: '0px',
   };
 };

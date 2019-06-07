@@ -16,6 +16,8 @@ import {
 import {
   generateBodyTextModule,
   generateBodyTextModuleAboutUs,
+  generateProductLineStorySingleBodyTextHtml,
+  generateProductLineStorySingleBodyTextHtml2,
 } from 'src/model/bodytext-module';
 import { generateDummyFooterModule } from 'src/model/footer-component';
 import { generateDummyInstagramWallModule } from 'src/model/instagram-wall';
@@ -144,8 +146,10 @@ export class PageService {
           'Terug naar home',
           '/',
         ),
-        generateBodyTextModule('add dummy bodytext html'),
+        generateProductLineStorySingleBodyTextHtml(),
         generateDummyRelatedProductsSlider2('ONZE JAPANSE PRODUCTEN'),
+        generateProductLineStorySingleBodyTextHtml2(),
+
         generateDummyGallerySliderModule(),
         generateDummyCTAModuleHomePage2(),
         generateDummyFeaturedItemModule('Gerelateerde recepten'),
