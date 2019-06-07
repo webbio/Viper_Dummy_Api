@@ -1,4 +1,8 @@
-import { WordPressPostModule } from './wordpress-post-module';
+import {
+  WordPressPostModule,
+  paddingDesktop,
+  paddingMobile,
+} from './wordpress-post-module';
 import * as uuid from 'uuid';
 import { ApiModelProperty } from '@nestjs/swagger';
 import { Link } from './link';
@@ -74,14 +78,10 @@ export const generateDummyRecipeDetailModule = (): RecipeDetailModule => {
             'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/mail.svg',
         },
       ],
-      curve: {
-        decorCurveVerticalAlignment: 'bottom',
-      },
       id: '44',
       topMargin: '1',
       bottomMargin: '5',
       name: 'RecipeDetailHeader',
-      topPadding: '20px',
     },
     howTo: {
       steps: [
@@ -169,6 +169,10 @@ export const generateDummyRecipeDetailModule = (): RecipeDetailModule => {
     titleRelatedPosts: 'Gerelateerde producten',
     buttonTextRelatedPosts: 'Meer producten',
     buttonURLRelatedPosts: '/product-line-single',
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
     id: uuid(),
     topMargin: '',
     bottomMargin: '',

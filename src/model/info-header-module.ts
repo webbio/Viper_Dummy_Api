@@ -1,4 +1,8 @@
-import { WordPressPostModule } from './wordpress-post-module';
+import {
+  WordPressPostModule,
+  paddingDesktop,
+  paddingMobile,
+} from './wordpress-post-module';
 import * as uuid from 'uuid';
 import { ApiModelProperty } from '@nestjs/swagger';
 
@@ -50,6 +54,14 @@ export const generateDummyInfoHeaderModule = (
       },
       decorCurveHorizontalAlignment: 'right',
       decorCurveVerticalAlignment: 'bottom',
+    },
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
+    topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
     },
     titleText: title,
     bodyText,

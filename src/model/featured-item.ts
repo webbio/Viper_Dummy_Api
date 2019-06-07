@@ -1,4 +1,8 @@
-import { WordPressPostModule } from './wordpress-post-module';
+import {
+  WordPressPostModule,
+  paddingDesktop,
+  paddingMobile,
+} from './wordpress-post-module';
 import * as uuid from 'uuid';
 import { ApiModelProperty, ApiImplicitBody, ApiUseTags } from '@nestjs/swagger';
 import { Module } from '@nestjs/common';
@@ -26,6 +30,11 @@ export const generateDummyFeaturedItemModule = (
   return {
     id: uuid(),
     name: 'featuredItemModule',
+    topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
+
     topMargin: '0px',
     bottomMargin: '0px',
     title,
@@ -44,6 +53,11 @@ export const generateDummyFeaturedItemModuleNoPattern = (
   return {
     id: uuid(),
     name: 'featuredItemModule',
+    topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
+
     topMargin: '0px',
     bottomMargin: '0px',
     title,
@@ -68,6 +82,14 @@ export const generateDummyFeaturedItemModuleSimple = (
   return {
     id: uuid(),
     name: 'featuredItemModule',
+    topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
     topMargin: '0px',
     bottomMargin: '0px',
     title,
@@ -82,6 +104,11 @@ export const generateDummyFeaturedItemModuleNoPatternCurveWhite = (
   return {
     id: uuid(),
     name: 'featuredItemModule',
+    topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
+
     topMargin: '0px',
     bottomMargin: '0px',
     title,
@@ -103,6 +130,11 @@ export const generateDummyFeaturedItemModuleLightBackground = (
   return {
     id: uuid(),
     name: 'featuredItemModule',
+    topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
+
     topMargin: '0px',
     bottomMargin: '0px',
     title,

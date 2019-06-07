@@ -4,6 +4,7 @@ import {
 } from './product-line-card';
 import uuid = require('uuid');
 import { categories } from 'src/card/card-generator';
+import { paddingDesktop, paddingMobile } from 'src/model/wordpress-post-module';
 
 export const diets = ['Glutenvrij', 'Vegetarisch', 'Veganistisch'];
 
@@ -131,6 +132,14 @@ const generateProductLineStoryOverviewModule = (): ProductLineOverviewModule => 
       backgroundColour: '#f5fafa',
     },
     productsLine: generateProductLineCardList(9),
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
+    topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
   };
 };
 

@@ -1,7 +1,7 @@
 import {
   WordPressPostModule,
-  paddingMedium,
-  paddingSmall,
+  paddingDesktop,
+  paddingMobile,
 } from './wordpress-post-module';
 import { ApiModelProperty, ApiImplicitBody, ApiUseTags } from '@nestjs/swagger';
 import { Module } from '@nestjs/common';
@@ -40,8 +40,14 @@ export const generateDummyProductDetailHeader = (): ProductDetailHeader => {
     header: '100% brunine rijstnoedels',
     subHeader: 'Glutenvrij - 250g ',
     backButtonText: 'Terug naar alle noedels',
-    topPadding: paddingSmall,
-    bottomPadding: paddingMedium,
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
+    topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
     background: {
       backgroundPattern:
         'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',

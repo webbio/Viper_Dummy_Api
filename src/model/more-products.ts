@@ -1,4 +1,8 @@
-import { WordPressPostModule } from './wordpress-post-module';
+import {
+  WordPressPostModule,
+  paddingDesktop,
+  paddingMobile,
+} from './wordpress-post-module';
 import { ApiModelProperty, ApiImplicitBody, ApiUseTags } from '@nestjs/swagger';
 import { Module } from '@nestjs/common';
 import { PageController } from 'src/page/page.controller';
@@ -24,13 +28,15 @@ export const generateDummyMoreProducts = (): MoreProducts => {
     name: 'MoreProducts',
     topMargin: '0px',
     bottomMargin: '0px',
-    topPadding: '50px',
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
     title: 'Meer Noedels!',
     buttonText: 'Meer noedels',
     background: {
       backgroundColour: '#f5fafa',
     },
-    bottomPadding: '150px',
     curve: {
       decorCurveVerticalAlignment: 'bottom',
       decorCurveHorizontalAlignment: 'right',

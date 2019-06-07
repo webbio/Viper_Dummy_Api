@@ -1,4 +1,8 @@
-import { WordPressPostModule } from './wordpress-post-module';
+import {
+  WordPressPostModule,
+  paddingDesktop,
+  paddingMobile,
+} from './wordpress-post-module';
 import {
   ProductLineFilter,
   generateProductLineFilter,
@@ -34,7 +38,14 @@ export const generateProductLineSingleModule = (): ProductLineSingleModule => {
       decorCurveVerticalAlignment: 'bottom',
       decorCurveHorizontalAlignment: 'right',
     },
-
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
+    topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
     name: 'ProductLineSingleModule',
     filter: generateProductLineFilter(),
     productCardList: generateDummyProductCard(),

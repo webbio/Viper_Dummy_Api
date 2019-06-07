@@ -33,10 +33,6 @@ export const generateDummyRelatedProductsSlider = (
   return {
     id: uuid(),
     name: 'RelatedProductsSlider',
-    bottomPadding: {
-      desktopPadding: paddingDesktop.desktopPaddingLarge,
-      mobilePadding: paddingMobile.mobilePaddingLarge,
-    },
     topMargin: '0px',
     bottomMargin: '0px',
     background: {
@@ -179,10 +175,6 @@ export const generateDummyRelatedProductsSliderNoCurveBackground = (
   return {
     id: uuid(),
     name: 'RelatedProductsSlider',
-    bottomPadding: {
-      desktopPadding: paddingDesktop.desktopPaddingMedium,
-      mobilePadding: paddingMobile.mobilePaddingMedium,
-    },
     topMargin: '0px',
     bottomMargin: '0px',
 
@@ -323,10 +315,7 @@ export const generateDummyRelatedProductsSlider2 = (
   return {
     id: uuid(),
     name: 'RelatedProductsSlider',
-    bottomPadding: {
-      desktopPadding: paddingDesktop.desktopPaddingLarge,
-      mobilePadding: paddingMobile.mobilePaddingLarge,
-    },
+
     topMargin: '0px',
     bottomMargin: '0px',
 
