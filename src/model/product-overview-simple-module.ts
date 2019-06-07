@@ -1,7 +1,5 @@
 import {
   WordPressPostModule,
-  paddingSmall,
-  paddingMedium,
 } from './wordpress-post-module';
 import {
   ProductLineFilter,
@@ -40,8 +38,6 @@ export const generateProductOverviewSimpleModuleCurvePatternBottom = (): Product
     name: 'ProductOverviewSimpleModule',
     filter: generateProductLineFilter(),
     productCardList: generateDummyProductCard(),
-    topPadding: paddingSmall,
-    bottomPadding: paddingMedium,
     totalItems: 5,
     background: {
       backgroundColour: '#f5fafa',
