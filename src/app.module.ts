@@ -12,6 +12,9 @@ import { NavbarSearchController } from './navbar-search/navbar-search.controller
 import { NavbarSearchService } from './navbar-search/navbar-search.service';
 import { NewsOverviewController } from './news-overview/news-overview.controller';
 import { NewsOverviewService } from './news-overview/news-overview.service';
+import { BusinessOverviewCategoryController } from './business-overview/business-overview.controller';
+import { BusinessOverviewProductLineController } from './business-overview/business-overview.controller';
+import { BusinessOverviewService } from './business-overview/business-overview.service';
 
 @Module({
   imports: [],
@@ -22,6 +25,8 @@ import { NewsOverviewService } from './news-overview/news-overview.service';
     DummyController,
     ProductLineController,
     NavbarSearchController,
+    BusinessOverviewCategoryController,
+    BusinessOverviewProductLineController,
   ],
   providers: [
     AppService,
@@ -31,6 +36,7 @@ import { NewsOverviewService } from './news-overview/news-overview.service';
     DummyService,
     ProductLineService,
     NavbarSearchService,
+    BusinessOverviewService,
   ],
 })
 export class AppModule {}

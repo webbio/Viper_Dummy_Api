@@ -52,7 +52,11 @@ import {
   NewsOverviewModule,
 } from 'src/model/news-overview-module';
 import { NotFoundModule } from 'src/model/not-found-module';
-import { BusinessOverviewModule } from 'src/model/business-overview-module';
+import {
+  BusinessOverviewModule,
+  BusinessOverviewProductsState,
+  BusinessOverviewCategoriesState,
+} from 'src/model/business-overview-module';
 
 export class DummyModel {
   @ApiModelProperty()
@@ -76,6 +80,10 @@ export class DummyModel {
 
   @ApiModelProperty()
   public socialMediaButtons?: SocialMediaButtons;
+  @ApiModelProperty()
+  public businessOverviewProductsReturn?: BusinessOverviewProductsState;
+  @ApiModelProperty()
+  public businessOverviewCategoriesReturn?: BusinessOverviewCategoriesState;
 
   @ApiModelProperty()
   public navBarModule?: NavBarModule;
