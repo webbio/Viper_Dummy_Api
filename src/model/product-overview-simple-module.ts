@@ -34,8 +34,8 @@ export const generateProductOverviewSimpleModule = (): ProductOverviewSimpleModu
       mobilePadding: paddingMobile.mobilePaddingSmall,
     },
     bottomPadding: {
-      desktopPadding: paddingDesktop.desktopPaddingSmall,
-      mobilePadding: paddingMobile.mobilePaddingSmall,
+      desktopPadding: paddingDesktop.desktopPaddingMedium,
+      mobilePadding: paddingMobile.mobilePaddingMedium,
     },
   };
 };
@@ -53,8 +53,8 @@ export const generateProductOverviewSimpleModuleCurvePatternBottom = (): Product
       mobilePadding: paddingMobile.mobilePaddingSmall,
     },
     bottomPadding: {
-      desktopPadding: paddingDesktop.desktopPaddingSmall,
-      mobilePadding: paddingMobile.mobilePaddingSmall,
+      desktopPadding: paddingDesktop.desktopPaddingMedium,
+      mobilePadding: paddingMobile.mobilePaddingMedium,
     },
     totalItems: 5,
     background: {

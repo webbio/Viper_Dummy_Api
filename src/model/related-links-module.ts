@@ -1,4 +1,8 @@
-import { WordPressPostModule } from './wordpress-post-module';
+import {
+  WordPressPostModule,
+  paddingDesktop,
+  paddingMobile,
+} from './wordpress-post-module';
 import * as uuid from 'uuid';
 import { ApiModelProperty } from '@nestjs/swagger';
 import { RelatedLinks, generateDummyRelatedLinks } from './related-links';
@@ -18,5 +22,13 @@ export const generateDummyRelatedLinksModule = (): RelatedLinksModule => {
     topMargin: '',
     bottomMargin: '',
     name: 'RelatedLinksModule',
+    topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
   };
 };

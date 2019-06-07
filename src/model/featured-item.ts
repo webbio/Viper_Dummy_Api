@@ -54,10 +54,13 @@ export const generateDummyFeaturedItemModuleNoPattern = (
     id: uuid(),
     name: 'featuredItemModule',
     topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingLarge,
+      mobilePadding: paddingMobile.mobilePaddingLarge,
+    },
+    bottomPadding: {
       desktopPadding: paddingDesktop.desktopPaddingSmall,
       mobilePadding: paddingMobile.mobilePaddingSmall,
     },
-
     topMargin: '0px',
     bottomMargin: '0px',
     title,
@@ -134,6 +137,10 @@ export const generateDummyFeaturedItemModuleLightBackground = (
     id: uuid(),
     name: 'featuredItemModule',
     topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
+    bottomPadding: {
       desktopPadding: paddingDesktop.desktopPaddingSmall,
       mobilePadding: paddingMobile.mobilePaddingSmall,
     },

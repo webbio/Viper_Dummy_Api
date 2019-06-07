@@ -1,5 +1,9 @@
 import { ApiModelProperty } from '@nestjs/swagger';
-import { WordPressPostModule } from './wordpress-post-module';
+import {
+  WordPressPostModule,
+  paddingDesktop,
+  paddingMobile,
+} from './wordpress-post-module';
 import uuid = require('uuid');
 import { ContainerSize } from 'src/enums/container-size';
 import { ContainerAlignment } from 'src/enums/container-alignment';
@@ -35,6 +39,14 @@ export const generateBodyTextModuleAboutUs = (html: string): BodyTextModule => {
     topMargin: '0px',
     containerSize: 'medium',
     containerAlignment: 'center',
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
+    topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
     curve: {
       decorCurveVerticalAlignment: 'bottom',
       decorCurveHorizontalAlignment: 'right',
@@ -106,6 +118,14 @@ export const generateProductLineStorySingleBodyTextHtml = (): BodyTextModule => 
     topMargin: '0px',
     containerSize: 'large',
     containerAlignment: 'center',
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
+    topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
   };
 };
 export const generateProductLineStorySingleBodyTextHtml2 = (): BodyTextModule => {
@@ -130,5 +150,13 @@ export const generateProductLineStorySingleBodyTextHtml2 = (): BodyTextModule =>
     topMargin: '0px',
     containerSize: 'medium',
     containerAlignment: 'center',
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
+    topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
   };
 };

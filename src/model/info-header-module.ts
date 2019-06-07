@@ -107,6 +107,14 @@ export const generateDummyInfoHeaderModule2 = (
     buttonLinkURL,
     htmlArea: '',
     buttonLinkText,
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
+    topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
     align,
     bgcolor: '#FFFFFF',
     imageAlign,

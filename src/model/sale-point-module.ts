@@ -1,4 +1,8 @@
-import { WordPressPostModule } from './wordpress-post-module';
+import {
+  WordPressPostModule,
+  paddingDesktop,
+  paddingMobile,
+} from './wordpress-post-module';
 import * as uuid from 'uuid';
 import { ApiModelProperty } from '@nestjs/swagger';
 import { Link } from './link';
@@ -38,7 +42,14 @@ export const generateDummySalePointModule = (): SalePointModule => {
         backgroundColour: '#f5fafa',
       },
     },
-    topPadding: '150px',
+    topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingMedium,
+      mobilePadding: paddingMobile.mobilePaddingMedium,
+    },
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
     imageLinks: [
       {
         logo:

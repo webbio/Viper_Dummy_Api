@@ -1,4 +1,8 @@
-import { WordPressPostModule } from './wordpress-post-module';
+import {
+  WordPressPostModule,
+  paddingDesktop,
+  paddingMobile,
+} from './wordpress-post-module';
 import { ApiModelProperty } from '@nestjs/swagger';
 import { Link } from './link';
 
@@ -27,5 +31,13 @@ export const generateDummySignUpModule = (): SignUpModule => {
     name: 'LoginModule',
     topMargin: '0px',
     bottomMargin: '0px',
+    topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingMedium,
+      mobilePadding: paddingMobile.mobilePaddingMedium,
+    },
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
   };
 };

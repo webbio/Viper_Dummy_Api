@@ -1,4 +1,8 @@
-import { WordPressPostModule } from './wordpress-post-module';
+import {
+  WordPressPostModule,
+  paddingDesktop,
+  paddingMobile,
+} from './wordpress-post-module';
 import * as uuid from 'uuid';
 import { ApiModelProperty } from '@nestjs/swagger';
 import { CardModel } from './card-model';
@@ -22,11 +26,24 @@ export class ItemOverviewModule extends WordPressPostModule {
 export const generateDummyItemOverviewData = (): ItemOverviewModule => {
   return {
     name: 'RecipeOverviewModule',
-    bottomPadding: '12px',
-    topPadding: '72px',
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
+    topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
     topMargin: '0px',
     bottomMargin: '0px',
-    categories: ["Noedels", "Zeewieren", "Paddenstoelen en seitan", "Veganistischs", "Sojasauzen", "Rijst"],
+    categories: [
+      'Noedels',
+      'Zeewieren',
+      'Paddenstoelen en seitan',
+      'Veganistischs',
+      'Sojasauzen',
+      'Rijst',
+    ],
     background: {
       backgroundColour: '#F5FAFA',
     },

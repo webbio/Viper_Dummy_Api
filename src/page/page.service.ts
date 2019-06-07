@@ -20,7 +20,10 @@ import {
   generateProductLineStorySingleBodyTextHtml2,
 } from 'src/model/bodytext-module';
 import { generateDummyFooterModule } from 'src/model/footer-component';
-import { generateDummyInstagramWallModule } from 'src/model/instagram-wall';
+import {
+  generateDummyInstagramWallModule,
+  generateDummyInstagramWallModuleContactPage,
+} from 'src/model/instagram-wall';
 import { generateDummyContactModule } from 'src/model/contact-module';
 import { generateDummyOurTeamModule } from 'src/model/our-team-module';
 import { generateDummySalePointModule } from 'src/model/sale-point-module';
@@ -191,8 +194,12 @@ export class PageService {
         generateDummyProductDetailHeader(),
         generateDummyTabs(),
         generateDummyMoreProducts(),
-        generateDummyFeaturedItemModuleSimple('Recepten met Bruine Rijstnoedels'),
-        generateDummyRelatedProductsSliderNoCurveBackground('Gerelateerde Producten'),
+        generateDummyFeaturedItemModuleSimple(
+          'Recepten met Bruine Rijstnoedels',
+        ),
+        generateDummyRelatedProductsSliderNoCurveBackground(
+          'Gerelateerde Producten',
+        ),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
@@ -297,7 +304,9 @@ export class PageService {
       wordPressPostModules: [
         generateDummyNavBarModule(),
         generateDummyRecipeDetailModule(),
-        generateDummyFeaturedItemModuleNoPatternCurveWhite('Vergelikbare recepten'),
+        generateDummyFeaturedItemModuleNoPatternCurveWhite(
+          'Vergelikbare recepten',
+        ),
         generateDummyRelatedProductsSlider('Gerelateerde Producten'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
@@ -326,20 +335,20 @@ export class PageService {
         generateDummyFooterModule(),
       ],
     } as PageModel,
-    {
-      id: uuid(),
-      route: 'terrasana.com/faq-single',
-      description: 'Veelgestelde vragen',
-      wordPressPostModules: [
-        generateDummyNavBarModule(),
-        // generateDummyInfoHeaderModule('Hoe worden de noedels gemaakt?'),
-        generateBodyTextModule('add dummy bodytext html'),
-        generateNotYetImplemented('Related FAQ Module'),
-        generateDummyRelatedProductsSlider('Gerelateerde Producten'),
-        generateDummyNewsletterModule(),
-        generateDummyFooterModule(),
-      ],
-    } as PageModel,
+    // {
+    //   id: uuid(),
+    //   route: 'terrasana.com/faq-single',
+    //   description: 'Veelgestelde vragen',
+    //   wordPressPostModules: [
+    //     generateDummyNavBarModule(),
+    //     // generateDummyInfoHeaderModule('Hoe worden de noedels gemaakt?'),
+    //     generateBodyTextModule('add dummy bodytext html'),
+    //     generateNotYetImplemented('Related FAQ Module'),
+    //     generateDummyRelatedProductsSlider('Gerelateerde Producten'),
+    //     generateDummyNewsletterModule(),
+    //     generateDummyFooterModule(),
+    //   ],
+    // } as PageModel,
     {
       id: uuid(),
       route: 'terrasana.com/about-us',
@@ -371,7 +380,11 @@ export class PageService {
       id: uuid(),
       route: 'terrasana.com/not-found',
       description: 'Not Found module',
-      wordPressPostModules: [generateDummyNavBarModule(), generateDummyNotFoundModule(), generateDummyFooterModule()],
+      wordPressPostModules: [
+        generateDummyNavBarModule(),
+        generateDummyNotFoundModule(),
+        generateDummyFooterModule(),
+      ],
     } as PageModel,
     {
       id: uuid(),
@@ -393,7 +406,7 @@ export class PageService {
         generateDummyContactModule(),
         generateDummySalePointModule(),
         generateDummyRelatedLinksModule(),
-        generateDummyInstagramWallModule(),
+        generateDummyInstagramWallModuleContactPage(),
         generateDummyCTAModuleHomePage2(),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
@@ -420,29 +433,35 @@ export class PageService {
         generateDummyFooterModule(),
       ],
     } as PageModel,
-    {
-      id: uuid(),
-      route: 'terrasana.com/business-downloads-product-line',
-      description: 'Zakelijk',
-      wordPressPostModules: [generateDummyNavBarModule()],
-    } as PageModel,
-    {
-      id: uuid(),
-      route: 'terrasana.com/business-downloads-product-line-detail',
-      description: 'Zakelijk',
-      wordPressPostModules: [generateDummyNavBarModule()],
-    } as PageModel,
+    // {
+    //   id: uuid(),
+    //   route: 'terrasana.com/business-downloads-product-line',
+    //   description: 'Zakelijk',
+    //   wordPressPostModules: [generateDummyNavBarModule()],
+    // } as PageModel,
+    // {
+    //   id: uuid(),
+    //   route: 'terrasana.com/business-downloads-product-line-detail',
+    //   description: 'Zakelijk',
+    //   wordPressPostModules: [generateDummyNavBarModule()],
+    // } as PageModel,
     {
       id: uuid(),
       route: 'terrasana.com/business-login',
       description: 'Zakelijk',
-      wordPressPostModules: [generateDummyNavBarModule(), generateDummyLoginModule()],
+      wordPressPostModules: [
+        generateDummyNavBarModule(),
+        generateDummyLoginModule(),
+      ],
     } as PageModel,
     {
       id: uuid(),
       route: 'terrasana.com/business-new-account',
       description: 'Zakelijk',
-      wordPressPostModules: [generateDummyNavBarModule(), generateDummySignUpModule()],
+      wordPressPostModules: [
+        generateDummyNavBarModule(),
+        generateDummySignUpModule(),
+      ],
     } as PageModel,
   ];
 

@@ -6,6 +6,7 @@ import {
 } from './social-media-buttons';
 import uuid = require('uuid');
 import { Author } from './author';
+import { paddingDesktop, paddingMobile } from './wordpress-post-module';
 
 export class BodyTextExpandedModule extends BodyTextModule {
   @ApiModelProperty()
@@ -32,6 +33,14 @@ export const generateBodyTextExpandedModule = (): BodyTextExpandedModule => {
     id: uuid(),
     bottomMargin: '0px',
     containerAlignment: 'center',
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
+    topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
     containerSize: 'large',
     name: 'bodyTextExpandedModule',
     socialMediaButtons: generateDummySocialMediaButtons(),

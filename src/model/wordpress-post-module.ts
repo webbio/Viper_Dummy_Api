@@ -40,10 +40,12 @@ export const paddingMobile = {
   mobilePaddingSmall: 24,
   mobilePaddingMedium: 32,
   mobilePaddingLarge: 48,
+  mobilePaddingXLarge: 64,
 };
 
 export const paddingDesktop = {
   desktopPaddingSmall: 72,
   desktopPaddingMedium: 96,
   desktopPaddingLarge: 120,
+  desktopPaddingXLarge: 144,
 };

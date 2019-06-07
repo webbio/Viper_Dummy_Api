@@ -1,4 +1,8 @@
-import { WordPressPostModule } from './wordpress-post-module';
+import {
+  WordPressPostModule,
+  paddingDesktop,
+  paddingMobile,
+} from './wordpress-post-module';
 import * as uuid from 'uuid';
 import { ApiModelProperty } from '@nestjs/swagger';
 import { ourTeamCards } from './our-team-cards';
@@ -80,5 +84,13 @@ export const generateDummyOurTeamModule = (): OurTeamModule => {
     topMargin: '',
     bottomMargin: '',
     name: 'OurTeamComponent',
+
+    topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
+    background: {
+      backgroundColour: '#f5fafa',
+    },
   };
 };
