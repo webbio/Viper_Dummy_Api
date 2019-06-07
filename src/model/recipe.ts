@@ -44,8 +44,8 @@ export const generateDummyRecipes = (): Recipe[] => {
         'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
       content: 'Soba met frisse gember-sojasaus',
       category: 'Recept',
-      buttonText: 'Bekijk meer recepten',
-      link: './',
+      buttonText: 'Bekijk meer ',
+      link: '/recipe-single',
     },
     {
       imageUrl:
@@ -64,8 +64,8 @@ export const generateDummyRecipes = (): Recipe[] => {
       ],
       content: 'Yaki soba (gebakken sobanoedels)',
       category: 'Recept',
-      buttonText: 'Bekijk meer recepten',
-      link: './',
+      buttonText: 'Bekijk meer ',
+      link: '/recipe-single',
     },
     {
       imageUrl:
@@ -84,8 +84,8 @@ export const generateDummyRecipes = (): Recipe[] => {
       ],
       content: 'Udon met daikon in miso-tamarisaus',
       category: 'Recept',
-      buttonText: 'Bekijk meer recepten',
-      link: './',
+      buttonText: 'Bekijk meer',
+      link: '/recipe-single',
     },
   ];
 };

@@ -24,6 +24,7 @@ export const generateDummyMoreProducts = (): MoreProducts => {
     name: 'MoreProducts',
     topMargin: '0px',
     bottomMargin: '0px',
+    topPadding: '50px',
     title: 'Meer Noedels!',
     buttonText: 'Meer noedels',
     background: {
@@ -42,31 +43,31 @@ export const generateDummyMoreProducts = (): MoreProducts => {
         title: '100% Bruine rijstnoedels',
         picture:
           'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg',
-        URL: '/',
+        URL: '/product-single',
       },
       {
         title: 'Boekweitnoedels met zoete aardappel',
         picture:
           'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/4.jpg',
-        URL: '/',
+        URL: '/product-single',
       },
       {
         title: 'Bruine rijstnoedels met pompoen en gember',
         picture:
           'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg',
-        URL: '/',
+        URL: '/product-single',
       },
       {
         title: 'Bruine rijstnoedels met wakame',
         picture:
           'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg',
-        URL: '/',
+        URL: '/product-single',
       },
       {
         title: '100% Bruine rijstnoedels',
         picture:
           'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg',
-        URL: '/',
+        URL: '/product-single',
       },
     ],
   } as MoreProducts;

@@ -8,7 +8,10 @@ import { BodyTextModule } from 'src/model/bodytext-module';
 import { WelcomeModule } from 'src/model/welcome-module';
 import { InstagramWalllModule } from 'src/model/instagram-wall';
 import { FeaturedItemModule } from 'src/model/featured-item';
-import { ItemOverviewModule, ItemOverviewStateModule } from 'src/model/item-overview-module';
+import {
+  ItemOverviewModule,
+  ItemOverviewStateModule,
+} from 'src/model/item-overview-module';
 import { HowToModel } from 'src/model/how-to-model';
 import { IngredientModel } from 'src/model/ingredient-model';
 import { ItemRecipeInfo } from 'src/model/item-recipe-info';
@@ -34,14 +37,20 @@ import { NewsletterModule } from 'src/model/newsletter-module';
 import { FAQOverviewModule } from 'src/model/faq-overview-module';
 import { TabsModule } from 'src/model/tab-module';
 import { ProductDetailHeader } from 'src/model/product-detail-header';
-import { ProductLineOverviewCard, ProductLineOverviewModule } from 'src/product-line-overview/product-line-card';
+import {
+  ProductLineOverviewCard,
+  ProductLineOverviewModule,
+} from 'src/product-line-overview/product-line-card';
 import { RelatedLinksModule } from 'src/model/related-links-module';
 import { ContactForm } from 'src/model/contact-form';
 import { ProductLineSingleModule } from 'src/model/product-line-single-module';
 import { ProductOverviewSimpleModule } from 'src/model/product-overview-simple-module';
 import { LoginModule } from 'src/model/login';
 import { SignUpModule } from 'src/model/sign-up';
-import { NewsOverviewStateModule, NewsOverviewModule } from 'src/model/news-overview-module';
+import {
+  NewsOverviewStateModule,
+  NewsOverviewModule,
+} from 'src/model/news-overview-module';
 import { NotFoundModule } from 'src/model/not-found-module';
 import {
   BusinessOverviewModule,
@@ -187,6 +196,11 @@ export class DummyModel {
   public productLineOverviewModel?: ProductLineOverviewCard;
 
   @ApiModelProperty()
+  public signUpModule?: SignUpModule;
+
+  @ApiModelProperty()
+  public productLineStoryOverviewModule?: ProductLineOverviewModule;
+  @ApiModelProperty()
   public ContactForm?: ContactForm;
 
   @ApiModelProperty()
@@ -194,11 +208,6 @@ export class DummyModel {
 
   @ApiModelProperty()
   public loginModule?: LoginModule;
-
-  @ApiModelProperty()
-  public signUpModule?: SignUpModule;
-  @ApiModelProperty()
-  public productLineStoryOverviewModule?: ProductLineOverviewModule;
 
   @ApiModelProperty()
   public productLineSingleModule?: ProductLineSingleModule;

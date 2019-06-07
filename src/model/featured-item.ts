@@ -4,6 +4,7 @@ import { ApiModelProperty, ApiImplicitBody, ApiUseTags } from '@nestjs/swagger';
 import { Module } from '@nestjs/common';
 import { PageController } from 'src/page/page.controller';
 import { Recipe, generateDummyRecipes } from './recipe';
+import { Link } from './link';
 
 @Module({
   controllers: [PageController],
@@ -15,8 +16,8 @@ export class FeaturedItemModule extends WordPressPostModule {
   @ApiModelProperty()
   public title: string;
 
-  @ApiModelProperty()
-  public buttonText: string;
+  @ApiModelProperty({ type: Link })
+  public button: Link;
 }
 
 export const generateDummyFeaturedItemModule = (
@@ -28,7 +29,93 @@ export const generateDummyFeaturedItemModule = (
     topMargin: '0px',
     bottomMargin: '0px',
     title,
-    buttonText: 'Bekijk meer recepten',
+    button: { content: 'Bekijk meer recepten', route: '/recipe-overview' },
     recipes: generateDummyRecipes(),
+    background: {
+      backgroundPattern:
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
+    },
+    topPadding: '50px',
+  } as FeaturedItemModule;
+};
+
+export const generateDummyFeaturedItemModuleNoPattern = (
+  title: string,
+): FeaturedItemModule => {
+  return {
+    id: uuid(),
+    name: 'featuredItemModule',
+    topMargin: '0px',
+    bottomMargin: '0px',
+    title,
+    button: { content: 'Bekijk meer recepten', route: '/recipe-overview' },
+    recipes: generateDummyRecipes(),
+    background: {
+      backgroundColour: '#f5fafa',
+    },
+
+    curve: {
+      curveBackground: {
+        backgroundPattern:
+          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
+      },
+    },
+    topPadding: '150px',
+  } as FeaturedItemModule;
+};
+
+export const generateDummyFeaturedItemModuleSimple = (
+  title: string,
+): FeaturedItemModule => {
+  return {
+    id: uuid(),
+    name: 'featuredItemModule',
+    topMargin: '0px',
+    bottomMargin: '0px',
+    title,
+    button: { content: 'Bekijk meer recepten', route: '/recipe-overview' },
+    recipes: generateDummyRecipes(),
+    topPadding: '150px',
+  } as FeaturedItemModule;
+};
+
+export const generateDummyFeaturedItemModuleNoPatternCurveWhite = (
+  title: string,
+): FeaturedItemModule => {
+  return {
+    id: uuid(),
+    name: 'featuredItemModule',
+    topMargin: '0px',
+    bottomMargin: '0px',
+    title,
+    button: { content: 'Bekijk meer recepten', route: '/recipe-overview' },
+    recipes: generateDummyRecipes(),
+    background: {
+      backgroundColour: '#f5fafa',
+    },
+
+    curve: {
+      decorCurveVerticalAlignment: 'top',
+    },
+    topPadding: '150px',
+  } as FeaturedItemModule;
+};
+
+export const generateDummyFeaturedItemModuleLightBackground = (
+  title: string,
+): FeaturedItemModule => {
+  return {
+    id: uuid(),
+    name: 'featuredItemModule',
+    topMargin: '0px',
+    bottomMargin: '0px',
+    title,
+    button: { content: 'Bekijk meer recepten', route: '/recipe-overview' },
+    recipes: generateDummyRecipes(),
+    background: {
+      backgroundColour: '#f5fafa',
+    },
+
+    topPadding: '50px',
   } as FeaturedItemModule;
 };

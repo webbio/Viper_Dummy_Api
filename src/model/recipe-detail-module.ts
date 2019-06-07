@@ -25,7 +25,7 @@ export class RecipeDetailModule extends WordPressPostModule {
   public socialMediaButtons: SocialMediaButtons;
 
   @ApiModelProperty({ type: [ItemRecipeInfo] })
-  public itensRecipeInfo: ItemRecipeInfo[];
+  public itemsRecipeInfo: ItemRecipeInfo[];
 
   @ApiModelProperty({ type: [IngredientModel] })
   public ingredients: IngredientModel[];
@@ -74,10 +74,14 @@ export const generateDummyRecipeDetailModule = (): RecipeDetailModule => {
             'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/mail.svg',
         },
       ],
+      curve: {
+        decorCurveVerticalAlignment: 'bottom',
+      },
       id: '44',
       topMargin: '1',
       bottomMargin: '5',
       name: 'RecipeDetailHeader',
+      topPadding: '20px',
     },
     howTo: {
       steps: [
@@ -92,7 +96,7 @@ export const generateDummyRecipeDetailModule = (): RecipeDetailModule => {
     title: 'Vegan chocokoekjes met amandelpasta',
     subTitle:
       '  Deze koekjes kunnen gewoon altijd. Wist je dat je ze ook kunt eten zonder te bakken? Zet ze in dat geval in de vriezer tot je ze gaat eten.',
-    itensRecipeInfo: [
+    itemsRecipeInfo: [
       {
         text: 'Tussendoortje',
         icon:
@@ -145,26 +149,26 @@ export const generateDummyRecipeDetailModule = (): RecipeDetailModule => {
         amount: '50g',
         picture:
           'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/Screenshot+2019-05-14+at+09.54.09.png',
-        URL: '/',
+        URL: '/product-single',
       },
       {
         title: 'Boekweitnoedels met zoete aardappel',
         amount: '50g',
         picture:
           'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/Screenshot+2019-05-14+at+09.55.45.png',
-        URL: '/',
+        URL: '/product-single',
       },
       {
         title: 'Bruine rijstnoedels met pompoen en gember',
         amount: '50g',
         picture:
           'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/Screenshot+2019-05-14+at+09.54.26.png',
-        URL: '/',
+        URL: '/product-single',
       },
     ],
     titleRelatedPosts: 'Gerelateerde producten',
     buttonTextRelatedPosts: 'Meer producten',
-    buttonURLRelatedPosts: '/',
+    buttonURLRelatedPosts: '/product-line-single',
     id: uuid(),
     topMargin: '',
     bottomMargin: '',

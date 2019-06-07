@@ -38,6 +38,10 @@ export class ContactModule extends WordPressPostModule {
 export const generateDummyContactModule = (): ContactModule => {
   return {
     title: 'Neem gelijk contact op',
+    topPadding: '100px',
+    background: {
+      backgroundColour: '#f5fafa',
+    },
     description:
       'Aenean id lorem eleifend, malesuada arcu a, fringilla mauris. Pellentesque dolor lacus, luctus lobortis rhoncus vitae, ultricies vitae justo. Mauris ut interdum purus.',
     subtitleContactAddress: 'Contact adres',

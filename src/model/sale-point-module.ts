@@ -33,6 +33,12 @@ export const generateDummySalePointModule = (): SalePointModule => {
       <br /><br />
       Verkoopt u TerraSana producten en staat uw adres niet vermeld? Neemt u dan contact met ons op? Dan passen wij het z.s.m. aan.`,
     bgcolor: '',
+    curve: {
+      curveBackground: {
+        backgroundColour: '#f5fafa',
+      },
+    },
+    topPadding: '150px',
     imageLinks: [
       {
         logo:

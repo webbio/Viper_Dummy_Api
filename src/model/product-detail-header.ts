@@ -36,9 +36,20 @@ export const generateDummyProductDetailHeader = (): ProductDetailHeader => {
     header: '100% brunine rijstnoedels',
     subHeader: 'Glutenvrij - 250g ',
     backButtonText: 'Terug naar alle noedels',
+    topPadding: '70px',
+    background: {
+      backgroundPattern:
+        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
+    },
+    curve: {
+      decorCurveVerticalAlignment: 'bottom',
+      curveBackground: {
+        backgroundColour: '#f5fafa',
+      },
+    },
     listPictures: [
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/4.jpg',
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.png',
+      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg',
+      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/7.jpg',
       'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg',
     ],
     body:

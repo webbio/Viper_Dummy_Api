@@ -60,35 +60,35 @@ export const generateDummyWelcomeModule = (): WelcomeModule => {
     mainButton1: {
       buttonType: ButtonType.Large,
       content: 'Producten',
-      route: '/products',
+      route: '/product-line-overview',
       imageUrl:
         'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/card1.jpg',
     },
     mainButton2: {
       buttonType: ButtonType.Large,
       content: 'Recepten',
-      route: '/recipes',
+      route: '/recipe-overview',
       imageUrl:
         'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/card2.jpg',
     },
     smallButton1: {
       buttonType: ButtonType.Medium,
       content: 'Recept van de maand: freakshake met curcuma latte!',
-      route: '/products',
+      route: '/recipe-single',
       imageUrl:
         'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/small-card1.png',
     },
     smallButton2: {
       buttonType: ButtonType.Medium,
       content: 'Gezonde snack? Probeer onze nieuwe snackmixen!',
-      route: '/products',
+      route: '/recipe-single',
       imageUrl:
         'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/small-card2.png',
     },
     smallButton3: {
       buttonType: ButtonType.Medium,
       content: 'RECEPT: vegan & glutenvrij courgettebrood',
-      route: '/products',
+      route: '/recipe-single',
       imageUrl:
         'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/small-card3.jpg',
     },

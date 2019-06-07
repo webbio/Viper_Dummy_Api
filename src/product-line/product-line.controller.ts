@@ -8,6 +8,12 @@ export class ProductLineController {
   constructor(private readonly pageService: ProductLineService) {}
 
   @ApiImplicitQuery({
+    name: 'search',
+    description: 'search',
+    required: true,
+    type: String,
+  })
+  @ApiImplicitQuery({
     name: 'category',
     description: 'Filter by  cateogry',
     required: true,
@@ -35,24 +41,13 @@ export class ProductLineController {
   @Get('/productsPagination')
   getProductsWithPagination(@Query() query) {
     const cards = this.pageService.getProductsWithPagination(
+      query.search,
       query.category,
       query.filter,
       parseInt(query.skip),
       parseInt(query.take),
     );
     return cards;
-  }
-
-  @ApiImplicitQuery({
-    name: 'search',
-    description: 'search',
-    required: true,
-    type: String,
-  })
-  @Get('/search')
-  searchProduct(@Query() query) {
-    const products = this.pageService.searchProducts(query.search);
-    return products;
   }
 
   @ApiImplicitQuery({
@@ -69,11 +64,18 @@ export class ProductLineController {
     type: Array,
     collectionFormat: 'multi',
   })
+  @ApiImplicitQuery({
+    name: 'search',
+    description: 'search',
+    required: true,
+    type: String,
+  })
   @Get('/category')
   getCategoryList(@Query() query) {
     const categories = this.pageService.getCategoryList(
       query.category,
       query.product,
+      query.search,
     );
     return categories;
   }
@@ -85,9 +87,15 @@ export class ProductLineController {
     type: Array,
     collectionFormat: 'multi',
   })
+  @ApiImplicitQuery({
+    name: 'search',
+    description: 'search',
+    required: true,
+    type: String,
+  })
   @Get('/products')
   getProductList(@Query() query) {
-    const products = this.pageService.getProducts(query.product);
+    const products = this.pageService.getProducts(query.product, query.search);
     return products;
   }
 }
