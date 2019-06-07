@@ -43,158 +43,166 @@ import { LoginModule } from 'src/model/login';
 import { SignUpModule } from 'src/model/sign-up';
 import { NewsOverviewStateModule, NewsOverviewModule } from 'src/model/news-overview-module';
 import { NotFoundModule } from 'src/model/not-found-module';
-import { BusinessOverviewModule } from 'src/model/business-overview-module';
+import {
+  BusinessOverviewModule,
+  BusinessOverviewProductsState,
+  BusinessOverviewCategoriesState,
+} from 'src/model/business-overview-module';
 
 export class DummyModel {
-         @ApiModelProperty()
-         public id: string;
+  @ApiModelProperty()
+  public id: string;
 
-         @ApiModelProperty()
-         public description: string;
+  @ApiModelProperty()
+  public description: string;
 
-         @ApiModelProperty({ type: [WordPressPostModule] })
-         public wordPressPostModules: WordPressPostModule[];
+  @ApiModelProperty({ type: [WordPressPostModule] })
+  public wordPressPostModules: WordPressPostModule[];
 
-         // change NavBarModule to module you are working on
-         @ApiModelProperty()
-         public playgroundModule?: NavBarModule;
+  // change NavBarModule to module you are working on
+  @ApiModelProperty()
+  public playgroundModule?: NavBarModule;
 
-         @ApiModelProperty()
-         public ctaModule?: CTAModule;
+  @ApiModelProperty()
+  public ctaModule?: CTAModule;
 
-         @ApiModelProperty()
-         public footerModule?: FooterModule;
+  @ApiModelProperty()
+  public footerModule?: FooterModule;
 
-         @ApiModelProperty()
-         public socialMediaButtons?: SocialMediaButtons;
+  @ApiModelProperty()
+  public socialMediaButtons?: SocialMediaButtons;
+  @ApiModelProperty()
+  public businessOverviewProductsReturn?: BusinessOverviewProductsState;
+  @ApiModelProperty()
+  public businessOverviewCategoriesReturn?: BusinessOverviewCategoriesState;
 
-         @ApiModelProperty()
-         public navBarModule?: NavBarModule;
+  @ApiModelProperty()
+  public navBarModule?: NavBarModule;
 
-         @ApiModelProperty()
-         public infoHeaderModule?: InfoHeaderModule;
+  @ApiModelProperty()
+  public infoHeaderModule?: InfoHeaderModule;
 
-         @ApiModelProperty()
-         public bodyTextModule?: BodyTextModule;
+  @ApiModelProperty()
+  public bodyTextModule?: BodyTextModule;
 
-         @ApiModelProperty()
-         public businessOverviewModule?: BusinessOverviewModule;
+  @ApiModelProperty()
+  public businessOverviewModule?: BusinessOverviewModule;
 
-         @ApiModelProperty()
-         public gallerySliderModule?: GallerySliderModule;
+  @ApiModelProperty()
+  public gallerySliderModule?: GallerySliderModule;
 
-         @ApiModelProperty()
-         public relatedProductsSlider?: RelatedProductsSlider;
+  @ApiModelProperty()
+  public relatedProductsSlider?: RelatedProductsSlider;
 
-         @ApiModelProperty()
-         public welcomeModule?: WelcomeModule;
+  @ApiModelProperty()
+  public welcomeModule?: WelcomeModule;
 
-         @ApiModelProperty()
-         public InstagramWalllModule?: InstagramWalllModule;
+  @ApiModelProperty()
+  public InstagramWalllModule?: InstagramWalllModule;
 
-         @ApiModelProperty()
-         public FeaturedItemModule?: FeaturedItemModule;
+  @ApiModelProperty()
+  public FeaturedItemModule?: FeaturedItemModule;
 
-         @ApiModelProperty()
-         public itemOverviewModule?: ItemOverviewModule;
-         @ApiModelProperty()
-         public notFoundModule?: NotFoundModule;
+  @ApiModelProperty()
+  public itemOverviewModule?: ItemOverviewModule;
+  @ApiModelProperty()
+  public notFoundModule?: NotFoundModule;
 
-         @ApiModelProperty()
-         public newsOverviewModule?: NewsOverviewModule;
+  @ApiModelProperty()
+  public newsOverviewModule?: NewsOverviewModule;
 
-         @ApiModelProperty()
-         public card?: CardModel;
+  @ApiModelProperty()
+  public card?: CardModel;
 
-         @ApiModelProperty()
-         public itemOverviewStateModule?: ItemOverviewStateModule;
+  @ApiModelProperty()
+  public itemOverviewStateModule?: ItemOverviewStateModule;
 
-         @ApiModelProperty()
-         public newsOverviewStateModule?: NewsOverviewStateModule;
+  @ApiModelProperty()
+  public newsOverviewStateModule?: NewsOverviewStateModule;
 
-         @ApiModelProperty()
-         public howTo?: HowToModel;
+  @ApiModelProperty()
+  public howTo?: HowToModel;
 
-         @ApiModelProperty()
-         public ingredientModel?: IngredientModel;
+  @ApiModelProperty()
+  public ingredientModel?: IngredientModel;
 
-         @ApiModelProperty()
-         public itemRecipeInfo?: ItemRecipeInfo;
+  @ApiModelProperty()
+  public itemRecipeInfo?: ItemRecipeInfo;
 
-         @ApiModelProperty()
-         public recipeDetailModule?: RecipeDetailModule;
+  @ApiModelProperty()
+  public recipeDetailModule?: RecipeDetailModule;
 
-         @ApiModelProperty()
-         public recipeHeadCard?: RecipeHeadCard;
+  @ApiModelProperty()
+  public recipeHeadCard?: RecipeHeadCard;
 
-         @ApiModelProperty()
-         public relatedProduct?: RelatedProduct;
+  @ApiModelProperty()
+  public relatedProduct?: RelatedProduct;
 
-         @ApiModelProperty()
-         public salePointModule?: SalePointModule;
+  @ApiModelProperty()
+  public salePointModule?: SalePointModule;
 
-         @ApiModelProperty()
-         public ourTeamModule?: OurTeamModule;
+  @ApiModelProperty()
+  public ourTeamModule?: OurTeamModule;
 
-         @ApiModelProperty()
-         public contactModule?: ContactModule;
+  @ApiModelProperty()
+  public contactModule?: ContactModule;
 
-         @ApiModelProperty()
-         public bodyTextExpandedModule?: BodyTextExpandedModule;
+  @ApiModelProperty()
+  public bodyTextExpandedModule?: BodyTextExpandedModule;
 
-         @ApiModelProperty()
-         public notYetImplemented?: NotYetImplemented;
+  @ApiModelProperty()
+  public notYetImplemented?: NotYetImplemented;
 
-         @ApiModelProperty()
-         public toggleModule?: ToggleModule;
+  @ApiModelProperty()
+  public toggleModule?: ToggleModule;
 
-         @ApiModelProperty()
-         public expandablePanel?: ExpandablePanel;
+  @ApiModelProperty()
+  public expandablePanel?: ExpandablePanel;
 
-         @ApiModelProperty()
-         public newsletterModule?: NewsletterModule;
+  @ApiModelProperty()
+  public newsletterModule?: NewsletterModule;
 
-         @ApiModelProperty()
-         public navbarSearchCategory?: NavbarSearchCategory;
+  @ApiModelProperty()
+  public navbarSearchCategory?: NavbarSearchCategory;
 
-         @ApiModelProperty()
-         public navbarSearchItem?: NavbarSearchItem;
+  @ApiModelProperty()
+  public navbarSearchItem?: NavbarSearchItem;
 
-         @ApiModelProperty()
-         public faqOverviewModule?: FAQOverviewModule;
+  @ApiModelProperty()
+  public faqOverviewModule?: FAQOverviewModule;
 
-         @ApiModelProperty()
-         public tabs?: TabsModule;
+  @ApiModelProperty()
+  public tabs?: TabsModule;
 
-         @ApiModelProperty()
-         public productLineReturn?: ProductLineOverviewModule;
+  @ApiModelProperty()
+  public productLineReturn?: ProductLineOverviewModule;
 
-         @ApiModelProperty()
-         public moreProducts?: MoreProducts;
+  @ApiModelProperty()
+  public moreProducts?: MoreProducts;
 
-         @ApiModelProperty()
-         public productDetailHeader?: ProductDetailHeader;
+  @ApiModelProperty()
+  public productDetailHeader?: ProductDetailHeader;
 
-         @ApiModelProperty()
-         public productLineOverviewModel?: ProductLineOverviewCard;
+  @ApiModelProperty()
+  public productLineOverviewModel?: ProductLineOverviewCard;
 
-         @ApiModelProperty()
-         public ContactForm?: ContactForm;
+  @ApiModelProperty()
+  public ContactForm?: ContactForm;
 
-         @ApiModelProperty()
-         public relatedLinksModule?: RelatedLinksModule;
+  @ApiModelProperty()
+  public relatedLinksModule?: RelatedLinksModule;
 
-         @ApiModelProperty()
-         public loginModule?: LoginModule;
+  @ApiModelProperty()
+  public loginModule?: LoginModule;
 
-         @ApiModelProperty()
-         public signUpModule?: SignUpModule;
-         @ApiModelProperty()
-         public productLineStoryOverviewModule?: ProductLineOverviewModule;
+  @ApiModelProperty()
+  public signUpModule?: SignUpModule;
+  @ApiModelProperty()
+  public productLineStoryOverviewModule?: ProductLineOverviewModule;
 
-         @ApiModelProperty()
-         public productLineSingleModule?: ProductLineSingleModule;
+  @ApiModelProperty()
+  public productLineSingleModule?: ProductLineSingleModule;
 
-         @ApiModelProperty()
-         public productOverviewSimpleModule?: ProductOverviewSimpleModule;
-       }
+  @ApiModelProperty()
+  public productOverviewSimpleModule?: ProductOverviewSimpleModule;
+}
