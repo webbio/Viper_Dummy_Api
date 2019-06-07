@@ -1,7 +1,7 @@
 import {
   WordPressPostModule,
-  paddingSmall,
-  paddingMedium,
+  paddingDesktop,
+  paddingMobile,
 } from './wordpress-post-module';
 import {
   ProductLineFilter,
@@ -29,6 +29,14 @@ export const generateProductOverviewSimpleModule = (): ProductOverviewSimpleModu
     filter: generateProductLineFilter(),
     productCardList: generateDummyProductCard(),
     totalItems: 5,
+    topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
   };
 };
 
@@ -40,8 +48,14 @@ export const generateProductOverviewSimpleModuleCurvePatternBottom = (): Product
     name: 'ProductOverviewSimpleModule',
     filter: generateProductLineFilter(),
     productCardList: generateDummyProductCard(),
-    topPadding: paddingSmall,
-    bottomPadding: paddingMedium,
+    topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
     totalItems: 5,
     background: {
       backgroundColour: '#f5fafa',
