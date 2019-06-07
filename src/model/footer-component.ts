@@ -1,9 +1,17 @@
-import { WordPressPostModule } from './wordpress-post-module';
+import {
+  WordPressPostModule,
+  paddingDesktop,
+  paddingMobile,
+} from './wordpress-post-module';
 import * as uuid from 'uuid';
 import { ApiModelProperty } from '@nestjs/swagger';
 import { footerSection } from './footer-section';
+import { PageController } from 'src/page/page.controller';
 import { Link } from './link';
-
+import { Module } from '@nestjs/common';
+@Module({
+  controllers: [PageController],
+})
 export class FooterModule extends WordPressPostModule {
   @ApiModelProperty({ type: [footerSection] })
   public footerSections: footerSection[];
@@ -15,6 +23,14 @@ export class FooterModule extends WordPressPostModule {
 
 export const generateDummyFooterModule = (): FooterModule => {
   return {
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
+    topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
     footerSections: [
       {
         title: 'Onze producten',

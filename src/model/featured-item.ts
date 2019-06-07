@@ -34,7 +34,6 @@ export const generateDummyFeaturedItemModule = (
       backgroundPattern:
         'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
     },
-    topPadding: '50px',
   } as FeaturedItemModule;
 };
 
@@ -59,7 +58,6 @@ export const generateDummyFeaturedItemModuleNoPattern = (
           'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
       },
     },
-    topPadding: '150px',
   } as FeaturedItemModule;
 };
 
@@ -74,7 +72,6 @@ export const generateDummyFeaturedItemModuleSimple = (
     title,
     buttonText: 'Bekijk meer recepten',
     recipes: generateDummyRecipes(),
-    topPadding: '150px',
   } as FeaturedItemModule;
 };
 
@@ -96,7 +93,6 @@ export const generateDummyFeaturedItemModuleNoPatternCurveWhite = (
     curve: {
       decorCurveVerticalAlignment: 'top',
     },
-    topPadding: '150px',
   } as FeaturedItemModule;
 };
 
@@ -114,7 +110,5 @@ export const generateDummyFeaturedItemModuleLightBackground = (
     background: {
       backgroundColour: '#f5fafa',
     },
-
-    topPadding: '50px',
   } as FeaturedItemModule;
 };

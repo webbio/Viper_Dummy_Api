@@ -1,4 +1,8 @@
-import { WordPressPostModule } from './wordpress-post-module';
+import {
+  WordPressPostModule,
+  paddingDesktop,
+  paddingMobile,
+} from './wordpress-post-module';
 import * as uuid from 'uuid';
 import { ApiModelProperty, ApiImplicitBody, ApiUseTags } from '@nestjs/swagger';
 import { Module } from '@nestjs/common';
@@ -22,10 +26,12 @@ export const generateDummyInstagramWallModule = (): InstagramWalllModule => {
     id: uuid(),
     name: 'InstagramModule',
     topMargin: '0px',
-    topPadding: '6px',
-    bottomPadding: '80px',
     bottomMargin: '0px',
     title: 'Bekijk onze instagram wall!',
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingMedium,
+      mobilePadding: paddingMobile.mobilePaddingMedium,
+    },
     background: {
       backgroundPattern:
         'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',

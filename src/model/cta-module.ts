@@ -39,7 +39,7 @@ export const generateDummyCTAModuleHomePage1 = (): CTAModule => {
         location: 'center',
       },
     ],
-    id: uuid(),
+    id: '55',
     name: 'CTAModule',
     bottomMargin: '0px',
     topMargin: '0px',
@@ -62,6 +62,7 @@ export const generateDummyCTAModuleHomePage2 = (): CTAModule => {
           'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
       },
     },
+
     buttons: [
       {
         href: '#',

@@ -1,4 +1,8 @@
-import { WordPressPostModule } from './wordpress-post-module';
+import {
+  WordPressPostModule,
+  paddingDesktop,
+  paddingMobile,
+} from './wordpress-post-module';
 import * as uuid from 'uuid';
 import { ApiModelProperty, ApiImplicitBody, ApiUseTags } from '@nestjs/swagger';
 import { Module } from '@nestjs/common';
@@ -29,9 +33,12 @@ export const generateDummyRelatedProductsSlider = (
   return {
     id: uuid(),
     name: 'RelatedProductsSlider',
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingLarge,
+      mobilePadding: paddingMobile.mobilePaddingLarge,
+    },
     topMargin: '0px',
     bottomMargin: '0px',
-    bottomPadding: '32px',
     background: {
       backgroundPattern:
         'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
@@ -172,9 +179,13 @@ export const generateDummyRelatedProductsSliderNoCurveBackground = (
   return {
     id: uuid(),
     name: 'RelatedProductsSlider',
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingMedium,
+      mobilePadding: paddingMobile.mobilePaddingMedium,
+    },
     topMargin: '0px',
     bottomMargin: '0px',
-    bottomPadding: '32px',
+
     background: {
       backgroundPattern:
         'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
@@ -312,9 +323,13 @@ export const generateDummyRelatedProductsSlider2 = (
   return {
     id: uuid(),
     name: 'RelatedProductsSlider',
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingLarge,
+      mobilePadding: paddingMobile.mobilePaddingLarge,
+    },
     topMargin: '0px',
     bottomMargin: '0px',
-    bottomPadding: '32px',
+
     title,
     buttonLink: '/recipe-overview',
     buttonText: 'Bekijk alle producten',
