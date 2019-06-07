@@ -187,12 +187,8 @@ export class PageService {
         generateDummyProductDetailHeader(),
         generateDummyTabs(),
         generateDummyMoreProducts(),
-        generateDummyFeaturedItemModuleSimple(
-          'Recepten met Bruine Rijstnoedels',
-        ),
-        generateDummyRelatedProductsSliderNoCurveBackground(
-          'Gerelateerde Producten',
-        ),
+        generateDummyFeaturedItemModuleSimple('Recepten met Bruine Rijstnoedels'),
+        generateDummyRelatedProductsSliderNoCurveBackground('Gerelateerde Producten'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
       ],
@@ -297,9 +293,7 @@ export class PageService {
       wordPressPostModules: [
         generateDummyNavBarModule(),
         generateDummyRecipeDetailModule(),
-        generateDummyFeaturedItemModuleNoPatternCurveWhite(
-          'Vergelikbare recepten',
-        ),
+        generateDummyFeaturedItemModuleNoPatternCurveWhite('Vergelikbare recepten'),
         generateDummyRelatedProductsSlider('Gerelateerde Producten'),
         generateDummyNewsletterModule(),
         generateDummyFooterModule(),
@@ -373,11 +367,7 @@ export class PageService {
       id: uuid(),
       route: 'terrasana.com/not-found',
       description: 'Not Found module',
-      wordPressPostModules: [
-        generateDummyNavBarModule(),
-        generateDummyNotFoundModule(),
-        generateDummyFooterModule(),
-      ],
+      wordPressPostModules: [generateDummyNavBarModule(), generateDummyNotFoundModule(), generateDummyFooterModule()],
     } as PageModel,
     {
       id: uuid(),
@@ -408,10 +398,22 @@ export class PageService {
     {
       id: uuid(),
       route: 'terrasana.com/business',
-      description: 'Zakelijk',
+      description: 'Business',
       wordPressPostModules: [
         generateDummyNavBarModule(),
+        generateDummyInfoHeaderModule(
+          'DOWNLOADS',
+          'Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.',
+          'center',
+          '',
+          '',
+          '',
+          '',
+          '',
+          '',
+        ),
         generateDummyBusinessOverviewData(),
+        generateDummyFooterModule(),
       ],
     } as PageModel,
     {
@@ -430,19 +432,13 @@ export class PageService {
       id: uuid(),
       route: 'terrasana.com/business-login',
       description: 'Zakelijk',
-      wordPressPostModules: [
-        generateDummyNavBarModule(),
-        generateDummyLoginModule(),
-      ],
+      wordPressPostModules: [generateDummyNavBarModule(), generateDummyLoginModule()],
     } as PageModel,
     {
       id: uuid(),
       route: 'terrasana.com/business-new-account',
       description: 'Zakelijk',
-      wordPressPostModules: [
-        generateDummyNavBarModule(),
-        generateDummySignUpModule(),
-      ],
+      wordPressPostModules: [generateDummyNavBarModule(), generateDummySignUpModule()],
     } as PageModel,
   ];
 
