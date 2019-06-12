@@ -1,13 +1,8 @@
-import {
-  WordPressPostModule,
-  paddingDesktop,
-  paddingMobile,
-} from './wordpress-post-module';
-import * as uuid from 'uuid';
-import { ApiModelProperty } from '@nestjs/swagger';
-import { CardModel } from './card-model';
-import { getCards } from 'src/card/card-methods';
-import { generateProductLineStoryOverviewModule } from 'dist/src/product-line-overview/product-line-generator';
+import { WordPressPostModule, paddingDesktop, paddingMobile } from "./wordpress-post-module";
+import * as uuid from "uuid";
+import { ApiModelProperty } from "@nestjs/swagger";
+import { CardModel } from "./card-model";
+import { getCards } from "src/card/card-methods";
 
 class BusinessOverviewLinks {
   @ApiModelProperty()
@@ -79,219 +74,204 @@ export class BusinessOverviewModule extends WordPressPostModule {
 }
 
 const emptyLinks: BusinessOverviewLinks = {
-  downloadAlleZip: 'www.google.com',
-  downloadAlleVideos: '/',
-  downloadAlleProductInfo: '/',
-  downloadAlleProductPhoto: '/',
+  downloadAlleZip: "www.google.com",
+  downloadAlleVideos: "/",
+  downloadAlleProductInfo: "/",
+  downloadAlleProductPhoto: "/"
 };
 
 const generateFullProductLine = (): BusinessOverviewProductLine[] => {
   const productLineList: BusinessOverviewProductLine[] = [];
 
   productLineList.push({
-    title: 'Latte',
+    title: "Latte",
     id: uuid(),
-    links: emptyLinks,
+    links: emptyLinks
   });
   productLineList.push({
-    title: 'Vegan cakes',
+    title: "Vegan cakes",
     id: uuid(),
-    links: emptyLinks,
+    links: emptyLinks
   });
   productLineList.push({
-    title: 'Nottenpasta',
+    title: "Nottenpasta",
     id: uuid(),
-    links: emptyLinks,
+    links: emptyLinks
   });
   productLineList.push({
-    title: 'Raw superfood',
+    title: "Raw superfood",
     id: uuid(),
-    links: emptyLinks,
+    links: emptyLinks
   });
   productLineList.push({
-    title: 'Meditarrane keuken',
+    title: "Meditarrane keuken",
     id: uuid(),
-    links: emptyLinks,
+    links: emptyLinks
   });
   productLineList.push({
-    title: 'Japan moderne keuken',
+    title: "Japan moderne keuken",
     id: uuid(),
-    links: emptyLinks,
+    links: emptyLinks
   });
   productLineList.push({
-    title: 'Drop',
+    title: "Drop",
     id: uuid(),
-    links: emptyLinks,
+    links: emptyLinks
   });
   productLineList.push({
-    title: 'Noten, zaden en zuivruchten',
+    title: "Noten, zaden en zuivruchten",
     id: uuid(),
-    links: emptyLinks,
+    links: emptyLinks
   });
   productLineList.push({
-    title: 'Muesli en cereals',
+    title: "Muesli en cereals",
     id: uuid(),
-    links: emptyLinks,
+    links: emptyLinks
   });
   productLineList.push({
-    title: 'Granen en rijst',
+    title: "Granen en rijst",
     id: uuid(),
-    links: emptyLinks,
+    links: emptyLinks
   });
   productLineList.push({
-    title: 'Melen',
+    title: "Melen",
     id: uuid(),
-    links: emptyLinks,
+    links: emptyLinks
   });
   productLineList.push({
-    title: 'Peulvruchten',
+    title: "Peulvruchten",
     id: uuid(),
-    links: emptyLinks,
+    links: emptyLinks
   });
   productLineList.push({
-    title: 'Japan macrobiotisch',
+    title: "Japan macrobiotisch",
     id: uuid(),
-    links: emptyLinks,
+    links: emptyLinks
   });
   productLineList.push({
-    title: 'Kokos',
+    title: "Kokos",
     id: uuid(),
-    links: emptyLinks,
+    links: emptyLinks
   });
   productLineList.push({
-    title: 'Broodvarianten',
+    title: "Broodvarianten",
     id: uuid(),
-    links: emptyLinks,
+    links: emptyLinks
   });
   productLineList.push({
-    title: 'Ahornsiroop',
+    title: "Ahornsiroop",
     id: uuid(),
-    links: emptyLinks,
+    links: emptyLinks
   });
   productLineList.push({
-    title: 'Chips',
+    title: "Chips",
     id: uuid(),
-    links: emptyLinks,
+    links: emptyLinks
   });
   productLineList.push({
-    title: 'Wafels',
+    title: "Wafels",
     id: uuid(),
-    links: emptyLinks,
+    links: emptyLinks
   });
   productLineList.push({
-    title: 'Choco-treats',
+    title: "Choco-treats",
     id: uuid(),
-    links: emptyLinks,
+    links: emptyLinks
   });
   productLineList.push({
-    title: 'Conserven',
+    title: "Conserven",
     id: uuid(),
-    links: emptyLinks,
+    links: emptyLinks
   });
 
   return productLineList;
 };
 
-export const generateProductLineJapanCategories = (
-  amount,
-): BusinessOverviewCategory[] => {
+export const generateProductLineJapanCategories = (amount): BusinessOverviewCategory[] => {
   let productLineList: BusinessOverviewCategory[] = [];
   productLineList.push({
-    title: 'Noedels',
-    pictureURL:
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/6.jpg',
+    title: "Noedels",
+    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/6.jpg",
     links: emptyLinks,
-    id: uuid(),
+    id: uuid()
   });
   productLineList.push({
-    title: 'Zeewieren',
-    pictureURL:
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/1.jpg',
+    title: "Zeewieren",
+    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/1.jpg",
     links: emptyLinks,
-    id: uuid(),
+    id: uuid()
   });
   productLineList.push({
-    title: 'Paddenstoelen en seitan',
-    pictureURL:
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg',
+    title: "Paddenstoelen en seitan",
+    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg",
     links: emptyLinks,
 
-    id: uuid(),
+    id: uuid()
   });
   productLineList.push({
-    title: 'Rijst, bonen, zaden',
-    pictureURL:
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg',
+    title: "Rijst, bonen, zaden",
+    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg",
     links: emptyLinks,
 
-    id: uuid(),
+    id: uuid()
   });
   productLineList.push({
-    title: 'Bind- en zoetmiddelen',
-    pictureURL:
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/4.jpg',
+    title: "Bind- en zoetmiddelen",
+    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/4.jpg",
     links: emptyLinks,
-    id: uuid(),
+    id: uuid()
   });
   productLineList.push({
-    title: 'Sojasauzen',
-    pictureURL:
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg',
+    title: "Sojasauzen",
+    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg",
     links: emptyLinks,
-    id: uuid(),
+    id: uuid()
   });
   productLineList.push({
-    title: 'Miso',
-    pictureURL:
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/1.jpg',
+    title: "Miso",
+    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/1.jpg",
     links: emptyLinks,
-    id: uuid(),
+    id: uuid()
   });
   productLineList.push({
-    title: 'Ume(boshi)',
-    pictureURL:
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/1.jpg',
+    title: "Ume(boshi)",
+    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/1.jpg",
     links: emptyLinks,
-    id: uuid(),
+    id: uuid()
   });
   productLineList.push({
-    title: 'Smaakmakers',
-    pictureURL:
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg',
+    title: "Smaakmakers",
+    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg",
     links: emptyLinks,
-    id: uuid(),
+    id: uuid()
   });
   productLineList.push({
-    title: 'Crackers',
-    pictureURL:
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg',
+    title: "Crackers",
+    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg",
     links: emptyLinks,
-    id: uuid(),
+    id: uuid()
   });
 
   productLineList.push({
-    title: 'Non-food',
-    pictureURL:
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/4.jpg',
+    title: "Non-food",
+    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/4.jpg",
     links: emptyLinks,
 
-    id: uuid(),
+    id: uuid()
   });
 
   productLineList.push({
-    title: 'ALLES VOOR SUSHI',
-    pictureURL:
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/1.jpg',
+    title: "ALLES VOOR SUSHI",
+    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/1.jpg",
     links: emptyLinks,
 
-    id: uuid(),
+    id: uuid()
   });
   productLineList.push({
-    title: 'Noedels',
-    pictureURL:
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/6.jpg',
+    title: "Noedels",
+    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/6.jpg",
     links: emptyLinks,
-    id: uuid(),
+    id: uuid()
   });
   if (amount < productLineList.length) {
     return productLineList.slice(0, amount);
@@ -302,73 +282,63 @@ export const generateProductLineJapanCategories = (
   return productLineList.slice(0, amount);
 };
 
-export const generateProductLineNoedelsProduct = (
-  amount,
-): BusinessOverviewProduct[] => {
+export const generateProductLineNoedelsProduct = (amount): BusinessOverviewProduct[] => {
   let productLineList: BusinessOverviewProduct[] = [];
   productLineList.push({
-    title: 'Bruine rijstnoedels met pompoen en gember',
-    description: 'Glutenvrij - 250g',
-    pictureURL:
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/6.jpg',
+    title: "Bruine rijstnoedels met pompoen en gember",
+    description: "Glutenvrij - 250g",
+    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/6.jpg",
     links: emptyLinks,
-    id: uuid(),
+    id: uuid()
   });
   productLineList.push({
-    title: 'Boekweitnoedels met zoete aardappel',
-    description: 'Glutenvrij - 250g',
-    pictureURL:
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/1.jpg',
+    title: "Boekweitnoedels met zoete aardappel",
+    description: "Glutenvrij - 250g",
+    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/1.jpg",
     links: emptyLinks,
-    id: uuid(),
+    id: uuid()
   });
   productLineList.push({
-    title: 'Bruine rijstnoedels met wakame',
-    description: 'Glutenvrij - 250g',
-    pictureURL:
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg',
+    title: "Bruine rijstnoedels met wakame",
+    description: "Glutenvrij - 250g",
+    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg",
     links: emptyLinks,
-    id: uuid(),
+    id: uuid()
   });
   productLineList.push({
-    title: '100% Bruine rijstnoedels',
-    description: 'Glutenvrij - 250g',
-    pictureURL:
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg',
+    title: "100% Bruine rijstnoedels",
+    description: "Glutenvrij - 250g",
+    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg",
     links: emptyLinks,
-    id: uuid(),
+    id: uuid()
   });
   productLineList.push({
-    title: 'Boekweitnoedels met zoete aardappel',
-    description: 'Glutenvrij - 250g',
-    pictureURL:
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/4.jpg',
+    title: "Boekweitnoedels met zoete aardappel",
+    description: "Glutenvrij - 250g",
+    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/4.jpg",
     links: emptyLinks,
-    id: uuid(),
+    id: uuid()
   });
   productLineList.push({
-    title: 'Bruine rijstnoedels met wakame',
-    description: 'Glutenvrij - 250g',
-    pictureURL:
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg',
+    title: "Bruine rijstnoedels met wakame",
+    description: "Glutenvrij - 250g",
+    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg",
     links: emptyLinks,
-    id: uuid(),
+    id: uuid()
   });
   productLineList.push({
-    title: '100% Bruine rijstnoedels',
-    description: 'Glutenvrij - 250g',
-    pictureURL:
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/1.jpg',
+    title: "100% Bruine rijstnoedels",
+    description: "Glutenvrij - 250g",
+    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/1.jpg",
     links: emptyLinks,
-    id: uuid(),
+    id: uuid()
   });
   productLineList.push({
-    title: 'Boekweitnoedels met zoete aardappel',
-    description: 'Glutenvrij - 250g',
-    pictureURL:
-      'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg',
+    title: "Boekweitnoedels met zoete aardappel",
+    description: "Glutenvrij - 250g",
+    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg",
     links: emptyLinks,
-    id: uuid(),
+    id: uuid()
   });
   if (amount < productLineList.length) {
     return productLineList.slice(0, amount);
@@ -382,17 +352,15 @@ const TOTAL_CATEGORIES = 84;
 const TOTAL_PRODUCTS = 12;
 export const generateDummyBusinessOverviewData = (): BusinessOverviewModule => {
   const generatedProductLineList = generateFullProductLine();
-  const generatedCategoryList = generateProductLineJapanCategories(
-    TOTAL_CATEGORIES,
-  );
+  const generatedCategoryList = generateProductLineJapanCategories(TOTAL_CATEGORIES);
 
   return {
-    name: 'BusinessOverviewModule',
-    topMargin: '0px',
-    bottomMargin: '0px',
-    sidebarTitle: 'Productlijnen',
+    name: "BusinessOverviewModule",
+    topMargin: "0px",
+    bottomMargin: "0px",
+    sidebarTitle: "Productlijnen",
     background: {
-      backgroundColour: '#F5FAFA',
+      backgroundColour: "#F5FAFA"
     },
     productLineList: generatedProductLineList,
     totalCategories: generatedCategoryList.length,
@@ -400,12 +368,12 @@ export const generateDummyBusinessOverviewData = (): BusinessOverviewModule => {
     categoryList: generatedCategoryList.slice(0, 12),
     bottomPadding: {
       desktopPadding: paddingDesktop.desktopPaddingSmall,
-      mobilePadding: paddingMobile.mobilePaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall
     },
     topPadding: {
       desktopPadding: paddingDesktop.desktopPaddingSmall,
-      mobilePadding: paddingMobile.mobilePaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingSmall
     },
-    id: uuid(),
+    id: uuid()
   };
 };
