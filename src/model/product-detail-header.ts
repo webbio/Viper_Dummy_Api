@@ -7,6 +7,7 @@ import { ApiModelProperty, ApiImplicitBody, ApiUseTags } from '@nestjs/swagger';
 import { Module } from '@nestjs/common';
 import { PageController } from 'src/page/page.controller';
 import { Link } from './link';
+import { ShareSocialMediaButtons } from './social-media-module';
 
 @Module({
   controllers: [PageController],
@@ -29,9 +30,15 @@ export class ProductDetailHeader extends WordPressPostModule {
 
   @ApiModelProperty({ type: [String] })
   listPictures: string[];
+
+  @ApiModelProperty()
+  public socialMediaButtons: ShareSocialMediaButtons;
+
 }
 
 export const generateDummyProductDetailHeader = (): ProductDetailHeader => {
+  const webbioURL = 'https://www.webbio.nl';
+  const titleSharing = 'Vegan chocokoekjes met amandelpasta';
   return {
     id: '9',
     name: 'ProductDetailHeader',
@@ -40,6 +47,34 @@ export const generateDummyProductDetailHeader = (): ProductDetailHeader => {
     header: '100% brunine rijstnoedels',
     subHeader: 'Glutenvrij - 250g ',
     backButtonText: 'Terug naar alle noedels',
+    socialMediaButtons: {
+      facebook: { hashtag: 'terrasana', url: webbioURL, title: titleSharing },
+      linkedin: {
+        url: webbioURL,
+        title: titleSharing,
+        description: 'Description sharing',
+      },
+      twitter: {
+        url: webbioURL,
+        title: titleSharing,
+        via: 'terrasana',
+        hashtags: ['veganFood', 'greenFood', 'organicFood', 'terrasana', 'netherlands'],
+      },
+      email: {
+        url: webbioURL,
+        subject: titleSharing,
+      },
+      whatsapp: {
+        url: webbioURL,
+        separator: ' - ',
+        title: titleSharing,
+      },
+      pinterest: {
+        url: webbioURL,
+        title: titleSharing,
+        media: 'https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/image-featured.1ebed0b8.jpg',
+      },
+    },
     bottomPadding: {
       desktopPadding: paddingDesktop.desktopPaddingSmall,
       mobilePadding: paddingMobile.mobilePaddingSmall,
