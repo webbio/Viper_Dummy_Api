@@ -3,7 +3,6 @@ import { ApiModelProperty } from '@nestjs/swagger';
 import { NavBarModule } from 'src/model/nav-bar-module';
 import { CTAModule } from 'src/model/cta-module';
 import { FooterModule } from 'src/model/footer-component';
-import { SocialMediaButtons } from 'src/model/social-media-buttons';
 import { BodyTextModule } from 'src/model/bodytext-module';
 import { WelcomeModule } from 'src/model/welcome-module';
 import { InstagramWalllModule } from 'src/model/instagram-wall';
@@ -57,6 +56,8 @@ import {
   BusinessOverviewProductsState,
   BusinessOverviewCategoriesState,
 } from 'src/model/business-overview-module';
+import { LikeSocialMediaButtons, ShareSocialMediaButtons } from 'src/model/social-media-module';
+
 
 export class DummyModel {
   @ApiModelProperty()
@@ -79,7 +80,9 @@ export class DummyModel {
   public footerModule?: FooterModule;
 
   @ApiModelProperty()
-  public socialMediaButtons?: SocialMediaButtons;
+  public likeMediaButtons?: LikeSocialMediaButtons;
+  @ApiModelProperty()
+  public shareMediaButtons?: ShareSocialMediaButtons;
   @ApiModelProperty()
   public businessOverviewProductsReturn?: BusinessOverviewProductsState;
   @ApiModelProperty()

@@ -1,25 +1,24 @@
 import { BodyTextModule } from './bodytext-module';
 import { ApiModelProperty } from '@nestjs/swagger';
-import {
-  SocialMediaButtons,
-  generateDummySocialMediaButtons,
-} from './social-media-buttons';
+
 import uuid = require('uuid');
 import { Author } from './author';
 import { paddingDesktop, paddingMobile } from './wordpress-post-module';
+import { SocialMediaOptions, ShareSocialMediaButtons } from './social-media-module';
 
 export class BodyTextExpandedModule extends BodyTextModule {
   @ApiModelProperty()
   public author: Author;
   @ApiModelProperty()
-  public socialMediaButtons: SocialMediaButtons;
+  public socialMediaButtons: ShareSocialMediaButtons;
 }
 
 export const generateBodyTextExpandedModule = (): BodyTextExpandedModule => {
+  const webbioURL = 'https://www.webbio.nl';
+  const titleSharing = 'Vegan chocokoekjes met amandelpasta';
   return {
     author: {
-      iconURL:
-        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/img%403x.png',
+      iconURL: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/img%403x.png',
       displayName: 'Sarah de Jong',
       title: 'Marketing Manager',
       date: '22 nov. 2018',
@@ -43,7 +42,34 @@ export const generateBodyTextExpandedModule = (): BodyTextExpandedModule => {
     },
     containerSize: 'large',
     name: 'bodyTextExpandedModule',
-    socialMediaButtons: generateDummySocialMediaButtons(),
+    socialMediaButtons: {
+      facebook: { url: webbioURL, title: titleSharing, hashtag: '#terrasana' },
+      linkedin: {
+        url: webbioURL,
+        title: titleSharing,
+        description: 'Description sharing',
+      },
+      twitter: {
+        url: webbioURL,
+        title: titleSharing,
+        via: 'terrasana',
+        hashtags: ['veganFood', 'greenFood', 'organicFood', 'terrasana', 'netherlands'],
+      },
+      email: {
+        url: webbioURL,
+        subject: titleSharing,
+      },
+      whatsapp: {
+        url: webbioURL,
+        separator: ' - ',
+        title: titleSharing,
+      },
+      pinterest: {
+        url: webbioURL,
+        title: titleSharing,
+        media: 'https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/image-featured.1ebed0b8.jpg',
+      },
+    },
     topMargin: '0px',
   };
 };

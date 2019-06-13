@@ -10,78 +10,81 @@ import { HowToModel } from './how-to-model';
 import { IngredientModel } from './ingredient-model';
 import { ItemRecipeInfo } from './item-recipe-info';
 import { RelatedProduct } from './related-product';
-import { SocialMediaButtons } from './social-media-buttons';
+import { ENAMETOOLONG } from 'constants';
+import { ShareSocialMediaButtons } from './social-media-module';
 
 export class RecipeDetailModule extends WordPressPostModule {
-  @ApiModelProperty()
-  public bgcolor?: string;
+         @ApiModelProperty()
+         public bgcolor?: string;
 
-  @ApiModelProperty()
-  public title: string;
+         @ApiModelProperty()
+         public title: string;
 
-  @ApiModelProperty()
-  public subTitle: string;
+         @ApiModelProperty()
+         public subTitle: string;
 
-  @ApiModelProperty()
-  public howTo: HowToModel;
+         @ApiModelProperty()
+         public howTo: HowToModel;
 
-  @ApiModelProperty()
-  public socialMediaButtons: SocialMediaButtons;
+         @ApiModelProperty()
+         public socialMediaButtons: ShareSocialMediaButtons;
 
-  @ApiModelProperty({ type: [ItemRecipeInfo] })
-  public itemsRecipeInfo: ItemRecipeInfo[];
+         @ApiModelProperty({ type: [ItemRecipeInfo] })
+         public itemsRecipeInfo: ItemRecipeInfo[];
 
-  @ApiModelProperty({ type: [IngredientModel] })
-  public ingredients: IngredientModel[];
+         @ApiModelProperty({ type: [IngredientModel] })
+         public ingredients: IngredientModel[];
 
-  @ApiModelProperty()
-  public ingredientsPics: string[];
+         @ApiModelProperty()
+         public ingredientsPics: string[];
 
-  @ApiModelProperty()
-  public sidebarTitle: string;
+         @ApiModelProperty()
+         public sidebarTitle: string;
 
-  @ApiModelProperty()
-  public buttonTextRelatedPosts: string;
+         @ApiModelProperty()
+         public buttonTextRelatedPosts: string;
 
-  @ApiModelProperty()
-  public buttonURLRelatedPosts: string;
+         @ApiModelProperty()
+         public buttonURLRelatedPosts: string;
 
-  @ApiModelProperty()
-  public titleRelatedPosts: string;
+         @ApiModelProperty()
+         public titleRelatedPosts: string;
 
-  @ApiModelProperty({ type: [RelatedProduct] })
-  public productsRelatedPosts: RelatedProduct[];
-}
+         @ApiModelProperty({ type: [RelatedProduct] })
+         public productsRelatedPosts: RelatedProduct[];
+       }
 
 export const generateDummyRecipeDetailModule = (): RecipeDetailModule => {
+  const webbioURL = 'https://www.webbio.nl';
+  const titleSharing = 'Vegan chocokoekjes met amandelpasta';
   return {
     socialMediaButtons: {
-      footerButtons: [
-        {
-          href: 'fb',
-          icon:
-            'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/facebook.svg',
-        },
-        {
-          href: 'linked',
-          icon:
-            'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/linkedin.svg',
-        },
-        {
-          href: 'twitter',
-          icon:
-            'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/twitter.svg',
-        },
-        {
-          href: 'mail',
-          icon:
-            'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/mail.svg',
-        },
-      ],
-      id: '44',
-      topMargin: '1',
-      bottomMargin: '5',
-      name: 'RecipeDetailHeader',
+      facebook: { hashtag: 'terrasana', url: webbioURL, title: titleSharing },
+      linkedin: {
+        url: webbioURL,
+        title: titleSharing,
+        description: 'Description sharing',
+      },
+      twitter: {
+        url: webbioURL,
+        title: titleSharing,
+        via: 'terrasana',
+        hashtags: ['veganFood', 'greenFood', 'organicFood', 'terrasana', 'netherlands'],
+      },
+      email: {
+        url: webbioURL,
+        subject: titleSharing,
+      },
+      whatsapp: {
+        url: webbioURL,
+        separator: ' - ',
+        title: titleSharing,
+      },
+      pinterest: {
+        url: webbioURL,
+        title: titleSharing,
+        media: 'https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/image-featured.1ebed0b8.jpg',
+      },
     },
     howTo: {
       steps: [
@@ -99,28 +102,23 @@ export const generateDummyRecipeDetailModule = (): RecipeDetailModule => {
     itemsRecipeInfo: [
       {
         text: 'Tussendoortje',
-        icon:
-          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/type.svg',
+        icon: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/type.svg',
       },
       {
         text: '15 koekjes',
-        icon:
-          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/person.svg',
+        icon: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/person.svg',
       },
       {
         text: '15-20 minuten',
-        icon:
-          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/time.svg',
+        icon: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/time.svg',
       },
       {
         text: 'Vegan',
-        icon:
-          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/check.svg',
+        icon: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/check.svg',
       },
       {
         text: 'Glutenvrij',
-        icon:
-          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/check.svg',
+        icon: 'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/check.svg',
       },
     ],
     ingredients: [
