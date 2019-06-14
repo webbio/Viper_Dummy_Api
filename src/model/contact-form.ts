@@ -1,4 +1,5 @@
 import { ApiModelProperty } from '@nestjs/swagger';
+import { Placeholder } from './placeholder-fields';
 
 export class ContactForm {
   @ApiModelProperty()
@@ -9,4 +10,6 @@ export class ContactForm {
   public privacyText?: string;
   @ApiModelProperty()
   public privacyLink?: string;
+  @ApiModelProperty({ type: Placeholder })
+  public placeholderField?: Placeholder;
 }

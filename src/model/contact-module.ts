@@ -78,6 +78,14 @@ export const generateDummyContactModule = (): ContactModule => {
       name: 'name',
       privacyText: 'Wanneer je op verzenden drukt ga je akkoord met ons',
       privacyLink: '/privacy',
+      placeholderField: {
+        email: 'E-mailadres',
+        name: 'Naam',
+        lastName: 'Achternaam',
+        companyName: 'Bedrijfsnaam',
+        phoneNumber: 'Telefoonnummer',
+        message: 'Bericht',
+      },
     },
 
     id: uuid(),

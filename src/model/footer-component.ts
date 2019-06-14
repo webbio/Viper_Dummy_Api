@@ -9,6 +9,7 @@ import { footerSection } from './footer-section';
 import { PageController } from 'src/page/page.controller';
 import { Link } from './link';
 import { Module } from '@nestjs/common';
+import { LikeSocialMediaButtons } from './social-media-module';
 @Module({
   controllers: [PageController],
 })
@@ -19,10 +20,23 @@ export class FooterModule extends WordPressPostModule {
   public footerLinks: Link[];
   @ApiModelProperty()
   public logo: string;
+  @ApiModelProperty({ type: LikeSocialMediaButtons })
+  public likeSocialMedia: LikeSocialMediaButtons;
 }
+
+export const generateLikeSocialMediaButtons = (): LikeSocialMediaButtons => {
+  return {
+    facebook: 'https://www.facebook.com/TerraSana/',
+    linkedin: 'https://www.linkedin.com/company/terrasana-natuurvoeding/',
+    twitter: 'https://twitter.com/terrasananl',
+    instagram: 'https://www.instagram.com/terrasana_positive_eating/',
+    youtube: 'https://www.youtube.com/user/TerraSanaNL',
+  };
+};
 
 export const generateDummyFooterModule = (): FooterModule => {
   return {
+    likeSocialMedia: generateLikeSocialMediaButtons(),
     bottomPadding: {
       desktopPadding: paddingDesktop.desktopPaddingSmall,
       mobilePadding: paddingMobile.mobilePaddingSmall,

@@ -5,6 +5,7 @@ import {
 } from './wordpress-post-module';
 import { ApiModelProperty } from '@nestjs/swagger';
 import { Link } from './link';
+import { Placeholder } from './placeholder-fields';
 
 export class SignUpModule extends WordPressPostModule {
   @ApiModelProperty()
@@ -17,6 +18,8 @@ export class SignUpModule extends WordPressPostModule {
   public link: Link;
   @ApiModelProperty()
   public options: string[];
+  @ApiModelProperty({ type: Placeholder })
+  public placeholderField?: Placeholder;
 }
 
 export const generateDummySignUpModule = (): SignUpModule => {
@@ -24,11 +27,11 @@ export const generateDummySignUpModule = (): SignUpModule => {
     title: 'Nieuw account aanmaken',
     content:
       'Aenean id lorem eleifend, malesuada arcu afringilla mauris. Pellentesque dolor lacus, luctus.',
-    button: { content: 'Account aanmaken', route: '/' },
-    link: { content: 'Nieuw account aanmaken', route: '/' },
+    button: { content: 'Account aanmaken', route: '/business-login' },
+    link: { content: 'Nieuw account aanmaken', route: '/business-new-account' },
     options: ['Nederlands', 'Engels', 'Frans'],
     id: '9',
-    name: 'LoginModule',
+    name: 'SignUpModule',
     topMargin: '0px',
     bottomMargin: '0px',
     topPadding: {
@@ -38,6 +41,13 @@ export const generateDummySignUpModule = (): SignUpModule => {
     bottomPadding: {
       desktopPadding: paddingDesktop.desktopPaddingSmall,
       mobilePadding: paddingMobile.mobilePaddingSmall,
+    },
+    placeholderField: {
+      companyName: 'Bedrijfsnaam',
+      password: 'Wachtwoord',
+      confirmPassword: 'Herhaal wachtwoord',
+      email: 'E-mailadres',
+      language: 'Selecteer je taalvoorkeur',
     },
   };
 };

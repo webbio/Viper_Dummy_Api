@@ -5,6 +5,7 @@ import {
 } from './wordpress-post-module';
 import * as uuid from 'uuid';
 import { ApiModelProperty } from '@nestjs/swagger';
+import { Placeholder } from './placeholder-fields';
 
 export class NewsletterModule extends WordPressPostModule {
   @ApiModelProperty()
@@ -13,6 +14,8 @@ export class NewsletterModule extends WordPressPostModule {
   public text: string;
   @ApiModelProperty()
   public pictureURL: string;
+  @ApiModelProperty({ type: Placeholder })
+  public placeholderField: Placeholder;
 }
 
 export const generateDummyNewsletterModule = (): NewsletterModule => {
@@ -39,5 +42,6 @@ export const generateDummyNewsletterModule = (): NewsletterModule => {
       desktopPadding: paddingDesktop.desktopPaddingMedium,
       mobilePadding: paddingMobile.mobilePaddingMedium,
     },
+    placeholderField: { email: 'E-mailadres', name: 'Naam' },
   };
 };
