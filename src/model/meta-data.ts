@@ -6,4 +6,7 @@ export class MetaData {
 
   @ApiModelProperty()
   public content: string;
+
+  @ApiModelProperty()
+  public description: string;
 }

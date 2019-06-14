@@ -66,7 +66,8 @@ export class PageService {
       route: "terrasana.com",
       metaData: {
         title: "Homepage",
-        content: "The landing page of the webpage"
+        content: "The landing page of the webpage",
+        description: "The landing page of the webpage"
       },
       wordPressPostModules: [
         generateDummyNavBarModule(),
@@ -82,10 +83,10 @@ export class PageService {
     {
       id: uuid(),
       route: "terrasana.com/product-line-overview",
-
       metaData: {
         title: "Product line overview",
-        content: "Product line overview"
+        content: "Product line overview",
+        description: "Description of page"
       },
       wordPressPostModules: [
         generateDummyNavBarModule(),
@@ -112,7 +113,8 @@ export class PageService {
 
       metaData: {
         title: "Product line single",
-        content: "Product line single"
+        content: "Product line single",
+        description: "Description of page"
       },
       wordPressPostModules: [
         generateDummyNavBarModule(),
@@ -139,7 +141,8 @@ export class PageService {
       route: "terrasana.com/product-line-story-single",
       metaData: {
         title: "Product line story single",
-        content: "Product line story single"
+        content: "Product line story single",
+        description: "Description of page"
       },
       wordPressPostModules: [
         generateDummyNavBarModule(),
@@ -170,7 +173,8 @@ export class PageService {
       route: "terrasana.com/product-group",
       metaData: {
         title: "Product group",
-        content: "Product group"
+        content: "Product group",
+        description: "Description of page"
       },
       wordPressPostModules: [
         generateDummyNavBarModule(),
@@ -198,7 +202,8 @@ export class PageService {
       route: "terrasana.com/product-single",
       metaData: {
         title: "Product Single",
-        content: "Product Single"
+        content: "Product Single",
+        description: "Description of page"
       },
       wordPressPostModules: [
         generateDummyNavBarModule(),
@@ -216,7 +221,8 @@ export class PageService {
       route: "terrasana.com/news-overview",
       metaData: {
         title: "News Overview",
-        content: "News Overview"
+        content: "News Overview",
+        description: "Description of page"
       },
       wordPressPostModules: [
         generateDummyNavBarModule(),
@@ -242,7 +248,8 @@ export class PageService {
       route: "terrasana.com/news-single",
       metaData: {
         title: "News Single",
-        content: "News Single"
+        content: "News Single",
+        description: "Description of page"
       },
       wordPressPostModules: [
         generateDummyNavBarModule(),
@@ -269,7 +276,8 @@ export class PageService {
       route: "terrasana.com/recipe-overview",
       metaData: {
         title: "Recipe overview",
-        content: "Recipe overview"
+        content: "Recipe overview",
+        description: "Description of page"
       },
       wordPressPostModules: [
         generateDummyNavBarModule(),
@@ -295,7 +303,8 @@ export class PageService {
       route: "terrasana.com/recipe-single",
       metaData: {
         title: "Recipe Single",
-        content: "Recipe Single"
+        content: "Recipe Single",
+        description: "Description of page"
       },
       wordPressPostModules: [
         generateDummyNavBarModule(),
@@ -311,7 +320,8 @@ export class PageService {
       route: "terrasana.com/faq-overview",
       metaData: {
         title: "FAQ Overview",
-        content: "FAQ Overview"
+        content: "FAQ Overview",
+        description: "Description of page"
       },
       wordPressPostModules: [
         generateDummyNavBarModule(),
@@ -337,7 +347,8 @@ export class PageService {
       route: "terrasana.com/about-us",
       metaData: {
         title: "About Us",
-        content: "About Us"
+        content: "About Us",
+        description: "Description of page"
       },
       wordPressPostModules: [
         generateDummyNavBarModule(),
@@ -367,7 +378,8 @@ export class PageService {
       route: "terrasana.com/contact",
       metaData: {
         title: "Contact",
-        content: "Contact"
+        content: "Contact",
+        description: "Description of page"
       },
       wordPressPostModules: [
         generateDummyNavBarModule(),
@@ -396,7 +408,8 @@ export class PageService {
       route: "terrasana.com/business",
       metaData: {
         title: "Business",
-        content: "Business"
+        content: "Business",
+        description: "Description of page"
       },
       wordPressPostModules: [
         generateDummyNavBarModule(),
@@ -420,7 +433,8 @@ export class PageService {
       route: "terrasana.com/business-login",
       metaData: {
         title: "Business Login",
-        content: "Business Login"
+        content: "Business Login",
+        description: "Description of page"
       },
       wordPressPostModules: [generateDummyNavBarModule(), generateDummyLoginModule()]
     } as PageModel,
@@ -429,7 +443,8 @@ export class PageService {
       route: "terrasana.com/business-new-account",
       metaData: {
         title: "Business New Account",
-        content: "Business New Account"
+        content: "Business New Account",
+        description: "Description of page"
       },
       wordPressPostModules: [generateDummyNavBarModule(), generateDummySignUpModule()]
     } as PageModel
@@ -440,7 +455,8 @@ export class PageService {
     route: "terrasana.com/not-found",
     metaData: {
       title: "Not Found",
-      content: "Not Found"
+      content: "Not Found",
+      description: "Description of page"
     },
     wordPressPostModules: [generateDummyNavBarModule(), generateDummyNotFoundModule(), generateDummyFooterModule()]
   } as PageModel;
