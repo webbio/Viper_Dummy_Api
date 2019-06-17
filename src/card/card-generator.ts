@@ -4,7 +4,6 @@ export const categories = [
   'Noedels',
   'Zeewieren',
   'Paddenstoelen en seitan',
-  'Veganistischs',
   'Sojasauzen',
   'Rijst',
 ];
@@ -137,7 +136,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
       },
       title: `Consectetur adipiscing elit sed finibus`,
       URL: '/recipe-single',
-      categoryDetail: categories[5],
+      categoryDetail: categories[4],
     });
   }
   if (amount >= 6) {
@@ -161,7 +160,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
       },
       title: `Duis vestibulum lectus quis faucibus facilisis`,
       URL: '/recipe-single',
-      categoryDetail: categories[5],
+      categoryDetail: categories[4],
     });
   }
   if (amount >= 7) {

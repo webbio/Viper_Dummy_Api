@@ -71,7 +71,7 @@ export const generateDummyFooterModule = (): FooterModule => {
         title: 'Koken met Terrasana',
         links: [
           { content: 'Raw Superfood Recepten', route: 'recipe-single' },
-          { content: 'RawSuperfood Smoothies', route: 'recipe-single' },
+          { content: 'Raw Superfood Smoothies', route: 'recipe-single' },
           { content: 'Ontbijt', route: 'recipe-single' },
           { content: 'Voorgerecht', route: 'recipe-single' },
           { content: 'Soepen', route: 'recipe-single' },

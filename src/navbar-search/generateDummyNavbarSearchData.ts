@@ -1,44 +1,43 @@
 import { NavbarSearchCategory } from './navbar-search-category';
 import { NavbarSearchItem } from './navbar-search-item';
 
-export const generateDummyNavbarSearchData = (): NavbarSearchCategory[]  => {
-
+export const generateDummyNavbarSearchData = (): NavbarSearchCategory[] => {
   const brownRiceNoodles250g: NavbarSearchItem = {
     name: '100% Brown Rice noodles 250g',
-    url: '/',
+    url: '/product-single',
   };
   const brownRiceNoodles500g: NavbarSearchItem = {
     name: '100% Brown Rice noodles 500g',
-    url: '/',
+    url: '/product-single',
   };
   const hazelnutPaste250g: NavbarSearchItem = {
     name: '2 Mix, hazelnut almond paste 250g',
-    url: '/',
+    url: '/product-single',
   };
   const hazelnutPaste500g: NavbarSearchItem = {
     name: '2 Mix, hazelnut almond paste 500g',
-    url: '/',
+    url: '/product-single',
   };
 
   const grainMuesli750g: NavbarSearchItem = {
     name: '4-grain muesli 750g',
-    url: '/',
+    url: '/product-single',
   };
   const aoNoriFlakes20g: NavbarSearchItem = {
     name: 'AO-nori 20g',
-    url: '/',
+    url: '/product-single',
   };
   const saltedPotatoChips125g: NavbarSearchItem = {
     name: 'Salted Potato Chips 125g',
-    url: '/',
+    url: '/product-single',
   };
   const unsaltedPotatoChips125g: NavbarSearchItem = {
     name: 'Unsalted Potato Chips 125g',
-    url: '/',
+    url: '/product-single',
   };
   const mashedPotatoes100g: NavbarSearchItem = {
     name: 'Mashed potatoes 100g',
-    url: '/',
+    url: '/product-single',
   };
 
   const itemsGlutenFree: NavbarSearchItem[] = [
@@ -53,7 +52,11 @@ export const generateDummyNavbarSearchData = (): NavbarSearchCategory[]  => {
     mashedPotatoes100g,
   ];
 
-  const itemsPotatoes: NavbarSearchItem[] = [saltedPotatoChips125g, unsaltedPotatoChips125g, mashedPotatoes100g];
+  const itemsPotatoes: NavbarSearchItem[] = [
+    saltedPotatoChips125g,
+    unsaltedPotatoChips125g,
+    mashedPotatoes100g,
+  ];
 
   const gluttenFree: NavbarSearchCategory = {
     name: 'Gluten free',
@@ -84,12 +87,17 @@ export const generateDummyNavbarSearchData = (): NavbarSearchCategory[]  => {
     name: 'Recipe',
     url: '/recipes',
   };
-  const itemsPages: NavbarSearchItem[] = [faqPage, aboutUsPage, newsPage, contactPage, RecipesPage];
+  const itemsPages: NavbarSearchItem[] = [
+    faqPage,
+    aboutUsPage,
+    newsPage,
+    contactPage,
+    RecipesPage,
+  ];
 
   const pages: NavbarSearchCategory = {
     name: 'Pages',
     items: itemsPages,
   };
   return [gluttenFree, potatoes, pages];
-
 };
