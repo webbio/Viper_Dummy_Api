@@ -32,6 +32,10 @@ export const generateDummyInstagramWallModule = (): InstagramWalllModule => {
       desktopPadding: paddingDesktop.desktopPaddingMedium,
       mobilePadding: paddingMobile.mobilePaddingMedium,
     },
+    topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingMedium,
+      mobilePadding: paddingMobile.mobilePaddingMedium,
+    },
     background: {
       backgroundPattern:
         'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
