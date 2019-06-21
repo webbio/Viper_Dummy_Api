@@ -22,10 +22,7 @@ export const generateDummyRelatedLinksModule = (): RelatedLinksModule => {
     topMargin: '',
     bottomMargin: '',
     name: 'RelatedLinksModule',
-    topPadding: {
-      desktopPadding: paddingDesktop.desktopPaddingSmall,
-      mobilePadding: paddingMobile.mobilePaddingSmall,
-    },
+
     bottomPadding: {
       desktopPadding: paddingDesktop.desktopPaddingSmall,
       mobilePadding: paddingMobile.mobilePaddingSmall,
