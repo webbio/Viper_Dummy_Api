@@ -16,9 +16,11 @@ import {
 } from './product-information-tab';
 import { generateDummyGeneralInformationTab } from './general-information-tab';
 import { BodyTextModule } from './bodytext-module';
-import { TabsHeader } from './tabs-header';
+import { SidebarBox, generateDummySidebarBox } from './sidebar-box';
 
 export class TabsModule extends WordPressPostModule {
+  @ApiModelProperty({ type: SidebarBox })
+  public sidebarBox: SidebarBox;
   @ApiModelProperty({ type: [String] })
   public tabsTitle: string[];
   @ApiModelProperty({ type: SalePointModule })
@@ -33,7 +35,13 @@ export class TabsModule extends WordPressPostModule {
 
 export const generateDummyTabs = (): TabsModule => {
   return {
-    tabsTitle: ['Algemene informatie', 'Productinformatie','Verkooppunten','B2B gegevens' ],
+    sidebarBox: generateDummySidebarBox(),
+    tabsTitle: [
+      'Algemene informatie',
+      'Productinformatie',
+      'Verkooppunten',
+      'B2B gegevens',
+    ],
     b2bData: generateDummyB2BDataTabs(),
     productInformation: generateDummyProductInformationTabs(),
     salePoints: generateDummySalePointModule(),
