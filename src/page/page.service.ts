@@ -87,7 +87,7 @@ export class PageService {
       meta: {
         title: "Product line overview",
         content: "Product line overview",
-        description: "Description of page",
+        description: "Description of the page",
       },
       data: {
         permalink: "/product-line-overview",
