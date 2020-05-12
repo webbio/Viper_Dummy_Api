@@ -11,12 +11,12 @@ import {
   generateBodyTextModule,
   generateBodyTextModuleAboutUs,
   generateProductLineStorySingleBodyTextHtml,
-  generateProductLineStorySingleBodyTextHtml2
+  generateProductLineStorySingleBodyTextHtml2,
 } from "src/model/bodytext-module";
 import { generateDummyFooterModule } from "src/model/footer-component";
 import {
   generateDummyInstagramWallModule,
-  generateDummyInstagramWallModuleContactPage
+  generateDummyInstagramWallModuleContactPage,
 } from "src/model/instagram-wall";
 import { generateDummyContactModule } from "src/model/contact-module";
 import { generateDummyOurTeamModule } from "src/model/our-team-module";
@@ -27,7 +27,7 @@ import { generateNotYetImplemented } from "src/model/not-yet-implemented-module"
 import {
   generateDummyRelatedProductsSlider,
   generateDummyRelatedProductsSlider2,
-  generateDummyRelatedProductsSliderNoCurveBackground
+  generateDummyRelatedProductsSliderNoCurveBackground,
 } from "src/model/related-products-slider";
 import { generateDummyGallerySliderModule } from "src/model/gallery-slider";
 import { generateDummyNewsletterModule } from "src/model/newsletter-module";
@@ -38,7 +38,7 @@ import { generateDummyProductDetailHeader } from "src/model/product-detail-heade
 import { generateProductLineSingleModule } from "src/model/product-line-single-module";
 import {
   generateProductOverviewSimpleModule,
-  generateProductOverviewSimpleModuleCurvePatternBottom
+  generateProductOverviewSimpleModuleCurvePatternBottom,
 } from "src/model/product-overview-simple-module";
 import { generateDummyRelatedLinksModule } from "src/model/related-links-module";
 import { generateProductLineStoryOverviewModule } from "src/product-line-overview/product-line-generator";
@@ -49,7 +49,7 @@ import {
   generateDummyFeaturedItemModuleNoPattern,
   generateDummyFeaturedItemModuleSimple,
   generateDummyFeaturedItemModuleNoPatternCurveWhite,
-  generateDummyFeaturedItemModuleLightBackground
+  generateDummyFeaturedItemModuleLightBackground,
 } from "src/model/featured-item";
 import { generateDummyNotFoundModule } from "src/model/not-found-module";
 import { generateDummyLoginModule } from "src/model/login";
@@ -62,403 +62,435 @@ import { ToggleModule, generateDummyToggleModule } from "src/model/toggle-module
 export class PageService {
   private pageList: PageModel[] = [
     {
-      id: uuid(),
-      route: "terrasana.com",
-      metaData: {
+      blogId: uuid(),
+      meta: {
         title: "Homepage",
         content: "The landing page of the webpage",
-        description: "The landing page of the webpage"
+        description: "The landing page of the webpage",
       },
-      wordPressPostModules: [
-        generateDummyNavBarModule(),
-        generateDummyWelcomeModule(),
-        generateDummyCTAModuleHomePage1(),
-        generateDummyRelatedProductsSlider("Gerelateerde Producten"),
-        generateDummyInstagramWallModule(),
-        generateDummyCTAModuleHomePage2(),
-        generateDummyNewsletterModule(),
-        generateDummyFooterModule()
-      ]
+      data: {
+        permalink: "/",
+        modules: [
+          generateDummyNavBarModule(),
+          generateDummyWelcomeModule(),
+          generateDummyCTAModuleHomePage1(),
+          generateDummyRelatedProductsSlider("Gerelateerde Producten"),
+          generateDummyInstagramWallModule(),
+          generateDummyCTAModuleHomePage2(),
+          generateDummyNewsletterModule(),
+          generateDummyFooterModule(),
+        ],
+      },
     } as PageModel,
     {
-      id: uuid(),
-      route: "terrasana.com/product-line-overview",
-      metaData: {
+      blogId: uuid(),
+      meta: {
         title: "Product line overview",
         content: "Product line overview",
-        description: "Description of page"
+        description: "Description of page",
       },
-      wordPressPostModules: [
-        generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule(
-          "Onze productlijnen",
-          "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
-          "center",
-          "",
-          "",
-          "Meer Over Japan Moderne Keuken",
-          "/product-line-single",
-          "Terug naar home",
-          "/"
-        ),
-        generateProductLineStoryOverviewModule(),
-        generateDummyRelatedProductsSlider("ONZE JAPANSE PRODUCTEN"),
-        generateDummyNewsletterModule(),
-        generateDummyFooterModule()
-      ]
+      data: {
+        permalink: "/product-line-overview",
+        modules: [
+          generateDummyNavBarModule(),
+          generateDummyInfoHeaderModule(
+            "Onze productlijnen",
+            "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
+            "center",
+            "",
+            "",
+            "Meer Over Japan Moderne Keuken",
+            "/product-line-single",
+            "Terug naar home",
+            "/"
+          ),
+          generateProductLineStoryOverviewModule(),
+          generateDummyRelatedProductsSlider("ONZE JAPANSE PRODUCTEN"),
+          generateDummyNewsletterModule(),
+          generateDummyFooterModule(),
+        ],
+      },
     } as PageModel,
     {
-      id: uuid(),
-      route: "terrasana.com/product-line-single",
-
-      metaData: {
+      blogId: uuid(),
+      meta: {
         title: "Product line single",
         content: "Product line single",
-        description: "Description of page"
+        description: "Description of page",
       },
-      wordPressPostModules: [
-        generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule(
-          "JAPAN MODERNE KEUKEN",
-          "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
-          "center",
-          "",
-          "",
-          "Meer Over Japan Moderne Keuken",
-          "/product-line-story-single",
-          "Terug naar home",
-          "/"
-        ),
-        generateProductLineSingleModule(),
-        generateDummyFeaturedItemModule("Gerelateerde recepten"),
-        generateDummyNewsletterModule(),
-        generateDummyFooterModule()
-      ]
+      data: {
+        permalink: "/product-line-single",
+        modules: [
+          generateDummyNavBarModule(),
+          generateDummyInfoHeaderModule(
+            "JAPAN MODERNE KEUKEN",
+            "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
+            "center",
+            "",
+            "",
+            "Meer Over Japan Moderne Keuken",
+            "/product-line-story-single",
+            "Terug naar home",
+            "/"
+          ),
+          generateProductLineSingleModule(),
+          generateDummyFeaturedItemModule("Gerelateerde recepten"),
+          generateDummyNewsletterModule(),
+          generateDummyFooterModule(),
+        ],
+      },
     } as PageModel,
-
     {
-      id: uuid(),
-      route: "terrasana.com/product-line-story-single",
-      metaData: {
+      blogId: uuid(),
+      meta: {
         title: "Product line story single",
         content: "Product line story single",
-        description: "Description of page"
+        description: "Description of page",
       },
-      wordPressPostModules: [
-        generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule2(
-          "Japan Moderne Keuken",
-          "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
-          "right",
-          "https://d2ddoduugvun08.cloudfront.net/items/2E0z1A2O210L0G3w140J/Image%202019-05-24%20at%2011.51.39%20AM.png?X-CloudApp-Visitor-Id=3342233&v=3a301060",
-          "",
-          "Download boekje",
-          "/product-line-single",
-          "Terug naar home",
-          "/"
-        ),
-        generateProductLineStorySingleBodyTextHtml(),
-        generateDummyRelatedProductsSlider2("ONZE JAPANSE PRODUCTEN"),
-        generateProductLineStorySingleBodyTextHtml2(),
+      data: {
+        permalink: "/product-line-story-single",
+        modules: [
+          generateDummyNavBarModule(),
+          generateDummyInfoHeaderModule2(
+            "Japan Moderne Keuken",
+            "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
+            "right",
+            "https://d2ddoduugvun08.cloudfront.net/items/2E0z1A2O210L0G3w140J/Image%202019-05-24%20at%2011.51.39%20AM.png?X-CloudApp-Visitor-Id=3342233&v=3a301060",
+            "",
+            "Download boekje",
+            "/product-line-single",
+            "Terug naar home",
+            "/"
+          ),
+          generateProductLineStorySingleBodyTextHtml(),
+          generateDummyRelatedProductsSlider2("ONZE JAPANSE PRODUCTEN"),
+          generateProductLineStorySingleBodyTextHtml2(),
 
-        generateDummyGallerySliderModule(),
-        generateDummyCTAModuleHomePage2(),
-        generateDummyFeaturedItemModule("Gerelateerde recepten"),
-        generateDummyNewsletterModule(),
-        generateDummyFooterModule()
-      ]
+          generateDummyGallerySliderModule(),
+          generateDummyCTAModuleHomePage2(),
+          generateDummyFeaturedItemModule("Gerelateerde recepten"),
+          generateDummyNewsletterModule(),
+          generateDummyFooterModule(),
+        ],
+      },
     } as PageModel,
     {
-      id: uuid(),
-      route: "terrasana.com/product-group",
-      metaData: {
+      blogId: uuid(),
+      meta: {
         title: "Product group",
         content: "Product group",
-        description: "Description of page"
+        description: "Description of page",
       },
-      wordPressPostModules: [
-        generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule(
-          "Noedels",
-          "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
-          "center",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ),
-        generateProductOverviewSimpleModuleCurvePatternBottom(),
-        generateDummyToggleModule(),
-        generateDummyFeaturedItemModuleNoPattern("Recepten met Noedels"),
-        generateDummyRelatedProductsSlider("ONZE JAPANSE PRODUCTEN"),
-        generateDummyNewsletterModule(),
-        generateDummyFooterModule()
-      ]
+      data: {
+        permalink: "/product-group",
+        modules: [
+          generateDummyNavBarModule(),
+          generateDummyInfoHeaderModule(
+            "Noedels",
+            "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
+            "center",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ),
+          generateProductOverviewSimpleModuleCurvePatternBottom(),
+          generateDummyToggleModule(),
+          generateDummyFeaturedItemModuleNoPattern("Recepten met Noedels"),
+          generateDummyRelatedProductsSlider("ONZE JAPANSE PRODUCTEN"),
+          generateDummyNewsletterModule(),
+          generateDummyFooterModule(),
+        ],
+      },
     } as PageModel,
     {
-      id: uuid(),
-      route: "terrasana.com/product-single",
-      metaData: {
+      blogId: uuid(),
+      meta: {
         title: "Product Single",
         content: "Product Single",
-        description: "Description of page"
+        description: "Description of page",
       },
-      wordPressPostModules: [
-        generateDummyNavBarModule(),
-        generateDummyProductDetailHeader(),
-        generateDummyTabs(),
-        generateDummyMoreProducts(),
-        generateDummyFeaturedItemModuleSimple("Recepten met Bruine Rijstnoedels"),
-        generateDummyRelatedProductsSliderNoCurveBackground("Gerelateerde Producten"),
-        generateDummyNewsletterModule(),
-        generateDummyFooterModule()
-      ]
+      data: {
+        permalink: "/product-single",
+        modules: [
+          generateDummyNavBarModule(),
+          generateDummyProductDetailHeader(),
+          generateDummyTabs(),
+          generateDummyMoreProducts(),
+          generateDummyFeaturedItemModuleSimple("Recepten met Bruine Rijstnoedels"),
+          generateDummyRelatedProductsSliderNoCurveBackground("Gerelateerde Producten"),
+          generateDummyNewsletterModule(),
+          generateDummyFooterModule(),
+        ],
+      },
     } as PageModel,
     {
-      id: uuid(),
-      route: "terrasana.com/news-overview",
-      metaData: {
+      blogId: uuid(),
+      meta: {
         title: "News Overview",
         content: "News Overview",
-        description: "Description of page"
+        description: "Description of page",
       },
-      wordPressPostModules: [
-        generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule(
-          "Nieuwtjes",
-          "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
-          "center",
-          "",
-          "center",
-          "",
-          "",
-          "Terug naar home",
-          "/"
-        ),
-        generateDummyNewsOverviewData(),
-        generateDummyRelatedProductsSlider("Gerelateerde Producten", true),
-        generateDummyNewsletterModule(),
-        generateDummyFooterModule()
-      ]
+      data: {
+        permalink: "/news-overview",
+        modules: [
+          generateDummyNavBarModule(),
+          generateDummyInfoHeaderModule(
+            "Nieuwtjes",
+            "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
+            "center",
+            "",
+            "center",
+            "",
+            "",
+            "Terug naar home",
+            "/"
+          ),
+          generateDummyNewsOverviewData(),
+          generateDummyRelatedProductsSlider("Gerelateerde Producten", true),
+          generateDummyNewsletterModule(),
+          generateDummyFooterModule(),
+        ],
+      },
     } as PageModel,
     {
-      id: uuid(),
-      route: "terrasana.com/news-single",
-      metaData: {
+      blogId: uuid(),
+      meta: {
         title: "News Single",
         content: "News Single",
-        description: "Description of page"
+        description: "Description of page",
       },
-      wordPressPostModules: [
-        generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule2(
-          "Gezonde snack? Probeer onze nieuwe snackmixen!",
-          "",
-          "left",
-          "https://www.berkeleywellness.com/sites/default/files/field/image/iStock-919666108-2_field_img_intro_774_500.jpg",
-          "left",
-          "",
-          "",
-          "Terug naar Nieuwtjes",
-          "/news-overview"
-        ),
-        generateBodyTextExpandedModule(),
-        generateDummyFeaturedItemModuleNoPatternCurveWhite("Bekijk ook"),
-        generateDummyRelatedProductsSlider("Gerelateerde Producten"),
-        generateDummyNewsletterModule(),
-        generateDummyFooterModule()
-      ]
+      data: {
+        permalink: "/news-single",
+        modules: [
+          generateDummyNavBarModule(),
+          generateDummyInfoHeaderModule2(
+            "Gezonde snack? Probeer onze nieuwe snackmixen!",
+            "",
+            "left",
+            "https://www.berkeleywellness.com/sites/default/files/field/image/iStock-919666108-2_field_img_intro_774_500.jpg",
+            "left",
+            "",
+            "",
+            "Terug naar Nieuwtjes",
+            "/news-overview"
+          ),
+          generateBodyTextExpandedModule(),
+          generateDummyFeaturedItemModuleNoPatternCurveWhite("Bekijk ook"),
+          generateDummyRelatedProductsSlider("Gerelateerde Producten"),
+          generateDummyNewsletterModule(),
+          generateDummyFooterModule(),
+        ],
+      },
     } as PageModel,
     {
-      id: uuid(),
-      route: "terrasana.com/recipe-overview",
-      metaData: {
+      blogId: uuid(),
+      meta: {
         title: "Recipe overview",
         content: "Recipe overview",
-        description: "Description of page"
+        description: "Description of page",
       },
-      wordPressPostModules: [
-        generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule(
-          "Recipes",
-          "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
-          "center",
-          "",
-          "center",
-          "",
-          "",
-          "Terug naar home",
-          "/"
-        ),
-        generateDummyItemOverviewData(),
-        generateDummyRelatedProductsSlider("Gerelateerde Producten", true),
-        generateDummyNewsletterModule(),
-        generateDummyFooterModule()
-      ]
+      data: {
+        permalink: "/recipe-overview",
+        modules: [
+          generateDummyNavBarModule(),
+          generateDummyInfoHeaderModule(
+            "Recipes",
+            "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
+            "center",
+            "",
+            "center",
+            "",
+            "",
+            "Terug naar home",
+            "/"
+          ),
+          generateDummyItemOverviewData(),
+          generateDummyRelatedProductsSlider("Gerelateerde Producten", true),
+          generateDummyNewsletterModule(),
+          generateDummyFooterModule(),
+        ],
+      },
     } as PageModel,
     {
-      id: uuid(),
-      route: "terrasana.com/recipe-single",
-      metaData: {
+      blogId: uuid(),
+      meta: {
         title: "Recipe Single",
         content: "Recipe Single",
-        description: "Description of page"
+        description: "Description of page",
       },
-      wordPressPostModules: [
-        generateDummyNavBarModule(),
-        generateDummyRecipeDetailModule(),
-        generateDummyFeaturedItemModuleNoPatternCurveWhite("Vergelikbare recepten"),
-        generateDummyRelatedProductsSlider("Gerelateerde Producten"),
-        generateDummyNewsletterModule(),
-        generateDummyFooterModule()
-      ]
+      data: {
+        permalink: "/recipe-single",
+        modules: [
+          generateDummyNavBarModule(),
+          generateDummyRecipeDetailModule(),
+          generateDummyFeaturedItemModuleNoPatternCurveWhite("Vergelikbare recepten"),
+          generateDummyRelatedProductsSlider("Gerelateerde Producten"),
+          generateDummyNewsletterModule(),
+          generateDummyFooterModule(),
+        ],
+      },
     } as PageModel,
     {
-      id: uuid(),
-      route: "terrasana.com/faq-overview",
-      metaData: {
+      blogId: uuid(),
+      meta: {
         title: "FAQ Overview",
         content: "FAQ Overview",
-        description: "Description of page"
+        description: "Description of page",
       },
-      wordPressPostModules: [
-        generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule(
-          "Alle veelgestelde vragen",
-          "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
-          "center",
-          "",
-          "",
-          "",
-          "",
-          "Terug naar home",
-          "/"
-        ),
-        generateDummyFaqModule(),
-        generateDummyRelatedProductsSlider("Gerelateerde Producten"),
-        generateDummyNewsletterModule(),
-        generateDummyFooterModule()
-      ]
+      data: {
+        permalink: "/faq-overview",
+        modules: [
+          generateDummyNavBarModule(),
+          generateDummyInfoHeaderModule(
+            "Alle veelgestelde vragen",
+            "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
+            "center",
+            "",
+            "",
+            "",
+            "",
+            "Terug naar home",
+            "/"
+          ),
+          generateDummyFaqModule(),
+          generateDummyRelatedProductsSlider("Gerelateerde Producten"),
+          generateDummyNewsletterModule(),
+          generateDummyFooterModule(),
+        ],
+      },
     } as PageModel,
     {
-      id: uuid(),
-      route: "terrasana.com/about-us",
-      metaData: {
+      blogId: uuid(),
+      meta: {
         title: "About Us",
         content: "About Us",
-        description: "Description of page"
+        description: "Description of page",
       },
-      wordPressPostModules: [
-        generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule2(
-          "Ontmoet het team achter Terrasana",
-          "",
-          "right",
-          "https://d2ddoduugvun08.cloudfront.net/items/2E0z1A2O210L0G3w140J/Image%202019-05-24%20at%2011.51.39%20AM.png?X-CloudApp-Visitor-Id=3342233&v=3a301060",
-          "right",
-          "",
-          "",
-          "Terug naar home",
-          "/"
-        ),
-        generateBodyTextModuleAboutUs(
-          "Bij ons weet je niet alleen zeker dat de producten écht biologisch zijn, maar ook dat we alles met de grootste zorg uitkiezen en samenstellen. We hebben aandacht voor kwaliteit, natuur, milieu, smaak en productiewijze. We zijn altijd op zoek naar de mooiste en meest verantwoorde ingrediënten. Onze medewerkers weten wat ze in handen hebben en bereiden met hart en ziel veel zelf. Geen poespas maar pure en eerlijke producten."
-        ),
-        generateDummyOurTeamModule(),
-        generateDummyFeaturedItemModuleLightBackground("Heerlijke recepten!"),
-        generateDummyRelatedProductsSlider("Gerelateerde Producten"),
-        generateDummyNewsletterModule(),
-        generateDummyFooterModule()
-      ]
+      data: {
+        permalink: "/about-us",
+        modules: [
+          generateDummyNavBarModule(),
+          generateDummyInfoHeaderModule2(
+            "Ontmoet het team achter Terrasana",
+            "",
+            "right",
+            "https://d2ddoduugvun08.cloudfront.net/items/2E0z1A2O210L0G3w140J/Image%202019-05-24%20at%2011.51.39%20AM.png?X-CloudApp-Visitor-Id=3342233&v=3a301060",
+            "right",
+            "",
+            "",
+            "Terug naar home",
+            "/"
+          ),
+          generateBodyTextModuleAboutUs(
+            "Bij ons weet je niet alleen zeker dat de producten écht biologisch zijn, maar ook dat we alles met de grootste zorg uitkiezen en samenstellen. We hebben aandacht voor kwaliteit, natuur, milieu, smaak en productiewijze. We zijn altijd op zoek naar de mooiste en meest verantwoorde ingrediënten. Onze medewerkers weten wat ze in handen hebben en bereiden met hart en ziel veel zelf. Geen poespas maar pure en eerlijke producten."
+          ),
+          generateDummyOurTeamModule(),
+          generateDummyFeaturedItemModuleLightBackground("Heerlijke recepten!"),
+          generateDummyRelatedProductsSlider("Gerelateerde Producten"),
+          generateDummyNewsletterModule(),
+          generateDummyFooterModule(),
+        ],
+      },
     } as PageModel,
     {
-      id: uuid(),
-      route: "terrasana.com/contact",
-      metaData: {
+      blogId: uuid(),
+      meta: {
         title: "Contact",
         content: "Contact",
-        description: "Description of page"
+        description: "Description of page",
       },
-      wordPressPostModules: [
-        generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule(
-          "Contact met terrasana",
-          "",
-          "right",
-          "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/Screenshot+2019-05-10+at+16.19.17.jpg",
-          "right",
-          "",
-          "",
-          "Terug",
-          "/"
-        ),
-        generateDummyContactModule(),
-        generateDummySalePointModule(),
-        generateDummyRelatedLinksModule(),
-        generateDummyInstagramWallModuleContactPage(),
-        generateDummyCTAModuleHomePage2(),
-        generateDummyNewsletterModule(),
-        generateDummyFooterModule()
-      ]
+      data: {
+        permalink: "/contact",
+        modules: [
+          generateDummyNavBarModule(),
+          generateDummyInfoHeaderModule(
+            "Contact met terrasana",
+            "",
+            "right",
+            "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/Screenshot+2019-05-10+at+16.19.17.jpg",
+            "right",
+            "",
+            "",
+            "Terug",
+            "/"
+          ),
+          generateDummyContactModule(),
+          generateDummySalePointModule(),
+          generateDummyRelatedLinksModule(),
+          generateDummyInstagramWallModuleContactPage(),
+          generateDummyCTAModuleHomePage2(),
+          generateDummyNewsletterModule(),
+          generateDummyFooterModule(),
+        ],
+      },
     } as PageModel,
     {
-      id: uuid(),
-      route: "terrasana.com/business",
-      metaData: {
+      blogId: uuid(),
+      meta: {
         title: "Business",
         content: "Business",
-        description: "Description of page"
+        description: "Description of page",
       },
-      wordPressPostModules: [
-        generateDummyNavBarModule(),
-        generateDummyInfoHeaderModule(
-          "DOWNLOADS",
-          "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
-          "center",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ),
-        generateDummyBusinessOverviewData(),
-        generateDummyFooterModule()
-      ]
+      data: {
+        permalink: "/business",
+        modules: [
+          generateDummyNavBarModule(),
+          generateDummyInfoHeaderModule(
+            "DOWNLOADS",
+            "Praesent vitae neque egestas sem efficitur aliquam. Nunc pharetra, mauris at laoreet condimentum, mi risus convallis.",
+            "center",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ),
+          generateDummyBusinessOverviewData(),
+          generateDummyFooterModule(),
+        ],
+      },
     } as PageModel,
     {
-      id: uuid(),
-      route: "terrasana.com/business-login",
-      metaData: {
+      blogId: uuid(),
+      meta: {
         title: "Business Login",
         content: "Business Login",
-        description: "Description of page"
+        description: "Description of page",
       },
-      wordPressPostModules: [generateDummyNavBarModule(), generateDummyLoginModule()]
+      data: {
+        permalink: "/business-login",
+        modules: [generateDummyNavBarModule(), generateDummyLoginModule()],
+      },
     } as PageModel,
     {
-      id: uuid(),
-      route: "terrasana.com/business-new-account",
-      metaData: {
+      blogId: uuid(),
+      meta: {
         title: "Business New Account",
         content: "Business New Account",
-        description: "Description of page"
+        description: "Description of page",
       },
-      wordPressPostModules: [generateDummyNavBarModule(), generateDummySignUpModule()]
-    } as PageModel
+      data: {
+        permalink: "/business-new-account",
+        modules: [generateDummyNavBarModule(), generateDummySignUpModule()],
+      },
+    } as PageModel,
   ];
 
   private notFound: PageModel = {
-    id: uuid(),
-    route: "terrasana.com/not-found",
-    metaData: {
+    blogId: uuid(),
+    meta: {
       title: "Not Found",
       content: "Not Found",
-      description: "Description of page"
+      description: "Description of page",
     },
-    wordPressPostModules: [generateDummyNavBarModule(), generateDummyNotFoundModule(), generateDummyFooterModule()]
+    data: {
+      permalink: "/not-found",
+      modules: [generateDummyNavBarModule(), generateDummyNotFoundModule(), generateDummyFooterModule()],
+    },
   } as PageModel;
 
   public getWordPressControls(): PageModel[] {

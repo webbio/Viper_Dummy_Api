@@ -1,12 +1,41 @@
 import { ApiModelProperty } from "@nestjs/swagger";
 
-export class MetaData {
+export class IWPPageMeta {
   @ApiModelProperty()
-  public title: string;
+  public breadcrumbTitle?: string;
+  @ApiModelProperty()
+  public canonicalUrl?: string;
+  @ApiModelProperty()
+  public facebookDescription?: string;
+  @ApiModelProperty()
+  public facebookImage?: string;
+  @ApiModelProperty()
+  public facebookTitle?: string;
+  @ApiModelProperty()
+  public featuredImage?: string;
+  @ApiModelProperty()
+  public hreflang?: IWPPageMetaHrefLang[];
+  @ApiModelProperty()
+  public metaRobotAdvanced?: string;
+  @ApiModelProperty()
+  public metaRobotFollow?: number;
+  @ApiModelProperty()
+  public metaRobotIndex?: number;
+  @ApiModelProperty()
+  public seoMetaDescription?: string;
+  @ApiModelProperty()
+  public seoTitle?: string;
+  @ApiModelProperty()
+  public twitterDescription?: string;
+  @ApiModelProperty()
+  public twitterImage?: string;
+  @ApiModelProperty()
+  public twitterTitle?: string;
+}
 
+export class IWPPageMetaHrefLang {
   @ApiModelProperty()
-  public content: string;
-
+  public lang?: string;
   @ApiModelProperty()
-  public description: string;
+  public value?: string;
 }
