@@ -23,6 +23,6 @@ phases:
       - docker push $REPOSITORY_URI_VIPER_DUMMY:latest
       - docker push $REPOSITORY_URI_VIPER_DUMMY:$IMAGE_TAG
       - echo Writing image definitions file...
-      - printf '[{"name":"viper_client","imageUri":"%s"},{"name":"viper_dummy_api","imageUri":"%s"}]' $REPOSITORY_URI_VIPER_CLIENT:latest $REPOSITORY_URI_VIPER_DUMMY:$IMAGE_TAG > imagedefinitions.json
+      - printf '[{"name":"terrasana","imageUri":"%s"},{"name":"viper_dummy_api","imageUri":"%s"}]' $REPOSITORY_URI_VIPER_CLIENT:latest $REPOSITORY_URI_VIPER_DUMMY:$IMAGE_TAG > imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
