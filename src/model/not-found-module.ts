@@ -1,10 +1,6 @@
-import uuid = require('uuid');
-import {
-  WordPressPostModule,
-  paddingDesktop,
-  paddingMobile,
-} from './wordpress-post-module';
-import { ApiModelProperty } from '@nestjs/swagger';
+import uuid = require("uuid");
+import { WordPressPostModule, paddingDesktop, paddingMobile } from "./wordpress-post-module";
+import { ApiModelProperty } from "@nestjs/swagger";
 
 export class NotFoundModule extends WordPressPostModule {
   @ApiModelProperty()
@@ -20,13 +16,12 @@ export class NotFoundModule extends WordPressPostModule {
 export const generateDummyNotFoundModule = (): NotFoundModule => {
   return {
     id: uuid(),
-    title: 'Oeps, er is iets mis gegaan',
-    text:
-      'Aenean id lorem eleifend, malesuada arcu afringilla mauris. Pellentesque dolor lacus, luctus.',
-    backButtonText: 'Terug naar vorige pagina',
-    homeButtonText: 'Naar home',
-    topMargin: '',
-    background: { backgroundColour: '#f5fafa' },
+    title: "Oeps, er is iets mis gegaan",
+    text: "Aenean id lorem eleifend, malesuada arcu afringilla mauris. Pellentesque dolor lacus, luctus.",
+    backButtonText: "Terug naar vorige pagina",
+    homeButtonText: "Naar home",
+    topMargin: "",
+    background: { color: "#f5fafa" },
     bottomPadding: {
       desktopPadding: paddingDesktop.desktopPaddingSmall,
       mobilePadding: paddingMobile.mobilePaddingSmall,
@@ -35,7 +30,7 @@ export const generateDummyNotFoundModule = (): NotFoundModule => {
       desktopPadding: paddingDesktop.desktopPaddingSmall,
       mobilePadding: paddingMobile.mobilePaddingSmall,
     },
-    bottomMargin: '',
-    name: 'NotFoundModule',
+    bottomMargin: "",
+    name: "NotFoundModule",
   };
 };

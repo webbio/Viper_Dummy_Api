@@ -1,14 +1,10 @@
-import {
-  WordPressPostModule,
-  paddingDesktop,
-  paddingMobile,
-} from './wordpress-post-module';
-import * as uuid from 'uuid';
-import { ApiModelProperty } from '@nestjs/swagger';
+import { WordPressPostModule, paddingDesktop, paddingMobile } from "./wordpress-post-module";
+import * as uuid from "uuid";
+import { ApiModelProperty } from "@nestjs/swagger";
 
-import { ContactForm } from './contact-form';
-import { AddressInfo } from './address';
-import { Phone } from './phone';
+import { ContactForm } from "./contact-form";
+import { AddressInfo } from "./address";
+import { Phone } from "./phone";
 
 export class ContactModule extends WordPressPostModule {
   @ApiModelProperty()
@@ -41,56 +37,56 @@ export class ContactModule extends WordPressPostModule {
 
 export const generateDummyContactModule = (): ContactModule => {
   return {
-    title: 'Neem gelijk contact op',
+    title: "Neem gelijk contact op",
     background: {
-      backgroundColour: '#f5fafa',
+      color: "#f5fafa",
     },
     description:
-      'Aenean id lorem eleifend, malesuada arcu a, fringilla mauris. Pellentesque dolor lacus, luctus lobortis rhoncus vitae, ultricies vitae justo. Mauris ut interdum purus.',
-    subtitleContactAddress: 'Contact adres',
+      "Aenean id lorem eleifend, malesuada arcu a, fringilla mauris. Pellentesque dolor lacus, luctus lobortis rhoncus vitae, ultricies vitae justo. Mauris ut interdum purus.",
+    subtitleContactAddress: "Contact adres",
     contactAddressInfo: {
-      shopName: 'TerraSana',
-      street: 'Waaier 10',
-      postalCode: '2451VV',
-      city: 'LEIMUIDEN',
+      shopName: "TerraSana",
+      street: "Waaier 10",
+      postalCode: "2451VV",
+      city: "LEIMUIDEN",
     },
-    mailingAddress: 'Postadres',
+    mailingAddress: "Postadres",
     mailingAddressInfo: {
-      shopName: 'TerraSana',
-      street: 'Postbus 70',
-      postalCode: '2450 AB',
-      city: 'LEIMUIDEN',
+      shopName: "TerraSana",
+      street: "Postbus 70",
+      postalCode: "2450 AB",
+      city: "LEIMUIDEN",
     },
-    phone: 'Telefonisch',
+    phone: "Telefonisch",
     generalAndSales: {
-      contactName: 'Algemeen & verkoop',
-      phone: '+31 (0) 172 - 50 33 33',
+      contactName: "Algemeen & verkoop",
+      phone: "+31 (0) 172 - 50 33 33",
     },
-    marketing: { contactName: 'Marketing', phone: '+31 (0) 172 - 50 33 47' },
+    marketing: { contactName: "Marketing", phone: "+31 (0) 172 - 50 33 47" },
     customerService: {
-      contactName: 'Consumentenservice',
-      phone: '+31 (0) 172 - 50 33 44',
+      contactName: "Consumentenservice",
+      phone: "+31 (0) 172 - 50 33 44",
     },
-    fax: { contactName: 'Fax', phone: '+31 (0) 172 - 50 33 55' },
-    directContact: 'DIRECT CONTACT',
+    fax: { contactName: "Fax", phone: "+31 (0) 172 - 50 33 55" },
+    directContact: "DIRECT CONTACT",
     contactForm: {
-      email: 'email',
-      name: 'name',
-      privacyText: 'Wanneer je op verzenden drukt ga je akkoord met ons',
-      privacyLink: '/privacy',
+      email: "email",
+      name: "name",
+      privacyText: "Wanneer je op verzenden drukt ga je akkoord met ons",
+      privacyLink: "/privacy",
       placeholderField: {
-        email: 'E-mailadres',
-        name: 'Naam',
-        lastName: 'Achternaam',
-        companyName: 'Bedrijfsnaam',
-        phoneNumber: 'Telefoonnummer',
-        message: 'Bericht',
+        email: "E-mailadres",
+        name: "Naam",
+        lastName: "Achternaam",
+        companyName: "Bedrijfsnaam",
+        phoneNumber: "Telefoonnummer",
+        message: "Bericht",
       },
     },
 
     id: uuid(),
-    topMargin: '',
-    bottomMargin: '',
+    topMargin: "",
+    bottomMargin: "",
     topPadding: {
       desktopPadding: paddingDesktop.desktopPaddingSmall,
       mobilePadding: paddingMobile.mobilePaddingSmall,
@@ -99,6 +95,6 @@ export const generateDummyContactModule = (): ContactModule => {
       desktopPadding: paddingDesktop.desktopPaddingSmall,
       mobilePadding: paddingMobile.mobilePaddingSmall,
     },
-    name: 'ContactComponent',
+    name: "ContactComponent",
   };
 };

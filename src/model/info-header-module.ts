@@ -1,10 +1,6 @@
-import {
-  WordPressPostModule,
-  paddingDesktop,
-  paddingMobile,
-} from './wordpress-post-module';
-import * as uuid from 'uuid';
-import { ApiModelProperty } from '@nestjs/swagger';
+import { WordPressPostModule, paddingDesktop, paddingMobile } from "./wordpress-post-module";
+import * as uuid from "uuid";
+import { ApiModelProperty } from "@nestjs/swagger";
 
 export class InfoHeaderModule extends WordPressPostModule {
   @ApiModelProperty()
@@ -40,20 +36,19 @@ export const generateDummyInfoHeaderModule = (
   buttonLinkText: string,
   buttonLinkURL: string,
   backButtonText: string,
-  backButtonURL: string,
+  backButtonURL: string
 ): InfoHeaderModule => {
   return {
     background: {
-      backgroundPattern:
-        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
+      pattern: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png",
     },
 
     curve: {
-      curveBackground: {
-        backgroundColour: '#f5fafa',
+      background: {
+        color: "#f5fafa",
       },
-      decorCurveHorizontalAlignment: 'right',
-      decorCurveVerticalAlignment: 'bottom',
+      horizontalAlignment: "right",
+      verticalAlignment: "bottom",
     },
     bottomPadding: {
       desktopPadding: paddingDesktop.desktopPaddingSmall,
@@ -68,16 +63,16 @@ export const generateDummyInfoHeaderModule = (
     backButtonText,
     backButtonURL,
     buttonLinkURL,
-    htmlArea: '',
+    htmlArea: "",
     buttonLinkText,
     align,
-    bgcolor: '#FFFFFF',
+    bgcolor: "#FFFFFF",
     imageAlign,
     imageURL,
     id: uuid(),
-    name: 'infoHeaderModule',
-    bottomMargin: '0px',
-    topMargin: '0px',
+    name: "infoHeaderModule",
+    bottomMargin: "0px",
+    topMargin: "0px",
   };
 };
 export const generateDummyInfoHeaderModule2 = (
@@ -89,23 +84,22 @@ export const generateDummyInfoHeaderModule2 = (
   buttonLinkText: string,
   buttonLinkURL: string,
   backButtonText: string,
-  backButtonURL: string,
+  backButtonURL: string
 ): InfoHeaderModule => {
   return {
     background: {
-      backgroundPattern:
-        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png',
+      pattern: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png",
     },
     curve: {
-      decorCurveHorizontalAlignment: 'right',
-      decorCurveVerticalAlignment: 'bottom',
+      horizontalAlignment: "right",
+      verticalAlignment: "bottom",
     },
     titleText: title,
     bodyText,
     backButtonText,
     backButtonURL,
     buttonLinkURL,
-    htmlArea: '',
+    htmlArea: "",
     buttonLinkText,
     bottomPadding: {
       desktopPadding: paddingDesktop.desktopPaddingSmall,
@@ -116,12 +110,12 @@ export const generateDummyInfoHeaderModule2 = (
       mobilePadding: paddingMobile.mobilePaddingSmall,
     },
     align,
-    bgcolor: '#FFFFFF',
+    bgcolor: "#FFFFFF",
     imageAlign,
     imageURL,
     id: uuid(),
-    name: 'infoHeaderModule',
-    bottomMargin: '0px',
-    topMargin: '0px',
+    name: "infoHeaderModule",
+    bottomMargin: "0px",
+    topMargin: "0px",
   };
 };

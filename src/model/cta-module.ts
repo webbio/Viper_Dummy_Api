@@ -22,7 +22,7 @@ export const generateDummyCTAModuleHomePage1 = (): CTAModule => {
   return {
     titleText: "Wat goed eten is, weten we bij Terrarana al 35 jaar.",
     background: {
-      backgroundColour: "#f5fafa"
+      color: "#f5fafa",
     },
 
     bodyText:
@@ -36,15 +36,15 @@ export const generateDummyCTAModuleHomePage1 = (): CTAModule => {
         type: "",
         icon: "",
         onClick: "",
-        location: "center"
-      }
+        location: "center",
+      },
     ],
     id: "55",
     name: "CTAModule",
     bottomMargin: "0px",
     topMargin: "0px",
     containerAlignment: "center",
-    contentAlignment: "center"
+    contentAlignment: "center",
   };
 };
 
@@ -53,12 +53,11 @@ export const generateDummyCTAModuleHomePage2 = (): CTAModule => {
     titleText: "Maak je eigen biologische wraps!",
     bodyText: "Binnen een half uur je eigen biologische hoemoes. Lees hier hoe dat moet!",
     curve: {
-      decorCurveVerticalAlignment: "bottom",
-      decorCurveHorizontalAlignment: "right",
-
-      curveBackground: {
-        backgroundPattern: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png"
-      }
+      verticalAlignment: "bottom",
+      horizontalAlignment: "right",
+      background: {
+        pattern: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png",
+      },
     },
 
     buttons: [
@@ -70,7 +69,7 @@ export const generateDummyCTAModuleHomePage2 = (): CTAModule => {
         type: "",
         icon: "",
         onClick: "",
-        location: "center"
+        location: "center",
       },
       {
         href: "/recipe-overview",
@@ -80,8 +79,8 @@ export const generateDummyCTAModuleHomePage2 = (): CTAModule => {
         type: "",
         icon: "",
         onClick: "",
-        location: "center"
-      }
+        location: "center",
+      },
     ],
     id: uuid(),
     name: "CTAModule",
@@ -89,6 +88,6 @@ export const generateDummyCTAModuleHomePage2 = (): CTAModule => {
     topMargin: "0px",
     containerAlignment: "left",
     contentAlignment: "left",
-    imageURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/rectangle-5.jpg"
+    imageURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/rectangle-5.jpg",
   };
 };

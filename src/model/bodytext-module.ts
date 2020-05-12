@@ -1,44 +1,40 @@
-import { ApiModelProperty } from '@nestjs/swagger';
-import {
-  WordPressPostModule,
-  paddingDesktop,
-  paddingMobile,
-} from './wordpress-post-module';
-import uuid = require('uuid');
-import { ContainerSize } from 'src/enums/container-size';
-import { ContainerAlignment } from 'src/enums/container-alignment';
+import { ApiModelProperty } from "@nestjs/swagger";
+import { WordPressPostModule, paddingDesktop, paddingMobile } from "./wordpress-post-module";
+import uuid = require("uuid");
+import { ContainerSize } from "src/enums/container-size";
+import { ContainerAlignment } from "src/enums/container-alignment";
 
 export class BodyTextModule extends WordPressPostModule {
   @ApiModelProperty()
   public html: string;
 
   @ApiModelProperty()
-  public containerSize: 'full' | 'large' | 'medium' | 'small';
+  public containerSize: "full" | "large" | "medium" | "small";
 
   @ApiModelProperty()
-  public containerAlignment: 'left' | 'center' | 'right';
+  public containerAlignment: "left" | "center" | "right";
 }
 
 export const generateBodyTextModule = (html: string): BodyTextModule => {
   return {
     html,
     id: uuid(),
-    name: 'bodyTextModule',
-    bottomMargin: '0px',
-    topMargin: '0px',
-    containerSize: 'medium',
-    containerAlignment: 'center',
+    name: "bodyTextModule",
+    bottomMargin: "0px",
+    topMargin: "0px",
+    containerSize: "medium",
+    containerAlignment: "center",
   };
 };
 export const generateBodyTextModuleAboutUs = (html: string): BodyTextModule => {
   return {
     html,
     id: uuid(),
-    name: 'bodyTextModule',
-    bottomMargin: '0px',
-    topMargin: '0px',
-    containerSize: 'medium',
-    containerAlignment: 'center',
+    name: "bodyTextModule",
+    bottomMargin: "0px",
+    topMargin: "0px",
+    containerSize: "medium",
+    containerAlignment: "center",
     bottomPadding: {
       desktopPadding: paddingDesktop.desktopPaddingSmall,
       mobilePadding: paddingMobile.mobilePaddingSmall,
@@ -48,10 +44,10 @@ export const generateBodyTextModuleAboutUs = (html: string): BodyTextModule => {
       mobilePadding: paddingMobile.mobilePaddingSmall,
     },
     curve: {
-      decorCurveVerticalAlignment: 'bottom',
-      decorCurveHorizontalAlignment: 'right',
-      curveBackground: {
-        backgroundColour: '#f5fafa',
+      verticalAlignment: "bottom",
+      horizontalAlignment: "right",
+      background: {
+        color: "#f5fafa",
       },
     },
   };
@@ -113,11 +109,11 @@ export const generateProductLineStorySingleBodyTextHtml = (): BodyTextModule => 
 </div>
   `,
     id: uuid(),
-    name: 'bodyTextModule',
-    bottomMargin: '0px',
-    topMargin: '0px',
-    containerSize: 'large',
-    containerAlignment: 'center',
+    name: "bodyTextModule",
+    bottomMargin: "0px",
+    topMargin: "0px",
+    containerSize: "large",
+    containerAlignment: "center",
     bottomPadding: {
       desktopPadding: paddingDesktop.desktopPaddingSmall,
       mobilePadding: paddingMobile.mobilePaddingSmall,
@@ -145,11 +141,11 @@ export const generateProductLineStorySingleBodyTextHtml2 = (): BodyTextModule =>
     </ul>
   `,
     id: uuid(),
-    name: 'bodyTextModule',
-    bottomMargin: '0px',
-    topMargin: '0px',
-    containerSize: 'medium',
-    containerAlignment: 'center',
+    name: "bodyTextModule",
+    bottomMargin: "0px",
+    topMargin: "0px",
+    containerSize: "medium",
+    containerAlignment: "center",
     bottomPadding: {
       desktopPadding: paddingDesktop.desktopPaddingSmall,
       mobilePadding: paddingMobile.mobilePaddingSmall,
