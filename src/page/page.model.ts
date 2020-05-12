@@ -1,39 +1,5 @@
-import { WordPressPostModule } from "src/model/wordpress-post-module";
 import { ApiModelProperty } from "@nestjs/swagger";
 import { IWPPageMeta } from "src/model/meta-data";
-
-export class PageModel {
-  @ApiModelProperty()
-  public data?: IWPData;
-  @ApiModelProperty()
-  public meta?: IWPPageMeta;
-  @ApiModelProperty()
-  public taxonomies?: IWPPageTaxonomies[] | [];
-  @ApiModelProperty()
-  public type?: string;
-}
-
-export class IWPModule {
-  @ApiModelProperty()
-  public acf_fc_layout?: string;
-  @ApiModelProperty()
-  public setMargins?: any;
-  @ApiModelProperty()
-  public spacing?: IWPSpacing;
-  @ApiModelProperty()
-  public useDefault?: boolean;
-  @ApiModelProperty()
-  public data?: any;
-}
-
-export class IWPData {
-  @ApiModelProperty()
-  public post?: IWPPost;
-  @ApiModelProperty()
-  public permalink?: string;
-  @ApiModelProperty({ type: [IWPModule] })
-  public modules?: IWPModule[];
-}
 
 export class IWPSpacing {
   @ApiModelProperty()
@@ -48,6 +14,19 @@ export class IWPSpacing {
 
 export type IWPSpacingOptions = "none" | "default" | "small" | "large";
 export type IWPSpacingOptionsArray = ["none"] | ["default"] | ["small"] | ["large"];
+
+export class IWPModule {
+  @ApiModelProperty()
+  public acf_fc_layout?: string;
+  @ApiModelProperty()
+  public setMargins?: any;
+  @ApiModelProperty()
+  public spacing?: IWPSpacing;
+  @ApiModelProperty()
+  public useDefault?: boolean;
+  @ApiModelProperty()
+  public data?: any;
+}
 
 export class IWPPost {
   @ApiModelProperty()
@@ -100,6 +79,15 @@ export class IWPPost {
   public filter: string;
 }
 
+export class IWPData {
+  @ApiModelProperty()
+  public post?: IWPPost;
+  @ApiModelProperty()
+  public permalink?: string;
+  @ApiModelProperty({ type: [IWPModule] })
+  public modules?: IWPModule[];
+}
+
 export class IWPPageTaxonomies {
   @ApiModelProperty()
   public term_id?: number;
@@ -123,4 +111,15 @@ export class IWPPageTaxonomies {
   public filter?: string;
   @ApiModelProperty()
   public term_order?: string;
+}
+
+export class PageModel {
+  @ApiModelProperty()
+  public data?: IWPData;
+  @ApiModelProperty()
+  public meta?: IWPPageMeta;
+  @ApiModelProperty()
+  public taxonomies?: IWPPageTaxonomies[] | [];
+  @ApiModelProperty()
+  public type?: string;
 }

@@ -90,7 +90,7 @@ export class PageService {
         description: "Description of the page",
       },
       data: {
-        permalink: "/product-line-overview",
+        permalink: "/product-line-overview/",
         modules: [
           generateDummyNavBarModule(),
           generateDummyInfoHeaderModule(
@@ -119,7 +119,7 @@ export class PageService {
         description: "Description of page",
       },
       data: {
-        permalink: "/product-line-single",
+        permalink: "/product-line-single/",
         modules: [
           generateDummyNavBarModule(),
           generateDummyInfoHeaderModule(
@@ -148,7 +148,7 @@ export class PageService {
         description: "Description of page",
       },
       data: {
-        permalink: "/product-line-story-single",
+        permalink: "/product-line-story-single/",
         modules: [
           generateDummyNavBarModule(),
           generateDummyInfoHeaderModule2(
@@ -182,7 +182,7 @@ export class PageService {
         description: "Description of page",
       },
       data: {
-        permalink: "/product-group",
+        permalink: "/product-group/",
         modules: [
           generateDummyNavBarModule(),
           generateDummyInfoHeaderModule(
@@ -213,7 +213,7 @@ export class PageService {
         description: "Description of page",
       },
       data: {
-        permalink: "/product-single",
+        permalink: "/product-single/",
         modules: [
           generateDummyNavBarModule(),
           generateDummyProductDetailHeader(),
@@ -234,7 +234,7 @@ export class PageService {
         description: "Description of page",
       },
       data: {
-        permalink: "/news-overview",
+        permalink: "/news-overview/",
         modules: [
           generateDummyNavBarModule(),
           generateDummyInfoHeaderModule(
@@ -263,7 +263,7 @@ export class PageService {
         description: "Description of page",
       },
       data: {
-        permalink: "/news-single",
+        permalink: "/news-single/",
         modules: [
           generateDummyNavBarModule(),
           generateDummyInfoHeaderModule2(
@@ -293,7 +293,7 @@ export class PageService {
         description: "Description of page",
       },
       data: {
-        permalink: "/recipe-overview",
+        permalink: "/recipe-overview/",
         modules: [
           generateDummyNavBarModule(),
           generateDummyInfoHeaderModule(
@@ -322,7 +322,7 @@ export class PageService {
         description: "Description of page",
       },
       data: {
-        permalink: "/recipe-single",
+        permalink: "/recipe-single/",
         modules: [
           generateDummyNavBarModule(),
           generateDummyRecipeDetailModule(),
@@ -341,7 +341,7 @@ export class PageService {
         description: "Description of page",
       },
       data: {
-        permalink: "/faq-overview",
+        permalink: "/faq-overview/",
         modules: [
           generateDummyNavBarModule(),
           generateDummyInfoHeaderModule(
@@ -370,7 +370,7 @@ export class PageService {
         description: "Description of page",
       },
       data: {
-        permalink: "/about-us",
+        permalink: "/about-us/",
         modules: [
           generateDummyNavBarModule(),
           generateDummyInfoHeaderModule2(
@@ -403,7 +403,7 @@ export class PageService {
         description: "Description of page",
       },
       data: {
-        permalink: "/contact",
+        permalink: "/contact/",
         modules: [
           generateDummyNavBarModule(),
           generateDummyInfoHeaderModule(
@@ -435,7 +435,7 @@ export class PageService {
         description: "Description of page",
       },
       data: {
-        permalink: "/business",
+        permalink: "/business/",
         modules: [
           generateDummyNavBarModule(),
           generateDummyInfoHeaderModule(
@@ -462,7 +462,7 @@ export class PageService {
         description: "Description of page",
       },
       data: {
-        permalink: "/business-login",
+        permalink: "/business-login/",
         modules: [generateDummyNavBarModule(), generateDummyLoginModule()],
       },
     } as PageModel,
@@ -474,7 +474,7 @@ export class PageService {
         description: "Description of page",
       },
       data: {
-        permalink: "/business-new-account",
+        permalink: "/business-new-account/",
         modules: [generateDummyNavBarModule(), generateDummySignUpModule()],
       },
     } as PageModel,
@@ -488,7 +488,7 @@ export class PageService {
       description: "Description of page",
     },
     data: {
-      permalink: "/not-found",
+      permalink: "/not-found/",
       modules: [generateDummyNavBarModule(), generateDummyNotFoundModule(), generateDummyFooterModule()],
     },
   } as PageModel;
@@ -499,17 +499,14 @@ export class PageService {
 
   public getPageByRoute(route: string): PageModel {
     debugger;
-    let routeToUse = route;
-    if (route === "") {
-      routeToUse = "terrasana.com/";
-    }
-    const uri = new URI(routeToUse);
+    const uri = new URI(route);
+    const path = uri.path();
 
-    routeToUse = uri.domain();
-    routeToUse += uri.segment()[0] !== "" ? "/" + uri.segment()[0] : "";
+    const removePost = path.replace("post=", "");
+    const addSlashes = removePost[0] !== "/" ? `${removePost}/` : removePost;
 
     const page = _.find(this.pageList, (page: PageModel) => {
-      return _.isEqual(page.route, routeToUse);
+      return _.isEqual(page.data.permalink, addSlashes);
     });
 
     if (!page) {
