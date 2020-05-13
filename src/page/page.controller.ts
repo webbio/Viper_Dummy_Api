@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Post, Body } from "@nestjs/common";
+import { Controller, Get, Param, Post, Body, Req, Request } from "@nestjs/common";
 import { PageService } from "./page.service";
 import { PageModel } from "./page.model";
 import { ApiUseTags } from "@nestjs/swagger";
@@ -9,8 +9,8 @@ export class PageController {
   constructor(private readonly pageService: PageService) {}
 
   @Get(":route")
-  getPage(@Param("route") route: string): PageModel {
-    const page = this.pageService.getPageByRoute(route);
+  getPage(@Req() request: Request): PageModel {
+    const page = this.pageService.getPageByRoute(request);
     return page;
   }
 

@@ -497,16 +497,23 @@ export class PageService {
     return this.pageList;
   }
 
-  public getPageByRoute(route: string): PageModel {
+  public getPageByRoute(request: Request): PageModel {
     debugger;
-    const uri = new URI(route);
-    const path = uri.path();
+    const path = request.url;
 
-    const removePost = path.replace("post=", "");
-    const addSlashes = removePost[0] !== "/" ? `${removePost}/` : removePost;
+    const findKeyWord = path.indexOf("post?page=");
+
+    if (!findKeyWord) return this.notFound;
+
+    const removePost = path.split("post?page=")[1];
+    const addSlashToFront = removePost[0] !== "/" ? `/${removePost}` : removePost;
+    const addSlashToBack =
+      addSlashToFront[addSlashToFront.length - 1] !== "/" ? `${addSlashToFront}/` : addSlashToFront;
+
+    console.log(addSlashToBack);
 
     const page = _.find(this.pageList, (page: PageModel) => {
-      return _.isEqual(page.data.permalink, addSlashes);
+      return _.isEqual(page.data.permalink, addSlashToBack);
     });
 
     if (!page) {
