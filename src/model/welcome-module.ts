@@ -1,6 +1,5 @@
 import { WordPressPostModule, paddingDesktop, paddingMobile } from "./wordpress-post-module";
 import { ImageButton } from "./image-button";
-import { ButtonType } from "../enums/button-type";
 import * as uuid from "uuid";
 import { ApiModelProperty, ApiImplicitBody, ApiUseTags } from "@nestjs/swagger";
 import { Module } from "@nestjs/common";
@@ -9,7 +8,7 @@ import { PageController } from "src/page/page.controller";
 @Module({
   controllers: [PageController],
 })
-export class WelcomeModule extends WordPressPostModule {
+export class MainHeaderModule extends WordPressPostModule {
   @ApiModelProperty()
   public headerText: string;
 
@@ -20,28 +19,27 @@ export class WelcomeModule extends WordPressPostModule {
   public welcomeImage: string;
 
   @ApiModelProperty()
-  public mainButton1: ImageButton;
+  public bigCardLeft: ImageButton;
 
   @ApiModelProperty()
-  public mainButton2: ImageButton;
+  public bigCardRight: ImageButton;
 
   @ApiModelProperty()
-  public smallButton1: ImageButton;
+  public smallCard1: ImageButton;
 
   @ApiModelProperty()
-  public smallButton2: ImageButton;
+  public smallCard2: ImageButton;
 
   @ApiModelProperty()
-  public smallButton3: ImageButton;
+  public smallCard3: ImageButton;
 }
 
-export const generateDummyWelcomeModule = (): WelcomeModule => {
+export const generateDummyMainHeaderModule = (): MainHeaderModule => {
   return {
     id: uuid(),
     background: {
       pattern: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png",
     },
-
     curve: {
       background: {
         color: "#f5fafa",
@@ -59,35 +57,30 @@ export const generateDummyWelcomeModule = (): WelcomeModule => {
     bodyText:
       "We houden van echt eten, waarmee je iets goed doet voor jezelf én de wereld om je heen. Samen. Dat is positive eating!",
     welcomeImage: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/rectangle-copy.jpg",
-    mainButton1: {
-      buttonType: ButtonType.Large,
+    bigCardLeft: {
       content: "Producten",
       route: "/product-line-overview",
       imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/card1.jpg",
     },
-    mainButton2: {
-      buttonType: ButtonType.Large,
+    bigCardRight: {
       content: "Recepten",
       route: "/recipe-overview",
       imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/card2.jpg",
     },
-    smallButton1: {
-      buttonType: ButtonType.Medium,
+    smallCard1: {
       content: "Recept van de maand: freakshake met curcuma latte!",
       route: "/recipe-single",
       imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/small-card1.png",
     },
-    smallButton2: {
-      buttonType: ButtonType.Medium,
+    smallCard2: {
       content: "Gezonde snack? Probeer onze nieuwe snackmixen!",
       route: "/recipe-single",
       imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/small-card2.png",
     },
-    smallButton3: {
-      buttonType: ButtonType.Medium,
+    smallCard3: {
       content: "RECEPT: vegan & glutenvrij courgettebrood",
       route: "/recipe-single",
       imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/small-card3.jpg",
     },
-  } as WelcomeModule;
+  } as MainHeaderModule;
 };

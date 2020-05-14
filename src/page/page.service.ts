@@ -3,7 +3,7 @@ import { PageModel } from "./page.model";
 import * as uuid from "uuid";
 import * as _ from "lodash";
 import * as URI from "urijs";
-import { generateDummyWelcomeModule } from "src/model/welcome-module";
+import { generateDummyMainHeaderModule } from "src/model/welcome-module";
 import { generateDummyNavBarModule } from "src/model/nav-bar-module";
 import { generateDummyCTAModuleHomePage1, generateDummyCTAModuleHomePage2 } from "src/model/cta-module";
 import { generateDummyInfoHeaderModule, generateDummyInfoHeaderModule2 } from "src/model/info-header-module";
@@ -72,7 +72,7 @@ export class PageService {
         permalink: "/",
         modules: [
           generateDummyNavBarModule(),
-          generateDummyWelcomeModule(),
+          generateDummyMainHeaderModule(),
           generateDummyCTAModuleHomePage1(),
           generateDummyRelatedProductsSlider("Gerelateerde Producten"),
           generateDummyInstagramWallModule(),
@@ -509,8 +509,6 @@ export class PageService {
     const addSlashToFront = removePost[0] !== "/" ? `/${removePost}` : removePost;
     const addSlashToBack =
       addSlashToFront[addSlashToFront.length - 1] !== "/" ? `${addSlashToFront}/` : addSlashToFront;
-
-    console.log(addSlashToBack);
 
     const page = _.find(this.pageList, (page: PageModel) => {
       return _.isEqual(page.data.permalink, addSlashToBack);
