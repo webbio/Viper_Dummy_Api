@@ -1,8 +1,6 @@
 import { NavBarModule } from "src/model/nav-bar-module";
 import uuid = require("uuid");
-import { MainHeaderModule } from "src/model/welcome-module";
-import { ButtonType } from "src/enums/button-type";
-import { ProductLineStoryOverviewModule } from "src/model/product-line-story-overview-module";
+import { MainHeaderModule } from "src/model/main-header-module";
 import { NotYetImplemented } from "src/model/not-yet-implemented-module";
 import { FooterModule, generateLikeSocialMediaButtons } from "src/model/footer-component";
 import { InstagramWalllModule } from "src/model/instagram-wall";
@@ -32,10 +30,10 @@ const generateDummyNavBarModule = (): NavBarModule => {
   };
 };
 
-const generateDummyWelcomeModule = (): MainHeaderModule => {
+const generateDummyMainHeaderModule = (): MainHeaderModule => {
   return {
     id: uuid(),
-    name: "WelcomeModule",
+    name: "MainHeaderModule",
     topMargin: "0px",
     bottomMargin: "0px",
     headerText: "Proef en voel dat het goed is.",
@@ -284,7 +282,7 @@ const generateDummyFooterModule = (): FooterModule => {
 
 export const homePagemodules = [
   generateDummyNavBarModule(),
-  generateDummyWelcomeModule(),
+  generateDummyMainHeaderModule(),
   generateDummyCTAModuleHomePage1(),
   generateNotYetImplemented(),
   generateDummyInstagramWallModule(),

@@ -50,7 +50,7 @@ export const generateDummyMainHeaderModule = (): MainHeaderModule => {
       desktopPadding: paddingDesktop.desktopPaddingLarge,
       mobilePadding: paddingMobile.mobilePaddingLarge,
     },
-    name: "WelcomeModule",
+    name: "MainHeaderModule",
     topMargin: "0px",
     bottomMargin: "0px",
     headerText: "Proef en voel dat het goed is.",

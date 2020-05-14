@@ -3,7 +3,7 @@ import { PageModel } from "./page.model";
 import * as uuid from "uuid";
 import * as _ from "lodash";
 import * as URI from "urijs";
-import { generateDummyMainHeaderModule } from "src/model/welcome-module";
+import { generateDummyMainHeaderModule } from "src/model/main-header-module";
 import { generateDummyNavBarModule } from "src/model/nav-bar-module";
 import { generateDummyCTAModuleHomePage1, generateDummyCTAModuleHomePage2 } from "src/model/cta-module";
 import { generateDummyInfoHeaderModule, generateDummyInfoHeaderModule2 } from "src/model/info-header-module";

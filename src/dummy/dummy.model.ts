@@ -4,7 +4,7 @@ import { NavBarModule } from "src/model/nav-bar-module";
 import { CTAModule } from "src/model/cta-module";
 import { FooterModule } from "src/model/footer-component";
 import { BodyTextModule } from "src/model/bodytext-module";
-import { MainHeaderModule } from "src/model/welcome-module";
+import { MainHeaderModule } from "src/model/main-header-module";
 import { InstagramWalllModule } from "src/model/instagram-wall";
 import { FeaturedItemModule } from "src/model/featured-item";
 import { ItemOverviewModule, ItemOverviewStateModule } from "src/model/item-overview-module";
@@ -97,7 +97,7 @@ export class DummyModel {
   public relatedProductsSlider?: RelatedProductsSlider;
 
   @ApiModelProperty()
-  public welcomeModule?: MainHeaderModule;
+  public mainHeaderModule?: MainHeaderModule;
 
   @ApiModelProperty()
   public InstagramWalllModule?: InstagramWalllModule;
