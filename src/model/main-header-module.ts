@@ -58,21 +58,21 @@ export const generateDummyMainHeaderModule = (): MainHeaderModule => {
     topMargin: "0px",
     bottomMargin: "0px",
     headerText: "Proef en voel dat het goed is.",
-    welcomeImage: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/rectangle-copy.jpg",
+    welcomeImage: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/homepage-main-header-1.jpg",
     bigCardLeft: {
       content: "Producten",
       route: "/product-line-overview",
-      imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/card1.jpg",
+      imageUrl: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/coconut.jpg",
     },
     bigCardRight: {
       content: "Recepten",
       route: "/recipe-overview",
-      imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/card2.jpg",
+      imageUrl: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/soup.jpg",
     },
     smallCard1: {
-      content: "Recept van de maand: freakshake met curcuma latte!",
-      route: "/recipe-single",
-      imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/small-card1.png",
+      type: "filled",
+      content: "Nieuws",
+      route: "/nieuws/",
     },
     smallCard2: {
       content: "Gezonde snack? Probeer onze nieuwe snackmixen!",
