@@ -5,6 +5,9 @@ export class ImageButton {
   public type: "blog" | "filled";
 
   @ApiModelProperty()
+  public category: string;
+
+  @ApiModelProperty()
   public content: string;
 
   @ApiModelProperty()

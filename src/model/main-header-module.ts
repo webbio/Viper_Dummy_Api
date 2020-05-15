@@ -78,11 +78,13 @@ export const generateDummyMainHeaderModule = (): MainHeaderModule => {
       content: "Gezonde snack? Probeer onze nieuwe snackmixen!",
       route: "/recipe-single",
       imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/small-card2.png",
+      category: "Recept",
     },
     smallCard3: {
       content: "RECEPT: vegan & glutenvrij courgettebrood",
       route: "/recipe-single",
       imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/small-card3.jpg",
+      category: "Nieuws",
     },
   } as MainHeaderModule;
 };
