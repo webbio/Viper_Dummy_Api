@@ -9,6 +9,9 @@ import { PageController } from "src/page/page.controller";
   controllers: [PageController],
 })
 export class MainHeaderModule extends WordPressPostModule {
+  @ApiModelProperty({ required: false })
+  public topTitle: string;
+
   @ApiModelProperty()
   public headerText: string;
 
@@ -51,6 +54,7 @@ export const generateDummyMainHeaderModule = (): MainHeaderModule => {
       mobilePadding: paddingMobile.mobilePaddingLarge,
     },
     name: "MainHeaderModule",
+    topTitle: "Terrasana",
     topMargin: "0px",
     bottomMargin: "0px",
     headerText: "Proef en voel dat het goed is.",
