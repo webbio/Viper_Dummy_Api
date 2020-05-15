@@ -38,7 +38,7 @@ export const generateDummyMainHeaderModule = (): MainHeaderModule => {
   return {
     id: uuid(),
     background: {
-      olor: "#DDEDED",
+      color: "#DDEDED",
     },
     curve: {
       background: {
