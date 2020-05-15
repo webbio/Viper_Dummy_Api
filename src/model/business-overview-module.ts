@@ -191,70 +191,70 @@ export const generateProductLineJapanCategories = (amount): BusinessOverviewCate
   let productLineList: BusinessOverviewCategory[] = [];
   productLineList.push({
     title: "Noedels",
-    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/6.jpg",
+    pictureURL: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-5.jpg",
     links: emptyLinks,
     id: uuid(),
   });
   productLineList.push({
     title: "Zeewieren",
-    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/1.jpg",
+    pictureURL: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-6.jpg",
     links: emptyLinks,
     id: uuid(),
   });
   productLineList.push({
     title: "Paddenstoelen en seitan",
-    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg",
+    pictureURL: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-2.jpg",
     links: emptyLinks,
 
     id: uuid(),
   });
   productLineList.push({
     title: "Rijst, bonen, zaden",
-    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg",
+    pictureURL: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-3.jpg",
     links: emptyLinks,
 
     id: uuid(),
   });
   productLineList.push({
     title: "Bind- en zoetmiddelen",
-    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/4.jpg",
+    pictureURL: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-3.jpg",
     links: emptyLinks,
     id: uuid(),
   });
   productLineList.push({
     title: "Sojasauzen",
-    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg",
+    pictureURL: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-2.jpg",
     links: emptyLinks,
     id: uuid(),
   });
   productLineList.push({
     title: "Miso",
-    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/1.jpg",
+    pictureURL: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-6.jpg",
     links: emptyLinks,
     id: uuid(),
   });
   productLineList.push({
     title: "Ume(boshi)",
-    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/1.jpg",
+    pictureURL: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-6.jpg",
     links: emptyLinks,
     id: uuid(),
   });
   productLineList.push({
     title: "Smaakmakers",
-    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg",
+    pictureURL: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-2.jpg",
     links: emptyLinks,
     id: uuid(),
   });
   productLineList.push({
     title: "Crackers",
-    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg",
+    pictureURL: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-3.jpg",
     links: emptyLinks,
     id: uuid(),
   });
 
-  productLineList.push({
+  https: productLineList.push({
     title: "Non-food",
-    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/4.jpg",
+    pictureURL: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-3.jpg",
     links: emptyLinks,
 
     id: uuid(),
@@ -262,14 +262,14 @@ export const generateProductLineJapanCategories = (amount): BusinessOverviewCate
 
   productLineList.push({
     title: "ALLES VOOR SUSHI",
-    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/1.jpg",
+    pictureURL: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-6.jpg",
     links: emptyLinks,
 
     id: uuid(),
   });
   productLineList.push({
     title: "Noedels",
-    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/6.jpg",
+    pictureURL: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-5.jpg",
     links: emptyLinks,
     id: uuid(),
   });
@@ -287,56 +287,56 @@ export const generateProductLineNoedelsProduct = (amount): BusinessOverviewProdu
   productLineList.push({
     title: "Bruine rijstnoedels met pompoen en gember",
     description: "Glutenvrij - 250g",
-    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/6.jpg",
+    pictureURL: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-5.jpg",
     links: emptyLinks,
     id: uuid(),
   });
   productLineList.push({
     title: "Boekweitnoedels met zoete aardappel",
     description: "Glutenvrij - 250g",
-    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/1.jpg",
+    pictureURL: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-6.jpg",
     links: emptyLinks,
     id: uuid(),
   });
   productLineList.push({
     title: "Bruine rijstnoedels met wakame",
     description: "Glutenvrij - 250g",
-    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg",
+    pictureURL: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-2.jpg",
     links: emptyLinks,
     id: uuid(),
   });
   productLineList.push({
     title: "100% Bruine rijstnoedels",
     description: "Glutenvrij - 250g",
-    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg",
+    pictureURL: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-3.jpg",
     links: emptyLinks,
     id: uuid(),
   });
   productLineList.push({
     title: "Boekweitnoedels met zoete aardappel",
     description: "Glutenvrij - 250g",
-    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/4.jpg",
+    pictureURL: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-3.jpg",
     links: emptyLinks,
     id: uuid(),
   });
   productLineList.push({
     title: "Bruine rijstnoedels met wakame",
     description: "Glutenvrij - 250g",
-    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg",
+    pictureURL: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-2.jpg",
     links: emptyLinks,
     id: uuid(),
   });
   productLineList.push({
     title: "100% Bruine rijstnoedels",
     description: "Glutenvrij - 250g",
-    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/1.jpg",
+    pictureURL: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-6.jpg",
     links: emptyLinks,
     id: uuid(),
   });
   productLineList.push({
     title: "Boekweitnoedels met zoete aardappel",
     description: "Glutenvrij - 250g",
-    pictureURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg",
+    pictureURL: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-2.jpg",
     links: emptyLinks,
     id: uuid(),
   });

@@ -1,9 +1,6 @@
-import { Injectable } from '@nestjs/common';
-import { generateDummyProductCard, ProductCard } from 'src/model/product-card';
-import {
-  CategoryCard,
-  generateDummyCategoryCard,
-} from 'src/model/category-card';
+import { Injectable } from "@nestjs/common";
+import { generateDummyProductCard, ProductCard } from "src/model/product-card";
+import { CategoryCard, generateDummyCategoryCard } from "src/model/category-card";
 
 @Injectable()
 export class ProductLineService {
@@ -15,25 +12,18 @@ export class ProductLineService {
     data = generateDummyProductCard();
     for (let i = 0; i < dataLength; i++) {
       data.push({
-        link: '/',
-        title: 'Test' + i,
-        category: 'Noedels',
-        image:
-          'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg',
-        content: 'Content',
-        subCategory: 'Glutenvrij',
+        link: "/",
+        title: "Test" + i,
+        category: "Noedels",
+        image: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-3.jpg",
+        content: "Content",
+        subCategory: "Glutenvrij",
       });
     }
     return data;
   }
 
-  public getProductsWithPagination(
-    search: string,
-    category: string,
-    filter: string[],
-    skip: number,
-    take: number,
-  ) {
+  public getProductsWithPagination(search: string, category: string, filter: string[], skip: number, take: number) {
     const TOTAL_ITEMS = 202;
     const paginatedList = [];
     if (skip > TOTAL_ITEMS) {
@@ -55,19 +45,15 @@ export class ProductLineService {
         }
       }
       if (filter) {
-        filteredList.forEach(
-          product =>
-            filter.includes(product.subCategory) &&
-            filteredProductList.push(product),
-        );
+        filteredList.forEach((product) => filter.includes(product.subCategory) && filteredProductList.push(product));
       } else {
         filteredProductList = filteredList;
       }
       if (search) {
         filteredProductList.forEach(
-          productCard =>
+          (productCard) =>
             productCard.title.toUpperCase().includes(search.toUpperCase()) &&
-            filteredProductListWithSearch.push(productCard),
+            filteredProductListWithSearch.push(productCard)
         );
       } else {
         filteredProductListWithSearch = filteredProductList;
@@ -94,11 +80,7 @@ export class ProductLineService {
     };
   }
 
-  public getCategoryList(
-    categories: string[],
-    products: string[],
-    search: string,
-  ) {
+  public getCategoryList(categories: string[], products: string[], search: string) {
     this.categoryCardList = generateDummyCategoryCard();
     this.productCardList = generateDummyProductCard();
     const filteredCategoryList: CategoryCard[] = [];
@@ -107,24 +89,16 @@ export class ProductLineService {
     let filteredProductListWithSearch: ProductCard[] = [];
     if (categories) {
       this.categoryCardList.forEach(
-        categoryCard =>
-          categories.includes(categoryCard.category) &&
-          filteredCategoryList.push(categoryCard),
+        (categoryCard) => categories.includes(categoryCard.category) && filteredCategoryList.push(categoryCard)
       );
 
-      filteredCategoryList.forEach(filteredCategory =>
+      filteredCategoryList.forEach((filteredCategory) =>
         this.productCardList.forEach(
-          product =>
-            filteredCategory.category === product.category &&
-            productList.push(product),
-        ),
+          (product) => filteredCategory.category === product.category && productList.push(product)
+        )
       );
       if (products) {
-        productList.forEach(
-          product =>
-            products.includes(product.subCategory) &&
-            filteredProductList.push(product),
-        );
+        productList.forEach((product) => products.includes(product.subCategory) && filteredProductList.push(product));
       } else {
         filteredProductList = productList;
       }
@@ -134,9 +108,9 @@ export class ProductLineService {
 
     if (search) {
       filteredProductList.forEach(
-        productCard =>
+        (productCard) =>
           productCard.title.toUpperCase().includes(search.toUpperCase()) &&
-          filteredProductListWithSearch.push(productCard),
+          filteredProductListWithSearch.push(productCard)
       );
     } else {
       filteredProductListWithSearch = filteredProductList;
@@ -153,18 +127,16 @@ export class ProductLineService {
     let filteredProductListWithSearch: ProductCard[] = [];
     if (products) {
       this.productCardList.forEach(
-        productCard =>
-          products.includes(productCard.subCategory) &&
-          filteredProductList.push(productCard),
+        (productCard) => products.includes(productCard.subCategory) && filteredProductList.push(productCard)
       );
     } else {
       filteredProductList = this.productCardList;
     }
     if (search) {
       filteredProductList.forEach(
-        productCard =>
+        (productCard) =>
           productCard.title.toUpperCase().includes(search.toUpperCase()) &&
-          filteredProductListWithSearch.push(productCard),
+          filteredProductListWithSearch.push(productCard)
       );
     } else {
       filteredProductListWithSearch = filteredProductList;

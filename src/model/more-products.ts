@@ -47,27 +47,27 @@ export const generateDummyMoreProducts = (): MoreProducts => {
     relatedProducts: [
       {
         title: "100% Bruine rijstnoedels",
-        picture: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg",
+        picture: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-2.jpg",
         URL: "/product-single",
       },
       {
         title: "Boekweitnoedels met zoete aardappel",
-        picture: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/4.jpg",
+        picture: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-3.jpg",
         URL: "/product-single",
       },
       {
         title: "Bruine rijstnoedels met pompoen en gember",
-        picture: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg",
+        picture: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-2.jpg",
         URL: "/product-single",
       },
       {
         title: "Bruine rijstnoedels met wakame",
-        picture: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/3.jpg",
+        picture: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-3.jpg",
         URL: "/product-single",
       },
       {
         title: "100% Bruine rijstnoedels",
-        picture: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/products/Noedels/2.jpg",
+        picture: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/products/Decent/product-2.jpg",
         URL: "/product-single",
       },
     ],
