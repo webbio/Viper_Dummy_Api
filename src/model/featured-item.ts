@@ -58,7 +58,7 @@ export const generateDummyFeaturedItemModuleNoPattern = (title: string): Feature
     button: { content: "Bekijk meer recepten", route: "/recipe-overview" },
     recipes: generateDummyRecipes(),
     background: {
-      color: "#f5fafa",
+      color: "#DDEDED",
     },
 
     curve: {
@@ -107,7 +107,7 @@ export const generateDummyFeaturedItemModuleNoPatternCurveWhite = (title: string
     button: { content: "Bekijk meer recepten", route: "/recipe-overview" },
     recipes: generateDummyRecipes(),
     background: {
-      color: "#f5fafa",
+      color: "#DDEDED",
     },
 
     curve: {
@@ -135,7 +135,7 @@ export const generateDummyFeaturedItemModuleLightBackground = (title: string): F
     button: { content: "Bekijk meer recepten", route: "/recipe-overview" },
     recipes: generateDummyRecipes(),
     background: {
-      color: "#f5fafa",
+      color: "#DDEDED",
     },
   } as FeaturedItemModule;
 };

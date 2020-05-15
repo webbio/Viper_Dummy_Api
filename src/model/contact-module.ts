@@ -39,7 +39,7 @@ export const generateDummyContactModule = (): ContactModule => {
   return {
     title: "Neem gelijk contact op",
     background: {
-      color: "#f5fafa",
+      color: "#DDEDED",
     },
     description:
       "Aenean id lorem eleifend, malesuada arcu a, fringilla mauris. Pellentesque dolor lacus, luctus lobortis rhoncus vitae, ultricies vitae justo. Mauris ut interdum purus.",

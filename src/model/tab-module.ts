@@ -44,7 +44,7 @@ export const generateDummyTabs = (): TabsModule => {
       mobilePadding: paddingMobile.mobilePaddingSmall,
     },
     background: {
-      color: "#f5fafa",
+      color: "#DDEDED",
     },
   };
 };

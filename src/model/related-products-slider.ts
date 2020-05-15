@@ -33,7 +33,7 @@ export const generateDummyRelatedProductsSlider = (title: string, showDetail?: b
     },
     curve: {
       background: {
-        color: "#f5fafa",
+        color: "#DDEDED",
       },
       verticalAlignment: "middle",
     },

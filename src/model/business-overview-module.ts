@@ -360,7 +360,7 @@ export const generateDummyBusinessOverviewData = (): BusinessOverviewModule => {
     bottomMargin: "0px",
     sidebarTitle: "Productlijnen",
     background: {
-      color: "#F5FAFA",
+      color: "#DDEDED",
     },
     productLineList: generatedProductLineList,
     totalCategories: generatedCategoryList.length,

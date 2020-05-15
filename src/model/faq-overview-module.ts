@@ -94,7 +94,7 @@ Aenean sagittis volutpat eros, at egestas est convallis sed.Quisque vel finibus 
     name: "FAQOverviewModule",
     bottomMargin: "0px",
     background: {
-      color: "#f5fafa",
+      color: "#DDEDED",
     },
     topMargin: "0px",
     topPadding: {

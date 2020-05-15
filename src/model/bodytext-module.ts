@@ -47,7 +47,7 @@ export const generateBodyTextModuleAboutUs = (html: string): BodyTextModule => {
       verticalAlignment: "bottom",
       horizontalAlignment: "right",
       background: {
-        color: "#f5fafa",
+        color: "#DDEDED",
       },
     },
   };

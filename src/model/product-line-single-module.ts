@@ -21,7 +21,7 @@ export const generateProductLineSingleModule = (): ProductLineSingleModule => {
     bottomMargin: "",
 
     background: {
-      color: "#f5fafa",
+      color: "#DDEDED",
     },
     curve: {
       background: {

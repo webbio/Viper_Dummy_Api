@@ -21,7 +21,7 @@ export const generateDummyNotFoundModule = (): NotFoundModule => {
     backButtonText: "Terug naar vorige pagina",
     homeButtonText: "Naar home",
     topMargin: "",
-    background: { color: "#f5fafa" },
+    background: { color: "#DDEDED" },
     bottomPadding: {
       desktopPadding: paddingDesktop.desktopPaddingSmall,
       mobilePadding: paddingMobile.mobilePaddingSmall,

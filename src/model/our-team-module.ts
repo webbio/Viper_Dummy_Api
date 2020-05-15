@@ -78,7 +78,7 @@ export const generateDummyOurTeamModule = (): OurTeamModule => {
       mobilePadding: paddingMobile.mobilePaddingSmall,
     },
     background: {
-      color: "#f5fafa",
+      color: "#DDEDED",
     },
   };
 };

@@ -110,7 +110,7 @@ const generateProductLineStoryOverviewModule = (): ProductLineOverviewModule => 
     topMargin: "0px",
     name: "ProductLineStoryOverviewModule",
     background: {
-      color: "#f5fafa",
+      color: "#DDEDED",
     },
     productsLine: generateProductLineCardList(9),
     bottomPadding: {

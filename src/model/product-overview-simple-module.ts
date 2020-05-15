@@ -51,7 +51,7 @@ export const generateProductOverviewSimpleModuleCurvePatternBottom = (): Product
     },
     totalItems: 5,
     background: {
-      color: "#f5fafa",
+      color: "#DDEDED",
     },
     curve: {
       verticalAlignment: "bottom",

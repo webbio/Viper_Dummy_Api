@@ -35,7 +35,7 @@ export const generateDummyMoreProducts = (): MoreProducts => {
     buttonText: "Meer noedels",
     moreProductsLink: "/product-line-single",
     background: {
-      color: "#f5fafa",
+      color: "#DDEDED",
     },
     curve: {
       verticalAlignment: "bottom",

@@ -84,7 +84,7 @@ export const generateDummyProductDetailHeader = (): ProductDetailHeader => {
     curve: {
       verticalAlignment: "bottom",
       background: {
-        color: "#f5fafa",
+        color: "#DDEDED",
       },
     },
     listPictures: [

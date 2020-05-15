@@ -45,7 +45,7 @@ export const generateDummyInfoHeaderModule = (
 
     curve: {
       background: {
-        color: "#f5fafa",
+        color: "#DDEDED",
       },
       horizontalAlignment: "right",
       verticalAlignment: "bottom",

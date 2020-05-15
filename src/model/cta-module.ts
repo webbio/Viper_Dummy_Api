@@ -22,7 +22,7 @@ export const generateDummyCTAModuleHomePage1 = (): CTAModule => {
   return {
     titleText: "Wat goed eten is, weten we bij Terrarana al 35 jaar.",
     background: {
-      color: "#f5fafa",
+      color: "#DDEDED",
     },
 
     bodyText:

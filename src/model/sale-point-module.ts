@@ -35,7 +35,7 @@ export const generateDummySalePointModule = (): SalePointModule => {
     bgcolor: "",
     curve: {
       background: {
-        color: "#f5fafa",
+        color: "#DDEDED",
       },
     },
     topPadding: {

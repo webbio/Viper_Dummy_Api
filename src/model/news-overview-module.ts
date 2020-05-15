@@ -34,7 +34,7 @@ export const generateDummyNewsOverviewData = (): NewsOverviewModule => {
     bottomMargin: "0px",
     categories: ["Noedels", "Zeewieren", "Paddenstoelen en seitan", "Veganistischs", "Sojasauzen", "Rijst"],
     background: {
-      color: "#F5FAFA",
+      color: "#DDEDED",
     },
     state: getCards(0, 9),
     id: uuid(),
