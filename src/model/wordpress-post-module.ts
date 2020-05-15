@@ -28,6 +28,12 @@ export class WordPressPostModule {
   @ApiModelProperty({ required: false })
   public curve?: Curve;
 
+  @ApiModelProperty({ required: false })
+  public topCurve?: Curve;
+
+  @ApiModelProperty({ required: false })
+  public bottomCurve?: Curve;
+
   // padding must be one of the following object. Each object identifies a desktop and mobile size, SMALL, MEDIUM, LARGE
   @ApiModelProperty({ required: false, type: Padding })
   public topPadding?: Padding;

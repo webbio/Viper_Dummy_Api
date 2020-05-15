@@ -52,12 +52,12 @@ export const generateDummyCTAModuleHomePage2 = (): CTAModule => {
   return {
     titleText: "Maak je eigen biologische wraps!",
     bodyText: "Binnen een half uur je eigen biologische hoemoes. Lees hier hoe dat moet!",
-    curve: {
-      verticalAlignment: "bottom",
+    topCurve: {
+      horizontalAlignment: "left",
+    },
+
+    bottomCurve: {
       horizontalAlignment: "right",
-      background: {
-        pattern: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png",
-      },
     },
 
     buttons: [
