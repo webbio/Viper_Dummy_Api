@@ -42,7 +42,7 @@ export const generateDummyMainHeaderModule = (): MainHeaderModule => {
     },
     curve: {
       background: {
-        color: "#f5fafa",
+        color: "#DDEDED",
       },
       verticalAlignment: "bottom",
     },
