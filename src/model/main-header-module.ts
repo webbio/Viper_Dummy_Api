@@ -38,7 +38,7 @@ export const generateDummyMainHeaderModule = (): MainHeaderModule => {
   return {
     id: uuid(),
     background: {
-      pattern: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png",
+      olor: "#DDEDED",
     },
     curve: {
       background: {
