@@ -73,6 +73,62 @@ export const generateDummyRelatedProductLinesSlider = (title: string): RelatedPr
         URL: "/product-single/",
         icon: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/product-lines/acorn+1.svg",
       },
+      {
+        title: "Mediterraan",
+        picture:
+          "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/product-lines/productline-1.jpg",
+        URL: "/product-single/",
+        icon: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/product-lines/tomato+1.svg",
+      },
+      {
+        title: "Basis",
+        picture:
+          "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/product-lines/productline-2.jpg",
+        URL: "/product-single/",
+        icon: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/product-lines/organic-2+1.svg",
+      },
+      {
+        title: "Superfood",
+        picture:
+          "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/product-lines/productline-3.jpg",
+        URL: "/product-single/",
+        icon: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/product-lines/leaf-80+1.svg",
+      },
+      {
+        title: "Notenpasta",
+        picture:
+          "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/product-lines/productline-4.jpg",
+        URL: "/product-single/",
+        icon: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/product-lines/acorn+1.svg",
+      },
+      {
+        title: "Mediterraan",
+        picture:
+          "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/product-lines/productline-1.jpg",
+        URL: "/product-single/",
+        icon: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/product-lines/tomato+1.svg",
+      },
+      {
+        title: "Basis",
+        picture:
+          "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/product-lines/productline-2.jpg",
+        URL: "/product-single/",
+        icon: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/product-lines/organic-2+1.svg",
+      },
+      {
+        title: "Superfood",
+        picture:
+          "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/product-lines/productline-3.jpg",
+        URL: "/product-single/",
+        icon: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/product-lines/leaf-80+1.svg",
+      },
+      {
+        title: "Notenpasta",
+        picture:
+          "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/product-lines/productline-4.jpg",
+        URL: "/product-single/",
+        icon: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/product-lines/acorn+1.svg",
+      },
     ],
   } as RelatedProductsSlider;
 };
