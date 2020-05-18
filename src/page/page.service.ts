@@ -28,6 +28,7 @@ import {
   generateDummyRelatedProductsSlider,
   generateDummyRelatedProductsSlider2,
   generateDummyRelatedProductsSliderNoCurveBackground,
+  generateDummyRelatedProductLinesSlider,
 } from "src/model/related-products-slider";
 import { generateDummyGallerySliderModule } from "src/model/gallery-slider";
 import { generateDummyNewsletterModule } from "src/model/newsletter-module";
@@ -74,7 +75,7 @@ export class PageService {
           generateDummyNavBarModule(),
           generateDummyMainHeaderModule(),
           generateDummyCTAModuleHomePage1(),
-          generateDummyRelatedProductsSlider("Gerelateerde Producten"),
+          generateDummyRelatedProductLinesSlider("Onze productlijnen"),
           generateDummyInstagramWallModule(),
           generateDummyCTAModuleHomePage2(),
           generateDummyNewsletterModule(),

@@ -20,7 +20,62 @@ export class RelatedProductsSlider extends WordPressPostModule {
 
   @ApiModelProperty()
   public buttonLink: string;
+
+  @ApiModelProperty()
+  public showProductLines?: boolean;
 }
+
+export const generateDummyRelatedProductLinesSlider = (title: string): RelatedProductsSlider => {
+  return {
+    id: uuid(),
+    name: "RelatedProductsSlider",
+    topMargin: "0px",
+    bottomMargin: "0px",
+    background: {
+      pattern: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png",
+    },
+    curve: {
+      background: {
+        color: "#DDEDED",
+      },
+      verticalAlignment: "middle",
+    },
+    title,
+    buttonLink: "/product-line-single/",
+    buttonText: "Bekijk alle producten",
+    showProductLines: true,
+    relatedProducts: [
+      {
+        title: "Mediterraan",
+        picture:
+          "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/product-lines/productline-1.jpg",
+        URL: "/product-single/",
+        icon: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/product-lines/tomato+1.svg",
+      },
+      {
+        title: "Basis",
+        picture:
+          "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/product-lines/productline-2.jpg",
+        URL: "/product-single/",
+        icon: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/product-lines/organic-2+1.svg",
+      },
+      {
+        title: "Superfood",
+        picture:
+          "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/product-lines/productline-3.jpg",
+        URL: "/product-single/",
+        icon: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/product-lines/leaf-80+1.svg",
+      },
+      {
+        title: "Notenpasta",
+        picture:
+          "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/product-lines/productline-4.jpg",
+        URL: "/product-single/",
+        icon: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/product-lines/acorn+1.svg",
+      },
+    ],
+  } as RelatedProductsSlider;
+};
 
 export const generateDummyRelatedProductsSlider = (title: string, showDetail?: boolean): RelatedProductsSlider => {
   return {

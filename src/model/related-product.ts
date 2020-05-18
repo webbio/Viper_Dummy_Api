@@ -1,7 +1,7 @@
-import { WordPressPostModule } from './wordpress-post-module';
-import * as uuid from 'uuid';
-import { ApiModelProperty } from '@nestjs/swagger';
-import { buttonFooter } from './buttonFooter';
+import { WordPressPostModule } from "./wordpress-post-module";
+import * as uuid from "uuid";
+import { ApiModelProperty } from "@nestjs/swagger";
+import { buttonFooter } from "./buttonFooter";
 
 export class RelatedProduct {
   @ApiModelProperty()
@@ -12,4 +12,6 @@ export class RelatedProduct {
   public picture: string;
   @ApiModelProperty()
   public URL: string;
+  @ApiModelProperty()
+  public icon?: string;
 }
