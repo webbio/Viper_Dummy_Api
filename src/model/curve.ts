@@ -12,4 +12,8 @@ export class Curve {
   // inside the curve, pattern or color
   @ApiModelProperty({ required: false })
   public background?: Background;
+
+  // inside the curve, pattern or color
+  @ApiModelProperty({ required: false })
+  public type?: "in" | "out";
 }

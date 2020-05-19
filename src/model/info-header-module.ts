@@ -45,6 +45,7 @@ export const generateDummyInfoHeaderModule = (
 
     bottomCurve: {
       horizontalAlignment: "right",
+      type: "in",
     },
     bottomPadding: {
       desktopPadding: paddingDesktop.desktopPaddingSmall,
