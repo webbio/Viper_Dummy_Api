@@ -24,7 +24,6 @@ export const generateDummyCTAModuleHomePage1 = (): CTAModule => {
     background: {
       color: "#DDEDED",
     },
-
     bodyText:
       "Bij ons weet je niet alleen zeker dat de producten écht biologisch zijn, maar ook dat we alles met de grootste zorg uitkiezen en samenstellen. We hebben aandacht voor kwaliteit, natuur, milieu, smaak en productiewijze. We zijn altijd op zoek naar de mooiste en meest verantwoorde ingrediënten. Onze medewerkers weten wat ze in handen hebben en bereiden met hart en ziel veel zelf. Geen poespas maar pure en eerlijke producten.",
     buttons: [

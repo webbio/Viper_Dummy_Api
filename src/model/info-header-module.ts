@@ -43,12 +43,8 @@ export const generateDummyInfoHeaderModule = (
       pattern: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png",
     },
 
-    curve: {
-      background: {
-        color: "#DDEDED",
-      },
+    bottomCurve: {
       horizontalAlignment: "right",
-      verticalAlignment: "bottom",
     },
     bottomPadding: {
       desktopPadding: paddingDesktop.desktopPaddingSmall,
