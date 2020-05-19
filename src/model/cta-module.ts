@@ -1,4 +1,4 @@
-import { WordPressPostModule } from "./wordpress-post-module";
+import { WordPressPostModule, paddingDesktop, paddingMobile } from "./wordpress-post-module";
 import * as uuid from "uuid";
 import { ApiModelProperty } from "@nestjs/swagger";
 import { CTAButton } from "./cta-button";
@@ -24,6 +24,10 @@ export const generateDummyCTAModuleHomePage1 = (): CTAModule => {
     background: {
       color: "#DDEDED",
     },
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
+      mobilePadding: paddingMobile.mobilePaddingMedium,
+    },
     bodyText:
       "Bij ons weet je niet alleen zeker dat de producten écht biologisch zijn, maar ook dat we alles met de grootste zorg uitkiezen en samenstellen. We hebben aandacht voor kwaliteit, natuur, milieu, smaak en productiewijze. We zijn altijd op zoek naar de mooiste en meest verantwoorde ingrediënten. Onze medewerkers weten wat ze in handen hebben en bereiden met hart en ziel veel zelf. Geen poespas maar pure en eerlijke producten.",
     buttons: [
@@ -31,7 +35,7 @@ export const generateDummyCTAModuleHomePage1 = (): CTAModule => {
         href: "/contact",
         target: "",
         title: "Meer over ons",
-        variant: "secondary",
+        variant: "tertiary",
         type: "",
         icon: "",
         onClick: "",
@@ -49,13 +53,19 @@ export const generateDummyCTAModuleHomePage1 = (): CTAModule => {
 
 export const generateDummyCTAModuleHomePage2 = (): CTAModule => {
   return {
-    titleText: "Maak je eigen biologische wraps!",
-    bodyText: "Binnen een half uur je eigen biologische hoemoes. Lees hier hoe dat moet!",
+    titleText: "Maak nu een gezonde boteram op bijzonder brood!",
+    bodyText: "",
     topCurve: {
-      horizontalAlignment: "left",
+      background: {
+        color: "#faf0ee",
+      },
+      horizontalAlignment: "right",
+      type: "in",
     },
-
     bottomCurve: {
+      background: {
+        color: "#faf0ee",
+      },
       horizontalAlignment: "right",
     },
 
@@ -89,6 +99,6 @@ export const generateDummyCTAModuleHomePage2 = (): CTAModule => {
     topPadding: { desktopPadding: 140, mobilePadding: 56 },
     containerAlignment: "left",
     contentAlignment: "left",
-    imageURL: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/rectangle-5.jpg",
+    imageURL: "https://viper-development-images.s3-eu-west-1.amazonaws.com/Terrasana/cta-bg-1.jpg",
   };
 };

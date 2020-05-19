@@ -23,17 +23,17 @@ export const generateDummyInstagramWallModule = (): InstagramWalllModule => {
     name: "InstagramModule",
     topMargin: "0px",
     bottomMargin: "0px",
-    title: "Bekijk onze instagram wall!",
-    bottomPadding: {
-      desktopPadding: paddingDesktop.desktopPaddingMedium,
-      mobilePadding: paddingMobile.mobilePaddingMedium,
-    },
+    title: "Volg ons op instagram",
     topPadding: {
-      desktopPadding: paddingDesktop.desktopPaddingMedium,
-      mobilePadding: paddingMobile.mobilePaddingMedium,
+      desktopPadding: 0,
+      mobilePadding: 0,
+    },
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingLarge,
+      mobilePadding: paddingMobile.mobilePaddingLarge,
     },
     background: {
-      pattern: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png",
+      color: "faf0ee",
     },
 
     posts: [

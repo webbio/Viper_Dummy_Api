@@ -32,14 +32,24 @@ export const generateDummyRelatedProductLinesSlider = (title: string): RelatedPr
     topMargin: "0px",
     bottomMargin: "0px",
     background: {
-      pattern: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png",
+      color: "#faf0ee",
     },
-    curve: {
+    topCurve: {
       background: {
         color: "#DDEDED",
       },
-      verticalAlignment: "middle",
+      horizontalAlignment: "right",
+      type: "in",
     },
+    topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingXLarge,
+      mobilePadding: paddingMobile.mobilePaddingMedium,
+    },
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingLarge,
+      mobilePadding: paddingMobile.mobilePaddingLarge,
+    },
+
     title,
     buttonLink: "/product-line-single/",
     buttonText: "Bekijk alle producten",
