@@ -6,7 +6,7 @@ export class ourTeamCards {
   @ApiModelProperty()
   public title?: string;
   @ApiModelProperty()
-  public image?: string;
+  public image?: any;
   @ApiModelProperty()
   public position?: string;
   @ApiModelProperty()
