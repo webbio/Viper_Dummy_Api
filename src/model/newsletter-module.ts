@@ -27,14 +27,20 @@ export const generateDummyNewsletterModule = (): NewsletterModule => {
       pattern: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/pattern-food.png",
     },
     topMargin: "0px",
-    bottomPadding: {
-      desktopPadding: paddingDesktop.desktopPaddingMedium,
+    topPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingSmall,
       mobilePadding: paddingMobile.mobilePaddingMedium,
     },
-
-    topPadding: {
-      desktopPadding: paddingDesktop.desktopPaddingMedium,
+    bottomPadding: {
+      desktopPadding: paddingDesktop.desktopPaddingXLarge,
       mobilePadding: paddingMobile.mobilePaddingMedium,
+    },
+    bottomCurve: {
+      background: {
+        color: "white",
+      },
+      horizontalAlignment: "right",
+      type: "in",
     },
     placeholderField: { email: "E-mailadres", name: "Naam" },
   };

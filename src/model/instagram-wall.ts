@@ -33,7 +33,7 @@ export const generateDummyInstagramWallModule = (): InstagramWalllModule => {
       mobilePadding: paddingMobile.mobilePaddingLarge,
     },
     background: {
-      color: "faf0ee",
+      color: "#faf0ee",
     },
 
     posts: [
