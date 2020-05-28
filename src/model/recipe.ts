@@ -1,4 +1,4 @@
-import { ApiModelProperty } from '@nestjs/swagger';
+import { ApiModelProperty } from "@nestjs/swagger";
 export class IconLabel {
   @ApiModelProperty()
   public icon: string;
@@ -30,62 +30,53 @@ export const generateDummyRecipes = (): Recipe[] => {
     {
       label: [
         {
-          icon:
-            'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/person.svg',
-          label: '1 persoon',
+          icon: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/person.svg",
+          label: "1",
         },
         {
-          icon:
-            'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/time.svg',
-          label: '20 minuten',
+          icon: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/time.svg",
+          label: "20 minuten",
         },
       ],
-      imageUrl:
-        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
-      content: 'Soba met frisse gember-sojasaus',
-      category: 'Recept',
-      buttonText: 'Bekijk meer ',
-      link: '/recipe-single',
+      imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg",
+      content: "Soba met frisse gember-sojasaus",
+      category: "Recept",
+      buttonText: "Bekijk meer ",
+      link: "/recipe-single",
     },
     {
-      imageUrl:
-        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+      imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg",
       label: [
         {
-          icon:
-            'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/person.svg',
-          label: '2 persoon',
+          icon: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/person.svg",
+          label: "2 persoon",
         },
         {
-          icon:
-            'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/time.svg',
-          label: '20 minuten',
+          icon: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/time.svg",
+          label: "20 minuten",
         },
       ],
-      content: 'Yaki soba (gebakken sobanoedels)',
-      category: 'Recept',
-      buttonText: 'Bekijk meer ',
-      link: '/recipe-single',
+      content: "Yaki soba (gebakken sobanoedels)",
+      category: "Recept",
+      buttonText: "Bekijk meer ",
+      link: "/recipe-single",
     },
     {
-      imageUrl:
-        'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg',
+      imageUrl: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/image-featured.jpg",
       label: [
         {
-          icon:
-            'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/person.svg',
-          label: '3 persoon',
+          icon: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/person.svg",
+          label: "3 persoon",
         },
         {
-          icon:
-            'https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/time.svg',
-          label: '15 minuten',
+          icon: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/time.svg",
+          label: "15 minuten",
         },
       ],
-      content: 'Udon met daikon in miso-tamarisaus',
-      category: 'Recept',
-      buttonText: 'Bekijk meer',
-      link: '/recipe-single',
+      content: "Udon met daikon in miso-tamarisaus",
+      category: "Recept",
+      buttonText: "Bekijk meer",
+      link: "/recipe-single",
     },
   ];
 };
