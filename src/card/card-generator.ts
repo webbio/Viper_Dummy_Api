@@ -64,7 +64,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
       category: "Recept",
       cardLabels: [
         {
-          title: "4 personen",
+          title: "4",
           icon: personIcon,
         },
         {
@@ -113,7 +113,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
       category: "Recept",
       cardLabels: [
         {
-          title: "2 persoon",
+          title: "2",
           icon: personIcon,
         },
         {
@@ -209,7 +209,7 @@ const generateRecipesUpTo9 = (amount: number): any[] => {
       category: "Recept",
       cardLabels: [
         {
-          title: "5 personen",
+          title: "5",
           icon: personIcon,
         },
         {

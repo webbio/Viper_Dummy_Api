@@ -49,7 +49,7 @@ export const generateDummyRecipes = (): Recipe[] => {
       label: [
         {
           icon: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/person.svg",
-          label: "2 persoon",
+          label: "2",
         },
         {
           icon: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/time.svg",
@@ -66,7 +66,7 @@ export const generateDummyRecipes = (): Recipe[] => {
       label: [
         {
           icon: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/person.svg",
-          label: "3 persoon",
+          label: "3",
         },
         {
           icon: "https://s3-eu-west-1.amazonaws.com/viper-development-images/Terrasana/recipe-detail/time.svg",
