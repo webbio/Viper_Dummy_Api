@@ -26,6 +26,7 @@ export class RelatedProductsSlider {
 }
 
 export class RelatedProductsSliderModule extends WordPressPostModule {
+  @ApiModelProperty()
   public relatedProductsSlider: RelatedProductsSlider;
 }
 
