@@ -23,7 +23,7 @@ import { SalePointModule } from "src/model/sale-point-module";
 import { BodyTextExpandedModule } from "src/model/bodytext-expanded-module";
 import { NotYetImplemented } from "src/model/not-yet-implemented-module";
 import { CardModel } from "src/model/card-model";
-import { RelatedProductsSlider } from "src/model/related-products-slider";
+import { RelatedProductsSliderModule } from "src/model/related-products-slider";
 import { GallerySliderModule } from "src/model/gallery-slider";
 import { MoreProducts } from "src/model/more-products";
 import { InfoHeaderModule } from "src/model/info-header-module";
@@ -94,7 +94,7 @@ export class DummyModel {
   public gallerySliderModule?: GallerySliderModule;
 
   @ApiModelProperty()
-  public relatedProductsSlider?: RelatedProductsSlider;
+  public relatedProductsSlider?: RelatedProductsSliderModule;
 
   @ApiModelProperty()
   public mainHeaderModule?: MainHeaderModule;
